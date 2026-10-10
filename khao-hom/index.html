@@ -441,6 +441,9 @@ document.querySelectorAll(".ph[data-shot]").forEach(f => {
 });
 document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ");
 
+/* when shown inside the Restauranting studio page, hide the concept banner for a cleaner frame */
+try { if (window.self !== window.top) document.querySelector(".preview")?.remove(); } catch {}
+
 /* concept preview helper: drop or pick a photo for any frame (stays in your browser, nothing is uploaded) */
 const input = document.getElementById("photo-input"); let target = null;
 function place(frame, file){
