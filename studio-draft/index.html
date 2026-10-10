@@ -85,11 +85,11 @@ header.top .wrap{display:flex;justify-content:space-between;align-items:center;g
 /* strip of facts */
 .facts{background:var(--ink);color:var(--cream)}
 .facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
-.facts div{padding:22px 18px 22px 0;display:flex;align-items:baseline;gap:10px;min-width:0}
-.facts div + div{padding-left:18px;border-left:1px solid #34413A}
+.facts .wrap>div{padding:22px 18px 22px 0;display:flex;align-items:baseline;gap:10px;min-width:0}
+.facts .wrap>div + div{padding-left:18px;border-left:1px solid #34413A}
 .facts b{font:850 34px/1 var(--sans);font-stretch:62%;color:var(--mustard)}
 .facts span{font-size:14.5px;color:#D8D2C2}
-@media (max-width:860px){.facts .wrap{grid-template-columns:1fr 1fr}.facts div:nth-child(3){padding-left:0;border-left:0}.facts div:nth-child(n+3){border-top:1px solid #34413A}}
+@media (max-width:860px){.facts .wrap{grid-template-columns:1fr 1fr}.facts .wrap>div:nth-child(3){padding-left:0;border-left:0}.facts .wrap>div:nth-child(n+3){border-top:1px solid #34413A}}
 
 /* places */
 .places{background:var(--green);color:var(--cream);padding-block:clamp(64px,9vw,112px)}
@@ -308,8 +308,8 @@ footer .credit{font:12px var(--mono)}
       <div class="sec-h"><p class="tag">How it works</p><h2>You see it <span class="ital">before</span> you decide</h2></div>
       <div class="sec-b">
         <ol class="steps">
-          <li><b>We build you a free preview</b><span>Your menu, hours, location and story, designed around your place. You get a private link.</span></li>
-          <li><b>You tell us what to change</b><span>Colours, photos, wording, anything. No obligation.</span></li>
+          <li><b>We build you a free preview</b><span>In your own logo, colours and style, with your menu, hours and location. It should look like you from the first glance. You get a private link.</span></li>
+          <li><b>We shape it together</b><span>A quick 1:1, on a call or at your place. Tell us what to add or change: your photos, catering, events, specials. No obligation.</span></li>
           <li><b>We go live within a week</b><span>On your own domain, like yourplace.com.au, and linked from your Google Maps listing.</span></li>
           <li><b>We keep it up to date</b><span>New dish, price change, holiday hours: send us a message and it's done within 48 hours.</span></li>
         </ol>
@@ -322,12 +322,12 @@ footer .credit{font:12px var(--mono)}
       <div class="sec-h"><p class="tag">What's included</p><h2>Everything a diner looks for</h2><p>And nothing they don't.</p></div>
       <div class="sec-b">
         <div class="incl">
+          <div><b>Your brand, not a template</b><span>Your logo, your colours, your look. Nobody else gets the same site.</span></div>
           <div><b>Your menu, properly set</b><span>Easy to read on a phone, with prices and dietary notes. Not a PDF.</span></div>
           <div><b>Open now, today's hours</b><span>Shown live, so nobody turns up to a closed door.</span></div>
           <div><b>Book, order, call, directions</b><span>One tap, linked to the tools you already use.</span></div>
           <div><b>Found on Google</b><span>Set up so Google understands your hours, address and cuisine.</span></div>
-          <div><b>Your domain, in your name</b><span>You own it, always.</span></div>
-          <div><b>Hosting and updates</b><span>Unlimited small changes, done for you.</span></div>
+                    <div><b>Domain, hosting and updates</b><span>Your domain in your name. Unlimited small changes, done for you.</span></div>
         </div>
       </div>
     </div>
