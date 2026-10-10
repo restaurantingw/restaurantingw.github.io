@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Lazy Frog · Beachside cafe, Bronte</title>
+<meta name="description" content="Lazy Frog, beachside cafe at 471 Bronte Rd, steps from Bronte Beach on the Bondi to Coogee coastal walk. Coffee from 6am daily, food 7am to 3pm.">
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Lexend:wght@300;400;500;600&display=swap">
+<!--
+  Direction "Pit stop on the walk": a beach cafe page built for people mid-walk on their phones.
+  Brand: logo.jpg from @lazyfrogbronte (profile picture). Frog green #2F8A2F as the primary, white + beach sand as grounds,
+  lily-pad green as the quiet secondary, a little sunny yellow only on the status dot.
+  Type: Bungee (blocky rounded-square caps, matching the feel of the "LAZY FROG" lettering, never used to fake the logo) + Lexend.
+  Open questions:
+  - Phone and email: none public. Ask owner.
+  - Closing time: Instagram says "Coffee from 6am daily | Food from 7am-3pm". Google lists Mon-Thu 6:30am-3:30pm, Fri-Sun 6:30am-4pm.
+    Which is right, and does coffee run past 3pm? (Open-now status below treats 3pm as the end of the day to be safe.)
+  - Delivery: which platforms (Uber Eats, DoorDash, Menulog)? Add an Order button with their link.
+  - Dietary marks (V / GF / VG) per dish: not on the listing. Ask owner.
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Lazy Frog","servesCuisine":["Cafe","Breakfast","Australian"],"priceRange":"$$",
+"address":{"@type":"PostalAddress","streetAddress":"471 Bronte Rd","addressLocality":"Bronte","addressRegion":"NSW","postalCode":"2024","addressCountry":"AU"},
+"sameAs":["https://www.instagram.com/lazyfrogbronte/"],
+"hasMenu":"#menu","acceptsReservations":false,
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"06:00","closes":"15:30"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday","Sunday"],"opens":"06:00","closes":"16:00"}]}
+</script>
+<style>
+:root{
+  --green:#2F8A2F; --green-d:#226A22; --pad:#DDEFD6; --sand:#F3EBDD; --sand-2:#EADFCB; --white:#FFFFFF;
+  --ink:#1F2A1F; --ink-2:#55604F; --rule:#D8CDB8; --sun:#F2C94C;
+  --disp:"Bungee","Arial Black",Impact,sans-serif;
+  --sans:"Lexend","Helvetica Neue",Arial,sans-serif;
+  --gut:clamp(16px,4vw,56px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--sand);color:var(--ink);font:300 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+:focus-visible{outline:2.5px solid var(--green);outline-offset:3px}
+img{display:block;max-width:100%}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:400}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+.label{font:500 12.5px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+.disp{font-family:var(--disp);letter-spacing:.01em;line-height:1.02;color:var(--green)}
+
+/* concept note */
+.preview{background:var(--green-d);color:#E6F1E2;font-size:13px;line-height:1.45;padding:9px var(--gut)}
+.preview b{color:#fff;font-weight:500}
+
+/* header: white, like the logo's own ground */
+header.site{position:sticky;top:0;z-index:10;background:var(--white);border-bottom:2px solid var(--green)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:block;height:56px;width:56px;flex:none}
+.brand img{height:100%;width:100%;object-fit:contain}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px;font-weight:400}
+.nav a{text-decoration:none}
+.nav a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:500 15px/1 var(--sans);padding:14px 20px;border:2px solid var(--green);border-radius:6px;text-decoration:none;cursor:pointer;background:transparent;color:var(--green);transition:background .15s,color .15s}
+.btn:hover{background:var(--green);color:#fff}
+.btn.solid{background:var(--green);color:#fff}
+.btn.solid:hover{background:var(--green-d);border-color:var(--green-d)}
+.btn.small{padding:10px 14px;font-size:14px}
+@media (max-width:760px){.nav .hide-m{display:none}}
+
+/* walk sign: Bondi - Bronte - Coogee */
+.walk{background:var(--green);color:#fff}
+.walk .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px;font:400 clamp(13px,1.6vw,16px)/1 var(--disp);letter-spacing:.04em}
+.walk .here{background:#fff;color:var(--green);padding:7px 12px 6px;border-radius:5px}
+.walk .side{opacity:.82;white-space:nowrap}
+.walk .line{flex:1;height:0;border-top:2px dashed rgba(255,255,255,.55);min-width:12px}
+
+/* hero */
+.hero{padding-block:clamp(28px,5vw,64px) clamp(40px,6vw,80px)}
+.hero-text{grid-column:1/span 6;display:flex;flex-direction:column;gap:22px;align-self:center}
+.hero h1{font-size:clamp(30px,5.6vw,74px)}
+.hero h1 span{display:block}
+.lede{font-size:18.5px;color:var(--ink-2);max-width:42ch}
+.status{display:flex;align-items:center;gap:14px;background:var(--white);border:2px solid var(--green);border-radius:8px;padding:14px 18px;max-width:440px}
+.status .dot{flex:none;width:14px;height:14px;border-radius:50%;background:#B9B19F}
+.status.open .dot{background:var(--sun);box-shadow:0 0 0 4px var(--pad)}
+.status strong{display:block;font-weight:600;font-size:17px;line-height:1.3}
+.status small{display:block;font-size:14px;color:var(--ink-2);line-height:1.4}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.hero-media{grid-column:8/span 5;position:relative}
+.hero-media .big{aspect-ratio:4/5;width:100%;object-fit:cover;border-radius:8px}
+.hero-media .small{position:absolute;left:-18%;bottom:-36px;width:46%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;border:6px solid var(--sand)}
+.hero-media figcaption{font-size:13px;color:var(--ink-2);margin-top:12px;text-align:right}
+@media (max-width:900px){
+  .hero-text,.hero-media{grid-column:1/-1}
+  .hero-media{order:-1;margin-bottom:56px}
+  .hero-media .big{aspect-ratio:5/4}
+  .hero-media .small{left:auto;right:12px;bottom:-40px;width:38%}
+  .hero-media figcaption{text-align:left;margin-top:10px;padding-right:44%}
+}
+
+/* the basics, one line each */
+.facts{border-block:2px solid var(--green);background:var(--white)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.facts .cell{padding:18px 18px 18px 0;display:flex;flex-direction:column;gap:4px;min-width:0}
+.facts .cell + .cell{padding-left:18px;border-left:1px solid var(--pad)}
+.facts .val{font-size:16px;font-weight:400}
+@media (max-width:900px){.facts .wrap{grid-template-columns:1fr 1fr}.facts .cell:nth-child(3){padding-left:0;border-left:0}.facts .cell:nth-child(n+3){border-top:1px solid var(--pad)}}
+
+section{padding-block:clamp(72px,10vw,120px)}
+h2{font-size:clamp(28px,3.4vw,44px)}
+.sec-head{display:flex;flex-direction:column;gap:14px}
+
+/* mood */
+.mood .quote{grid-column:1/span 7;font-size:clamp(30px,4vw,54px)}
+.mood .copy{grid-column:1/span 6;margin-top:clamp(28px,4vw,44px);display:flex;flex-direction:column;gap:16px;max-width:58ch}
+.mood .copy p:first-child{font-size:20px;line-height:1.5;font-weight:400}
+.mood .photo{grid-column:8/span 5;grid-row:1/span 2;align-self:end;margin:0}
+.mood .photo img{aspect-ratio:4/5;width:100%;object-fit:cover;border-radius:8px}
+.cap{font-size:13px;color:var(--ink-2);margin-top:10px}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:16px 28px;margin-top:8px;padding-top:20px;border-top:1px solid var(--rule)}
+.notes dt{font-weight:500;color:var(--green);font-size:15px}
+.notes dd{margin:2px 0 0;font-size:15px;color:var(--ink-2)}
+@media (max-width:900px){.mood .quote,.mood .copy,.mood .photo{grid-column:1/-1;grid-row:auto}.mood .photo{margin-top:36px}}
+@media (max-width:480px){.notes{grid-template-columns:1fr}}
+
+/* menu */
+.menu{background:var(--white);border-top:2px solid var(--green)}
+.menu-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 40px;margin-bottom:28px}
+.menu-top .key{font-size:15px;color:var(--ink-2);max-width:46ch}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;position:sticky;top:70px;z-index:5;background:var(--white);padding-block:12px;border-bottom:2px solid var(--green);margin-bottom:12px}
+.tab{font:400 clamp(13px,1.5vw,16px)/1 var(--disp);letter-spacing:.03em;padding:12px 16px 11px;border:2px solid var(--green);border-radius:6px;background:var(--white);color:var(--green);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--green);color:#fff}
+.tab:hover{background:var(--pad)}
+.tab[aria-selected="true"]:hover{background:var(--green-d)}
+.panel{columns:2 400px;column-gap:clamp(32px,5vw,80px);padding-top:16px}
+.panel[hidden]{display:none}
+.course{break-inside:avoid;margin-bottom:clamp(32px,4vw,52px)}
+.course h3{font:600 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--green);padding:10px 0;border-bottom:2px solid var(--green)}
+.item{padding:13px 0;border-bottom:1px solid var(--pad)}
+.item .row{display:flex;align-items:baseline;gap:10px}
+.item .name{font-weight:500;font-size:17px}
+.item .lead{flex:1;border-bottom:1.5px dotted #A9C9A0;transform:translateY(-4px);min-width:12px}
+.item .price{font-weight:500;font-variant-numeric:tabular-nums}
+.item .desc{font-size:15px;color:var(--ink-2);margin-top:2px;max-width:52ch}
+.item.sig{background:var(--pad);margin-inline:-12px;padding-inline:12px;border-radius:6px;border-bottom-color:transparent}
+.item .tag{font:400 11px/1 var(--disp);letter-spacing:.04em;color:var(--green);margin-left:8px;white-space:nowrap}
+.menu-foot{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:center;border-top:2px solid var(--green);padding-top:20px;font-size:14px;color:var(--ink-2)}
+
+/* plates band */
+.plates{padding-block:clamp(56px,8vw,96px)}
+.plates .grid{row-gap:28px}
+.plates figure{margin:0}
+.plates img{width:100%;object-fit:cover;border-radius:8px}
+.p1{grid-column:1/span 5}.p1 img{aspect-ratio:4/5}
+.p2{grid-column:6/span 4;margin-top:clamp(0px,8vw,96px)}.p2 img{aspect-ratio:1/1}
+.p3{grid-column:10/span 3}.p3 img{aspect-ratio:3/4}
+.p4{grid-column:6/span 7}.p4 img{aspect-ratio:3/2}
+.plates .say{grid-column:1/span 5;align-self:center;font-size:clamp(24px,2.8vw,36px)}
+@media (max-width:760px){.p1,.p2,.p3,.p4,.plates .say{grid-column:1/-1;margin-top:0}.p2,.p3{grid-column:span 6}.p2 img,.p3 img{aspect-ratio:4/5}.p4{order:5}}
+
+/* find us */
+.find{background:var(--green);color:#fff}
+.find .label{color:var(--pad)}
+.find h2{color:#fff}
+.find .head{grid-column:1/span 5;display:flex;flex-direction:column;gap:18px}
+.find .head p{color:#E3EFDD;max-width:40ch}
+.find .photo{grid-column:7/span 6;margin:0}
+.find .photo img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:8px}
+.find .photo .cap{color:#CFE3C8}
+.steps{grid-column:1/-1;margin-top:clamp(40px,6vw,72px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid rgba(255,255,255,.4)}
+.steps > div{padding:22px 22px 0 0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.steps > div + div{padding-left:22px;border-left:1px solid rgba(255,255,255,.3)}
+.steps h3{font:400 18px/1.1 var(--disp);color:#fff;letter-spacing:.02em}
+.steps p{font-size:16px;color:#E3EFDD}
+.find .btn{border-color:#fff;color:#fff;align-self:flex-start}
+.find .btn:hover{background:#fff;color:var(--green)}
+.find .btn.solid{background:#fff;color:var(--green)}
+.find .btn.solid:hover{background:var(--pad)}
+@media (max-width:900px){.find .head,.find .photo{grid-column:1/-1}.find .photo{margin-top:32px}.steps{grid-template-columns:1fr}.steps > div + div{padding-left:0;border-left:0;border-top:1px solid rgba(255,255,255,.3);margin-top:22px}}
+
+footer{background:var(--white);padding-block:40px 120px;font-size:14px;color:var(--ink-2);border-top:2px solid var(--green)}
+footer .wrap{display:grid;grid-template-columns:auto 1fr;gap:20px 32px;align-items:center}
+footer .flogo{width:96px;height:96px;object-fit:contain}
+footer .fine{display:flex;flex-direction:column;gap:6px}
+footer .fine strong{color:var(--ink);font-weight:500}
+@media (max-width:480px){footer .wrap{grid-template-columns:1fr}}
+
+/* mobile action bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:1fr 1.3fr 1fr;border-top:2px solid var(--green);background:var(--white);padding-bottom:env(safe-area-inset-bottom,0px)}
+.mbar a{padding:16px 6px;text-align:center;text-decoration:none;font-weight:500;font-size:15px;color:var(--green)}
+.mbar a + a{border-left:1px solid var(--pad)}
+.mbar a.solid{background:var(--green);color:#fff;border-left:0}
+@media (max-width:760px){.mbar{display:grid}}
+
+@media (prefers-reduced-motion:no-preference){img{animation:fade .5s ease both}@keyframes fade{from{opacity:0}}}
+</style>
+</head>
+<body>
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of Lazy Frog. Preview photos are licensed stock; logo, colours and details are taken from your Instagram, menu and Google listing.</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="logo.jpg" alt="Lazy Frog logo" width="56" height="56"></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-m" href="#menu">Menu</a>
+      <a class="hide-m" href="#find">Find us</a>
+      <a class="btn small solid" href="https://www.instagram.com/lazyfrogbronte/" target="_blank" rel="noopener">@lazyfrogbronte</a>
+    </nav>
+  </div>
+</header>
+
+<div class="walk" aria-label="On the Bondi to Coogee coastal walk">
+  <div class="wrap"><span class="side">&larr; Bondi</span><span class="line" aria-hidden="true"></span><span class="here">Bronte</span><span class="line" aria-hidden="true"></span><span class="side">Coogee &rarr;</span></div>
+</div>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap grid">
+      <div class="hero-text">
+        <p class="label">Beachside cafe · 471 Bronte Rd</p>
+        <h1 class="disp"><span>Coffee</span><span>from 6.</span><span>Food 7 till 3.</span></h1>
+        <p class="lede">Steps from Bronte Beach, right on the coastal walk. Grab a seat outside with the beach in view, take it with you, or have it delivered.</p>
+        <div class="status" id="status" role="status">
+          <span class="dot" aria-hidden="true"></span>
+          <span><strong id="status-main">Coffee from 6am daily</strong><small id="status-sub">Food from 7am to 3pm</small></span>
+        </div>
+        <div class="actions">
+          <a class="btn solid" href="#menu">See the menu</a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Lazy+Frog+471+Bronte+Rd+Bronte+NSW+2024" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+      <figure class="hero-media" style="margin:0">
+        <img class="big" src="https://images.pexels.com/photos/3879297/pexels-photo-3879297.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1300"
+          srcset="https://images.pexels.com/photos/3879297/pexels-photo-3879297.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600 600w, https://images.pexels.com/photos/3879297/pexels-photo-3879297.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900 900w, https://images.pexels.com/photos/3879297/pexels-photo-3879297.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1300 1300w, https://images.pexels.com/photos/3879297/pexels-photo-3879297.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800 1800w"
+          sizes="(max-width:900px) 100vw, 42vw" alt="Clear blue water and rocky shore at Bronte Beach" loading="eager" fetchpriority="high">
+        <img class="small" src="https://images.pexels.com/photos/33216070/pexels-photo-33216070.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600"
+          srcset="https://images.pexels.com/photos/33216070/pexels-photo-33216070.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600 600w, https://images.pexels.com/photos/33216070/pexels-photo-33216070.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900 900w"
+          sizes="(max-width:900px) 38vw, 20vw" alt="A flat white with latte art on a wooden table" loading="eager">
+        <figcaption>Bronte Beach, a short walk from our door.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="facts" aria-label="Quick info">
+    <div class="wrap">
+      <div class="cell"><span class="label">Coffee</span><span class="val">From 6am, every day</span></div>
+      <div class="cell"><span class="label">Kitchen</span><span class="val">7am to 3pm</span></div>
+      <div class="cell"><span class="label">Find us</span><span class="val"><a href="https://www.google.com/maps/search/?api=1&amp;query=Lazy+Frog+471+Bronte+Rd+Bronte+NSW+2024" target="_blank" rel="noopener">471 Bronte Rd, Bronte</a></span></div>
+      <div class="cell"><span class="label">Eat</span><span class="val">Outside, takeaway or delivery</span></div>
+    </div>
+  </div>
+
+  <section class="mood" aria-labelledby="mood-h">
+    <div class="wrap grid">
+      <h2 class="disp quote" id="mood-h">Today's good mood is sponsored by coffee.</h2>
+      <div class="copy">
+        <p>A yawn is a silent scream of coffee, so we start pouring at 6am. Early swimmers and walkers, this one's for you.</p>
+        <p>The kitchen opens at 7 with eggs every way, big breakfasts and acai bowls, then rolls into burgers, salads, pasta and fish and chips until 3. Say hi to the Frog's Family on your way in.</p>
+        <dl class="notes">
+          <div><dt>Allergies</dt><dd>Tell us when you order and we'll look after you.</dd></div>
+          <div><dt>Gluten-free</dt><dd>We have gluten-free bread. Just ask.</dd></div>
+        </dl>
+      </div>
+      <figure class="photo">
+        <img src="https://images.pexels.com/photos/13927333/pexels-photo-13927333.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900"
+          srcset="https://images.pexels.com/photos/13927333/pexels-photo-13927333.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600 600w, https://images.pexels.com/photos/13927333/pexels-photo-13927333.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900 900w, https://images.pexels.com/photos/13927333/pexels-photo-13927333.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1300 1300w"
+          sizes="(max-width:900px) 100vw, 40vw" alt="Poached eggs with smoked salmon and hollandaise on a ceramic plate" loading="lazy">
+        <figcaption class="cap">Smoked salmon, poached eggs, hollandaise. Our Egg Montreal is next level.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="menu-top">
+        <div class="sec-head">
+          <p class="label">The menu</p>
+          <h2 class="disp" id="menu-h">Eggs, burgers &amp; a basket of chips</h2>
+        </div>
+        <p class="key">Prices in AUD. Highlighted dishes are the ones we're proudest of. Gluten-free bread on request; let us know about allergies.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Menu sections" id="tabs"></div>
+      <div id="panels"></div>
+      <div class="menu-foot">
+        <span>Kitchen open 7am to 3pm, every day. Coffee from 6am.</span>
+        <a class="btn small" href="https://www.instagram.com/lazyfrogbronte/" target="_blank" rel="noopener">Follow us on Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="plates" aria-label="From the kitchen">
+    <div class="wrap grid">
+      <figure class="p1">
+        <img src="https://images.pexels.com/photos/15640157/pexels-photo-15640157.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900"
+          srcset="https://images.pexels.com/photos/15640157/pexels-photo-15640157.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600 600w, https://images.pexels.com/photos/15640157/pexels-photo-15640157.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900 900w, https://images.pexels.com/photos/15640157/pexels-photo-15640157.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1300 1300w"
+          sizes="(max-width:760px) 100vw, 40vw" alt="A breakfast plate of bacon, poached eggs, mushrooms and grilled tomato" loading="lazy">
+        <figcaption class="cap">Lazy Frog's Big Breakfast, $27.</figcaption>
+      </figure>
+      <figure class="p2">
+        <img src="https://images.pexels.com/photos/5150303/pexels-photo-5150303.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900"
+          srcset="https://images.pexels.com/photos/5150303/pexels-photo-5150303.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600 600w, https://images.pexels.com/photos/5150303/pexels-photo-5150303.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900 900w"
+          sizes="(max-width:760px) 50vw, 32vw" alt="Acai bowl topped with banana, coconut and granola on a wooden surface" loading="lazy">
+        <figcaption class="cap">Acai bowl, spiced granola, banana, coconut. $20.</figcaption>
+      </figure>
+      <figure class="p3">
+        <img src="https://images.pexels.com/photos/7479006/pexels-photo-7479006.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600"
+          srcset="https://images.pexels.com/photos/7479006/pexels-photo-7479006.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600 600w, https://images.pexels.com/photos/7479006/pexels-photo-7479006.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900 900w"
+          sizes="(max-width:760px) 50vw, 24vw" alt="Beef burger with fresh toppings and fries on a wooden tray" loading="lazy">
+        <figcaption class="cap">Angus beef burger, $22.</figcaption>
+      </figure>
+      <p class="disp say">Breakfast for the walk there. Lunch for the walk back.</p>
+      <figure class="p4">
+        <img src="https://images.pexels.com/photos/7823946/pexels-photo-7823946.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1300"
+          srcset="https://images.pexels.com/photos/7823946/pexels-photo-7823946.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900 900w, https://images.pexels.com/photos/7823946/pexels-photo-7823946.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1300 1300w, https://images.pexels.com/photos/7823946/pexels-photo-7823946.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800 1800w"
+          sizes="(max-width:760px) 100vw, 58vw" alt="Bronte Beach from the rocks under a cloudy sky" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="find" id="find" aria-labelledby="find-h">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label">Find us</p>
+        <h2 class="disp" id="find-h">Steps from Bronte Beach</h2>
+        <p>471 Bronte Rd, Bronte NSW 2024. Coffee from 6am daily, food from 7am to 3pm.</p>
+        <div class="actions">
+          <a class="btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=Lazy+Frog+471+Bronte+Rd+Bronte+NSW+2024" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a class="btn" href="https://www.instagram.com/lazyfrogbronte/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <figure class="photo">
+        <img src="https://images.pexels.com/photos/8521887/pexels-photo-8521887.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1300"
+          srcset="https://images.pexels.com/photos/8521887/pexels-photo-8521887.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900 900w, https://images.pexels.com/photos/8521887/pexels-photo-8521887.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1300 1300w, https://images.pexels.com/photos/8521887/pexels-photo-8521887.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800 1800w"
+          sizes="(max-width:900px) 100vw, 50vw" alt="Aerial view of the Bronte rock pool and the coastal road" loading="lazy">
+        <figcaption class="cap">Bronte rock pool and the coastal walk.</figcaption>
+      </figure>
+      <div class="steps">
+        <div><h3>On the walk</h3><p>Coming from Bondi or Coogee on foot, stop at Bronte. We're on Bronte Road, a short stroll up from the sand.</p></div>
+        <div><h3>Sit outside</h3><p>Outdoor tables with the beach in view. Pull up a chair and stay a while.</p></div>
+        <div><h3>Take it away</h3><p>Order at the counter and take your coffee to the beach, or have it delivered.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="flogo" src="logo.jpg" alt="Lazy Frog logo" width="96" height="96" loading="lazy">
+    <div class="fine">
+      <strong>Lazy Frog · 471 Bronte Rd, Bronte NSW 2024 · <a href="https://www.instagram.com/lazyfrogbronte/" target="_blank" rel="noopener">@lazyfrogbronte</a></strong>
+      <span>Coffee from 6am daily · Food from 7am to 3pm</span>
+      <span>Concept by Restauranting · Photos via Pexels: Kate Trifo, thiagomobile, Augustine, camerosinb, Roman Odintsov, Engin Akyurt, golimpio, Brayden Stanford</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="#menu">Menu</a>
+  <a class="solid" href="https://www.google.com/maps/search/?api=1&amp;query=Lazy+Frog+471+Bronte+Rd+Bronte+NSW+2024" target="_blank" rel="noopener">Directions</a>
+  <a href="https://www.instagram.com/lazyfrogbronte/" target="_blank" rel="noopener">Instagram</a>
+</nav>
+
+<script>
+/* Menu from the Google listing (AUD). [name, price, description, signature?] */
+const MENU = [
+  {id:"breakfast", tab:"Breakfast", courses:[
+    {h:"Eggs & plates", items:[
+      ["Egg Montreal",24,"Scrambled eggs, smoked salmon, butter croissant, hollandaise",1],
+      ["Lazy Frog's Big Breakfast",27,"Eggs your way, bacon, avocado, chorizo, hash brown, grilled tomato, mushroom, spinach, sourdough",1],
+      ["Eggs Benedict",24.5,"Spinach, bacon, ham or smoked salmon, on muffin or sourdough, hollandaise"],
+      ["Salsa Eggs",23,"Bacon, poached eggs, avocado, tomato salsa, sourdough"],
+      ["Salmon Salsa",24,""],
+      ["Ham Omelette",23,""],
+      ["Veggie Omelette",24,""],
+      ["Eggs on Toast",14,""],
+      ["Bronte Healthy Bowl",26,"Halloumi, avocado, roast tomato, mushroom, spinach, poached egg, quinoa"],
+      ["Corn & Zucchini Fritters",21,"Baby spinach, tomato capsicum relish, tomato avocado salsa"],
+      ["Crostini Avocado",20,"Smashed avo, rocket, cherry tomato, radish, feta, soy linseed"]]},
+    {h:"Quick & sweet", items:[
+      ["Bacon & Egg Roll",14,"Brioche, fried egg, bacon, tomato chutney"],
+      ["Breakfast Wrap",21,"Scrambled egg, spinach, avocado, roast tomato, chorizo, hash brown, aioli"],
+      ["Ham & Cheese Croissant",12,""],
+      ["Toast & Spread",9,""],
+      ["Acai Bowl",20,"Acai, spiced granola, banana, seasonal fruit, honey, coconut"],
+      ["Waffle & Ice Cream",20,""]]}]},
+  {id:"lunch", tab:"Lunch", courses:[
+    {h:"Burgers", items:[
+      ["Angus Beef Burger",22,"Lettuce, caramelised onion, tomato, cheese, beetroot, milk bun"],
+      ["Schnitzel Burger",20.5,"Buttermilk schnitzel, rocket, tomato, cheese, chilli mayo, brioche"],
+      ["Chicken Portuguese",21.5,"Grilled chicken, cheese, avocado, mayo, Portuguese sauce"],
+      ["Veggie Burger",20.5,"Mushroom, halloumi, capsicum, spinach, tomato relish"]]},
+    {h:"Wraps & sandwiches", items:[
+      ["Steak Sandwich",23,""],
+      ["Chicken Peri Peri",22,""],
+      ["Crispy Chicken",22,""],
+      ["Veggie Deluxe",22,"Grilled eggplant, halloumi, roast pumpkin, rocket, pesto, aioli"]]},
+    {h:"Salads", items:[
+      ["Bronte Seafood Salad",30,"Prawn, calamari, avocado, lemon vinaigrette"],
+      ["Ortolana",25,"Roast pumpkin, beetroot, spinach, feta, candied walnuts, honey mustard"],
+      ["Halloumi & Couscous",25,""],
+      ["Chicken Salad",27,"Chicken, bacon, avocado, pine nuts"]]},
+    {h:"To share", items:[
+      ["Basket of Chips",13,"With aioli"],
+      ["Sweet Potato Fries",15,"With aioli"],
+      ["Potato Wedges",15,"Sour cream, chilli"],
+      ["Salmon & Avo Bruschetta",22,""]]}]},
+  {id:"mains", tab:"Mains & pasta", courses:[
+    {h:"Mains", items:[
+      ["Beer Battered Flathead & Chips",30,""],
+      ["Atlantic Salmon",34,"180g, crispy skin, roast veg"],
+      ["Schnitzel Parmigiana",33,""],
+      ["Chicken & Prawn",33,""]]},
+    {h:"Pasta", items:[
+      ["Spaghetti Bolognese",27,""],
+      ["Spaghetti Marinara",32,""],
+      ["Spaghetti Gamberi",31,""],
+      ["Penne Boscaiola",27,""]]},
+    {h:"Little frogs", items:[
+      ["Nuggets & Chips",15,""],
+      ["Spaghetti Bolognese",16,""],
+      ["Fish & Chips",16,""]]}]}
+];
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const money = p => Number.isInteger(p) ? String(p) : p.toFixed(2);
+const tabs = document.getElementById("tabs"), panels = document.getElementById("panels");
+MENU.forEach((m, i) => {
+  const b = el("button", "tab", m.tab);
+  b.type = "button"; b.id = "tab-" + m.id; b.setAttribute("role","tab");
+  b.setAttribute("aria-controls","panel-" + m.id); b.setAttribute("aria-selected", i === 0 ? "true" : "false");
+  b.tabIndex = i === 0 ? 0 : -1;
+  tabs.append(b);
+  const p = el("div","panel"); p.id = "panel-" + m.id; p.setAttribute("role","tabpanel"); p.setAttribute("aria-labelledby", b.id); p.hidden = i !== 0;
+  for (const c of m.courses) {
+    const box = el("div","course"); box.append(el("h3", null, c.h));
+    for (const [n, price, d, sig] of c.items) {
+      const it = el("div", "item" + (sig ? " sig" : "")), row = el("div","row"), name = el("span","name",n);
+      if (sig) name.append(el("span","tag","House fave"));
+      row.append(name, el("span","lead"), el("span","price",money(price)));
+      it.append(row); if (d) it.append(el("p","desc",d));
+      box.append(it);
+    }
+    p.append(box);
+  }
+  panels.append(p);
+});
+const allTabs = [...tabs.querySelectorAll(".tab")];
+function select(b){
+  allTabs.forEach(t => { const on = t === b; t.setAttribute("aria-selected", on); t.tabIndex = on ? 0 : -1; document.getElementById(t.getAttribute("aria-controls")).hidden = !on; });
+}
+allTabs.forEach((b, i) => {
+  b.addEventListener("click", () => select(b));
+  b.addEventListener("keydown", e => {
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    const n = allTabs[(i + (e.key === "ArrowRight" ? 1 : allTabs.length - 1)) % allTabs.length];
+    select(n); n.focus();
+  });
+});
+
+/* Open-now in Sydney time. Coffee from 6:00, kitchen 7:00 to 15:00 every day (Instagram wording). */
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+function sydneyNow(){
+  const p = new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => (p.find(x => x.type === k) || {}).value;
+  return {day: DAYS.indexOf(g("weekday")), mins: +g("hour") * 60 + +g("minute")};
+}
+function tick(){
+  const {mins} = sydneyNow(); if (isNaN(mins)) return;
+  const box = document.getElementById("status"), main = document.getElementById("status-main"), sub = document.getElementById("status-sub");
+  let open = false;
+  if (mins < 360) { main.textContent = "Closed right now"; sub.textContent = "Coffee from 6am, food from 7am"; }
+  else if (mins < 420) { open = true; main.textContent = "Open now. Coffee's on"; sub.textContent = "Kitchen opens at 7am"; }
+  else if (mins < 900) { open = true; main.textContent = "Open now. Kitchen till 3pm"; sub.textContent = "Coffee from 6am daily"; }
+  else { main.textContent = "Kitchen's closed for today"; sub.textContent = "Back tomorrow. Coffee from 6am"; }
+  box.classList.toggle("open", open);
+}
+tick(); setInterval(tick, 60000);
+</script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Bakery on Glenayr · Sourdough &amp; coffee, North Bondi</title>
+<meta name="description" content="Artisan sourdough bakery and coffee on the corner of Glenayr Ave, North Bondi. Open every day 6:30am to 2pm. Challah on Fridays.">
+<meta name="theme-color" content="#F4F2EE">
+<!--
+  Concept preview by Restauranting.
+  Direction "Painted wall": the whitewashed brick corner with the stacked, hand-painted THE / BAK / ERY sign,
+  the grey-and-white striped awning and the mint-green stools out front. Archetype: practical utility,
+  a neighbourhood daily ("what's on the counter today").
+  Type: Anton (sign-painter condensed capitals, wordmark + headings) + Libre Franklin (text).
+  Caveat is used ONLY for the tiny handwritten "on Glenayr" tag, because their wall sign has it in handwriting.
+  logo file: ask owner (their Instagram avatar is a photo of the shopfront, so the name is set as a wordmark echoing the painted sign).
+  Open questions for the owner:
+  - Prices (none shown).
+  - Public phone / email? (none found; contact is Instagram only)
+  - Bread schedule by day (only Friday challah is confirmed) and what time pizza slices come out.
+  - Pre-orders and wholesale?
+  - Opening year (article suggests early May 2023; not stated on the page).
+  - Address: Instagram bio says 100 Glenayr Ave; Google lists 98 Glenayr Ave. Page uses 100 as the bakery does.
+  - Mortadella: sandwich or focaccia?
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:ital,wght@0,400;0,500;0,700;1,400&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Bakery","name":"The Bakery on Glenayr","description":"Artisan sourdough bakery and coffee in North Bondi.","servesCuisine":["Bakery","Sourdough","Pastries","Coffee"],
+"address":{"@type":"PostalAddress","streetAddress":"100 Glenayr Ave","addressLocality":"North Bondi","addressRegion":"NSW","postalCode":"2026","addressCountry":"AU"},
+"sameAs":["https://www.instagram.com/thebakeryonglenayr/"],
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:30","closes":"14:00"}],
+"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Outdoor seating","value":true},{"@type":"LocationFeatureSpecification","name":"Dog friendly","value":true}],
+"hasMenu":{"@type":"Menu","name":"The counter","hasMenuSection":[
+{"@type":"MenuSection","name":"Bread","hasMenuItem":[{"@type":"MenuItem","name":"Sourdough loaves"},{"@type":"MenuItem","name":"Challah","description":"Fridays"}]},
+{"@type":"MenuSection","name":"Pastries & sweet things","hasMenuItem":[{"@type":"MenuItem","name":"Croissant"},{"@type":"MenuItem","name":"Chocolate & almond croissant"},{"@type":"MenuItem","name":"Monkey Cardamom Pull Apart"},{"@type":"MenuItem","name":"T-Birkes","description":"Danish poppy seed pastry"},{"@type":"MenuItem","name":"Choc chip cookie"},{"@type":"MenuItem","name":"Carrot & walnut cake"}]},
+{"@type":"MenuSection","name":"Lunch","hasMenuItem":[{"@type":"MenuItem","name":"Sliced potato pizza"},{"@type":"MenuItem","name":"Mortadella sandwich"},{"@type":"MenuItem","name":"Shakshuka"}]},
+{"@type":"MenuSection","name":"Coffee","hasMenuItem":[{"@type":"MenuItem","name":"Coffee"}]}]}}
+</script>
+<style>
+:root{
+  --wash:#F4F2EE; --wash-2:#EAE7E1; --ink:#161616; --ink-2:#55595E; --grey:#8C9196; --rule:#D3D0CA; --green:#7FB27A; --green-d:#4E8549;
+  --sign:"Anton","Impact","Arial Narrow",sans-serif;
+  --text:"Libre Franklin","Helvetica Neue",Arial,sans-serif;
+  --hand:"Caveat","Bradley Hand",cursive;
+  --gut:clamp(16px,4vw,56px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--wash);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:400}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+.label{font:700 12.5px/1.2 var(--text);letter-spacing:.12em;text-transform:uppercase}
+
+/* concept note */
+.preview{background:var(--ink);color:#CFCCC6;font-size:13px;line-height:1.45;padding:9px var(--gut)}
+.preview b{color:#fff;font-weight:500}
+
+/* awning: grey-and-white stripe, as over the shop door */
+.awning{height:22px;background:repeating-linear-gradient(90deg,var(--grey) 0 28px,#fff 28px 56px);border-bottom:1px solid var(--rule)}
+.awning.thin{height:12px}
+
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:var(--wash);border-bottom:1px solid var(--rule)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+.mark{display:flex;align-items:baseline;gap:7px;text-decoration:none;white-space:nowrap}
+.mark .caps{font:400 24px/1 var(--sign);letter-spacing:.02em;text-transform:uppercase}
+.mark .on{font:600 19px/1 var(--hand);color:var(--ink-2)}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px}
+.nav a{text-decoration:none}
+.nav a:hover{text-decoration:underline}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:500 15px/1 var(--text);padding:14px 20px;border:1.5px solid var(--ink);border-radius:2px;text-decoration:none;background:transparent;color:var(--ink);transition:background .15s,color .15s;cursor:pointer}
+.btn:hover{background:var(--ink);color:var(--wash)}
+.btn.solid{background:var(--ink);color:var(--wash)}
+.btn.solid:hover{background:#000}
+.btn.small{padding:10px 14px;font-size:14px}
+@media (max-width:820px){.nav .hide-m{display:none}}
+@media (max-width:420px){.nav .btn{display:none}}
+
+/* hero: the painted wall */
+.hero{padding-block:clamp(32px,5vw,72px) clamp(40px,6vw,80px)}
+.wall{grid-column:1/span 5;display:flex;flex-direction:column;gap:26px;align-self:center}
+.sign{position:relative;display:inline-block;align-self:flex-start;font:400 clamp(92px,11vw,156px)/.86 var(--sign);text-transform:uppercase;letter-spacing:.005em;margin:0}
+.sign span{display:block}
+.sign .on{position:absolute;right:-.15em;bottom:.42em;transform:translateX(100%) rotate(-4deg);font:600 clamp(24px,2.4vw,32px)/1 var(--hand);text-transform:none;letter-spacing:0;color:var(--ink);white-space:nowrap}
+.lede{font-size:19px;max-width:34ch}
+.status{display:flex;align-items:center;gap:10px;font-weight:500;font-size:16px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--grey);flex:none}
+.is-open .dot{background:var(--green)}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.hero-media{grid-column:7/span 6}
+@media (max-width:900px){
+  .wall,.hero-media{grid-column:1/-1}
+  .hero-media{margin-top:36px}
+  .sign .on{position:static;transform:rotate(-4deg);display:inline-block;margin-top:10px}
+}
+
+/* photo frames */
+.ph{position:relative;margin:0;background:var(--wash-2);overflow:hidden}
+.ph::before{content:"";display:block;padding-top:var(--r,125%)}
+.ph > img{position:absolute;inset:0}
+.cap{font-size:13px;color:var(--ink-2);margin-top:10px}
+
+/* section heads */
+section{padding-block:clamp(64px,9vw,120px)}
+h2{font:400 clamp(40px,5vw,64px)/.95 var(--sign);text-transform:uppercase;letter-spacing:.01em}
+.sec-head{grid-column:1/span 4;display:flex;flex-direction:column;gap:14px;align-self:start}
+.sec-head p{color:var(--ink-2);max-width:34ch}
+@media (max-width:900px){.sec-head{grid-column:1/-1;margin-bottom:28px}}
+
+/* today on the counter */
+.today{background:#fff;border-bottom:1px solid var(--rule)}
+.board{grid-column:5/span 8}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border:1.5px solid var(--ink);border-radius:2px}
+.days button{font:400 19px/1 var(--sign);text-transform:uppercase;letter-spacing:.04em;background:transparent;color:var(--ink);border:0;padding:14px 0;cursor:pointer;min-width:0}
+.days button + button{border-left:1px solid var(--rule)}
+.days button[aria-pressed="true"]{background:var(--green)}
+.days button:hover:not([aria-pressed="true"]){background:var(--wash)}
+.slate{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);margin-top:32px}
+.slate h3{font:700 12.5px/1.2 var(--text);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);padding-bottom:10px;border-bottom:1.5px solid var(--ink)}
+.slate ul{list-style:none;margin:0;padding:0}
+.slate li{padding:13px 0;border-bottom:1px solid var(--rule);font-size:18px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.slate li small{font-size:13.5px;color:var(--ink-2);text-align:right}
+.slate li.special{font-weight:700}
+.slate li.special small{color:var(--green-d);font-weight:500}
+.slate .notes p{padding:13px 0;border-bottom:1px solid var(--rule);font-size:16px}
+.slate .notes p strong{font-weight:500}
+@media (max-width:900px){.board{grid-column:1/-1}}
+@media (max-width:640px){.slate{grid-template-columns:1fr}.days button{font-size:16px;padding:13px 0}}
+
+/* the counter (menu) */
+.counter-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px 40px;margin-bottom:clamp(36px,5vw,60px)}
+.counter-head p{color:var(--ink-2);max-width:46ch;font-size:16px}
+.shelves{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);row-gap:clamp(40px,5vw,64px)}
+.shelf{grid-column:span 6;min-width:0}
+.shelf.wide{grid-column:span 6}
+.shelf h3{font:400 30px/1 var(--sign);text-transform:uppercase;letter-spacing:.02em;padding-bottom:12px;border-bottom:1.5px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.shelf h3 small{font:400 14px/1 var(--text);letter-spacing:0;text-transform:none;color:var(--ink-2)}
+.item{padding:14px 0;border-bottom:1px solid var(--rule)}
+.item .name{font-weight:700;font-size:17.5px}
+.item .tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--green);padding:3px 7px 2px;border-radius:2px;margin-left:8px;vertical-align:2px}
+.item .desc{font-size:15px;color:var(--ink-2);margin-top:2px}
+@media (max-width:760px){.shelf,.shelf.wide{grid-column:1/-1}}
+
+/* photo run */
+.run{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);row-gap:24px;margin-top:clamp(56px,8vw,104px)}
+.run .p1{grid-column:1/span 5}
+.run .p2{grid-column:6/span 3;margin-top:clamp(0px,8vw,110px)}
+.run .p3{grid-column:9/span 4}
+.run .p4{grid-column:2/span 4}
+.run .p5{grid-column:7/span 6}
+@media (max-width:760px){.run .p1,.run .p3,.run .p5{grid-column:1/-1;margin-top:0}.run .p2{grid-column:1/span 6;margin-top:0}.run .p4{grid-column:7/span 6}}
+
+/* who we are */
+.us{border-top:1px solid var(--rule)}
+.us .copy{grid-column:6/span 6;display:flex;flex-direction:column;gap:18px;font-size:18.5px;max-width:60ch}
+.us .copy p:first-child{font-size:clamp(22px,2.3vw,28px);line-height:1.35;letter-spacing:-.01em}
+.us .sig{font:600 26px/1 var(--hand)}
+.us .photo{margin-top:22px;max-width:340px}
+@media (max-width:900px){.us .copy{grid-column:1/-1}.us .photo{max-width:72%}}
+
+/* find us */
+.find{background:var(--ink);color:#E9E6E0}
+.find h2{color:#fff}
+.find .sec-head p{color:#B4B1AB}
+.find .body{grid-column:5/span 8;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px)}
+table.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.hours caption{text-align:left;margin-bottom:10px;color:#B4B1AB}
+table.hours th,table.hours td{text-align:left;font-weight:400;padding:10px 0;border-bottom:1px solid #3A3A3A;font-size:16px}
+table.hours td{text-align:right}
+table.hours tr.on th,table.hours tr.on td{color:#fff;font-weight:700}
+table.hours tr.on th::after{content:"today";font:500 11px/1 var(--text);letter-spacing:.08em;text-transform:uppercase;background:var(--green);color:var(--ink);padding:3px 6px 2px;border-radius:2px;margin-left:10px;vertical-align:2px}
+.where dl{margin:0;display:grid;gap:18px}
+.where dt{color:#B4B1AB;margin-bottom:3px}
+.where dd{margin:0;font-size:16.5px}
+.where .actions{margin-top:26px}
+.find .btn{border-color:#E9E6E0;color:#E9E6E0}
+.find .btn:hover{background:#E9E6E0;color:var(--ink)}
+.find .btn.solid{background:var(--green);border-color:var(--green);color:var(--ink)}
+.find .btn.solid:hover{background:#93C28E;border-color:#93C28E}
+@media (max-width:900px){.find .body{grid-column:1/-1;grid-template-columns:1fr}}
+
+footer{padding-block:36px 110px;font-size:14px;color:var(--ink-2)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between;align-items:baseline}
+footer p{max-width:70ch}
+
+/* mobile action bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:1fr 1fr;background:var(--wash);border-top:1.5px solid var(--ink);padding-bottom:env(safe-area-inset-bottom,0px)}
+.mbar a{padding:16px 8px;text-align:center;text-decoration:none;font-weight:500;font-size:15px}
+.mbar a + a{background:var(--ink);color:var(--wash)}
+@media (max-width:820px){.mbar{display:grid}}
+
+@media (prefers-reduced-motion:no-preference){.ph img{animation:fade .5s ease both}@keyframes fade{from{opacity:0}}}
+</style>
+</head>
+<body>
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of The Bakery on Glenayr. Preview photos are licensed stock; name, colours and details are taken from your Instagram, shopfront and Google listing.</div>
+
+<header class="site">
+  <div class="wrap">
+    <!-- logo file: ask owner. Wordmark echoes the painted wall sign. -->
+    <a class="mark" href="#top" aria-label="The Bakery on Glenayr, home"><span class="caps">The Bakery</span><span class="on">on Glenayr</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-m" href="#today">Today</a>
+      <a class="hide-m" href="#counter">The counter</a>
+      <a class="hide-m" href="#find">Find us</a>
+      <a class="btn small" href="https://www.instagram.com/thebakeryonglenayr/" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+</header>
+<div class="awning" aria-hidden="true"></div>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap grid">
+      <div class="wall">
+        <h1 class="sign" aria-label="The Bakery on Glenayr"><span>The</span><span>Bak</span><span>ery</span><span class="on" aria-hidden="true">on Glenayr</span></h1>
+        <p class="lede">Sourdough, croissants and coffee on the corner of Glenayr Ave, North Bondi. Open every day from 6:30am to 2pm.</p>
+        <p class="status" id="status"><span class="dot" aria-hidden="true"></span><span id="status-text">Open every day, 6:30am–2pm</span></p>
+        <div class="actions">
+          <a class="btn solid" href="#today">What's on today</a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=The+Bakery+on+Glenayr+100+Glenayr+Ave+North+Bondi+NSW+2026" rel="noopener">Directions</a>
+        </div>
+      </div>
+      <figure class="ph hero-media" data-shot="hero" style="--r:120%"></figure>
+    </div>
+  </div>
+
+  <section class="today" id="today" aria-labelledby="today-h">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <p class="label">Day by day</p>
+        <h2 id="today-h">On the counter</h2>
+        <p>Bread and pastries from first thing, pizza slices at lunch, coffee all morning. Fridays we bake challah for our community.</p>
+      </div>
+      <div class="board">
+        <!-- Bread schedule by day: only Friday challah confirmed. Ask owner for the rest and the time pizza comes out. -->
+        <div class="days" role="group" aria-label="Choose a day" id="days"></div>
+        <div class="slate">
+          <div>
+            <h3 id="slate-title">Every day</h3>
+            <ul id="slate-list"></ul>
+          </div>
+          <div class="notes">
+            <h3>Good to know</h3>
+            <p id="slate-hours"><strong>6:30am – 2pm</strong></p>
+            <p>Grab a seat outside on the corner.</p>
+            <p>Dogs welcome. There's dog parking out front.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="counter" id="counter" aria-labelledby="counter-h">
+    <div class="wrap">
+      <div class="counter-head">
+        <div>
+          <p class="label" style="margin-bottom:14px">What we bake</p>
+          <h2 id="counter-h">The counter</h2>
+        </div>
+        <p>Small scale, with ingredients we love. What's out changes through the day, so come early for the best pick.</p>
+      </div>
+      <div class="shelves" id="shelves"></div>
+
+      <div class="run">
+        <figure class="ph p1" data-shot="shelves" style="--r:125%"></figure>
+        <figure class="ph p2" data-shot="croissants" style="--r:133%"></figure>
+        <figure class="ph p3" data-shot="crumb" style="--r:100%"></figure>
+        <figure class="ph p4" data-shot="cookies" style="--r:100%"></figure>
+        <figure class="ph p5" data-shot="pizza" style="--r:66.67%"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="us" id="us" aria-labelledby="us-h">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <p class="label">Who we are</p>
+        <h2 id="us-h">A local bakery</h2>
+        <figure class="ph photo" data-shot="coffee" style="--r:125%"></figure>
+      </div>
+      <div class="copy">
+        <p>We wanted to run a great local bakery: small, close to the people we bake for, using ingredients we love.</p>
+        <p>We're Michael Klausen and Elise Cook. Michael was a co-owner of Brasserie Bread before we opened our own little shop on Glenayr Ave.</p>
+        <p>We love croissants, bread, coffee and our amazing community. That's still the whole idea.</p>
+        <p class="sig">Michael &amp; Elise</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="awning thin" aria-hidden="true"></div>
+  <section class="find" id="find" aria-labelledby="find-h">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <p class="label" style="color:var(--green)">Find us</p>
+        <h2 id="find-h">The corner of Glenayr</h2>
+        <p>Look for the white brick wall with the big black letters and the green stools out front.</p>
+      </div>
+      <div class="body">
+        <table class="hours" id="hours">
+          <caption class="label">Hours</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>6:30am – 2pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>6:30am – 2pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>6:30am – 2pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>6:30am – 2pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>6:30am – 2pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>6:30am – 2pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>6:30am – 2pm</td></tr>
+          </tbody>
+        </table>
+        <div class="where">
+          <dl>
+            <!-- Google lists 98 Glenayr Ave; the bakery's Instagram says 100. Using 100. -->
+            <div><dt>Address</dt><dd>100 Glenayr Ave<br>North Bondi NSW 2026</dd></div>
+            <div><dt>Say hello</dt><dd><a href="https://www.instagram.com/thebakeryonglenayr/" rel="noopener">@thebakeryonglenayr</a> on Instagram</dd></div>
+            <div><dt>Out front</dt><dd>Outdoor seating and dog parking</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=The+Bakery+on+Glenayr+100+Glenayr+Ave+North+Bondi+NSW+2026" rel="noopener">Get directions</a>
+            <a class="btn" href="https://www.instagram.com/thebakeryonglenayr/" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="The Bakery on Glenayr, back to top"><span class="caps">The Bakery</span><span class="on">on Glenayr</span></a>
+    <p>100 Glenayr Ave, North Bondi · Every day 6:30am–2pm · <a href="https://www.instagram.com/thebakeryonglenayr/" rel="noopener">@thebakeryonglenayr</a></p>
+    <p id="credits">Photos via Pexels.</p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=The+Bakery+on+Glenayr+100+Glenayr+Ave+North+Bondi+NSW+2026" rel="noopener">Directions</a>
+  <a href="https://www.instagram.com/thebakeryonglenayr/" rel="noopener">Instagram</a>
+</nav>
+
+<script>
+/* ---------- the counter, from structured data (no prices until the owner confirms them) ---------- */
+const COUNTER = [
+  {name:"Bread", note:"", items:[
+    ["Sourdough loaves",""],
+    ["Challah","For our community.","Fridays"]]},
+  {name:"Pastries", note:"From first thing", items:[
+    ["Croissant",""],
+    ["Chocolate & almond croissant",""],
+    ["Monkey Cardamom Pull Apart",""],
+    ["T-Birkes","Danish poppy seed pastry."]]},
+  {name:"Lunch", note:"Pizza is up", items:[
+    ["Sliced potato pizza","By the slice."],
+    ["Mortadella sandwich",""], /* sandwich or focaccia? ask owner */
+    ["Shakshuka",""]]},
+  {name:"Sweet things & coffee", note:"", items:[
+    ["Choc chip cookies",""],
+    ["Carrot & walnut cake",""],
+    ["Coffee","Take it to a stool on the corner."]]}
+];
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const shelves = document.getElementById("shelves");
+for (const s of COUNTER) {
+  const box = el("div", "shelf");
+  const h = el("h3", null, s.name); if (s.note) h.append(el("small", null, s.note)); box.append(h);
+  for (const [n, d, tag] of s.items) {
+    const it = el("div", "item"), nm = el("p", "name", n);
+    if (tag) nm.append(el("span", "tag", tag));
+    it.append(nm); if (d) it.append(el("p", "desc", d));
+    box.append(it);
+  }
+  shelves.append(box);
+}
+
+/* ---------- Sydney time, open-now and the day board ---------- */
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const OPEN = 390, CLOSE = 840; /* 6:30am to 2pm, every day */
+const fmt = m => { const h = Math.floor(m/60), mm = m%60, h12 = ((h+11)%12)+1; return h12 + (mm ? ":" + String(mm).padStart(2,"0") : "") + (h >= 12 ? "pm" : "am"); };
+function sydney(){
+  const p = new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => (p.find(x => x.type === k) || {}).value;
+  return {day: DAYS.indexOf(g("weekday")), mins: (+g("hour") % 24) * 60 + +g("minute")};
+}
+const BASE = [["Sourdough loaves","from 6:30am"],["Croissants & pastries","from 6:30am"],["Pizza slices","at lunch"],["Coffee","till 2pm"]];
+const daysEl = document.getElementById("days");
+const ORDER = [1,2,3,4,5,6,0];
+let today = -1, picked = -1;
+for (const d of ORDER) {
+  const b = el("button", null, DAYS[d].slice(0,3));
+  b.type = "button"; b.dataset.day = d; b.setAttribute("aria-pressed","false"); b.setAttribute("aria-label", DAYS[d]);
+  b.addEventListener("click", () => show(d));
+  daysEl.append(b);
+}
+function show(d){
+  picked = d;
+  daysEl.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.day === d)));
+  document.getElementById("slate-title").textContent = d === today ? "Today, " + DAYS[d] : DAYS[d];
+  const list = document.getElementById("slate-list"); list.textContent = "";
+  const rows = BASE.slice();
+  if (d === 5) rows.splice(1, 0, ["Challah","Fridays only","special"]);
+  for (const [n, s, cls] of rows) { const li = el("li", cls || null, n); li.append(el("small", null, s)); list.append(li); }
+  document.getElementById("slate-hours").innerHTML = "<strong>" + DAYS[d] + ": 6:30am – 2pm</strong>";
+}
+function tick(){
+  const {day, mins} = sydney(); if (day < 0) return;
+  const first = today === -1; today = day;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("on", +r.dataset.day === day));
+  const st = document.getElementById("status"), tx = document.getElementById("status-text");
+  const open = mins >= OPEN && mins < CLOSE;
+  st.classList.toggle("is-open", open);
+  if (open) tx.textContent = "Open now, until 2pm";
+  else if (mins < OPEN) tx.textContent = "Closed · we open at " + fmt(OPEN) + " today";
+  else tx.textContent = "Closed · back tomorrow at " + fmt(OPEN);
+  if (first) show(day); else if (picked === day) show(day);
+}
+tick(); setInterval(tick, 60000);
+
+/* ---------- licensed stock photos (Pexels licence), served from Pexels' CDN ---------- */
+const PHOTOS = {
+  hero:       {id:30350350, alt:"Golden-brown sourdough loaves cooling in a bakery kitchen", by:"Anthony Rahayel", eager:true, sizes:"(max-width:900px) 100vw, 50vw"},
+  shelves:    {id:36169353, alt:"Crusty loaves stacked on bakery shelves", by:"Ervasa", sizes:"(max-width:760px) 100vw, 42vw"},
+  croissants: {id:13425794, alt:"Freshly baked croissants in morning sunlight", by:"ffawdyy", sizes:"(max-width:760px) 50vw, 25vw"},
+  crumb:      {id:6608542,  alt:"Sliced sourdough showing an open, airy crumb", by:"Geraud Pfeiffer", sizes:"(max-width:760px) 100vw, 33vw"},
+  cookies:    {id:20558711, alt:"Chocolate chip cookies fresh from the oven on a tray", by:"bigparadox", sizes:"(max-width:760px) 50vw, 33vw"},
+  pizza:      {id:6213716,  alt:"Potato and cheese pizza on a marble bench", by:"vovkapanda", sizes:"(max-width:760px) 100vw, 50vw"},
+  coffee:     {id:33216070, alt:"A flat white with latte art on a wooden table", by:"thiagomobile", sizes:"(max-width:900px) 75vw, 33vw"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  if (p.eager) img.fetchPriority = "high";
+  img.sizes = p.sizes;
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 1300);
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ") + ".";
+</script>
+</body>
+</html>

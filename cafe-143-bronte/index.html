@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Cafe 143 · Coffee at 143 Macpherson St, Bronte</title>
+<meta name="description" content="Cafe 143 makes coffee at 143 Macpherson St, Bronte. Open every day 6am to 3pm. Mecca coffee, Iggy's pastries, toasties, bagels and a hotbox.">
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<!--
+  Direction "House numbers": taken straight from the avatar, three white number stickers on a brushed-steel post against a dusty-pink wall.
+  Pink = the wall (hero + visit), steel = the post (info band, menu ground), white tiles = the stickers (menu panels), ink = the numerals.
+  Display: Sofia Sans Condensed (road-sign / DIN-like condensed numerals). Text: Source Serif 4 (quiet, a little bookish, for the dry voice).
+  Open questions for the owner:
+  - Phone / email: none public. Action bar uses Directions + Instagram only.
+  - Wednesday market: what is it exactly (produce stall? pop-up? times)? Copy kept vague on purpose.
+  - Roasters: Mecca named in Sprudge (Jan 2024). Any guest roasters / current single origin to list?
+  - Opening date: "end of 2023" per Sprudge; confirm month.
+  - Logo file: only the Instagram avatar (300px). Ask for a higher-res photo of the post.
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Cafe 143","servesCuisine":["Coffee","Cafe","Breakfast"],"priceRange":"$",
+"address":{"@type":"PostalAddress","streetAddress":"143 Macpherson St","addressLocality":"Bronte","addressRegion":"NSW","postalCode":"2024","addressCountry":"AU"},
+"sameAs":["https://www.instagram.com/cafeonefourthree/"],
+"hasMenu":{"@type":"Menu","name":"Cafe 143 menu","url":"#coffee","hasMenuSection":[
+{"@type":"MenuSection","name":"Hot","hasMenuItem":[{"@type":"MenuItem","name":"Flat White","offers":{"@type":"Offer","price":"5.50","priceCurrency":"AUD"}},{"@type":"MenuItem","name":"Single Origin Espresso","offers":{"@type":"Offer","price":"5.00","priceCurrency":"AUD"}}]},
+{"@type":"MenuSection","name":"Cold","hasMenuItem":[{"@type":"MenuItem","name":"Honey Shakerato","offers":{"@type":"Offer","price":"5.50","priceCurrency":"AUD"}},{"@type":"MenuItem","name":"Big Diesel","offers":{"@type":"Offer","price":"6.50","priceCurrency":"AUD"}}]},
+{"@type":"MenuSection","name":"Kitchen","hasMenuItem":[{"@type":"MenuItem","name":"Breakfast Bagel","offers":{"@type":"Offer","price":"19.00","priceCurrency":"AUD"}},{"@type":"MenuItem","name":"Spicy BLAT","offers":{"@type":"Offer","price":"20.50","priceCurrency":"AUD"}}]}]},
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:00","closes":"15:00"}]}
+</script>
+<style>
+:root{
+  --wall:#D8A7A3; --wall-2:#CF9A96; --ink:#141414; --ink-2:#4A4544; --steel:#B9BCBE; --steel-2:#A6AAAD; --paper:#F7F3F0; --tile:#FFFFFF; --rule:#DCD5D1;
+  --cond:"Sofia Sans Condensed","Arial Narrow","Helvetica Neue",sans-serif;
+  --serif:"Source Serif 4",Georgia,serif;
+  --gut:clamp(16px,4vw,56px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:68px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--serif);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+p,h1,h2,h3{margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+.label{font:700 13px/1.2 var(--cond);letter-spacing:.14em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--cond);font-weight:700;letter-spacing:-.005em;text-wrap:balance}
+h1{font-size:clamp(38px,5.4vw,64px);line-height:1}
+h2{font-size:clamp(30px,3.6vw,42px);line-height:1.04}
+
+.preview{background:var(--ink);color:#D6D0CC;font:400 13px/1.45 var(--serif);padding:9px var(--gut)}
+.preview b{color:#fff;font-weight:600}
+
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--ink)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.brand img{width:40px;height:40px;border-radius:4px;flex:none}
+.brand span{font:800 22px/1 var(--cond);letter-spacing:.02em;text-transform:uppercase;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:26px;font:600 15px/1 var(--cond);letter-spacing:.08em;text-transform:uppercase}
+.nav a{text-decoration:none}
+.nav a:hover{text-decoration:underline}
+@media (max-width:760px){.nav .hide-m{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 15px/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;padding:15px 20px;border:1.5px solid var(--ink);border-radius:2px;text-decoration:none;background:transparent;color:var(--ink);transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.solid:hover{background:transparent;color:var(--ink)}
+.btn.small{padding:10px 14px;font-size:13px}
+
+/* photos */
+.ph{position:relative;margin:0;background:var(--steel);overflow:hidden}
+.ph::before{content:"";display:block;padding-top:var(--r,125%)}
+.ph>img{position:absolute;inset:0}
+figcaption{font:400 14px/1.45 var(--serif);color:var(--ink-2);margin-top:10px;font-style:italic}
+
+/* hero: the pink wall */
+.hero{background:var(--wall);padding-block:clamp(32px,6vw,80px) 0}
+.hero-text{grid-column:1/span 6;display:flex;flex-direction:column;gap:22px;padding-bottom:clamp(32px,6vw,80px);align-self:center}
+.hero-text .lede{font-size:19px;max-width:40ch}
+.hero-media{grid-column:8/span 5;align-self:end}
+.hero-media .ph{--r:120%}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.status{font:600 16px/1.3 var(--cond);letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--ink-2);flex:none}
+.is-open .dot{background:#1F7A4A;box-shadow:0 0 0 3px rgba(31,122,74,.18)}
+@media (max-width:900px){.hero-text,.hero-media{grid-column:1/-1}.hero-media{order:-1;margin-bottom:28px}.hero-media .ph{--r:85%}.hero-text{padding-bottom:40px}}
+
+/* steel band: the post */
+.post{background:var(--steel);border-block:1px solid var(--ink)}
+.post .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.post .cell{padding:18px 18px 18px 0;display:flex;flex-direction:column;gap:5px;min-width:0}
+.post .cell+.cell{padding-left:18px;border-left:1px solid var(--steel-2)}
+.post .label{color:var(--ink-2)}
+.post .val{font:600 19px/1.2 var(--cond);letter-spacing:.02em}
+@media (max-width:820px){.post .wrap{grid-template-columns:1fr 1fr}.post .cell:nth-child(3){padding-left:0;border-left:0}.post .cell:nth-child(n+3){border-top:1px solid var(--steel-2)}}
+
+section{padding-block:clamp(72px,10vw,128px)}
+.sec-head{display:flex;flex-direction:column;gap:14px}
+.sec-head .label{color:var(--ink-2)}
+
+/* story */
+.story .sec-head{grid-column:1/span 4}
+.story .copy{grid-column:6/span 6;display:flex;flex-direction:column;gap:18px;font-size:19px;max-width:60ch}
+.story .copy p:first-child{font-size:clamp(21px,2.1vw,25px);line-height:1.45}
+.story .mark{grid-column:1/span 4;margin-top:36px;display:flex;align-items:center;gap:16px}
+.story .mark img{width:112px;height:112px;border-radius:4px;flex:none}
+.story .mark p{font:italic 400 15px/1.45 var(--serif);color:var(--ink-2);max-width:22ch}
+.story-photo{grid-column:6/span 7;margin-top:clamp(48px,6vw,80px)}
+.story-photo .ph{--r:66.6%}
+@media (max-width:900px){.story .sec-head,.story .copy,.story .mark,.story-photo{grid-column:1/-1}.story .copy{margin-top:24px}.story .mark{order:3}}
+
+/* coffee */
+.coffee{border-top:1px solid var(--ink)}
+.coffee .sec-head{grid-column:1/span 4;align-self:start;position:sticky;top:96px}
+.coffee .sec-head p{color:var(--ink-2);max-width:32ch}
+.coffee .lists{grid-column:5/span 8;display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4vw,64px)}
+@media (max-width:900px){.coffee .sec-head{grid-column:1/-1;position:static}.coffee .lists{grid-column:1/-1;margin-top:36px}}
+@media (max-width:640px){.coffee .lists{grid-template-columns:1fr}}
+.list h3{font-size:15px;letter-spacing:.16em;text-transform:uppercase;padding-bottom:10px;border-bottom:2px solid var(--ink);display:flex;justify-content:space-between}
+.list h3 small{font:inherit;color:var(--ink-2);letter-spacing:.1em}
+.item{padding:12px 0;border-bottom:1px solid var(--rule)}
+.row{display:flex;align-items:baseline;gap:10px;min-width:0}
+.name{font:600 19px/1.2 var(--cond);letter-spacing:.01em;min-width:0}
+.lead{flex:1;border-bottom:1px dotted #9E9896;transform:translateY(-4px);min-width:10px}
+.price{font:600 18px/1 var(--cond);font-variant-numeric:tabular-nums;white-space:nowrap}
+.desc{font-size:15px;line-height:1.45;color:var(--ink-2);margin-top:3px;max-width:46ch}
+.add{font-size:14px;line-height:1.4;color:var(--ink-2);margin-top:2px;font-style:italic}
+.tag{font:700 11px/1 var(--cond);letter-spacing:.12em;border:1px solid currentColor;border-radius:2px;padding:2px 4px 1px;margin-left:8px;vertical-align:2px}
+
+/* photo pair */
+.pair{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);row-gap:28px;padding-bottom:clamp(72px,10vw,128px)}
+.pair .x{grid-column:1/span 5;margin:0}
+.pair .y{grid-column:7/span 6;margin:clamp(0px,8vw,110px) 0 0}
+.pair .x .ph{--r:125%}.pair .y .ph{--r:75%}
+@media (max-width:760px){.pair .x,.pair .y{grid-column:1/-1;margin-top:0}}
+
+/* food: white stickers on the steel post */
+.food{background:var(--steel);border-top:1px solid var(--ink)}
+.food-top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);margin-bottom:clamp(32px,5vw,56px)}
+.food-top .sec-head{grid-column:1/span 5}
+.food-top .note{grid-column:7/span 6;align-self:end;color:var(--ink);max-width:48ch}
+@media (max-width:900px){.food-top .sec-head,.food-top .note{grid-column:1/-1}.food-top .note{margin-top:16px}}
+.tiles{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2vw,28px);align-items:start}
+.tile{background:var(--tile);border-radius:3px;padding:clamp(20px,2.4vw,32px);min-width:0;box-shadow:0 1px 0 rgba(0,0,0,.18)}
+.tile.k{grid-column:1/span 7;grid-row:span 2}
+.tile.t{grid-column:8/span 5}
+.tile.h{grid-column:8/span 5}
+.tile.c{grid-column:1/-1}
+.tile.c .items{columns:2 300px;column-gap:clamp(32px,5vw,72px)}
+.tile.c .item{break-inside:avoid}
+.tile .no{display:flex;align-items:baseline;gap:14px;padding-bottom:12px;border-bottom:2px solid var(--ink);margin-bottom:4px}
+.tile .no b{font:800 34px/1 var(--cond);font-variant-numeric:tabular-nums}
+.tile .no span{font:700 15px/1 var(--cond);letter-spacing:.16em;text-transform:uppercase}
+.tile .no em{margin-left:auto;font:italic 400 14px/1.3 var(--serif);color:var(--ink-2);text-align:right}
+@media (max-width:900px){.tile.k,.tile.t,.tile.h,.tile.c{grid-column:1/-1;grid-row:auto}}
+.food-foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;font-size:14px;color:var(--ink)}
+
+/* visit: back to the wall */
+.visit{background:var(--wall);border-top:1px solid var(--ink)}
+.visit .num{grid-column:1/span 5;font:800 clamp(112px,20vw,260px)/.82 var(--cond);letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin:0}
+.visit .num small{display:block;font:700 clamp(20px,2.4vw,28px)/1.1 var(--cond);letter-spacing:.06em;text-transform:uppercase;margin-top:18px}
+.visit .body{grid-column:7/span 6;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,48px)}
+@media (max-width:900px){.visit .num,.visit .body{grid-column:1/-1}.visit .body{margin-top:40px}}
+@media (max-width:560px){.visit .body{grid-template-columns:1fr}}
+table.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.hours caption{text-align:left;margin-bottom:10px;color:var(--ink-2)}
+table.hours th,table.hours td{text-align:left;font:500 17px/1.3 var(--cond);letter-spacing:.03em;padding:9px 0;border-bottom:1px solid var(--wall-2)}
+table.hours td{text-align:right}
+table.hours tr.today th,table.hours tr.today td{font-weight:800}
+table.hours tr.today th::after{content:" · today";font-weight:500;color:var(--ink-2)}
+.where{display:flex;flex-direction:column;gap:20px}
+.where dl{margin:0;display:grid;gap:16px}
+.where dt{color:var(--ink-2);margin-bottom:3px}
+.where dd{margin:0;font-size:16px;line-height:1.5}
+
+footer{background:var(--ink);color:#CFC9C5;padding-block:36px 110px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:space-between;align-items:center}
+footer .f-brand{display:flex;align-items:center;gap:12px;color:#fff}
+footer .f-brand img{width:48px;height:48px;border-radius:4px}
+footer .f-brand span{font:800 20px/1 var(--cond);letter-spacing:.04em;text-transform:uppercase}
+footer a{color:#fff}
+@media (min-width:821px){footer{padding-bottom:40px}}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);background:var(--paper);padding-bottom:env(safe-area-inset-bottom,0px)}
+.mbar a{padding:16px 8px;text-align:center;text-decoration:none;font:700 15px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase}
+.mbar a.solid{background:var(--ink);color:var(--paper)}
+@media (max-width:820px){.mbar{display:grid}}
+
+@media (prefers-reduced-motion:no-preference){.ph img{animation:fade .5s ease both}@keyframes fade{from{opacity:0}}}
+</style>
+</head>
+<body>
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of Cafe 143. Preview photos are licensed stock; logo, colours and details are taken from your Instagram, menu and Google listing.</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="logo.jpg" alt="Cafe 143 logo" width="40" height="40"><span>Cafe 143</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-m" href="#coffee">Coffee</a>
+      <a class="hide-m" href="#food">Food</a>
+      <a href="#visit">Hours</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap grid">
+      <div class="hero-text">
+        <p class="label">Specialty coffee · Bronte</p>
+        <h1>Making coffee at 143 Macpherson St, Bronte.</h1>
+        <p class="lede">Every day from 6am to 3pm. Coffee from Mecca, pastries from Iggy's, toasties and bagels from our kitchen. Dogs welcome.</p>
+        <p class="status" id="status"><span class="dot"></span><span id="status-text">Open daily 6am to 3pm</span></p>
+        <div class="actions">
+          <a class="btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+143+143+Macpherson+St+Bronte+NSW+2024" target="_blank" rel="noopener">Directions</a>
+          <a class="btn" href="#coffee">The coffee list</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <figure class="ph" data-shot="hero"></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="post" aria-label="Quick info">
+    <div class="wrap">
+      <div class="cell"><span class="label">Hours</span><span class="val">Daily, 6am – 3pm</span></div>
+      <div class="cell"><span class="label">Find us</span><span class="val"><a href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+143+143+Macpherson+St+Bronte+NSW+2024" target="_blank" rel="noopener">143 Macpherson St</a></span></div>
+      <div class="cell"><span class="label">Next door</span><span class="val">Bar Buci</span></div>
+      <div class="cell"><span class="label">Wednesdays</span><span class="val">Market day</span></div>
+    </div>
+  </div>
+
+  <section class="story" id="story">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <p class="label">Who's on the machine</p>
+        <h2>From Los Angeles to Macpherson Street.</h2>
+      </div>
+      <div class="copy">
+        <p>Charles Babinski was US Barista Champion and runner-up at the World Barista Championship. He co-founded Go Get Em Tiger in Los Angeles and helped open Intelligentsia in Venice.</p>
+        <p>Then he moved to Bronte. At the end of 2023 we opened at number 143, next door to Bar Buci, to make coffee for the street.</p>
+        <p>The espresso comes from Mecca Coffee Roasters. The croissants and rolls come from Iggy's. The jam, the granola, the vanilla syrup, the juice and most of the jokes on the menu we make ourselves.</p>
+        <p>On weekends there's a line. It moves fast: we come down it and take your order on the way.</p>
+      </div>
+      <div class="mark">
+        <img src="logo.jpg" alt="Cafe 143 logo: the numbers 143 stuck on a steel post" width="112" height="112" loading="lazy">
+        <p>Look for the numbers on the post.</p>
+      </div>
+      <figure class="story-photo" style="margin:0">
+        <div class="ph" data-shot="pour"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="coffee" id="coffee" aria-labelledby="coffee-h">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <p class="label">Drinks</p>
+        <h2 id="coffee-h">Coffee, and the things that aren't.</h2>
+        <p>Espresso by Mecca, with a single origin on as well. If you want it cold and quick, the Shakerato is the one.</p>
+      </div>
+      <div class="lists" id="drinks"></div>
+    </div>
+  </section>
+
+  <div class="wrap pair" aria-label="Photos">
+    <figure class="x"><div class="ph" data-shot="iced"></div></figure>
+    <figure class="y"><div class="ph" data-shot="bronte"></div><figcaption>Bronte, a short walk downhill.</figcaption></figure>
+  </div>
+
+  <section class="food" id="food" aria-labelledby="food-h">
+    <div class="wrap">
+      <div class="food-top">
+        <div class="sec-head">
+          <p class="label">Food</p>
+          <h2 id="food-h">Kitchen, toasties, hotbox and the cabinet.</h2>
+        </div>
+        <p class="note">The kitchen runs until we close. Soup and quiche change daily. Muffin flavours change too, so check the cabinet.</p>
+      </div>
+      <div class="tiles" id="tiles"></div>
+      <div class="food-foot"><span>Prices in AUD.</span><span><b>GF</b> gluten free</span></div>
+    </div>
+  </section>
+
+  <div class="wrap pair" aria-label="Photos" style="padding-top:clamp(72px,10vw,128px)">
+    <figure class="x"><div class="ph" data-shot="croissant"></div><figcaption>Iggy's croissants, plain or chocolate.</figcaption></figure>
+    <figure class="y"><div class="ph" data-shot="bagel"></div><figcaption>The smoked salmon bagel, by the half.</figcaption></figure>
+  </div>
+
+  <section class="visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap grid">
+      <p class="num" aria-hidden="true">143<small>Macpherson St, Bronte</small></p>
+      <div class="body">
+        <table class="hours" id="hours">
+          <caption class="label">Hours</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>6am – 3pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>6am – 3pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>6am – 3pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>6am – 3pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>6am – 3pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>6am – 3pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>6am – 3pm</td></tr>
+          </tbody>
+        </table>
+        <div class="where">
+          <h2 id="visit-h" style="font-size:clamp(26px,2.6vw,32px)">Come by.</h2>
+          <dl>
+            <div><dt class="label">Address</dt><dd>143 Macpherson St<br>Bronte NSW 2024</dd></div>
+            <div><dt class="label">Next door</dt><dd>Bar Buci.</dd></div>
+            <div><dt class="label">Wednesdays</dt><dd>Market day. What's on goes up on our Instagram.</dd></div>
+            <div><dt class="label">Dogs</dt><dd>Welcome.</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn small solid" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+143+143+Macpherson+St+Bronte+NSW+2024" target="_blank" rel="noopener">Google Maps</a>
+            <a class="btn small" href="https://www.instagram.com/cafeonefourthree/" target="_blank" rel="noopener">@cafeonefourthree</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="f-brand"><img src="logo.jpg" alt="Cafe 143 logo" width="48" height="48" loading="lazy"><span>Cafe 143</span></span>
+    <span>143 Macpherson St, Bronte · Daily 6am – 3pm · <a href="https://www.instagram.com/cafeonefourthree/" target="_blank" rel="noopener">Instagram</a></span>
+    <span>Concept by Restauranting · <span id="credits"></span></span>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+143+143+Macpherson+St+Bronte+NSW+2024" target="_blank" rel="noopener">Directions</a>
+  <a class="solid" href="https://www.instagram.com/cafeonefourthree/" target="_blank" rel="noopener">Instagram</a>
+</nav>
+
+<script>
+/* Menu from the Google listing (AUD). [name, price, description, add-on line, tag] */
+const DRINKS = [
+  {title:"Hot", items:[
+    ["Batch Brew",4.5],
+    ["Espresso or Long Black",4.5],
+    ["Single Origin Espresso",5],
+    ["Flat White",5.5],
+    ["Chai Latte",5.5],
+    ["Hot Chocolate",5.5,"Valrhona ganache."],
+    ["Mocha",6.5,"Valrhona ganache."],
+    ["Vanilla Latte",6,"House burnt-sugar vanilla syrup."],
+    ["Turmeric Latte",6.5,"Almond macadamia milk, ginger, honey."]]},
+  {title:"Cold", items:[
+    ["Honey Shakerato",5.5,"Espresso shaken with ice and honey."],
+    ["Big Diesel",6.5,"Double single origin, shaken with ice and honey."],
+    ["Chiller",6,"Espresso and almond macadamia milk, shaken."],
+    ["Iced Long Black",5],
+    ["Iced Latte",6],
+    ["Cold Brew",5.5],
+    ["Iced Matcha Latte",7,"Almond macadamia milk, honey."],
+    ["Iced Chocolate",6],
+    ["Iced Berry Mocha",7.5],
+    ["Orange Juice",5,"Squeezed by us."],
+    ["Grapefruit Juice",6.5,"Also squeezed by us."],
+    ["Sparkling Lemonade",6,"Also also squeezed by us."],
+    ["Citrus Mint Soda",7],
+    ["Turmeric Orange Soda",7],
+    ["Lemon Berry Soda",7],
+    ["Hibiscus Mint Iced Tea",5.5],
+    ["Iced Tea Lemonade",6.5]]}
+];
+const FOOD = [
+  {cls:"k", no:"01", title:"Kitchen", note:"Until 3pm", items:[
+    ["Ricotta Toast",9.5,"Sourdough, ricotta, house-made jam."],
+    ["Avocado Toast",12,"Sourdough, white beans, avocado, pickled shallots, seeds.","Add Meredith goat's cheese 2.50"],
+    ["Granola Bowl",16,"House maple cinnamon granola, Greek yoghurt, fruit.","Coconut yoghurt +2"],
+    ["Breakfast Bagel",19,"Bacon, egg, cheddar, tomato jam, mayo."],
+    ["Smoked Salmon Bagel, half",9.5,"Cream cheese, red onion, capers, dill."],
+    ["Spicy BLAT",20.5,"Hot sauce, mayo, bacon, lettuce, avocado, tomato, toasted sourdough."],
+    ["Mixed Leaf Salad",15,"Roast pumpkin, avocado, Meredith goat's cheese, seeds, pickled shallots, vinaigrette, yoghurt, sumac."],
+    ["Soup of the Day",16,"With toast.","Upgrade to a cheese toastie +8"],
+    ["Quiche of the Day",9,null,"With side salad 15"],
+    ["Chicken Salad Baguette",16,"Poached chicken, turmeric pickled veg, mayo, herbs."]]},
+  {cls:"t", no:"02", title:"Toasties", items:[
+    ["Tuna Melt",15,"Gruyère, herbs, jalapeño."],
+    ["Ham & Cheese",15,"Gruyère, cornichons, dijon."],
+    ["Pastrami",16,"Gruyère, zucchini pickles, sauerkraut."],
+    ["Roasted Pumpkin",15,"Herb pesto, Meredith goat's cheese, radicchio."]]},
+  {cls:"h", no:"03", title:"Hotbox", note:"Grab and go", items:[
+    ["Veggie Quiche",9],
+    ["Bacon Quiche",9],
+    ["Spanakopita",12,"Spinach, halloumi, feta, herbs.","Add tzatziki 1"],
+    ["Sausage Roll",12,"Beef and Guinness."]]},
+  {cls:"c", no:"04", title:"Cabinet", note:"Pastries from Iggy's", items:[
+    ["Iggy's Rolls",9.5,"Ham, mustard, cornichon, gruyère, or salami, red pesto, pickles, manchego."],
+    ["Iggy's Plain Croissant",6.5],
+    ["Iggy's Chocolate Croissant",7.5],
+    ["Coconut Chia Pudding",12],
+    ["Polenta Buttermilk Muffin",6.5,"Flavours change daily."],
+    ["Almond Muffin",6.5,null,null,"GF"],
+    ["Banana Bread",6.5],
+    ["Carrot Loaf",7.5],
+    ["Honey & Cardamom Teacake",5.5],
+    ["Brown Butter Choc Chip Cookie",4.5]]}
+];
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const money = p => Number.isInteger(p) ? String(p) : p.toFixed(2);
+function itemNode([name, price, desc, add, tag]){
+  const it = el("div","item"), row = el("div","row"), nm = el("span","name",name);
+  if (tag) nm.append(el("span","tag",tag));
+  row.append(nm, el("span","lead"), el("span","price",money(price)));
+  it.append(row);
+  if (desc) it.append(el("p","desc",desc));
+  if (add) it.append(el("p","add",add));
+  return it;
+}
+const drinks = document.getElementById("drinks");
+for (const g of DRINKS){
+  const box = el("div","list"), h = el("h3", null, g.title);
+  h.append(el("small", null, g.items.length + " on"));
+  box.append(h); g.items.forEach(i => box.append(itemNode(i))); drinks.append(box);
+}
+const tiles = document.getElementById("tiles");
+for (const s of FOOD){
+  const t = el("div","tile " + s.cls), head = el("h3","no");
+  head.append(el("b",null,s.no), el("span",null,s.title));
+  if (s.note) head.append(el("em",null,s.note));
+  const items = el("div","items"); s.items.forEach(i => items.append(itemNode(i)));
+  t.append(head, items); tiles.append(t);
+}
+
+/* open now, in Sydney time: daily 6am to 3pm */
+const OPEN = 360, CLOSE = 900;
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+function sydney(){
+  const p = new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => p.find(x => x.type === k)?.value;
+  return {day: DAYS.indexOf(g("weekday")), mins: +g("hour") * 60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = sydney(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const box = document.getElementById("status"), txt = document.getElementById("status-text");
+  const open = mins >= OPEN && mins < CLOSE;
+  box.classList.toggle("is-open", open);
+  if (open) {
+    const left = CLOSE - mins;
+    txt.textContent = left <= 30 ? "Open now · closing at 3pm, " + left + " min to go" : "Open now · until 3pm";
+  } else {
+    txt.textContent = mins < OPEN ? "Closed · opens at 6am today" : "Closed · back tomorrow at 6am";
+  }
+}
+tick(); setInterval(tick, 60000);
+
+/* Licensed stock photos (Pexels licence), served from Pexels' CDN with srcset. */
+const PHOTOS = {
+  hero:      {id:13735912, alt:"Espresso pouring from a machine into a white cup", by:"Mizunokozuki", eager:true, sizes:"(max-width:900px) 100vw, 40vw"},
+  pour:      {id:36851643, alt:"A flat white with heart latte art in a grey ceramic cup", by:"Anne-Marie", sizes:"(max-width:900px) 100vw, 58vw"},
+  iced:      {id:18844909, alt:"Iced coffee on a cafe table in the sun", by:"Olga Shenderova", sizes:"(max-width:760px) 100vw, 42vw"},
+  bronte:    {id:8521887,  alt:"Bronte Beach rock pool and coastal road from above", by:"Brayden Stanford", sizes:"(max-width:760px) 100vw, 50vw"},
+  croissant: {id:13425794, alt:"Croissants catching morning sunlight", by:"Ffawdyy", sizes:"(max-width:760px) 100vw, 42vw"},
+  bagel:     {id:38399734, alt:"A smoked salmon bagel with cream cheese", by:"Anthony Rahayel", sizes:"(max-width:760px) 100vw, 50vw"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = p.sizes;
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 1300);
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + Object.values(PHOTOS).map(p => p.by).join(", ");
+
+try { if (window.self !== window.top) document.querySelector(".preview")?.remove(); } catch {}
+</script>
+</body>
+</html>

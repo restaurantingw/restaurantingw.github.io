@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>sundays bondi · cinnamon scrolls &amp; matcha, Bondi Rd</title>
+<meta name="description" content="sundays bondi bakes one thing well: cinnamon scrolls from a family recipe, plus matcha. 211 Bondi Rd, Thursday to Sunday, 9am till 2pm or until sold out.">
+<meta name="theme-color" content="#7A8F63">
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Albert+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<!--
+  Open questions for the owner (not shown on the page):
+  - Hours: Instagram and Google say Thu–Sun 9am–2pm "or until sold out". Google shows Saturday closed this week only (a one-off event), so we kept Saturday open.
+  - Prices for scrolls and matcha (left off for now).
+  - Pre-orders or boxes for events? A public email for enquiries? There's no public phone, so Instagram is the only contact link.
+  - Icing on the original: cream cheese (one review also mentions sour cream). Confirm.
+  - "lilac" scroll: what's in it? Shown by name only.
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Bakery","name":"sundays bondi","servesCuisine":["Bakery","Cinnamon scrolls","Matcha"],
+"address":{"@type":"PostalAddress","streetAddress":"211 Bondi Rd","addressLocality":"Bondi","addressRegion":"NSW","postalCode":"2026","addressCountry":"AU"},
+"sameAs":["https://www.instagram.com/sundaysbondi/"],
+"hasMenu":{"@type":"Menu","name":"scrolls & matcha","hasMenuSection":[
+ {"@type":"MenuSection","name":"scrolls","hasMenuItem":[
+  {"@type":"MenuItem","name":"the original","description":"Cinnamon scroll with cream cheese icing"},
+  {"@type":"MenuItem","name":"biscoff"},{"@type":"MenuItem","name":"kinder"},{"@type":"MenuItem","name":"pistachio"},
+  {"@type":"MenuItem","name":"sticky date"},{"@type":"MenuItem","name":"bueno"},{"@type":"MenuItem","name":"lilac"},
+  {"@type":"MenuItem","name":"snickers (October special)","description":"Sticky toffee, chocolate ganache and caramelised peanuts"}]},
+ {"@type":"MenuSection","name":"matcha","hasMenuItem":[
+  {"@type":"MenuItem","name":"matcha"},{"@type":"MenuItem","name":"jasmine matcha"},{"@type":"MenuItem","name":"matcha cloud"}]}]},
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"14:00"}]}
+</script>
+<style>
+/* Direction "sunday poster": one hero product, one confident page.
+   Taken from their own world: the sage circle of the logo (repeated as round photo crops — a scroll is a circle too),
+   cream paper, cinnamon brown from the bake, a whisper of bow pink. Lowercase everywhere, like their voice.
+   Gloock (soft high-contrast serif, like the logo lettering) + Albert Sans for reading. 12-col grid, left-aligned. */
+:root{
+  --cream:#F6F1E7; --cream-2:#EDE5D4; --sage:#7A8F63; --sage-deep:#566844; --sage-ink:#2E3527;
+  --cin:#B5712F; --cin-ink:#8A5220; --pink:#F3C6CF; --rule:#D9D0BD; --mute:#5F6455;
+  --serif:"Gloock","Bodoni 72",Didot,Georgia,serif;
+  --sans:"Albert Sans","Helvetica Neue",Arial,sans-serif;
+  --gut:clamp(16px,4.5vw,64px);
+  --s1:14px; --s2:17px; --s3:clamp(22px,2.4vw,28px); --s4:clamp(34px,5vw,60px); --s5:clamp(64px,15vw,190px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--sage-ink);font:400 var(--s2)/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1px}
+a:hover{color:var(--cin-ink)}
+:focus-visible{outline:2px solid var(--cin);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:1.02;margin:0}
+p{margin:0 0 1em}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,28px)}
+.label{font:600 var(--s1)/1.3 var(--sans);letter-spacing:.08em;text-transform:lowercase;color:var(--sage-deep)}
+
+/* concept note */
+.preview{background:var(--sage-ink);color:#E9E4D6;font-size:13px;line-height:1.45;padding:9px var(--gut)}
+.preview b{font-weight:600;color:#fff}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.96);border-bottom:1px solid var(--rule)}
+.hdr{display:flex;align-items:center;gap:20px;min-height:68px}
+.hdr .logo{width:48px;height:48px;border-radius:50%;flex:none}
+.hdr nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.hdr nav a{text-decoration:none}
+.hdr nav a:hover{text-decoration:underline}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;white-space:nowrap}
+.dot{width:9px;height:9px;border-radius:50%;background:#B7AE9C;flex:none}
+.is-open .dot{background:var(--sage)}
+@media (max-width:820px){.hdr nav{display:none}.hdr .chip{margin-left:auto}}
+
+/* hero poster */
+.hero{padding:clamp(36px,6vw,88px) 0 clamp(48px,7vw,104px)}
+.hero .copy{grid-column:1/span 6;align-self:center}
+.hero h1{font-size:clamp(46px,7.4vw,104px);margin:14px 0 26px}
+.hero h1 em{font-style:normal;color:var(--cin)}
+.hero .lede{font-size:clamp(17px,1.5vw,19px);max-width:34em;color:var(--sage-ink)}
+.nowbox{margin-top:30px;border-top:1px solid var(--sage-ink);padding-top:16px;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;max-width:30em}
+.nowbox dt{font-weight:600}
+.nowbox dd{margin:0}
+#open-line{font-family:var(--serif);font-size:var(--s3);line-height:1.15}
+.hero .disc{grid-column:8/span 5;position:relative}
+.circle{aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--cream-2)}
+.hero .stamp{position:absolute;height:auto;aspect-ratio:1;left:-8%;bottom:4%;width:28%;max-width:132px;border-radius:50%;box-shadow:0 0 0 6px var(--cream)}
+@media (max-width:820px){
+  .hero .copy{grid-column:1/-1;order:2}
+  .hero .disc{grid-column:2/span 10;order:1;margin-bottom:30px}
+  .hero .stamp{left:-4%}
+}
+
+/* this month */
+.month{background:var(--sage);color:#FBF8F1;padding:clamp(48px,7vw,104px) 0}
+.month .label{color:#E6EAD9}
+.month h2{font-size:var(--s5);line-height:.9;margin:10px 0 0;color:#FBF8F1;overflow-wrap:anywhere}
+.month .what{grid-column:1/span 7}
+.month .desc{font-family:var(--serif);font-size:var(--s3);line-height:1.25;max-width:20em;margin-top:26px}
+.month .pic{grid-column:9/span 4;align-self:end}
+.month .pic .circle{background:var(--sage-deep)}
+.past{grid-column:1/-1;margin-top:clamp(40px,5vw,64px);border-top:1px solid rgba(251,248,241,.45);padding-top:18px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:inherit}
+.past .label{grid-column:1/span 3}
+.past ul{grid-column:4/-1;list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 26px;font-size:16px}
+.past li span{opacity:.75}
+@media (max-width:820px){
+  .month .what,.month .pic{grid-column:1/-1}
+  .month .pic{grid-column:4/span 9;margin-top:34px}
+  .past .label,.past ul{grid-column:1/-1}
+  .past ul{margin-top:10px}
+}
+
+/* the week / queue */
+.week{padding:clamp(56px,8vw,112px) 0}
+.week .head{grid-column:1/span 4}
+.week h2{font-size:var(--s4);margin-top:10px}
+.week .body{grid-column:6/span 7}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:1px solid var(--sage-ink);border-left:1px solid var(--rule);margin-bottom:28px}
+.day{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:12px 8px 14px;min-height:108px;display:flex;flex-direction:column;justify-content:space-between}
+.day b{font-family:var(--serif);font-weight:400;font-size:clamp(18px,2vw,24px)}
+.day small{font-size:13px;line-height:1.3;color:var(--mute)}
+.day.off b{color:#B0A893}
+.day.on{background:#FBF8F1}
+.day.today{box-shadow:inset 0 3px 0 var(--cin)}
+.day.today small::after{content:"today";display:block;color:var(--cin-ink);font-weight:600;margin-top:2px}
+.tip{display:inline-block;background:var(--pink);color:var(--sage-ink);padding:2px 8px;border-radius:2px;font-weight:600;font-size:14px}
+.week p{max-width:36em}
+@media (max-width:820px){.week .head,.week .body{grid-column:1/-1}.week .body{margin-top:26px}.day{min-height:88px;padding:10px 5px}.day small{font-size:11.5px}}
+
+/* story */
+.story{background:var(--cream-2);padding:clamp(56px,8vw,112px) 0}
+.story .pic{grid-column:1/span 5}
+.story .pic .frame{aspect-ratio:4/5;overflow:hidden;border-radius:999px 999px 0 0;background:var(--rule)}
+.story .text{grid-column:7/span 6;align-self:center}
+.story h2{font-size:var(--s4);margin:10px 0 24px}
+.story .text p{max-width:34em}
+.story .press{margin-top:26px;padding-top:14px;border-top:1px solid var(--rule);font-size:15px;color:var(--mute)}
+@media (max-width:820px){.story .pic{grid-column:2/span 10}.story .text{grid-column:1/-1;margin-top:34px}}
+
+/* menu */
+.menu{padding:clamp(56px,8vw,112px) 0}
+.menu .head{grid-column:1/span 4}
+.menu h2{font-size:var(--s4);margin-top:10px}
+.menu .head p{margin-top:18px;max-width:22em;color:var(--mute)}
+.menu .head .circle{margin-top:34px;max-width:280px}
+.menu .lists{grid-column:6/span 7}
+.sec{margin-bottom:46px}
+.sec h3{font-family:var(--sans);font-weight:600;font-size:var(--s1);letter-spacing:.08em;color:var(--sage-deep);border-bottom:1px solid var(--sage-ink);padding-bottom:10px;margin-bottom:4px;display:flex;justify-content:space-between;gap:12px}
+.sec h3 span{font-weight:400;letter-spacing:0;color:var(--mute)}
+.item{display:grid;grid-template-columns:2.4em 1fr;gap:0 10px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.item .n{font:400 14px/1.9 var(--sans);color:var(--cin-ink);font-variant-numeric:tabular-nums}
+.item .nm{font-family:var(--serif);font-size:var(--s3);line-height:1.2}
+.item .nm .tag{font:600 12px/1 var(--sans);letter-spacing:.06em;background:var(--pink);padding:4px 7px;border-radius:2px;margin-left:10px;vertical-align:middle;white-space:nowrap}
+.item .d{grid-column:2;color:var(--mute);font-size:16px;margin-top:2px}
+@media (max-width:820px){.menu .head,.menu .lists{grid-column:1/-1}.menu .lists{margin-top:34px}.menu .head .circle{max-width:200px}}
+
+/* matcha */
+.matcha{padding:0 0 clamp(56px,8vw,112px)}
+.matcha .pic{grid-column:1/span 7}
+.matcha .pic .frame{aspect-ratio:3/2;overflow:hidden;border-radius:4px;background:var(--cream-2)}
+.matcha .text{grid-column:9/span 4;align-self:end}
+.matcha h2{font-size:var(--s4);margin:10px 0 20px}
+.matcha ul{list-style:none;margin:0;padding:0}
+.matcha li{font-family:var(--serif);font-size:var(--s3);padding:10px 0;border-bottom:1px solid var(--rule)}
+@media (max-width:820px){.matcha .pic,.matcha .text{grid-column:1/-1}.matcha .text{margin-top:28px}}
+
+/* find us */
+.find{background:var(--sage-ink);color:#EDE8DA;padding:clamp(56px,8vw,104px) 0}
+.find .label{color:#B9C3A6}
+.find h2{font-size:var(--s4);color:#FBF8F1;margin:10px 0 24px}
+.find .a{grid-column:1/span 5}
+.find .b{grid-column:7/span 3}
+.find .c{grid-column:10/span 3}
+.find address{font-style:normal;font-size:19px;line-height:1.5;margin-bottom:22px}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid currentColor;margin:0 10px 10px 0}
+.btn.solid{background:var(--cream);color:var(--sage-ink);border-color:var(--cream)}
+.btn:hover{color:inherit;opacity:.85}
+.btn.solid:hover{color:var(--sage-ink)}
+table{border-collapse:collapse;width:100%;font-size:16px}
+td{padding:8px 0;border-bottom:1px solid rgba(237,232,218,.2)}
+td:last-child{text-align:right}
+tr.today td{color:#fff;font-weight:600}
+tr.closed td{opacity:.55}
+.find .c p{font-size:16px}
+@media (max-width:820px){.find .a,.find .b,.find .c{grid-column:1/-1}.find .b{margin-top:30px}.find .c{margin-top:30px}}
+
+footer{padding:40px 0 calc(40px + 72px);font-size:14px;color:var(--mute)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
+footer .logo{width:64px;height:64px;border-radius:50%}
+footer p{margin:0;max-width:60em}
+@media (min-width:821px){footer{padding-bottom:40px}}
+
+/* mobile action bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--cream);border-top:1px solid var(--rule)}
+.bar a{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--sage-ink)}
+.bar a.pri{background:var(--sage);border-color:var(--sage);color:#fff}
+@media (min-width:821px){.bar{display:none}}
+
+.fade{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s ease}
+.fade.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of sundays bondi. Preview photos are licensed stock; logo, colours and details are taken from your Instagram and Google listing.</div>
+
+<header>
+  <div class="wrap hdr">
+    <a href="#top" aria-label="sundays bondi, back to top"><img class="logo" src="logo.jpg" alt="sundays bondi logo" width="48" height="48"></a>
+    <nav aria-label="Sections">
+      <a href="#month">this month</a>
+      <a href="#scrolls">scrolls</a>
+      <a href="#matcha">matcha</a>
+      <a href="#find">find us</a>
+    </nav>
+    <span class="chip status"><span class="dot"></span><span class="status-text">thu–sun, 9am–2pm</span></span>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="h-hero">
+    <div class="wrap grid">
+      <div class="copy">
+        <p class="label">cinnamon scrolls &amp; matcha · bondi rd</p>
+        <h1 id="h-hero">one scroll,<br>done <em>well.</em></h1>
+        <p class="lede">we bake cinnamon scrolls from a decades-old family recipe, pour matcha, and open the doors four mornings a week. when the trays are empty, that's us for the day.</p>
+        <dl class="nowbox">
+          <dt>today</dt>
+          <dd><span id="open-line" class="status-text">thursday to sunday, 9am till 2pm</span></dd>
+          <dt>where</dt>
+          <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=sundays+bondi+211+Bondi+Rd+Bondi+NSW+2026">211 bondi rd, bondi</a></dd>
+        </dl>
+      </div>
+      <div class="disc">
+        <div class="circle ph" data-shot="hero"></div>
+        <img class="stamp" src="logo.jpg" alt="" width="132" height="132">
+      </div>
+    </div>
+  </section>
+
+  <section class="month" id="month" aria-labelledby="h-month">
+    <div class="wrap grid">
+      <div class="what">
+        <p class="label">october's scroll</p>
+        <h2 id="h-month">snickers</h2>
+        <p class="desc">sticky toffee, chocolate ganache and caramelised peanuts, on our cinnamon scroll. here for october, then it's gone.</p>
+      </div>
+      <div class="pic fade"><div class="circle ph" data-shot="month"></div></div>
+      <div class="past">
+        <p class="label">a new special every month. lately</p>
+        <ul>
+          <li>lemon blueberry cheesecake <span>· september</span></li>
+          <li>the vegemite scroll <span>· whipped vegemite pepe saya butter, cheese, jalapeños, vegemite cheese frosting, parmigiano</span></li>
+          <li>nutella tiramisu</li>
+          <li>sticky date</li>
+          <li>dot scroll cake</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="week" aria-labelledby="h-week">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label">when to come</p>
+        <h2 id="h-week">9am till 2pm, or until we sell out.</h2>
+      </div>
+      <div class="body">
+        <div class="days" id="days" aria-label="Opening days"></div>
+        <p><span class="tip">thursdays</span> are usually our quietest morning, often with no queue at all.</p>
+        <p>on the weekend there's a line. it moves fast, but the earlier you come the more flavours you'll have to choose from.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" aria-labelledby="h-story">
+    <div class="wrap grid">
+      <div class="pic fade"><div class="frame ph" data-shot="story"></div></div>
+      <div class="text">
+        <p class="label">the recipe</p>
+        <h2 id="h-story">it started with a grandmother, in indonesia.</h2>
+        <p>our founder laetitia left the corporate world to build sundays around one thing done well: a really good cinnamon scroll.</p>
+        <p>every scroll is made with a decades-old family recipe from her grandmother in indonesia. we opened on bondi rd in 2025, and on day one we sold out within an hour.</p>
+        <p class="press">as featured in the sydney morning herald's good food.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="scrolls" aria-labelledby="h-menu">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label">on the counter</p>
+        <h2 id="h-menu">the scrolls</h2>
+        <p>plus the monthly special. come early for the full line-up.</p>
+        <div class="circle ph fade" data-shot="box"></div>
+      </div>
+      <div class="lists" id="menu-lists"></div>
+    </div>
+  </section>
+
+  <section class="matcha" id="matcha" aria-labelledby="h-matcha">
+    <div class="wrap grid">
+      <div class="pic fade"><div class="frame ph" data-shot="matcha"></div></div>
+      <div class="text">
+        <p class="label">to drink</p>
+        <h2 id="h-matcha">and matcha.</h2>
+        <ul id="drinks"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="find" id="find" aria-labelledby="h-find">
+    <div class="wrap grid">
+      <div class="a">
+        <p class="label">find us</p>
+        <h2 id="h-find">on bondi rd, heading down to the beach.</h2>
+        <address>211 bondi rd<br>bondi nsw 2026</address>
+        <a class="btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=sundays+bondi+211+Bondi+Rd+Bondi+NSW+2026">directions</a>
+        <a class="btn" href="https://www.instagram.com/sundaysbondi/">@sundaysbondi</a>
+      </div>
+      <div class="b">
+        <p class="label">hours</p>
+        <table id="hours" aria-label="Opening hours"></table>
+      </div>
+      <div class="c">
+        <p class="label">say hi</p>
+        <p>we're on instagram. follow along for the monthly special and any change to the week.</p>
+        <!-- walk-in only / bookings / pre-order boxes: confirm with owner -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="logo" src="logo.jpg" alt="sundays bondi logo" width="64" height="64">
+    <p>sundays bondi · 211 bondi rd, bondi nsw 2026 · thursday to sunday, 9am till 2pm or until sold out.<br><span id="credits"></span></p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="pri" href="https://www.google.com/maps/search/?api=1&amp;query=sundays+bondi+211+Bondi+Rd+Bondi+NSW+2026">directions</a>
+  <a href="https://www.instagram.com/sundaysbondi/">instagram</a>
+</nav>
+
+<script>
+/* menu from structured data (no prices published yet) */
+const SCROLLS = [
+  ["the original", "cinnamon scroll, cream cheese icing. where it all started."],
+  ["biscoff", ""],
+  ["kinder", ""],
+  ["pistachio", ""],
+  ["sticky date", ""],
+  ["bueno", ""],
+  ["lilac", ""]
+];
+const SPECIAL = {name: "snickers", note: "october", desc: "sticky toffee, chocolate ganache, caramelised peanuts."};
+const DRINKS = ["matcha", "jasmine matcha", "matcha cloud"];
+
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const lists = document.getElementById("menu-lists");
+function section(title, aside, rows){
+  const s = el("div", "sec"), h = el("h3", null, title);
+  if (aside) h.append(el("span", null, aside));
+  s.append(h);
+  rows.forEach((r, i) => {
+    const it = el("div", "item");
+    it.append(el("span", "n", String(i + 1).padStart(2, "0")));
+    const nm = el("div", "nm", r.name);
+    if (r.tag) nm.append(el("span", "tag", r.tag));
+    it.append(nm);
+    if (r.desc) it.append(el("p", "d", r.desc));
+    s.append(it);
+  });
+  lists.append(s);
+}
+section("scrolls", "the line-up", SCROLLS.map(([name, desc]) => ({name, desc})));
+section("this month", "while it lasts", [{name: SPECIAL.name, tag: SPECIAL.note, desc: SPECIAL.desc}]);
+const drinks = document.getElementById("drinks");
+DRINKS.forEach(d => drinks.append(el("li", null, d)));
+
+/* hours, in Sydney time. minutes from midnight; "or until sold out" applies to every day */
+const HOURS = {0:[540,840],1:null,2:null,3:null,4:[540,840],5:[540,840],6:[540,840]};
+const DAYS = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+const ORDER = [1,2,3,4,5,6,0];
+const fmt = m => { const h = Math.floor(m / 60), mm = m % 60, h12 = ((h + 11) % 12) + 1; return h12 + (mm ? ":" + String(mm).padStart(2, "0") : "") + (h >= 12 ? "pm" : "am"); };
+
+const daysBox = document.getElementById("days"), table = document.getElementById("hours");
+ORDER.forEach(d => {
+  const on = !!HOURS[d];
+  const c = el("div", "day " + (on ? "on" : "off")); c.dataset.day = d;
+  c.append(el("b", null, DAYS[d].slice(0, 3)), el("small", null, on ? "9–2" : "closed"));
+  daysBox.append(c);
+  const tr = el("tr", on ? null : "closed"); tr.dataset.day = d;
+  tr.append(el("td", null, DAYS[d]), el("td", null, on ? fmt(HOURS[d][0]) + " – " + fmt(HOURS[d][1]) : "closed"));
+  table.append(tr);
+});
+
+function sydneyNow(){
+  const p = new Intl.DateTimeFormat("en-AU", {timeZone: "Australia/Sydney", weekday: "long", hour: "numeric", minute: "numeric", hourCycle: "h23"}).formatToParts(new Date());
+  const g = k => (p.find(x => x.type === k) || {}).value;
+  return {day: DAYS.indexOf(String(g("weekday")).toLowerCase()), mins: +g("hour") * 60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = sydneyNow(); if (day < 0) return;
+  document.querySelectorAll("[data-day]").forEach(n => n.classList.toggle("today", +n.dataset.day === day));
+  const h = HOURS[day];
+  let txt, open = false;
+  if (h && mins >= h[0] && mins < h[1]) { open = true; txt = "open now, till 2pm (or sold out)"; }
+  else if (h && mins < h[0]) { txt = "opening at " + fmt(h[0]) + " today"; }
+  else {
+    let i = 1; while (i <= 7 && !HOURS[(day + i) % 7]) i++;
+    const d = (day + i) % 7;
+    txt = (h ? "done for today · " : "closed today · ") + "back " + (i === 1 ? "tomorrow" : DAYS[d]) + " " + fmt(HOURS[d][0]);
+  }
+  document.querySelectorAll(".status").forEach(s => s.classList.toggle("is-open", open));
+  document.querySelectorAll(".status-text").forEach(s => { s.textContent = txt; });
+}
+tick(); setInterval(tick, 60000);
+
+/* licensed stock photos (Pexels licence: free for commercial use), resized per screen */
+const PHOTOS = {
+  hero:   {id:14576632, alt:"A cinnamon scroll with cream icing running down its sides, close up", by:"Bethany Hicks", eager:true},
+  month:  {id:5507698,  alt:"Freshly baked cinnamon scrolls with icing, close up", by:"Jess Vide"},
+  story:  {id:39432441, alt:"Rolled cinnamon scrolls on baking paper, half covered with a cloth, ready for the oven", by:"Tanita Lupa"},
+  box:    {id:17430536, alt:"Freshly baked cinnamon scrolls packed in a box", by:"Federico Di Gioia"},
+  matcha: {id:38345070, alt:"An iced matcha latte on a wooden table", by:"lucasdc"}
+};
+const SIZES = {hero:"(max-width:820px) 84vw, 40vw", month:"(max-width:820px) 75vw, 32vw", story:"(max-width:820px) 84vw, 40vw", box:"(max-width:820px) 200px, 280px", matcha:"(max-width:820px) 100vw, 56vw"};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = SIZES[f.dataset.shot];
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 900);
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ") + ".";
+
+/* gentle fade-in */
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), {rootMargin: "0px 0px -10% 0px"});
+  document.querySelectorAll(".fade").forEach(n => io.observe(n));
+} else document.querySelectorAll(".fade").forEach(n => n.classList.add("in"));
+
+/* inside the Restauranting studio frame, hide the concept note */
+try { if (window.self !== window.top) document.querySelector(".preview").remove(); } catch (e) {}
+</script>
+</body>
+</html>
