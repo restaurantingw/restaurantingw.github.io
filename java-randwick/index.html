@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Java Restaurant · Indonesian on Avoca St, Randwick, since 1984</title>
+<meta name="description" content="Java Restaurant, 151 Avoca St, Randwick. Indonesian home cooking since 1984: ayam sereh, beef rendang, sate, gado gado. Closed Tuesdays. Call (02) 9398 6990.">
+<!--
+  Creative brief (Restauranting)
+  Direction: "Avoca St menu card, 1984". Archetype: story-led + menu.
+  Reference world: Indonesian warung signage and the typed, double-ruled restaurant menus of the 1980s. No batik, no wayang, no bamboo.
+  Type: Alegreya (display + italics, the wordmark and headings) + Alegreya Sans (text). Palette: paper cream #FBF4E6, ink #2A1D17,
+  sambal red #B23A2B (primary, wordmark + wayfinding), turmeric #E2A126 (highlight blocks), banana leaf #3F6B3A (open status, secondary).
+  logo file: ask owner. No logo found and no Instagram, so "Java" is set as a wordmark in Alegreya Black, sambal red.
+  Open questions for the family:
+  - Logo / sign artwork and their own photos (all photos here are Pexels stock).
+  - Prices (not shown; none known).
+  - BYO? Corkage?
+  - Bookings policy (do they take bookings by phone? group sizes?).
+  - Email address.
+  - Is takeaway still offered (it began as a takeaway shop)? Not stated on the page.
+-->
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Java Restaurant","servesCuisine":["Indonesian"],"telephone":"+61 2 9398 6990","foundingDate":"1984",
+"address":{"@type":"PostalAddress","streetAddress":"151 Avoca St","addressLocality":"Randwick","addressRegion":"NSW","postalCode":"2031","addressCountry":"AU"},
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:30","closes":"21:15"}],
+"hasMenu":{"@type":"Menu","name":"Java Restaurant menu (selection)","hasMenuSection":[
+{"@type":"MenuSection","name":"Small things","hasMenuItem":[{"@type":"MenuItem","name":"Sate ayam"},{"@type":"MenuItem","name":"Pork sate"},{"@type":"MenuItem","name":"Murtabak"},{"@type":"MenuItem","name":"Chicken lumpia"},{"@type":"MenuItem","name":"Fish cakes in banana leaf"}]},
+{"@type":"MenuSection","name":"Chicken and beef","hasMenuItem":[{"@type":"MenuItem","name":"Ayam sereh"},{"@type":"MenuItem","name":"Beef rendang"},{"@type":"MenuItem","name":"Balinese grilled chicken"}]},
+{"@type":"MenuSection","name":"Rice and noodles","hasMenuItem":[{"@type":"MenuItem","name":"Nasi goreng biasa"},{"@type":"MenuItem","name":"Seafood nasi goreng"},{"@type":"MenuItem","name":"Chicken fried rice"},{"@type":"MenuItem","name":"Nasi kuning"},{"@type":"MenuItem","name":"Seafood noodles"}]},
+{"@type":"MenuSection","name":"Vegetables","hasMenuItem":[{"@type":"MenuItem","name":"Gado gado"}]},
+{"@type":"MenuSection","name":"Sweets","hasMenuItem":[{"@type":"MenuItem","name":"Sticky rice pudding"},{"@type":"MenuItem","name":"Durian ice cream"},{"@type":"MenuItem","name":"Es bumi hangus"}]}]}}
+</script>
+<style>
+/* Direction "Avoca St menu card, 1984": the typed, double-ruled menu of an Indonesian family restaurant that has not needed to change.
+   Cream paper, brown-black ink, sambal red for the name and wayfinding, turmeric as the one warm block. 12-col grid, left-aligned. */
+:root{
+  --paper:#FBF4E6; --paper-2:#F3E8D2; --ink:#2A1D17; --ink-2:#6A574A; --rule:#DCCDB2;
+  --red:#B23A2B; --red-d:#962F22; --tur:#E2A126; --leaf:#3F6B3A;
+  --serif:"Alegreya",Georgia,"Times New Roman",serif;
+  --sans:"Alegreya Sans","Gill Sans","Trebuchet MS",sans-serif;
+  --gut:clamp(16px,4vw,56px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--red)}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+p{margin:0}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+.label{font:500 13px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.it{font-family:var(--serif);font-style:italic;font-weight:500}
+
+/* type scale: 15 / 18 / 23 / 34 / 54 */
+h1,h2,h3{font-family:var(--serif);margin:0;text-wrap:balance}
+h1{font-weight:700;font-size:clamp(34px,4.6vw,54px);line-height:1.05;letter-spacing:-.01em}
+h2{font-weight:700;font-size:clamp(28px,3vw,34px);line-height:1.12}
+h3{font-weight:700;font-size:23px;line-height:1.2}
+
+.preview{background:var(--ink);color:#E6D9C3;font-size:13.5px;line-height:1.45;padding:9px var(--gut)}
+.preview b{color:#fff;font-weight:500}
+
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:3px double var(--ink)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.mark{display:flex;align-items:baseline;gap:12px;text-decoration:none;min-width:0}
+.mark b{font:900 34px/1 var(--serif);color:var(--red);letter-spacing:-.01em}
+.mark span{font:500 15px/1 var(--serif);font-style:italic;color:var(--ink-2);white-space:nowrap}
+.nav{display:flex;align-items:center;gap:26px;font-size:16px}
+.nav a{text-decoration:none}
+@media (max-width:820px){.nav .hide-m{display:none}}
+@media (max-width:420px){.mark span{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:500 16px/1 var(--sans);padding:14px 20px;border:1.5px solid var(--ink);border-radius:2px;text-decoration:none;background:transparent;color:var(--ink);transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.solid{background:var(--red);border-color:var(--red);color:#fff}
+.btn.solid:hover{background:var(--red-d);border-color:var(--red-d);color:#fff}
+.btn.small{padding:10px 14px;font-size:15px}
+
+/* photos */
+.ph{position:relative;margin:0;background:var(--paper-2);overflow:hidden}
+.ph::before{content:"";display:block;padding-top:var(--r,125%)}
+.ph>img{position:absolute;inset:0}
+.cap{font:500 15px/1.4 var(--serif);font-style:italic;color:var(--ink-2);margin-top:10px}
+
+/* hero */
+.hero{padding-block:clamp(32px,6vw,80px) 0}
+.hero-text{grid-column:1/span 6;display:flex;flex-direction:column;gap:24px;align-self:center;position:relative}
+.hero-media{grid-column:8/span 5;position:relative}
+.hero .lede{font-size:19px;color:var(--ink-2);max-width:44ch}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.stamp{width:124px;height:124px;border-radius:50%;border:2px solid var(--red);color:var(--red);display:grid;place-items:center;text-align:center;transform:rotate(-9deg);position:relative;flex:none}
+.stamp::before{content:"";position:absolute;inset:5px;border:1px solid var(--red);border-radius:50%}
+.stamp span{display:block;font:500 11px/1.2 var(--sans);letter-spacing:.24em;text-transform:uppercase}
+.stamp strong{display:block;font:900 34px/1 var(--serif);letter-spacing:-.01em;margin:3px 0}
+.hero-media .stamp{position:absolute;left:-46px;bottom:-34px;background:var(--paper)}
+.hero-media .tab{position:absolute;top:0;right:0;background:var(--tur);color:var(--ink);padding:8px 12px;font:500 13px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+@media (max-width:900px){
+  .hero-text,.hero-media{grid-column:1/-1}
+  .hero-media{order:-1;margin-bottom:56px}
+  .hero-media .ph{--r:80%!important}
+  .hero-media .stamp{left:auto;right:12px;bottom:-40px;width:104px;height:104px}
+  .hero-media .stamp strong{font-size:28px}
+}
+
+/* facts strip */
+.facts{margin-top:clamp(40px,6vw,72px);border-top:3px double var(--ink);border-bottom:1px solid var(--ink)}
+.facts .wrap{display:grid;grid-template-columns:1.2fr 1.2fr 1fr 1fr}
+.facts .cell{padding:18px 18px 18px 0;display:flex;flex-direction:column;gap:4px;min-width:0}
+.facts .cell+.cell{padding-left:18px;border-left:1px solid var(--rule)}
+.facts .label{color:var(--ink-2)}
+.facts .val{font-size:17px;font-weight:500}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--ink-2);margin-right:8px;vertical-align:1px}
+.is-open .dot{background:var(--leaf)}
+.facts .closed-tue .val{color:var(--red)}
+@media (max-width:900px){.facts .wrap{grid-template-columns:1fr 1fr}.facts .cell:nth-child(3){padding-left:0;border-left:0}.facts .cell:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+section{padding-block:clamp(72px,10vw,124px)}
+.sec-label{color:var(--red);margin-bottom:14px}
+
+/* signature: ayam sereh on turmeric */
+.sig{background:var(--tur);padding-block:0;margin-top:clamp(72px,10vw,120px)}
+.sig .grid{align-items:stretch}
+.sig .media{grid-column:1/span 6;margin-block:calc(clamp(28px,4vw,48px)*-1) clamp(28px,4vw,48px)}
+.sig .copy{grid-column:8/span 5;padding-block:clamp(40px,6vw,80px);display:flex;flex-direction:column;gap:18px;justify-content:center}
+.sig .copy .label{color:var(--ink)}
+.sig .copy p{max-width:44ch}
+.sig .name{font:900 clamp(40px,5vw,54px)/1 var(--serif);color:var(--ink)}
+.sig .copy .note{font-size:16px;border-top:1px solid rgba(42,29,23,.35);padding-top:14px}
+@media (max-width:900px){.sig .media,.sig .copy{grid-column:1/-1}.sig .copy{padding-top:0}}
+
+/* story */
+.story .head{grid-column:1/span 5}
+.story .copy{grid-column:7/span 6;display:flex;flex-direction:column;gap:18px;max-width:60ch}
+.story .copy p:first-child{font:500 23px/1.45 var(--serif)}
+.ledger{grid-column:1/-1;margin-top:clamp(48px,7vw,80px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.ledger div{padding:20px 20px 0 0;min-width:0}
+.ledger div+div{padding-left:20px;border-left:1px solid var(--rule)}
+.ledger strong{display:block;font:900 clamp(34px,4vw,54px)/1 var(--serif);color:var(--red)}
+.ledger p{font-size:16px;color:var(--ink-2);margin-top:8px;max-width:28ch}
+@media (max-width:900px){.story .head,.story .copy{grid-column:1/-1}.story .copy{margin-top:22px}}
+@media (max-width:600px){.ledger{grid-template-columns:1fr}.ledger div+div{padding-left:0;border-left:0;border-top:1px solid var(--rule);margin-top:20px}}
+
+/* menu: typed card */
+.menu{background:var(--paper-2);border-block:3px double var(--ink)}
+.menu-top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);margin-bottom:clamp(32px,5vw,56px);row-gap:16px}
+.menu-top>div{grid-column:1/span 6}
+.menu-top .key{grid-column:8/span 5;font-size:16px;color:var(--ink-2);align-self:end}
+@media (max-width:900px){.menu-top>div,.menu-top .key{grid-column:1/-1}}
+.card{background:var(--paper);border:1px solid var(--ink);outline:1px solid var(--ink);outline-offset:-7px;padding:clamp(28px,5vw,64px) clamp(20px,5vw,64px)}
+.courses{columns:2 380px;column-gap:clamp(32px,5vw,72px)}
+.course{break-inside:avoid;margin-bottom:clamp(32px,4vw,48px)}
+.course h3{display:flex;align-items:baseline;gap:12px;padding-bottom:8px;margin-bottom:4px;border-bottom:1px solid var(--ink)}
+.course h3 .t{font-style:italic;color:var(--red)}
+.course h3 .s{font:500 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-left:auto}
+.item{padding:13px 0;border-bottom:1px dotted #BBA98C}
+.item:last-child{border-bottom:0}
+.item .n{font:700 19px/1.3 var(--serif)}
+.item .n i{font-weight:500;color:var(--ink-2);font-size:16px;margin-left:6px}
+.item .m{font:500 12px/1 var(--sans);letter-spacing:.1em;color:var(--red);margin-left:8px;text-transform:uppercase;white-space:nowrap}
+.item .d{font-size:16px;color:var(--ink-2);margin-top:3px;max-width:50ch}
+.card-foot{border-top:3px double var(--ink);padding-top:18px;margin-top:8px;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;font-size:16px;color:var(--ink-2)}
+
+/* dish band */
+.band{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);row-gap:32px}
+.band .a{grid-column:1/span 5}
+.band .b{grid-column:7/span 3;margin-top:clamp(0px,8vw,110px)}
+.band .c{grid-column:10/span 3}
+.band .d{grid-column:2/span 4}
+.band .e{grid-column:7/span 6;align-self:end}
+@media (max-width:760px){.band>figure{grid-column:1/-1!important;margin-top:0!important}.band .b{grid-column:1/span 6!important}.band .c{grid-column:7/span 6!important}}
+
+/* table manners */
+.manners{border-top:1px solid var(--rule)}
+.manners .head{grid-column:1/span 4}
+.manners ol{grid-column:6/span 7;list-style:none;margin:0;padding:0;counter-reset:m;display:grid;grid-template-columns:1fr 1fr;gap:28px clamp(24px,4vw,56px)}
+.manners li{counter-increment:m;border-top:1px solid var(--ink);padding-top:14px;font-size:17px}
+.manners li::before{content:counter(m);display:block;font:900 23px/1 var(--serif);color:var(--red);margin-bottom:8px}
+.manners li b{font-family:var(--serif);font-size:19px;display:block;margin-bottom:4px}
+@media (max-width:900px){.manners .head,.manners ol{grid-column:1/-1}.manners ol{margin-top:28px}}
+@media (max-width:560px){.manners ol{grid-template-columns:1fr}}
+
+/* visit */
+.visit{background:var(--ink);color:#EADFCB}
+.visit .sec-label{color:var(--tur)}
+.visit h2{color:#fff}
+.visit .head{grid-column:1/span 4;display:flex;flex-direction:column;gap:16px}
+.visit .head p{color:#C7B8A1;max-width:34ch}
+.visit .body{grid-column:6/span 7;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px)}
+table.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.hours caption{text-align:left;margin-bottom:10px;color:#C7B8A1}
+table.hours th,table.hours td{text-align:left;font-weight:400;padding:10px 0;border-bottom:1px solid #4A3A30;font-size:17px}
+table.hours td{text-align:right}
+table.hours tr.closed td{color:var(--tur)}
+table.hours tr.today th,table.hours tr.today td{font-weight:700;color:#fff}
+table.hours tr.today th::after{content:"today";font:500 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--tur);margin-left:10px;vertical-align:2px}
+.where dl{margin:0 0 22px;display:grid;gap:16px}
+.where dt{color:#C7B8A1;margin-bottom:3px}
+.where dd{margin:0;font-size:17px}
+.where dd a{text-decoration:none;border-bottom:1px solid #8A7766}
+.visit .btn{border-color:#EADFCB;color:#EADFCB;margin:0 8px 8px 0}
+.visit .btn:hover{background:#EADFCB;color:var(--ink)}
+.visit .btn.solid{border-color:var(--red);color:#fff}
+@media (max-width:900px){.visit .head,.visit .body{grid-column:1/-1}.visit .body{grid-template-columns:1fr;margin-top:28px}}
+
+footer{padding-block:40px 110px;font-size:15px;color:var(--ink-2)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:baseline}
+footer .mark b{font-size:28px}
+footer .mark{flex-wrap:wrap}
+footer .mark span{white-space:normal;display:inline!important;font-size:15px;line-height:1.4}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:1fr 1fr;border-top:3px double var(--ink);background:var(--paper);padding-bottom:env(safe-area-inset-bottom,0px)}
+.mbar a{padding:16px 8px;text-align:center;text-decoration:none;font-weight:500;font-size:16px}
+.mbar a.solid{background:var(--red);color:#fff}
+@media (max-width:820px){.mbar{display:grid}}
+
+@media (prefers-reduced-motion:no-preference){.ph img{animation:fade .5s ease both}@keyframes fade{from{opacity:0}}}
+</style>
+</head>
+<body>
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of Java Restaurant. Preview photos are licensed stock; details are taken from your Google listing and published press. A live site would use your own logo and photos.</div>
+
+<header class="site">
+  <div class="wrap">
+    <!-- logo file: ask owner (no logo or Instagram found; wordmark set in Alegreya Black) -->
+    <a class="mark" href="#top" aria-label="Java Restaurant, home"><b>Java</b><span>Indonesian · Randwick</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-m" href="#menu">Menu</a>
+      <a class="hide-m" href="#story">Since 1984</a>
+      <a class="hide-m" href="#visit">Hours &amp; map</a>
+      <a class="btn small solid" href="tel:+61293986990">Call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap grid">
+      <div class="hero-text">
+        <p class="label" style="color:var(--red)">151 Avoca St, Randwick</p>
+        <h1>Indonesian home cooking in Randwick since 1984.</h1>
+        <p class="lede">Wawan Kurniawan has cooked here for more than thirty years. Come in for ayam sereh, rendang and sate, share everything, and finish with fruit and biscuits on us.</p>
+        <div class="actions">
+          <a class="btn solid" href="tel:+61293986990">Call (02) 9398 6990</a>
+          <a class="btn" href="#menu">Read the menu</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <figure class="ph" style="--r:122%" data-shot="hero"></figure>
+        <span class="tab">Closed Tuesdays</span>
+        <div class="stamp" aria-label="Since 1984"><div><span>Since</span><strong>1984</strong><span>Randwick</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="facts" aria-label="Quick info">
+    <div class="wrap">
+      <div class="cell" id="open-cell"><span class="label">Today</span><span class="val"><span class="dot"></span><span id="open-text">11:30am to 9:15pm</span></span></div>
+      <div class="cell"><span class="label">Find us</span><span class="val"><a href="https://www.google.com/maps/search/?api=1&amp;query=Java+Restaurant+151+Avoca+St+Randwick+NSW+2031" target="_blank" rel="noopener">151 Avoca St, Randwick</a></span></div>
+      <div class="cell"><span class="label">Call</span><span class="val"><a href="tel:+61293986990">(02) 9398 6990</a></span></div>
+      <div class="cell closed-tue"><span class="label">Day off</span><span class="val">Tuesday</span></div>
+    </div>
+  </div>
+
+  <div class="sig" aria-labelledby="sig-h">
+    <div class="wrap grid">
+      <figure class="ph media" style="--r:100%" data-shot="sig"></figure>
+      <div class="copy">
+        <p class="label">Order this first</p>
+        <h2 class="name" id="sig-h">Ayam sereh</h2>
+        <p>Javanese fried chicken. We marinate it overnight in a spice paste heavy on lemongrass, dip it in a cornflour batter and fry it, then serve it with balado, our chilli paste.</p>
+        <p class="note">Want it gentle? Ask, and we'll keep the balado on the side. Most of the menu can be made without chilli.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="story" id="story">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label sec-label">Since 1984</p>
+        <h2>We started as a takeaway counter for students a long way from home.</h2>
+      </div>
+      <div class="copy">
+        <p>In 1984 most of the people at our counter were Indonesian students from UNSW, up the road, looking for food that tasted like home.</p>
+        <p>Today you'll find us on Avoca Street, in the quieter part of Randwick. Wawan Kurniawan has run the kitchen for more than thirty years and still does the cooking. Her son Johannes looks after the dining room.</p>
+        <p>The menu runs to seven pages and travels the whole archipelago, from Javanese fried chicken to Balinese grilled chicken and rendang with clove and star anise. Some of the families eating here tonight have been coming for three generations.</p>
+      </div>
+      <div class="ledger" aria-label="Java in numbers">
+        <div><strong>1984</strong><p>The year we opened, as a takeaway shop.</p></div>
+        <div><strong>30+</strong><p>Years Wawan has run our kitchen.</p></div>
+        <div><strong>3</strong><p>Generations of some families at our tables.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="menu-top">
+        <div>
+          <p class="label sec-label">From the menu</p>
+          <h2 id="menu-h">A few pages of seven</h2>
+        </div>
+        <p class="key">A selection from our full menu, which covers dishes from across Indonesia. Everything is made to share. <b style="color:var(--red)">Chilli</b> marks a dish served with chilli paste; non-spicy versions on request.</p>
+      </div>
+      <!-- Prices unknown: shown without prices. Ask owner for the full seven-page menu and prices. -->
+      <div class="card">
+        <div class="courses" id="courses"></div>
+        <div class="card-foot">
+          <span class="it">Full menu at the restaurant. Ask us what's good today.</span>
+          <a class="btn small" href="tel:+61293986990">Call (02) 9398 6990</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Dishes">
+    <div class="wrap band">
+      <figure class="a" style="margin:0"><div class="ph" style="--r:125%" data-shot="sate"></div><figcaption class="cap">Sate, chicken or pork, with peanut sauce.</figcaption></figure>
+      <figure class="b" style="margin:0"><div class="ph" style="--r:133%" data-shot="rendang"></div><figcaption class="cap">Beef rendang, with clove and star anise.</figcaption></figure>
+      <figure class="c" style="margin:0"><div class="ph" style="--r:133%" data-shot="gado"></div><figcaption class="cap">Gado gado, built in layers.</figcaption></figure>
+      <figure class="d" style="margin:0"><div class="ph" style="--r:100%" data-shot="kuning"></div><figcaption class="cap">Nasi kuning, turmeric rice.</figcaption></figure>
+      <figure class="e" style="margin:0"><div class="ph" style="--r:66.6%" data-shot="goreng"></div><figcaption class="cap">Nasi goreng biasa, the everyday fried rice.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="manners" aria-labelledby="man-h">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label sec-label">At our table</p>
+        <h2 id="man-h">How to eat at Java</h2>
+      </div>
+      <ol>
+        <li><b>Order for the table</b>A few dishes in the middle, rice for everyone, and keep passing.</li>
+        <li><b>Tell us about chilli</b>Most dishes can be made non-spicy. Say so when you order.</li>
+        <li><b>Leave room</b>Sticky-rice pudding, durian ice cream or es bumi hangus.</li>
+        <li><b>Stay for fruit</b>Every meal ends with fruit and biscuits, on the house.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label sec-label">Hours &amp; map</p>
+        <h2>Avoca Street, a short walk from UNSW.</h2>
+        <p>Open six days, lunch through dinner. Closed Tuesdays.</p>
+      </div>
+      <div class="body">
+        <table class="hours" id="hours">
+          <caption class="label">Opening hours</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>11:30am – 9:15pm</td></tr>
+            <tr data-day="2" class="closed"><th scope="row">Tuesday</th><td>Closed</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>11:30am – 9:15pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>11:30am – 9:15pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>11:30am – 9:15pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>11:30am – 9:15pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>11:30am – 9:15pm</td></tr>
+          </tbody>
+        </table>
+        <div class="where">
+          <dl>
+            <div><dt class="label">Address</dt><dd>151 Avoca St<br>Randwick NSW 2031</dd></div>
+            <div><dt class="label">Phone</dt><dd><a href="tel:+61293986990">(02) 9398 6990</a></dd></div>
+            <div><dt class="label">Tables</dt><dd>Call us to check a table, especially for a family group.</dd></div>
+          </dl>
+          <!-- Confirm Java has been at 151 Avoca St since 1984 (copy avoids claiming it). Bookings policy, BYO and email: ask owner. -->
+          <a class="btn solid" href="tel:+61293986990">Call</a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Java+Restaurant+151+Avoca+St+Randwick+NSW+2031" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mark"><b>Java</b><span>Indonesian since 1984 · 151 Avoca St, Randwick · (02) 9398 6990</span></span>
+    <span>Concept by Restauranting · <span id="credits"></span></span>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Java+Restaurant+151+Avoca+St+Randwick+NSW+2031" target="_blank" rel="noopener">Directions</a>
+  <a class="solid" href="tel:+61293986990">Call (02) 9398 6990</a>
+</nav>
+
+<script>
+/* menu: names and descriptions from published sources; no prices known */
+const MENU = [
+  {id:"small", t:"Small things", s:"To start", items:[
+    ["Sate ayam","chicken","Chicken skewers with our peanut sauce.",""],
+    ["Pork sate","","Pork skewers, also with peanut sauce.",""],
+    ["Murtabak","","Fried roti filled with beef, onion and egg, with sate sauce.",""],
+    ["Chicken lumpia","","Spring rolls with sate sauce.",""],
+    ["Fish cakes","in banana leaf","",""]]},
+  {id:"mains", t:"Chicken & beef", s:"For the table", items:[
+    ["Ayam sereh","","Javanese fried chicken, marinated overnight in lemongrass spices, cornflour batter, balado chilli paste.","Chilli"],
+    ["Beef rendang","","Rendang with clove and star anise.",""],
+    ["Balinese grilled chicken","","Grilled with a tamarind and candlenut paste.",""]]},
+  {id:"rice", t:"Rice & noodles", s:"Nasi & mie", items:[
+    ["Nasi goreng biasa","","The everyday fried rice.",""],
+    ["Seafood nasi goreng","","",""],
+    ["Chicken fried rice","","",""],
+    ["Nasi kuning","turmeric rice","",""],
+    ["Seafood noodles","","",""]]},
+  {id:"veg", t:"Vegetables", s:"Sayur", items:[
+    ["Gado gado","","Layered.",""]]},
+  {id:"sweet", t:"Sweets", s:"To finish", items:[
+    ["Sticky-rice pudding","","",""],
+    ["Durian ice cream","","",""],
+    ["Es bumi hangus","","",""]]}
+];
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const courses = document.getElementById("courses");
+for (const c of MENU) {
+  const box = el("div","course"); box.id = c.id;
+  const h = el("h3"); h.append(el("span","t",c.t), el("span","s",c.s)); box.append(h);
+  for (const [n, sub, d, m] of c.items) {
+    const it = el("div","item"), name = el("p","n",n);
+    if (sub) name.append(el("i",null,sub));
+    if (m) name.append(el("span","m",m));
+    it.append(name); if (d) it.append(el("p","d",d));
+    box.append(it);
+  }
+  courses.append(box);
+}
+
+/* open now, in Sydney time. Minutes from midnight. Tuesday closed. */
+const DAILY = [[690,1275]];
+const HOURS = {0:DAILY,1:DAILY,2:[],3:DAILY,4:DAILY,5:DAILY,6:DAILY};
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m/60), mm = m%60, h12 = ((h+11)%12)+1; return h12 + (mm ? ":" + String(mm).padStart(2,"0") : "") + (h >= 12 ? "pm" : "am"); };
+function sydneyNow(){
+  const p = new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => (p.find(x => x.type === k) || {}).value;
+  return {day: DAYS.indexOf(g("weekday")), mins: (+g("hour") % 24) * 60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = sydneyNow(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const cell = document.getElementById("open-cell"), txt = document.getElementById("open-text");
+  const cur = HOURS[day].find(([a,b]) => mins >= a && mins < b);
+  cell.classList.toggle("is-open", !!cur);
+  if (cur) { txt.textContent = "Open now, until " + fmt(cur[1]); return; }
+  const next = HOURS[day].find(([a]) => mins < a);
+  if (next) { txt.textContent = "Opens " + fmt(next[0]) + " today"; return; }
+  for (let i = 1; i <= 7; i++) {
+    const d = (day + i) % 7;
+    if (HOURS[d].length) { txt.textContent = (day === 2 ? "Closed Tuesdays" : "Closed now") + " · opens " + (i === 1 ? "tomorrow" : DAYS[d]) + " " + fmt(HOURS[d][0][0]); return; }
+  }
+}
+tick(); setInterval(tick, 60000);
+
+/* licensed stock photos (Pexels licence). Hotlinked from Pexels' CDN with srcset. Not the restaurant's own photos. */
+const PHOTOS = {
+  hero:    {id:37205641, alt:"A spread of Indonesian dishes shared on a restaurant table", by:"Ieda Teddy", eager:true, sizes:"(max-width:900px) 100vw, 42vw"},
+  sig:     {id:36853606, alt:"Indonesian fried chicken with rice, tofu and sambal on a plate", by:"Muhammad Solikin", sizes:"(max-width:900px) 100vw, 50vw"},
+  sate:    {id:33434049, alt:"Indonesian satay skewers with peanut sauce", by:"Scenehaus", sizes:"(max-width:760px) 100vw, 42vw"},
+  rendang: {id:37090687, alt:"Beef rendang with sliced chilli on a white plate", by:"Fadli Octora", sizes:"(max-width:760px) 50vw, 25vw"},
+  gado:    {id:37113556, alt:"Gado gado on a banana leaf with peanut sauce and crackers, from above", by:"Man Fong Wong", sizes:"(max-width:760px) 50vw, 25vw"},
+  kuning:  {id:37106996, alt:"Nasi kuning, yellow turmeric rice, with Indonesian sides", by:"tamba09", sizes:"(max-width:760px) 100vw, 33vw"},
+  goreng:  {id:32938736, alt:"Nasi goreng with a fried egg and crackers", by:"dickydikiw", sizes:"(max-width:760px) 100vw, 50vw"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = p.sizes;
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 1300);
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ");
+
+try { if (window.self !== window.top) document.querySelector(".preview")?.remove(); } catch (e) {}
+</script>
+</body>
+</html>

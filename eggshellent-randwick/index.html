@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eggshellent Cafe · Randwick</title>
+<meta name="description" content="Eggshellent Cafe, 11 Belmore Rd, Randwick. Premium coffee, breakfast, brunch and lunch, and overly friendly service. Open 6am weekdays, 7am weekends.">
+<meta name="theme-color" content="#F2C014">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Karla:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://images.pexels.com">
+<!--
+  Creative brief (Restauranting)
+  Direction: "Yolk & Ink". Menu-first brunch spot. Their yolk-yellow square and heavy black ring from the logo
+  become the whole system: big yellow fields, ink-black type, round photo crops that echo the cup seen from above.
+  Type: Outfit (heavy geometric, matches the logo's round, thick strokes) + Karla (body).
+  Palette: #F2C014 yolk, #1A1310 ink, #FFFFFF white, #FFF6DC cream (all from logo / Instagram).
+  Voice: their own Instagram puns ("Pork-fection", "Sit down, be hum-mus", "Our muffin man", "Compliments to the barista").
+  Open questions:
+  [CHECK] current prices (none shown on purpose)
+  [CHECK] exact pun names of menu items (we used the dish names from Google / menu aggregator)
+  [CHECK] ordering platform (Uber Eats / DoorDash / own?) so the action bar can carry Order
+  [CHECK] how many years open (regulars mention 6+), and the birthday date for the giveaway
+  [CHECK] Thursday run: meeting time and spot
+  [CHECK] vegetarian marks are inferred from dish names; confirm with the kitchen
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Eggshellent Cafe",
+  "image": "https://restaurantingw.github.io/eggshellent-randwick/logo.jpg",
+  "logo": "https://restaurantingw.github.io/eggshellent-randwick/logo.jpg",
+  "telephone": "+61 2 8283 5782",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "11 Belmore Rd",
+    "addressLocality": "Randwick",
+    "addressRegion": "NSW",
+    "postalCode": "2031",
+    "addressCountry": "AU"
+  },
+  "servesCuisine": ["Cafe", "Breakfast", "Brunch", "Coffee"],
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "06:00", "closes": "15:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "07:00", "closes": "15:00"}
+  ],
+  "sameAs": ["https://www.instagram.com/eggshellentrandwick/"],
+  "hasMenu": {
+    "@type": "Menu",
+    "hasMenuSection": [
+      {"@type": "MenuSection", "name": "Eggs and breakfast", "hasMenuItem": [
+        {"@type": "MenuItem", "name": "Super Eggs Benedict"},
+        {"@type": "MenuItem", "name": "Eggshellent Fritters"},
+        {"@type": "MenuItem", "name": "Smashed Avo & Feta"},
+        {"@type": "MenuItem", "name": "Chilli Jam Scrambled Eggs"}]},
+      {"@type": "MenuSection", "name": "Bowls and lighter", "hasMenuItem": [
+        {"@type": "MenuItem", "name": "Home-made Granola"},
+        {"@type": "MenuItem", "name": "Acai Bowl"},
+        {"@type": "MenuItem", "name": "Hummus plate"},
+        {"@type": "MenuItem", "name": "Protein Box"}]},
+      {"@type": "MenuSection", "name": "Lunch", "hasMenuItem": [
+        {"@type": "MenuItem", "name": "Beef Burger", "description": "Beef, cheese, onion, coleslaw, gherkin, bacon, BBQ sauce, with salad and chips"},
+        {"@type": "MenuItem", "name": "Chicken Schnitzel Burger", "description": "Cheese, lettuce, tomato, chilli mayo, with salad and chips"},
+        {"@type": "MenuItem", "name": "Schnitzels"},
+        {"@type": "MenuItem", "name": "Fish of the Day"},
+        {"@type": "MenuItem", "name": "Slow-cooked Lamb Shank"},
+        {"@type": "MenuItem", "name": "Wraps"}]},
+      {"@type": "MenuSection", "name": "Drinks", "hasMenuItem": [
+        {"@type": "MenuItem", "name": "Shawty", "description": "Salted Vietnamese coffee"},
+        {"@type": "MenuItem", "name": "Vietnamese coconut iced coffee"},
+        {"@type": "MenuItem", "name": "Crème Brûlée Latte"},
+        {"@type": "MenuItem", "name": "Green Tea Latte"}]}
+    ]
+  }
+}
+</script>
+<style>
+:root{
+  --yolk:#F2C014; --ink:#1A1310; --white:#FFFFFF; --cream:#FFF6DC;
+  --ink-soft:#4A3F38; --rule:#1A1310;
+  --display:"Outfit", "Trebuchet MS", system-ui, sans-serif;
+  --text:"Karla", "Helvetica Neue", Arial, sans-serif;
+  --s1:14px; --s2:17px; --s3:22px; --s4:clamp(28px, 4vw, 38px); --s5:clamp(38px, 6.4vw, 68px);
+  --gut:clamp(16px, 4vw, 48px); --max:1240px;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+body{margin:0; background:var(--cream); color:var(--ink); font:400 var(--s2)/1.55 var(--text); overflow-x:hidden}
+img{display:block; max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display); font-weight:800; line-height:1.02; letter-spacing:-0.015em; margin:0}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 var(--gut)}
+.grid{display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); column-gap:clamp(16px, 2.4vw, 32px)}
+.kicker{font:700 var(--s1)/1.2 var(--text); letter-spacing:.12em; text-transform:uppercase; margin:0 0 18px}
+:focus-visible{outline:3px solid var(--ink); outline-offset:3px}
+
+/* concept note */
+.preview{background:var(--ink); color:var(--cream); font-size:13px; line-height:1.45; padding:8px var(--gut)}
+.preview p{max-width:var(--max); margin:0 auto}
+
+/* header */
+.top{background:var(--yolk); border-bottom:2px solid var(--ink); position:sticky; top:0; z-index:20}
+.top .wrap{display:flex; align-items:center; gap:24px; min-height:72px}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+.brand img{width:52px; height:52px}
+.brand span{font:800 21px/1 var(--display); letter-spacing:-0.01em}
+.nav{display:flex; gap:22px; margin-left:auto; font:700 15px/1 var(--text)}
+.nav a{text-decoration:none; padding:6px 0; border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--ink)}
+.btn{display:inline-flex; align-items:center; gap:8px; min-height:46px; padding:0 20px; border:2px solid var(--ink); border-radius:999px;
+  font:700 16px/1 var(--text); text-decoration:none; background:var(--ink); color:var(--yolk); transition:background .15s, color .15s}
+.btn:hover{background:transparent; color:var(--ink)}
+.btn.ghost{background:transparent; color:var(--ink)}
+.btn.ghost:hover{background:var(--ink); color:var(--yolk)}
+.top .btn{min-height:40px; padding:0 16px; font-size:15px}
+
+/* hero */
+.hero{background:var(--yolk); padding:clamp(40px, 7vw, 96px) 0 clamp(48px, 7vw, 104px); border-bottom:2px solid var(--ink)}
+.hero .copy{grid-column:1 / span 7; align-self:center}
+.hero h1{font-size:var(--s5); max-width:13ch}
+.hero .lede{font-size:var(--s3); line-height:1.4; max-width:34ch; margin:24px 0 28px}
+.status{display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px; margin-bottom:28px; font-weight:700}
+.dot{width:12px; height:12px; border-radius:50%; background:transparent; border:2px solid var(--ink); flex:none}
+.is-open .dot{background:var(--ink)}
+.status .today{font-weight:400}
+.actions{display:flex; flex-wrap:wrap; gap:12px}
+.hero .plate{grid-column:9 / span 4; align-self:center}
+.round{position:relative; aspect-ratio:1; border-radius:50%; overflow:hidden; background:var(--ink); border:clamp(8px,1.2vw,14px) solid var(--ink)}
+.round img{width:100%; height:100%; object-fit:cover}
+.plate figcaption{font-size:var(--s1); margin-top:14px; max-width:28ch}
+
+/* facts band */
+.band{background:var(--ink); color:var(--cream)}
+.band ul{list-style:none; margin:0; padding:22px 0; display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:16px 32px}
+.band li{font:700 var(--s2)/1.3 var(--display)}
+.band li span{display:block; font:400 var(--s1)/1.4 var(--text); color:#D9CDB6; margin-top:4px}
+
+/* shawty */
+.shawty{padding:clamp(64px, 9vw, 128px) 0}
+.shawty .pic{grid-column:1 / span 5}
+.shawty .pic .frame{aspect-ratio:4/5; overflow:hidden; background:var(--yolk); border:2px solid var(--ink)}
+.shawty .pic img{width:100%; height:100%; object-fit:cover}
+.shawty .copy{grid-column:7 / span 6; align-self:center}
+.shawty h2{font-size:var(--s5)}
+.shawty .sub{font-size:var(--s3); line-height:1.35; margin:18px 0 36px; max-width:28ch}
+.drinks{border-top:2px solid var(--ink); margin:0; padding:0; list-style:none}
+.drinks li{display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:14px 0; border-bottom:1px solid var(--ink)}
+.drinks b{font:700 var(--s2)/1.3 var(--display)}
+.drinks span{font-size:var(--s1); color:var(--ink-soft); text-align:right}
+.tag{display:inline-block; font:700 12px/1 var(--text); letter-spacing:.08em; text-transform:uppercase; background:var(--yolk); padding:5px 8px; border-radius:999px; margin-left:8px; vertical-align:2px}
+.matcha{display:flex; align-items:center; gap:20px; margin-top:32px}
+.matcha .round{width:120px; flex:none; border-width:6px}
+.matcha p{margin:0; max-width:32ch}
+
+/* menu */
+.menu{background:var(--white); border-top:2px solid var(--ink); border-bottom:2px solid var(--ink); padding:clamp(64px, 9vw, 120px) 0}
+.menu-head{grid-column:1 / span 12; display:flex; flex-wrap:wrap; align-items:end; justify-content:space-between; gap:20px; margin-bottom:clamp(36px,5vw,64px)}
+.menu-head h2{font-size:var(--s5)}
+.menu-head p{max-width:40ch; margin:0}
+.jump{grid-column:1 / span 12; display:flex; flex-wrap:wrap; gap:8px; margin-bottom:40px}
+.jump a{font:700 15px/1 var(--text); text-decoration:none; border:2px solid var(--ink); border-radius:999px; padding:10px 16px}
+.jump a:hover{background:var(--yolk)}
+.courses{grid-column:1 / span 8; columns:2; column-gap:clamp(24px, 3.4vw, 48px)}
+.course{break-inside:avoid; margin:0 0 44px; scroll-margin-top:96px}
+.course h3{font-size:var(--s3); padding:0 0 10px; border-bottom:4px solid var(--ink); margin-bottom:6px; display:flex; justify-content:space-between; align-items:baseline; gap:12px}
+.course h3 small{font:400 var(--s1)/1.2 var(--text); letter-spacing:0}
+.item{padding:12px 0; border-bottom:1px solid #E6DCC4}
+.item .name{font:700 var(--s2)/1.3 var(--display)}
+.item .marks{font:700 12px/1 var(--text); border:1.5px solid var(--ink); border-radius:999px; padding:3px 6px; margin-left:8px; vertical-align:2px}
+.item .desc{font-size:15.5px; line-height:1.5; color:var(--ink-soft); margin:4px 0 0}
+.item .pun{font-style:italic; font-size:15.5px; margin:4px 0 0}
+.menu-side{grid-column:10 / span 3; display:flex; flex-direction:column; gap:28px}
+.menu-side figure{margin:0}
+.menu-side .frame{aspect-ratio:1; overflow:hidden; border:2px solid var(--ink); background:var(--cream)}
+.menu-side .frame.r{border-radius:50%; border-width:8px}
+.menu-side img{width:100%; height:100%; object-fit:cover}
+.menu-side figcaption{font-size:var(--s1); margin-top:10px}
+.key{grid-column:1 / span 8; font-size:var(--s1); color:var(--ink-soft); margin:0}
+
+/* off the menu */
+.extras{padding:clamp(64px, 9vw, 128px) 0}
+.extras .intro{grid-column:1 / span 4}
+.extras h2{font-size:var(--s4); max-width:12ch}
+.extras .intro p{margin-top:18px; max-width:32ch}
+.extras .intro .round{width:min(260px, 70%); margin-top:32px}
+.extras ol{grid-column:6 / span 7; list-style:none; margin:0; padding:0; counter-reset:x}
+.extras li{counter-increment:x; display:grid; grid-template-columns:72px 1fr; gap:4px 20px; padding:26px 0; border-top:2px solid var(--ink)}
+.extras li:last-child{border-bottom:2px solid var(--ink)}
+.extras li::before{content:counter(x, decimal-leading-zero); font:800 var(--s4)/1 var(--display); color:var(--ink); grid-row:span 2}
+.extras li h3{font-size:var(--s3); line-height:1.15}
+.extras li p{margin:6px 0 0; max-width:52ch}
+
+/* visit */
+.visit{background:var(--yolk); border-top:2px solid var(--ink); padding:clamp(64px, 9vw, 120px) 0}
+.visit h2{grid-column:1 / span 12; font-size:var(--s5); margin-bottom:clamp(32px,5vw,56px); max-width:14ch}
+.visit .hours{grid-column:1 / span 5}
+.visit .where{grid-column:7 / span 6}
+.visit h3{font-size:var(--s3); margin-bottom:14px}
+table{width:100%; border-collapse:collapse; font-size:var(--s2)}
+td{padding:11px 0; border-bottom:1px solid var(--ink)}
+td:last-child{text-align:right; font-variant-numeric:tabular-nums}
+tr:first-child td{border-top:2px solid var(--ink)}
+tr.today td{font-weight:700}
+tr.today td:first-child::after{content:" · today"; font-weight:400}
+.status.small{margin:18px 0 0}
+.where address{font-style:normal; font-size:var(--s3); line-height:1.35; margin-bottom:12px}
+.where p{max-width:40ch}
+.where .actions{margin-top:24px}
+
+/* footer */
+footer{background:var(--ink); color:var(--cream); padding:56px 0 120px; font-size:var(--s1)}
+footer .grid > *{grid-column:span 4}
+footer img{width:72px; height:72px; margin-bottom:14px}
+footer b{font:800 var(--s3)/1.1 var(--display); display:block; margin-bottom:6px; color:var(--yolk)}
+footer a{color:var(--cream)}
+footer p{margin:0 0 6px; color:#D9CDB6}
+
+/* mobile action bar */
+.bar{position:fixed; left:0; right:0; bottom:0; z-index:30; display:none; grid-template-columns:repeat(3,1fr); background:var(--ink); border-top:2px solid var(--yolk); padding-bottom:env(safe-area-inset-bottom)}
+.bar a{display:flex; align-items:center; justify-content:center; min-height:58px; color:var(--yolk); font:700 16px/1 var(--text); text-decoration:none}
+.bar a + a{border-left:1px solid #3A302A}
+
+.fade{opacity:0; transform:translateY(10px); transition:opacity .5s ease, transform .5s ease}
+.fade.in{opacity:1; transform:none}
+@media (prefers-reduced-motion: reduce){ .fade{opacity:1; transform:none; transition:none} html{scroll-behavior:auto} }
+
+@media (max-width: 980px){
+  .hero .copy{grid-column:1 / span 12}
+  .hero .plate{grid-column:1 / span 12; margin-top:40px; max-width:360px}
+  .band ul{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .shawty .pic{grid-column:1 / span 12; max-width:520px}
+  .shawty .copy{grid-column:1 / span 12; margin-top:40px}
+  .courses, .key{grid-column:1 / span 12}
+  .menu-side{grid-column:1 / span 12; flex-direction:row; margin-top:12px}
+  .menu-side figure{flex:1; min-width:0}
+  .extras .intro, .extras ol{grid-column:1 / span 12}
+  .extras ol{margin-top:40px}
+  .visit .hours, .visit .where{grid-column:1 / span 12}
+  .visit .where{margin-top:48px}
+  footer .grid > *{grid-column:span 12; margin-bottom:24px}
+}
+@media (max-width: 720px){
+  .nav{display:none}
+  .top .btn{margin-left:auto}
+  .courses{columns:1}
+  .bar{display:grid}
+  .brand span{font-size:18px}
+}
+@media (max-width: 420px){
+  .top .btn{display:none}
+  .band ul{grid-template-columns:1fr 1fr; gap:14px 20px}
+  .extras li{grid-template-columns:52px 1fr; gap:4px 14px}
+  .matcha .round{width:92px}
+}
+</style>
+</head>
+<body>
+
+<div class="preview"><p>Concept preview by Restauranting. Not the official website of Eggshellent Cafe. Preview photos are licensed stock; logo, colours and details are taken from your Instagram, Google listing and menu.</p></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Eggshellent Cafe, back to top"><img src="logo.jpg" alt="Eggshellent Cafe logo" width="52" height="52"><span>Eggshellent</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#menu">Menu</a><a href="#shawty">Shawty</a><a href="#extras">Thursdays</a><a href="#visit">Hours &amp; Belmore Rd</a>
+    </nav>
+    <a class="btn" href="tel:+61282835782">Call (02) 8283 5782</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap grid">
+      <div class="copy">
+        <p class="kicker">Cafe · 11 Belmore Rd, Randwick</p>
+        <h1>Premium coffee. Proper brunch. Overly friendly service.</h1>
+        <p class="lede">Breakfast, brunch and lunch on Belmore Rd, from six in the morning on weekdays. Bring the pram, bring the crew.</p>
+        <div class="status" id="status-hero"><span class="dot" aria-hidden="true"></span><span class="open-text">Checking today's hours</span><span class="today"></span></div>
+        <div class="actions">
+          <a class="btn" href="#menu">See the menu</a>
+          <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Eggshellent+Cafe+11+Belmore+Rd+Randwick+NSW+2031" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+      <figure class="plate fade">
+        <div class="round ph" data-shot="hero"></div>
+        <figcaption>Super Eggs Benedict. Start here.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="band" aria-label="At a glance">
+    <ul class="wrap">
+      <li>From 6am<span>Monday to Friday, till 3pm</span></li>
+      <li>From 7am<span>Saturday and Sunday, till 3pm</span></li>
+      <li>Pram friendly<span>Room for the little ones</span></li>
+      <li>Belmore Rd<span>Randwick, NSW 2031</span></li>
+    </ul>
+  </div>
+
+  <section class="shawty" id="shawty">
+    <div class="wrap grid">
+      <figure class="pic fade" style="margin:0">
+        <div class="frame ph" data-shot="shawty"></div>
+      </figure>
+      <div class="copy">
+        <p class="kicker">Compliments to the barista</p>
+        <h2>Meet Shawty.</h2>
+        <p class="sub">Salted Vietnamese coffee over ice. Our best cold drink seller.</p>
+        <ul class="drinks">
+          <li><b>Shawty</b><span>Salted Vietnamese coffee</span></li>
+          <li><b>Vietnamese coconut iced coffee</b><span>Coconut, over ice</span></li>
+          <li><b>Matcha series <i class="tag">New</i></b><span>Ask what's on</span></li>
+          <li><b>Crème Brûlée Latte</b><span>Latte, dessert-minded</span></li>
+          <li><b>Green Tea Latte</b><span>Latte, green</span></li>
+        </ul>
+        <div class="matcha">
+          <div class="round ph" data-shot="matcha"></div>
+          <p>The new matcha series has landed. Iced, green and very easy to drink on a Randwick afternoon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-title">
+    <div class="wrap grid">
+      <div class="menu-head">
+        <h2 id="menu-title">Menu, sunny side up</h2>
+        <p>Breakfast, brunch and lunch, all day till 3pm. Ask us for today's prices and the chef's special, in store or on the phone.</p>
+      </div>
+      <nav class="jump" id="jump" aria-label="Menu sections"></nav>
+      <div class="courses" id="courses"></div>
+      <aside class="menu-side">
+        <figure class="fade"><div class="frame ph" data-shot="burger"></div><figcaption>Beef Burger, salad and chips.</figcaption></figure>
+        <figure class="fade"><div class="frame r ph" data-shot="acai"></div><figcaption>Acai Bowl.</figcaption></figure>
+      </aside>
+      <p class="key">V vegetarian. Tell us about allergies when you order and we'll sort you out.</p>
+    </div>
+  </section>
+
+  <section class="extras" id="extras">
+    <div class="wrap grid">
+      <div class="intro">
+        <p class="kicker">Off the menu</p>
+        <h2>More than eggs and coffee.</h2>
+        <p>Overly friendly isn't a slogan, it's how we run the place. A few things you'll only find here.</p>
+        <div class="round ph fade" data-shot="latte"></div>
+      </div>
+      <ol>
+        <li><h3>Thursday hills run</h3><p>Every Thursday we run the hills together. Finish the workout and your post-run coffee is on us.</p></li>
+        <li><h3>The pull-up bar</h3><p>Yes, there's a pull-up bar in the cafe. Our barista will challenge you. Better safe than sorry: order first.</p></li>
+        <li><h3>Birthday giveaway</h3><p>Every year on our birthday we throw a giveaway for the people who keep us going. Follow <a href="https://www.instagram.com/eggshellentrandwick/" target="_blank" rel="noopener">@eggshellentrandwick</a> so you don't miss it.</p></li>
+        <li><h3>Prams and kids welcome</h3><p>Family friendly and pram friendly. Wheel straight in, we'll find you a spot.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap grid">
+      <h2>Up early on Belmore Rd.</h2>
+      <div class="hours">
+        <h3>Hours</h3>
+        <table id="hours">
+          <tr data-day="1"><td>Monday</td><td>6am – 3pm</td></tr>
+          <tr data-day="2"><td>Tuesday</td><td>6am – 3pm</td></tr>
+          <tr data-day="3"><td>Wednesday</td><td>6am – 3pm</td></tr>
+          <tr data-day="4"><td>Thursday</td><td>6am – 3pm</td></tr>
+          <tr data-day="5"><td>Friday</td><td>6am – 3pm</td></tr>
+          <tr data-day="6"><td>Saturday</td><td>7am – 3pm</td></tr>
+          <tr data-day="0"><td>Sunday</td><td>7am – 3pm</td></tr>
+        </table>
+        <div class="status small" id="status-visit"><span class="dot" aria-hidden="true"></span><span class="open-text">Checking today's hours</span></div>
+      </div>
+      <div class="where">
+        <h3>Find us</h3>
+        <address>11 Belmore Rd<br>Randwick NSW 2031</address>
+        <p>On Belmore Rd in Randwick. Walk in, grab a table, or take it to go.</p>
+        <p><a href="tel:+61282835782">(02) 8283 5782</a><br><a href="https://www.instagram.com/eggshellentrandwick/" target="_blank" rel="noopener">@eggshellentrandwick</a> on Instagram</p>
+        <div class="actions">
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Eggshellent+Cafe+11+Belmore+Rd+Randwick+NSW+2031" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn ghost" href="tel:+61282835782">Call us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div>
+      <img src="logo.jpg" alt="Eggshellent Cafe logo" width="72" height="72">
+      <b>Eggshellent Cafe</b>
+      <p>Premium coffee. Delicious breakfast, brunch and lunch. Overly friendly service.</p>
+    </div>
+    <div>
+      <p>11 Belmore Rd, Randwick NSW 2031</p>
+      <p><a href="tel:+61282835782">(02) 8283 5782</a></p>
+      <p>Mon–Fri 6am–3pm · Sat &amp; Sun 7am–3pm</p>
+    </div>
+    <div>
+      <p>Concept preview by Restauranting. Not the official website of Eggshellent Cafe.</p>
+      <p id="credits">Photos via Pexels</p>
+    </div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a href="tel:+61282835782">Call</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Eggshellent+Cafe+11+Belmore+Rd+Randwick+NSW+2031" target="_blank" rel="noopener">Directions</a>
+  <a href="https://www.instagram.com/eggshellentrandwick/" target="_blank" rel="noopener">Instagram</a>
+</nav>
+
+<script>
+/* menu: dish names from Google listing / menu aggregator; puns are captions from our Instagram. No prices until confirmed. */
+const MENU = [
+  {id:"eggs", name:"Eggs & brekkie", note:"from 6am", items:[
+    ["Super Eggs Benedict","","",""],
+    ["Eggshellent Fritters","","","The namesake."],
+    ["Smashed Avo & Feta","","V",""],
+    ["Chilli Jam Scrambled Eggs","","V",""]]},
+  {id:"bowls", name:"Bowls & lighter", note:"", items:[
+    ["Home-made Granola","Made here.","V",""],
+    ["Acai Bowl","","V",""],
+    ["Hummus plate","","V","Sit down, be hum-mus."],
+    ["Protein Box","","",""]]},
+  {id:"lunch", name:"Lunch", note:"with salad & chips", items:[
+    ["Beef Burger","Beef, cheese, onion, coleslaw, gherkin, bacon, BBQ sauce. With salad and chips.","",""],
+    ["Chicken Schnitzel Burger","Cheese, lettuce, tomato, chilli mayo. With salad and chips.","",""],
+    ["Schnitzels","","",""],
+    ["Fish of the Day","Ask us what came in.","",""],
+    ["Slow-cooked Lamb Shank","","",""],
+    ["Wraps","","",""]]},
+  {id:"specials", name:"Specials & the counter", note:"changes often", items:[
+    ["Chef's Special","Rotates. Recently a pork special.","","Pork-fection."],
+    ["Muffins","","","Our muffin man."]]}
+];
+const courses = document.getElementById("courses"), jump = document.getElementById("jump");
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+for (const c of MENU) {
+  const a = el("a", null, c.name); a.href = "#" + c.id; jump.append(a);
+  const box = el("div", "course"); box.id = c.id;
+  const h = el("h3", null, c.name); if (c.note) h.append(el("small", null, c.note)); box.append(h);
+  for (const [n, d, m, pun] of c.items) {
+    const it = el("div", "item"), name = el("div", "name", n);
+    if (m) { const mk = el("span", "marks", m); mk.title = "Vegetarian"; name.append(mk); }
+    it.append(name);
+    if (d) it.append(el("p", "desc", d));
+    if (pun) it.append(el("p", "pun", pun));
+    box.append(it);
+  }
+  courses.append(box);
+}
+
+/* open-now, in Sydney time. Minutes from midnight. */
+const HOURS = {0:[[420,900]],1:[[360,900]],2:[[360,900]],3:[[360,900]],4:[[360,900]],5:[[360,900]],6:[[420,900]]};
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m/60), mm = m%60, h12 = ((h+11)%12)+1; return h12 + (mm ? ":" + String(mm).padStart(2,"0") : "") + (h >= 12 ? "pm" : "am"); };
+function now(){
+  const p = new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => p.find(x => x.type === k)?.value;
+  return {day: DAYS.indexOf(g("weekday")), mins: +g("hour")*60 + +g("minute")};
+}
+function statusText(day, mins){
+  const cur = HOURS[day].find(([a,b]) => mins >= a && mins < b);
+  if (cur) return {open:true, text:"Open now, until " + fmt(cur[1])};
+  const next = HOURS[day].find(([a]) => mins < a);
+  if (next) return {open:false, text:"Closed · opens " + fmt(next[0]) + " today"};
+  for (let i = 1; i <= 7; i++) { const d = (day+i)%7; if (HOURS[d].length) return {open:false, text:"Closed · opens " + (i === 1 ? "tomorrow" : DAYS[d]) + " " + fmt(HOURS[d][0][0])}; }
+  return {open:false, text:"Closed"};
+}
+function tick(){
+  const {day, mins} = now(); if (day < 0) return;
+  const s = statusText(day, mins);
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  for (const id of ["status-hero","status-visit"]) {
+    const box = document.getElementById(id); if (!box) continue;
+    box.classList.toggle("is-open", s.open);
+    box.querySelector(".open-text").textContent = s.text;
+    const t = box.querySelector(".today");
+    if (t) t.textContent = "Today " + HOURS[day].map(([a,b]) => fmt(a) + "–" + fmt(b)).join(", ");
+  }
+}
+tick(); setInterval(tick, 60000);
+
+/* licensed stock photos (Pexels licence, free for commercial use), resized per screen by Pexels' CDN */
+const PHOTOS = {
+  hero:   {id:4869420,  alt:"Eggs benedict with hollandaise and greens, a coffee alongside", by:"Roman Odintsov", eager:true, sizes:"(max-width:980px) 360px, 30vw"},
+  shawty: {id:8343309,  alt:"A glass of Vietnamese iced coffee on a wooden table", by:"ngochuy", sizes:"(max-width:980px) 520px, 40vw"},
+  matcha: {id:38345070, alt:"Iced matcha latte on a wooden table", by:"lucasdc", sizes:"120px"},
+  burger: {id:7479006,  alt:"Beef burger with toppings and chips on a wooden tray", by:"Engin Akyurt", sizes:"(max-width:980px) 50vw, 22vw"},
+  acai:   {id:1334129,  alt:"Acai bowl with granola, mint and berries on rustic wood", by:"Ella Olsson", sizes:"(max-width:980px) 50vw, 22vw"},
+  latte:  {id:1252933,  alt:"A creamy coffee in a black cup, seen from above", by:"weekendplayer", sizes:"260px"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = p.sizes;
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 900);
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ") + ". Preview photos are licensed stock.";
+
+/* subtle fade-in */
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), {rootMargin:"0px 0px -8% 0px"}) : null;
+document.querySelectorAll(".fade").forEach(n => io ? io.observe(n) : n.classList.add("in"));
+
+/* inside the Restauranting studio frame, hide the concept banner */
+try { if (window.self !== window.top) document.querySelector(".preview")?.remove(); } catch (e) {}
+</script>
+</body>
+</html>
