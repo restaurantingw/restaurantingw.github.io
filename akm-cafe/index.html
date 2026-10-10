@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex">
 <title>AKM Cafe · Campbell Parade, Bondi Beach</title>
-<meta name="description" content="AKM Cafe is a small café on Campbell Parade, opposite Bondi Beach. Breakfast, bagels, wraps, coffee and a long iced matcha list. Open 7 days from early.">
+<meta name="description" content="AKM Cafe, coffee and bagels on Campbell Parade, opposite Bondi Beach. Campos Coffee, bagels made fresh every day, breakfast, wraps and a long iced matcha list. Open 7 days.">
 <meta name="theme-color" content="#F6F2E6">
 <link rel="preconnect" href="https://images.pexels.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,34 +15,34 @@
 {"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"AKM Cafe","servesCuisine":["Cafe","Breakfast","Coffee"],"priceRange":"$",
 "address":{"@type":"PostalAddress","streetAddress":"Shop 9, 152-162 Campbell Parade","addressLocality":"Bondi Beach","addressRegion":"NSW","postalCode":"2026","addressCountry":"AU"},
 "hasMap":"https://www.google.com/maps/place/?q=place_id:ChIJz4to1IqtEmsRxdhiF-_ySns",
-"hasMenu":"#menu","acceptsReservations":false,
+"hasMenu":"#menu","acceptsReservations":false,"logo":"https://s3.eu-west-1.amazonaws.com/merchant-dashboard.yoello.co-assets/912bff79-e38a-4c59-b5af-7f7346abf292/promotional/58101d94-4acf-492f-b688-4258e61b590b.png","sameAs":["https://www.instagram.com/cafe.akm/"],
 "openingHoursSpecification":[
 {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:30","closes":"17:00"},
 {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"07:00","closes":"17:00"}]}
 </script>
 <!--
-  Direction "Green cup": AKM's own green-and-white takeaway cups and the black line drawing on their ordering banner.
-  Menu-first poster. Cream milk ground, matcha green as the one brand colour, black ink, DM Mono prices like a counter board.
-  [CHECK] Logo + brand colours to confirm with owner: no logo file found, "AKM" is set as a plain wordmark.
+  Direction "Coffee and bagels": AKM's own line-drawn badge logo (black on white), cream and warm brown from their Instagram,
+  matcha green kept for the matcha block only. Menu-first poster, DM Mono prices like a counter board.
+  Colours are inferred from their Instagram posts (@cafe.akm), not from a brand guide.
 -->
 <style>
 :root{
-  --milk:#F6F2E6; --milk-2:#ECE6D4; --white:#FFFDF8; --ink:#171714; --ink-2:#55534A; --rule:#D6CFBB;
-  --matcha:#7A9A45;      /* fill colour (cups, matcha block) */
-  --matcha-ink:#4A6324;  /* matcha as text on milk: 6.3:1 */
-  --matcha-deep:#3C521C;
+  --milk:#F7F3EA; --milk-2:#ECE5D8; --white:#FFFDF8; --ink:#171714; --ink-2:#55534A; --rule:#D6CFBB;
+  --brown:#6B4A33;       /* warm coffee brown, small accents: 7:1 on milk */
+  --brown-deep:#523726;
+  --matcha:#7A9A45;      /* matcha block only */
   --sans:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
   --mono:"DM Mono",ui-monospace,Menlo,monospace;
   --gut:clamp(16px,4vw,56px);
   color-scheme:light;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--milk);color:var(--ink);font:400 17px/1.55 var(--sans);font-optical-sizing:auto;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
-a:hover{color:var(--matcha-ink)}
-:focus-visible{outline:2px solid var(--matcha-ink);outline-offset:3px}
+a:hover{color:var(--brown)}
+:focus-visible{outline:2px solid var(--brown);outline-offset:3px}
 img{display:block;width:100%;height:100%;object-fit:cover}
 p{margin:0}
 h1,h2,h3{margin:0;font-weight:700;text-wrap:balance}
@@ -56,10 +56,14 @@ h1,h2,h3{margin:0;font-weight:700;text-wrap:balance}
 
 /* header */
 header.site{position:sticky;top:0;z-index:10;background:var(--milk);border-bottom:1.5px solid var(--ink)}
-header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.logo img{width:60px;height:60px;border-radius:50%;object-fit:contain;background:#fff;border:1px solid var(--rule);flex:none}
+.logo span{font:500 11px/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--brown)}
+@media (max-width:420px){.logo span{display:none}}
 .wordmark{display:flex;align-items:baseline;gap:10px;text-decoration:none;min-width:0}
 .wordmark b{font:800 28px/1 var(--sans);letter-spacing:-.03em}
-.wordmark span{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--matcha-ink);white-space:nowrap}
+.wordmark span{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--brown);white-space:nowrap}
 .nav{display:flex;align-items:center;gap:26px;font-size:15px}
 .nav a{text-decoration:none}
 @media (max-width:820px){.nav .hide-m{display:none}}
@@ -67,7 +71,7 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:500 15px/1 var(--sans);padding:14px 20px;border:1.5px solid var(--ink);border-radius:2px;text-decoration:none;background:transparent;color:var(--ink);transition:background .15s,color .15s}
 .btn:hover{background:var(--ink);color:var(--milk)}
 .btn.solid{background:var(--ink);color:var(--milk)}
-.btn.solid:hover{background:var(--matcha-deep);border-color:var(--matcha-deep);color:#fff}
+.btn.solid:hover{background:var(--brown-deep);border-color:var(--brown-deep);color:#fff}
 .btn.small{padding:10px 14px;font-size:14px}
 
 /* photo frames */
@@ -80,7 +84,7 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .hero{padding-block:clamp(28px,5vw,64px) clamp(40px,6vw,80px)}
 .hero-text{grid-column:1/span 7;display:flex;flex-direction:column;gap:24px;align-self:end}
 .hero-media{grid-column:9/span 4}
-.hero .where-line{color:var(--matcha-ink)}
+.hero .where-line{color:var(--brown)}
 h1{font-size:clamp(34px,4.6vw,60px);line-height:1.04;letter-spacing:-.03em;max-width:15ch}
 .lede{font-size:18.5px;color:var(--ink-2);max-width:44ch}
 .status{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;padding:14px 0;border-block:1px solid var(--rule);font-size:16px;max-width:560px}
@@ -107,7 +111,7 @@ h1{font-size:clamp(34px,4.6vw,60px);line-height:1.04;letter-spacing:-.03em;max-w
 section{padding-block:clamp(64px,9vw,120px)}
 h2{font-size:clamp(28px,3.2vw,42px);line-height:1.08;letter-spacing:-.025em}
 .sec-head{grid-column:1/span 4;display:flex;flex-direction:column;gap:14px;align-self:start}
-.sec-head .label{color:var(--matcha-ink)}
+.sec-head .label{color:var(--brown)}
 .sec-head p{color:var(--ink-2);max-width:34ch}
 .key{font:400 13px/1.5 var(--mono);color:var(--ink-2)}
 @media (max-width:900px){.sec-head{grid-column:1/-1}}
@@ -118,13 +122,14 @@ h2{font-size:clamp(28px,3.2vw,42px);line-height:1.08;letter-spacing:-.025em}
 .item{padding:13px 0;border-bottom:1px solid var(--rule)}
 .item .row{display:flex;align-items:baseline;gap:10px}
 .item .name{font-weight:700;font-size:17.5px;line-height:1.3;min-width:0}
-.item .mk{font:500 11.5px/1 var(--mono);letter-spacing:.04em;color:var(--matcha-ink);margin-left:7px;white-space:nowrap}
+.item .mk{font:500 11.5px/1 var(--mono);letter-spacing:.04em;color:var(--brown);margin-left:7px;white-space:nowrap}
 .item .lead{flex:1;border-bottom:1px dotted #A8A08A;transform:translateY(-4px);min-width:14px}
 .item .price{font:500 15.5px/1 var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
 .item .desc{font-size:15px;color:var(--ink-2);margin-top:3px;max-width:54ch}
+.item.new .name::after{content:"New";display:inline-block;margin-left:10px;font:500 10.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 6px 3px;background:var(--ink);color:var(--milk);vertical-align:3px}
 .item.star .name::after{content:"Favourite";display:inline-block;margin-left:10px;font:500 10.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 6px 3px;border:1px solid currentColor;vertical-align:3px}
 
-/* matcha block: the green cup */
+/* matcha block: the one place matcha green is used */
 .matcha{background:var(--matcha);color:var(--ink);position:relative}
 .matcha .sec-head .label{color:var(--ink)}
 .matcha .sec-head p{color:#1F2A10}
@@ -137,7 +142,6 @@ h2{font-size:clamp(28px,3.2vw,42px);line-height:1.08;letter-spacing:-.025em}
 .matcha .ph-wrap{margin-top:28px;max-width:340px}
 .matcha .ph{background:#6A8839}
 .matcha .cap{color:#1F2A10}
-.cup{width:58px;height:auto;stroke:var(--ink);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 @media (max-width:900px){.matcha .list{grid-column:1/-1;margin-top:32px}.matcha .ph-wrap{max-width:none;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:end}.matcha .ph-wrap .cap{margin:0}}
 
 /* breakfast & bagels */
@@ -146,7 +150,7 @@ h2{font-size:clamp(28px,3.2vw,42px);line-height:1.08;letter-spacing:-.025em}
 .food .photos{grid-column:1/span 4;grid-row:2;display:flex;flex-direction:column;gap:28px;margin-top:40px}
 .food .photos figure{margin:0}
 .food .photos .b{margin-left:22%}
-.food .note{font-size:15px;color:var(--ink-2);border-left:3px solid var(--matcha);padding-left:14px;max-width:44ch}
+.food .note{font-size:15px;color:var(--ink-2);border-left:3px solid var(--brown);padding-left:14px;max-width:44ch}
 @media (max-width:900px){
   .food .sec-head,.food .menus,.food .photos{grid-column:1/-1;grid-row:auto}
   .food .menus{margin-top:32px}
@@ -163,15 +167,15 @@ h2{font-size:clamp(28px,3.2vw,42px);line-height:1.08;letter-spacing:-.025em}
 
 /* coffee: the counter board */
 .coffee{background:var(--ink);color:#EEE9DA}
-.coffee .sec-head .label{color:#A9C47A}
+.coffee .sec-head .label{color:#D7B48E}
 .coffee .sec-head p{color:#B9B4A5}
 .coffee h2{color:#fff}
 .coffee .menus{grid-column:5/span 8;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px clamp(28px,4vw,56px)}
 .coffee .item{border-color:#3A3833}
 .coffee .item .lead{border-color:#5E5B52}
 .coffee .item .desc{color:#B9B4A5}
-.coffee .item .mk{color:#A9C47A}
-.coffee .list h3{color:#A9C47A}
+.coffee .item .mk{color:#D7B48E}
+.coffee .list h3{color:#D7B48E}
 .coffee .ph-wrap{margin-top:32px;max-width:300px}
 .coffee .ph{background:#2A2925}
 .coffee .cap{color:#B9B4A5}
@@ -190,7 +194,7 @@ table.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-num
 table.hours caption{text-align:left;margin-bottom:10px;color:var(--ink-2)}
 table.hours th,table.hours td{text-align:left;font-weight:400;padding:10px 0;border-bottom:1px solid var(--rule);font-size:16px}
 table.hours td{text-align:right;font-family:var(--mono);font-size:14.5px}
-table.hours tr.today th,table.hours tr.today td{font-weight:700;color:var(--matcha-ink)}
+table.hours tr.today th,table.hours tr.today td{font-weight:700;color:var(--brown)}
 .where{display:flex;flex-direction:column;gap:20px}
 .where dl{margin:0;display:grid;gap:18px}
 .where dt{color:var(--ink-2);margin-bottom:3px}
@@ -205,19 +209,18 @@ footer .wordmark b{font-size:22px;color:var(--ink)}
 /* mobile action bar */
 .mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:1fr 1fr;border-top:1.5px solid var(--ink);background:var(--milk);padding-bottom:env(safe-area-inset-bottom,0px)}
 .mbar a{padding:16px 8px;text-align:center;text-decoration:none;font-weight:700;font-size:15.5px}
-.mbar a.solid{background:var(--matcha);color:var(--ink)}
+.mbar a.solid{background:var(--ink);color:var(--milk)}
 @media (max-width:820px){.mbar{display:grid}}
 
 @media (prefers-reduced-motion:no-preference){.ph img{animation:fade .5s ease both}@keyframes fade{from{opacity:0}}}
 </style>
 </head>
 <body>
-<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of AKM Cafe. Preview photos are licensed stock; logo and colours are taken from your existing branding.</div>
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of AKM Cafe. Preview photos are licensed stock; logo, colours and details are taken from your Instagram and menu.</div>
 
 <header class="site">
   <div class="wrap">
-    <!-- [CHECK] logo: no logo file found; plain wordmark until the owner supplies theirs -->
-    <a class="wordmark" href="#top" aria-label="AKM Cafe, back to top"><b>AKM</b><span>Cafe · Bondi Beach</span></a>
+    <a class="logo" href="#top"><img src="https://s3.eu-west-1.amazonaws.com/merchant-dashboard.yoello.co-assets/912bff79-e38a-4c59-b5af-7f7346abf292/promotional/58101d94-4acf-492f-b688-4258e61b590b.png" alt="AKM Cafe logo" width="60" height="60"><span>Coffee &amp; bagels<br>Bondi Beach</span></a>
     <nav class="nav" aria-label="Main">
       <a class="hide-m" href="#matcha">Matcha</a>
       <a class="hide-m" href="#menu">Food</a>
@@ -232,8 +235,8 @@ footer .wordmark b{font-size:22px;color:var(--ink)}
     <div class="wrap grid">
       <div class="hero-text">
         <p class="label where-line">Campbell Parade · opposite the beach</p>
-        <h1>Eggs, bagels and a long matcha list, across the road from Bondi.</h1>
-        <p class="lede">A small café on the beachfront strip. Breakfast from $11.90, coffee from $4, and quick, friendly service. Eat in or take it to the sand.</p>
+        <h1>Coffee and bagels, across the road from Bondi.</h1>
+        <p class="lede">Good coffee in Bondi Beach. We pour Campos Coffee, make our bagels fresh every day with generous fillings, and keep a long matcha list. Eat in or take it to the sand.</p>
         <div class="status" id="status"><span class="now"><span class="dot"></span><span id="open-text">Open 7 days</span></span><span class="today" id="today-text">Mon–Fri 6:30am–5pm · Sat–Sun 7am–5pm</span></div>
         <div class="actions">
           <a class="btn solid" href="https://www.google.com/maps/place/?q=place_id:ChIJz4to1IqtEmsRxdhiF-_ySns" target="_blank" rel="noopener">Directions</a>
@@ -258,10 +261,9 @@ footer .wordmark b{font-size:22px;color:var(--ink)}
   <section class="matcha" id="matcha" aria-labelledby="matcha-h">
     <div class="wrap grid">
       <div class="sec-head">
-        <svg class="cup" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 22h30l-3 30a4 4 0 0 1-4 4H21a4 4 0 0 1-4-4z"/><path d="M44 28h4a6 6 0 0 1 0 12h-5"/><path d="M24 8c-3 4 3 6 0 10M33 8c-3 4 3 6 0 10"/></svg>
         <p class="label">The matcha list</p>
-        <h2 id="matcha-h">Creamy, iced, eight ways.</h2>
-        <p>Matcha is the thing here. Have it hot, plain over ice, or with fruit, honey lemon or biscoff. Try the earl grey.</p>
+        <h2 id="matcha-h">Creamy, iced, nine ways.</h2>
+        <p>Have it hot and properly strong, plain over ice, or with fruit, honey lemon or biscoff. New: mango coconut, made with real mango. Have you tried the Earl Grey Matcha yet?</p>
         <div class="ph-wrap">
           <figure class="ph" style="--r:125%" data-shot="matcha"></figure>
           <p class="cap">Iced strawberry matcha. Preview photo.</p>
@@ -276,7 +278,7 @@ footer .wordmark b{font-size:22px;color:var(--ink)}
       <div class="sec-head">
         <p class="label">Breakfast &amp; bagels</p>
         <h2 id="food-h">Eggs on sourdough pita, and twelve bagels.</h2>
-        <p>Breakfast comes on sourdough pita. Start with the Signature Breakie. <!-- [CHECK] salmon add-on price --></p>
+        <p>Made fresh every day, with fresh ingredients and a generous filling. Our all-time favourite bagel: chicken, avocado and melted cheese. Breakfast plates come on sourdough pita.</p>
         <p class="key">V vegetarian · VG vegan · AUD</p>
       </div>
       <div class="menus">
@@ -309,8 +311,8 @@ footer .wordmark b{font-size:22px;color:var(--ink)}
     <div class="wrap grid">
       <div class="sec-head">
         <p class="label">Coffee &amp; iced</p>
-        <h2 id="coffee-h">A regular is $4.50.</h2>
-        <p>Flat white, cappuccino, latte, long black, macchiato or piccolo, all one price. Ask what's in the cabinet; the caramel slice is a good one.</p>
+        <h2 id="coffee-h">Campos Coffee. A regular is $4.50.</h2>
+        <p>Flat white, cappuccino, latte, long black, macchiato or piccolo, all one price. New on ice: Coco Cloud Cold Brew, smooth cold brew under silky coconut cream. Ask what's in the cabinet today.</p>
         <div class="ph-wrap">
           <figure class="ph" style="--r:100%" data-shot="coffee"></figure>
           <p class="cap">Flat white. Preview photo.</p>
@@ -333,7 +335,7 @@ footer .wordmark b{font-size:22px;color:var(--ink)}
       <div class="sec-head">
         <p class="label">Find us</p>
         <h2 id="visit-h">Opposite the beach on Campbell Parade.</h2>
-        <p>Open seven days from early. A small room, quick service, and everything comes takeaway too.</p>
+        <p>Open seven days from early. A small room, quick service, and everything comes takeaway too. Follow <a href="https://www.instagram.com/cafe.akm/" target="_blank" rel="noopener">@cafe.akm</a> for new drinks.</p>
       </div>
       <div class="body">
         <table class="hours" id="hours">
@@ -352,6 +354,7 @@ footer .wordmark b{font-size:22px;color:var(--ink)}
           <dl>
             <div><dt class="label">Address</dt><dd>Shop 9, 152–162 Campbell Parade<br>Bondi Beach NSW 2026</dd></div>
             <div><dt class="label">How it works</dt><dd>Dine in or takeaway.</dd></div>
+            <div><dt class="label">Instagram</dt><dd><a href="https://www.instagram.com/cafe.akm/" target="_blank" rel="noopener">@cafe.akm</a></dd></div>
             <div><dt class="label">Getting here</dt><dd>On the beachfront strip, facing the sand, on your way to the coastal walk.</dd></div>
           </dl>
           <a class="btn small" href="https://www.google.com/maps/place/?q=place_id:ChIJz4to1IqtEmsRxdhiF-_ySns" target="_blank" rel="noopener" style="align-self:flex-start">Open in Google Maps</a>
@@ -363,8 +366,8 @@ footer .wordmark b{font-size:22px;color:var(--ink)}
 
 <footer>
   <div class="wrap">
-    <a class="wordmark" href="#top"><b>AKM</b><span>Cafe · Bondi Beach</span></a>
-    <span>Shop 9, 152–162 Campbell Parade, Bondi Beach</span>
+    <a class="logo" href="#top"><img src="https://s3.eu-west-1.amazonaws.com/merchant-dashboard.yoello.co-assets/912bff79-e38a-4c59-b5af-7f7346abf292/promotional/58101d94-4acf-492f-b688-4258e61b590b.png" alt="AKM Cafe logo" width="72" height="72" loading="lazy" style="width:72px;height:72px"></a>
+    <span>Shop 9, 152–162 Campbell Parade, Bondi Beach · <a href="https://www.instagram.com/cafe.akm/" target="_blank" rel="noopener">Instagram @cafe.akm</a></span>
     <span>Concept by Restauranting · <span id="credits">Photos via Pexels</span></span>
   </div>
 </footer>
@@ -379,21 +382,24 @@ footer .wordmark b{font-size:22px;color:var(--ink)}
 const MENU = {
   matcha: {title:"Matcha", note:"hot & iced", items:[
     ["Iced Earl Grey Matcha", 8.50, "Earl grey and matcha, over ice.", "", "star hot"],
+    ["Mango Coconut Matcha", 11.50, "Creamy, refreshing and made with real mango.", "", "new"],
     ["Iced Matcha", 7.50, "Plain, creamy, over ice.", ""],
     ["Iced Strawberry Matcha", 9.50, "", ""],
     ["Iced Blueberry Matcha", 9.50, "", ""],
     ["Iced Honey Lemon Matcha", 8.50, "", ""],
     ["Iced Biscoff Matcha", 9.50, "", ""],
     ["Iced Tiramisu Matcha", 9.50, "", ""],
-    ["Matcha Latte, hot", 5.00, "", ""]]},
+    ["Matcha Latte, hot", 5.00, "Properly strong, the way it should be.", ""]]},
   breakfast: {title:"Breakfast", note:"on sourdough pita", items:[
-    ["Signature Breakie", 20.90, "Two eggs, halloumi, avocado, baby spinach, sourdough pita.", "V", "star"],
+    ["Signature Breakie", 20.90, "Two eggs, halloumi, avocado, baby spinach, sourdough pita.", "V"],
     ["Big Breakie", 24.90, "Two eggs, bacon, Spanish chorizo, baby spinach, mushroom, sourdough pita.", ""],
     ["Eggs Your Way", 15.90, "Two eggs, cooked how you like, with sourdough pita.", "V"],
     ["Breakie Burger", 16.90, "Bacon, egg, halloumi, baby spinach, tomato relish, sesame bun.", ""],
+    ["Chicken Parmi Burger", null, "Crispy chicken schnitzel, smoky ham, tomato and melted cheese on a soft sesame challah bun.", "", "new"],
     ["Bacon + Egg Roll", 13.90, "Sesame bun, tomato or BBQ sauce.", ""],
     ["Smashed Avocado on Toast", 11.90, "On sourdough.", "V"]]},
-  "bagels-a": {title:"Bagels", note:"brekkie", items:[
+  "bagels-a": {title:"Bagels", note:"made fresh daily", items:[
+    ["Chicken, Avo + Cheese", 20.90, "Chicken, avocado and melted cheese.", "", "star"],
     ["Smoked Salmon", 22.90, "Dill cream cheese, avocado, cucumber, capers.", ""],
     ["Bacon + Eggs", 18.90, "", ""],
     ["Chorizo + Eggs", 18.90, "", ""],
@@ -403,7 +409,6 @@ const MENU = {
   "bagels-b": {title:"Bagels", note:"more", items:[
     ["Smashed Avo", 19.90, "", "V"],
     ["Tuna", 19.90, "", ""],
-    ["Chicken, Avo + Cheese", 20.90, "", ""],
     ["Chicken + Bacon", 20.90, "", ""],
     ["Grilled Chicken", 22.90, "", ""],
     ["Chicken Schnitzel", 22.90, "", ""]]},
@@ -429,6 +434,7 @@ const MENU = {
   iced: {title:"Iced", note:"", items:[
     ["Iced Latte", 6.50, "", ""],
     ["Iced Long Black", 6.50, "", ""],
+    ["Coco Cloud Cold Brew", 9.90, "Smooth cold brew topped with silky coconut cream.", "", "new"],
     ["Iced Cold Brew", 6.90, "", ""],
     ["Iced Mocha", 7.10, "", ""],
     ["Mont Blanc Coffee", 8.50, "", ""],
@@ -445,7 +451,7 @@ document.querySelectorAll("[data-menu]").forEach(box => {
   for (const [n, p, d, m, f] of sec.items) {
     const it = el("div", "item" + (f ? " " + f : "")), row = el("div", "row"), name = el("span", "name", n);
     if (m) { const mk = el("span", "mk", m); mk.title = m === "VG" ? "Vegan" : "Vegetarian"; name.append(mk); }
-    row.append(name, el("span", "lead"), el("span", "price", p.toFixed(2)));
+    row.append(name, el("span", "lead"), el("span", "price", p == null ? "Ask us" : p.toFixed(2)));
     it.append(row); if (d) it.append(el("p", "desc", d));
     box.append(it);
   }
