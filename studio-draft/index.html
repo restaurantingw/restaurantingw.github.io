@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Restauranting · Websites for Sydney's independent restaurants</title>
+<meta name="description" content="Restauranting builds websites for Sydney's independent restaurants and cafés. Designed for your place, live in a week, no upfront cost.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap">
+<style>
+/* Direction "Shopfront": a Sydney neighbourhood shop awning. Green and cream stripes as the brand device,
+   signwritten condensed caps for the name, plain grotesk for everything practical. Photos of real Sydney
+   streets carry the warmth. One bold moment: the live site in a phone in the hero. */
+:root{
+  --cream:#F4EFE3; --paper:#FBF8F1; --ink:#14201A; --ink-2:#56605A; --rule:#D8D1C1;
+  --green:#1F4D3A; --green-d:#173B2C; --green-l:#DCE6DE; --tomato:#C8442C;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --ital:"Newsreader",Georgia,serif;
+  --gut:clamp(16px,4.5vw,64px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);font-stretch:100%;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--tomato);outline-offset:3px}
+p{margin:0}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+.label{font:600 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+
+/* awning */
+.awning{height:22px;background:repeating-linear-gradient(90deg,var(--green) 0 34px,var(--cream) 34px 68px);position:relative}
+.awning::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:10px;
+  background:radial-gradient(circle at 17px 0,var(--green) 16px,transparent 16.5px) 0 0/68px 10px repeat-x,
+             radial-gradient(circle at 51px 0,var(--cream) 16px,transparent 16.5px) 0 0/68px 10px repeat-x}
+
+/* header */
+header.top{background:var(--paper)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:26px 18px}
+.mark{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.mark b{font:850 26px/1 var(--sans);font-stretch:68%;letter-spacing:.04em;text-transform:uppercase;color:var(--green)}
+.mark span{font:500 10.5px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2);margin-top:6px}
+.top nav{display:flex;align-items:center;gap:24px;font-size:15px}
+.top nav a{text-decoration:none}
+.top nav a:not(.btn):hover{color:var(--green)}
+@media (max-width:760px){.top nav .hide-s{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px/1 var(--sans);padding:15px 22px;border:2px solid var(--green);border-radius:2px;text-decoration:none;color:var(--green);background:transparent;transition:background .15s,color .15s}
+.btn:hover{background:var(--green);color:var(--cream)}
+.btn.solid{background:var(--green);color:var(--cream)}
+.btn.solid:hover{background:var(--green-d);border-color:var(--green-d)}
+.btn.small{padding:11px 16px;font-size:14px}
+
+/* hero */
+.hero{padding-block:clamp(36px,6vw,80px) clamp(64px,8vw,104px)}
+.hero-copy{grid-column:1/span 7;align-self:center;display:flex;flex-direction:column;gap:26px}
+.hero h1{font:850 clamp(44px,7.4vw,104px)/.9 var(--sans);font-stretch:66%;text-transform:uppercase;letter-spacing:.005em;margin:0;color:var(--ink);text-wrap:balance}
+.hero h1 em{font:400 italic .62em/1 var(--ital);text-transform:none;letter-spacing:-.01em;color:var(--green);display:block;margin-top:.12em}
+.hero .lede{font-size:clamp(18px,1.7vw,20px);color:var(--ink-2);max-width:42ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero .note{font-size:14px;color:var(--ink-2);display:flex;align-items:center;gap:8px}
+.hero .note::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--tomato)}
+.hero-phone{grid-column:9/span 4;justify-self:center;align-self:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.phone{width:min(300px,78vw);aspect-ratio:9/19;border-radius:38px;background:#111;padding:12px;box-shadow:0 30px 60px -30px rgba(20,32,26,.55);position:relative}
+.phone::before{content:"";position:absolute;top:20px;left:50%;transform:translateX(-50%);width:84px;height:22px;border-radius:12px;background:#000;z-index:2}
+.screen{width:100%;height:100%;border-radius:28px;overflow:hidden;background:var(--cream);position:relative}
+.screen iframe{border:0;width:390px;height:calc(390px * 19 / 9 * 1.035);transform-origin:0 0;position:absolute;inset:0 auto auto 0;pointer-events:auto}
+.phone-cap{font-size:13px;color:var(--ink-2);text-align:center}
+.phone-cap a{color:var(--green);font-weight:600}
+@media (max-width:900px){.hero-copy{grid-column:1/-1}.hero-phone{grid-column:1/-1;margin-top:44px}}
+
+/* streets */
+.streets{background:var(--green);color:var(--cream);padding-block:clamp(56px,8vw,96px)}
+.streets .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:28px}
+.streets h2{font:850 clamp(30px,4.4vw,56px)/.95 var(--sans);font-stretch:68%;text-transform:uppercase;margin:0;max-width:16ch}
+.streets .head p{max-width:40ch;color:#CFDDD3}
+.strip{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:clamp(10px,1.4vw,18px);align-items:start}
+.strip figure{margin:0}
+.strip .ph{aspect-ratio:4/5;background:var(--green-d);overflow:hidden}
+.strip figure:first-child .ph{aspect-ratio:4/4.6}
+.strip figure:nth-child(2){margin-top:clamp(24px,5vw,64px)}
+.strip figcaption{font-size:13px;color:#CFDDD3;margin-top:10px}
+@media (max-width:760px){.strip{grid-template-columns:1fr 1fr}.strip figure:first-child{grid-column:1/-1}.strip figure:nth-child(2){margin-top:0}}
+
+/* sections */
+section{padding-block:clamp(72px,10vw,128px)}
+.sec-h{grid-column:1/span 4;display:flex;flex-direction:column;gap:14px;align-self:start}
+.sec-h .label{color:var(--tomato)}
+.sec-h h2{font:850 clamp(30px,3.8vw,48px)/.96 var(--sans);font-stretch:68%;text-transform:uppercase;margin:0;text-wrap:balance}
+.sec-h p{color:var(--ink-2);max-width:34ch}
+.sec-b{grid-column:6/span 7;min-width:0}
+@media (max-width:900px){.sec-h,.sec-b{grid-column:1/-1}.sec-b{margin-top:32px}}
+
+.why .sec-b p{font:400 italic clamp(21px,2.1vw,27px)/1.42 var(--ital);max-width:34ch}
+.why .sec-b p + p{margin-top:22px}
+.why .sign{font:500 15px/1.5 var(--sans)!important;font-style:normal!important;color:var(--ink-2);margin-top:30px!important;display:flex;align-items:center;gap:12px}
+.why .sign::before{content:"";width:32px;height:2px;background:var(--green)}
+
+/* work */
+.work{background:var(--cream);border-block:1px solid var(--rule)}
+.case{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.browser{border:1px solid var(--rule);background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 24px 48px -32px rgba(20,32,26,.45)}
+.browser .bar{height:30px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#EEE9DD;border-bottom:1px solid var(--rule)}
+.browser .bar i{width:9px;height:9px;border-radius:50%;background:#CFC6B3}
+.browser .bar span{margin-left:10px;font-size:11.5px;color:var(--ink-2)}
+.browser .view{aspect-ratio:16/10.5;position:relative;overflow:hidden}
+.browser iframe{border:0;width:1280px;height:840px;transform-origin:0 0;position:absolute;inset:0 auto auto 0;pointer-events:none}
+.case h3{font:850 clamp(28px,3vw,40px)/.95 var(--sans);font-stretch:68%;text-transform:uppercase;margin:0 0 10px}
+.case dl{margin:18px 0 22px;display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:15px}
+.case dt{color:var(--ink-2)}
+.case dd{margin:0}
+.case .fine{font-size:13px;color:var(--ink-2);margin-top:16px}
+@media (max-width:900px){.case{grid-template-columns:1fr}}
+
+/* how */
+ol.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:64px minmax(0,1fr);gap:4px 18px;padding:24px 0;border-top:1px solid var(--rule)}
+ol.steps li:last-child{border-bottom:1px solid var(--rule)}
+ol.steps li::before{content:counter(s,decimal-leading-zero);font:850 34px/1 var(--sans);font-stretch:66%;color:var(--green);grid-row:span 2}
+ol.steps b{font-weight:700;font-size:18px}
+ol.steps span{color:var(--ink-2)}
+
+/* included */
+.incl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px}
+.incl div{padding:18px 0 18px 22px;border-top:1px solid var(--rule);position:relative;min-width:0}
+.incl div::before{content:"";position:absolute;left:0;top:26px;width:8px;height:8px;background:var(--green)}
+.incl b{display:block;font-weight:700}
+.incl span{font-size:15px;color:var(--ink-2)}
+@media (max-width:560px){.incl{grid-template-columns:1fr}}
+
+/* price */
+.price{background:var(--green);color:var(--cream)}
+.price .sec-h .label{color:#F2B9A9}
+.price .big{font:850 clamp(36px,5vw,68px)/.92 var(--sans);font-stretch:66%;text-transform:uppercase;max-width:14ch}
+.price .sec-b p + p{margin-top:20px;color:#CFDDD3;max-width:50ch}
+.price .btn{margin-top:28px;border-color:var(--cream);color:var(--cream)}
+.price .btn:hover{background:var(--cream);color:var(--green)}
+
+/* faq */
+.faq details{border-top:1px solid var(--rule)}
+.faq details:last-child{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font-weight:700;font-size:18px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:14px;font:400 30px/1 var(--sans);color:var(--green)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 22px;color:var(--ink-2);max-width:60ch}
+
+/* contact */
+.contact{background:var(--cream);border-top:1px solid var(--rule)}
+.contact .sec-b{display:flex;flex-direction:column;gap:24px}
+.contact .mail{font:850 clamp(26px,3.6vw,46px)/1 var(--sans);font-stretch:66%;overflow-wrap:anywhere;user-select:all;color:var(--green)}
+.contact .row{display:flex;flex-wrap:wrap;gap:12px}
+.contact dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 20px}
+.contact dt{color:var(--ink-2)}
+.contact dd{margin:0}
+
+footer{background:var(--paper)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;padding-block:28px 40px;font-size:14px;color:var(--ink-2)}
+footer .credit{font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="awning" aria-hidden="true"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Restauranting, home"><b>Restauranting</b><span>Sydney · Websites for restaurants</span></a>
+    <nav aria-label="Main">
+      <a class="hide-s" href="#work">Work</a>
+      <a class="hide-s" href="#how">How it works</a>
+      <a class="hide-s" href="#price">Pricing</a>
+      <a class="btn small solid" href="#contact">Free preview</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap grid">
+      <div class="hero-copy">
+        <p class="label" style="color:var(--tomato)">For independent restaurants &amp; cafés</p>
+        <h1>Websites for Sydney's <em>hidden gems.</em></h1>
+        <p class="lede">The places locals love but newcomers can't find online. We design a site around your place, put it live in a week, and keep it up to date. No upfront cost.</p>
+        <div class="cta">
+          <a class="btn solid" href="#contact">Get a free preview</a>
+          <a class="btn" href="#work">See our work</a>
+        </div>
+        <p class="note">You see your site before you pay a cent.</p>
+      </div>
+      <div class="hero-phone">
+        <div class="phone"><div class="screen" id="phone-screen"><iframe src="../khao-hom/" title="Khao Hom concept website on a phone" loading="lazy" tabindex="-1"></iframe></div></div>
+        <p class="phone-cap">Live example. Scroll it. · <a href="../khao-hom/">Open full site</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="streets">
+    <div class="wrap">
+      <div class="head">
+        <h2>The kind of places we build for</h2>
+        <p>Corner canteens, laneway cafés, the late-night spot on the main street. Places with regulars, a story and food worth crossing the city for.</p>
+      </div>
+      <div class="strip">
+        <figure><div class="ph" data-photo="32133654" data-alt="A street café in Newtown at golden hour"></div><figcaption>Newtown</figcaption></figure>
+        <figure><div class="ph" data-photo="18587213" data-alt="A small canteen with green tiles and handwritten menus"></div><figcaption>A neighbourhood canteen</figcaption></figure>
+        <figure><div class="ph" data-photo="37240056" data-alt="Restaurants and cafés on Bondi Beach's main street at night"></div><figcaption>Bondi, after dark</figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <section class="why" id="why">
+    <div class="wrap grid">
+      <div class="sec-h"><p class="label">Why we do this</p><h2>The best places are often the hardest to find</h2></div>
+      <div class="sec-b">
+        <p>Some of the best meals in Sydney come from a 30-seat room with a handwritten menu and no website. People search for them at 7pm, land on an old Instagram post, can't tell if they're open, and go somewhere else.</p>
+        <p>We think that's a shame. So we build each place a site that looks like it, answers what diners actually want to know, and makes it easy to book, order or just turn up.</p>
+        <p class="sign">Restauranting is a small studio in Bondi, started by Jero, who eats out far too often.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+    <div class="wrap">
+      <div class="grid" style="margin-bottom:clamp(32px,5vw,56px)">
+        <div class="sec-h" style="grid-column:1/span 6"><p class="label">Work</p><h2>Every site is designed for one place</h2><p>No templates. A Thai canteen shouldn't look like a wine bar.</p></div>
+      </div>
+      <div class="case">
+        <a class="browser" href="../khao-hom/" aria-label="Open the Khao Hom site">
+          <div class="bar"><i></i><i></i><i></i><span>khaohom.com.au</span></div>
+          <div class="view" id="desk-view"><iframe src="../khao-hom/" title="Khao Hom concept website on a desktop" loading="lazy" tabindex="-1"></iframe></div>
+        </a>
+        <div>
+          <p class="label" style="color:var(--tomato);margin-bottom:12px">Concept project</p>
+          <h3>Khao Hom</h3>
+          <p>A 38-seat Isaan and Lao canteen in Marrickville. We built the identity around the two-colour printed menus of northeastern Thai shophouses, and put the menu one tap from the top.</p>
+          <dl>
+            <dt>Built around</dt><dd>Menu first, walk-ins and pickup</dd>
+            <dt>Features</dt><dd>Live open-now status, Thai menu names, book, order, directions</dd>
+          </dl>
+          <a class="btn" href="../khao-hom/">View the site</a>
+          <p class="fine">Khao Hom is a fictional restaurant made to show our approach. Client sites appear here as they go live.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap grid">
+      <div class="sec-h"><p class="label">How it works</p><h2>You see it before you decide</h2></div>
+      <div class="sec-b">
+        <ol class="steps">
+          <li><b>We build you a free preview</b><span>Your menu, hours, location and story, designed around your place. You get a private link.</span></li>
+          <li><b>You tell us what to change</b><span>Colours, photos, wording, anything. No obligation.</span></li>
+          <li><b>We go live within a week</b><span>On your own domain, like yourplace.com.au, and linked from your Google Maps listing.</span></li>
+          <li><b>We keep it up to date</b><span>New dish, price change, holiday hours: send us a message and it's done within 48 hours.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="included" style="border-top:1px solid var(--rule)">
+    <div class="wrap grid">
+      <div class="sec-h"><p class="label">What's included</p><h2>Everything a diner looks for</h2><p>And nothing they don't.</p></div>
+      <div class="sec-b">
+        <div class="incl">
+          <div><b>Your menu, properly set</b><span>Easy to read on a phone, with prices and dietary notes. Not a PDF.</span></div>
+          <div><b>Open now, today's hours</b><span>Shown live, so nobody turns up to a closed door.</span></div>
+          <div><b>Book, order, call, directions</b><span>One tap, linked to the tools you already use.</span></div>
+          <div><b>Found on Google</b><span>Set up so Google understands your hours, address and cuisine.</span></div>
+          <div><b>Your domain, in your name</b><span>You own it, always.</span></div>
+          <div><b>Hosting and updates</b><span>Unlimited small changes, done for you.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="price" id="price">
+    <div class="wrap grid">
+      <div class="sec-h"><p class="label">Pricing</p></div>
+      <div class="sec-b">
+        <p class="big">No upfront cost. One small monthly fee.</p>
+        <p>The fee depends on the size of your place and what it needs, and we agree it with you before anything goes live. It covers design, hosting, your domain and every update.</p>
+        <a class="btn" href="#contact">Ask for your price</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap grid">
+      <div class="sec-h"><p class="label">Questions</p><h2>Good to know</h2></div>
+      <div class="sec-b">
+        <details><summary>Isn't Instagram enough?</summary><p>Instagram is great for showing food, but people searching on Google want your hours, menu and a way to book. A website answers those in seconds and shows up when people search for your name or "Thai near me".</p></details>
+        <details><summary>Who owns the website and the domain?</summary><p>You own your domain and your content. If you ever leave, we hand everything over.</p></details>
+        <details><summary>What about photos?</summary><p>We use your own photos, picked and edited to look their best. If you don't have good ones, we can arrange a shoot.</p></details>
+        <details><summary>How do I make changes?</summary><p>Send us a message or an email with what's changed. We update it within 48 hours.</p></details>
+        <details><summary>Do you work with cafés and takeaways too?</summary><p>Yes. Any independent food business in Sydney: restaurants, cafés, bakeries, bars and takeaways.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap grid">
+      <div class="sec-h"><p class="label">Contact</p><h2>Want to see your restaurant's site?</h2><p>Send us its name and suburb. We'll send you a free preview within a few days.</p></div>
+      <div class="sec-b">
+        <p class="mail">restauranting8t8@gmail.com</p>
+        <div class="row"><a class="btn solid" href="mailto:restauranting8t8@gmail.com?subject=Free%20preview%20request">Email us</a></div>
+        <dl>
+          <dt>Instagram</dt><dd>@restauranting.syd</dd>
+          <dt>Based in</dt><dd>Bondi, Sydney. Happy to drop by.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="awning" aria-hidden="true"></div>
+  <div class="wrap"><span>© 2026 Restauranting · Sydney</span><span class="credit" id="credit"></span></div>
+</footer>
+
+<script>
+/* licensed Pexels photos, sized per screen */
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll("[data-photo]").forEach(el => {
+  const id = el.dataset.photo, img = new Image();
+  img.alt = el.dataset.alt; img.loading = "lazy"; img.decoding = "async";
+  img.sizes = "(max-width:760px) 50vw, 33vw";
+  img.srcset = [500, 800, 1200].map(w => src(id, w) + " " + w + "w").join(", ");
+  img.src = src(id, 800);
+  el.append(img);
+});
+document.getElementById("credit").textContent = "Street photos via Pexels: Daniel Dang, Talha Reşitoğlu, billow926";
+
+/* scale the live site to fit the phone and browser frames */
+function fit(box, w) { const f = box.querySelector("iframe"); if (!f) return; const s = box.clientWidth / w; f.style.transform = `scale(${s})`; f.style.height = (box.clientHeight / s) + "px"; }
+function fitAll(){ fit(document.getElementById("phone-screen"), 390); fit(document.getElementById("desk-view"), 1280); }
+fitAll(); addEventListener("resize", fitAll);
+</script>
+</body>
+</html>
