@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Coco Bento · Japanese lunch in Maroubra Plaza</title>
+<meta name="description" content="Coco Bento is a local Japanese restaurant inside Maroubra Plaza. Bento, donburi, udon, sushi and lunch specials from $11. Dine in, take away or delivery.">
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<!--
+  CREATIVE BRIEF: "Shopfront panel"
+  Brand capture (from the shopfront photo, confidence medium): white sign panel, red circle emblem, red "Coco Bento" lettering running vertically; red + white + dark interior.
+  Logo file: none found (Instagram profile picture is a food photo). Wordmark set in M PLUS Rounded 1c, beside a plain red circle that echoes the sign. LOGO TO REQUEST FROM OWNER.
+  Archetype: menu-first / practical utility. Lunch specials near the top, bento tray laid out as compartments, full menu typeset like a printed Japanese menu.
+  Open questions [CHECK]:
+  - Weekend hours not confirmed: page shows Mon to Fri only and asks people to call on weekends.
+  - Lunch specials: which days/times they run and what is included (miso, rice?).
+  - Flame Grilled Nigiri Set and Combo Large: prices unknown, shown without prices.
+  - Delivery platform (Uber Eats / DoorDash / Menulog?) unknown: no ordering link yet.
+  - Instagram shows birthday party plates: do they do party platters / catering? Not mentioned on page.
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Coco Bento","servesCuisine":"Japanese","priceRange":"$1–20","telephone":"+61 413 108 568",
+"address":{"@type":"PostalAddress","streetAddress":"Unit 5/189 Maroubra Rd (inside Maroubra Plaza)","addressLocality":"Maroubra","addressRegion":"NSW","postalCode":"2035","addressCountry":"AU"},
+"sameAs":["https://www.instagram.com/cocobento_maroubra/"],
+"hasMenu":"#menu","acceptsReservations":false,
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"11:30","closes":"15:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"16:00","closes":"20:30"}]}
+</script>
+<style>
+/* Direction "Shopfront panel": the white sign with the red circle and vertical red lettering, carried onto the page.
+   Red does the talking (wordmark, specials, prices); charcoal for the bento tray; rice-cream paper underneath. */
+:root{
+  --red:#D7262E; --red-d:#B51D24; --white:#FFFFFF; --char:#232120; --char-2:#5D5853; --rice:#F7F2E8; --rice-2:#EFE8DA; --rule:#DED6C7;
+  --round:"M PLUS Rounded 1c","Kosugi Maru","Hiragino Maru Gothic ProN",sans-serif;
+  --body:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",system-ui,sans-serif;
+  --gut:clamp(16px,4vw,56px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--rice);color:var(--char);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--red)}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+p{margin:0}
+h1,h2,h3{margin:0;font-family:var(--round);font-weight:800;text-wrap:balance}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+.label{font:500 13px/1.2 var(--round);letter-spacing:.08em;text-transform:uppercase}
+.jp{font-family:var(--body);font-weight:500}
+
+/* concept note */
+.preview{background:var(--char);color:#D8D2C8;font-size:13px;line-height:1.5;padding:9px var(--gut)}
+.preview b{color:#fff;font-weight:500}
+
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:var(--white);border-bottom:1px solid var(--rule)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--red)}
+.mark:hover{color:var(--red-d)}
+.dot{display:inline-block;width:26px;height:26px;border-radius:50%;background:var(--red);flex:none}
+.mark b{font:800 23px/1 var(--round);letter-spacing:.01em}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px}
+.nav a{text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:500 15px/1 var(--round);padding:14px 20px;border:2px solid var(--char);border-radius:4px;text-decoration:none;background:transparent;color:var(--char);transition:background .15s,color .15s,border-color .15s;white-space:nowrap}
+.btn:hover{background:var(--char);color:var(--white)}
+.btn.red{background:var(--red);border-color:var(--red);color:#fff}
+.btn.red:hover{background:var(--red-d);border-color:var(--red-d);color:#fff}
+.btn.small{padding:10px 14px;font-size:14px}
+@media (max-width:860px){.nav .hide-m{display:none}}
+@media (max-width:480px){.hide-s{display:none}}
+
+/* photo frames */
+.ph{position:relative;margin:0;background:var(--rice-2);overflow:hidden}
+.ph::before{content:"";display:block;padding-top:var(--r,125%)}
+.ph > img{position:absolute;inset:0}
+figcaption{font-size:14px;color:var(--char-2);margin-top:10px}
+figcaption b{color:var(--char);font-weight:700}
+
+/* hero: the sign panel, the line, the plate */
+.hero{padding-block:clamp(24px,4vw,56px) 0}
+.sign{grid-column:1/span 2;background:var(--white);border:1px solid var(--rule);display:flex;flex-direction:column;align-items:center;gap:22px;padding:28px 0 30px}
+.sign .dot{width:58px;height:58px}
+.sign .v{writing-mode:vertical-rl;font:800 clamp(40px,4.2vw,58px)/1 var(--round);color:var(--red);letter-spacing:.06em}
+.hero-text{grid-column:3/span 5;align-self:end;display:flex;flex-direction:column;gap:22px;padding-bottom:6px}
+.hero-text .label{color:var(--red)}
+h1{font-size:clamp(34px,4.2vw,54px);line-height:1.12;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--red)}
+.lede{font-size:18px;color:var(--char-2);max-width:42ch}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.hero-media{grid-column:8/span 5}
+@media (max-width:980px){
+  .sign{display:none}
+  .hero-text{grid-column:1/span 6}
+  .hero-media{grid-column:7/span 6}
+}
+@media (max-width:760px){
+  .hero-text,.hero-media{grid-column:1/-1}
+  .hero-media{order:-1;margin-inline:calc(var(--gut)*-1);margin-bottom:22px}
+  .hero-media .ph{--r:88%!important}
+}
+
+/* status strip */
+.strip{margin-top:clamp(28px,4vw,48px);background:var(--white);border-block:1px solid var(--rule)}
+.strip .wrap{display:grid;grid-template-columns:1.2fr 1.2fr 1fr 1fr}
+.strip .cell{padding:16px 16px 16px 0;display:flex;flex-direction:column;gap:3px;min-width:0}
+.strip .cell + .cell{padding-left:16px;border-left:1px solid var(--rule)}
+.strip .label{color:var(--char-2);font-size:12px}
+.strip .val{font-size:16px;font-weight:500}
+.strip a{text-decoration:none}
+.state{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--char-2);margin-right:8px;vertical-align:1px}
+.is-open .state{background:#2F8F4E}
+@media (max-width:860px){.strip .wrap{grid-template-columns:1fr 1fr}.strip .cell:nth-child(3){padding-left:0;border-left:0}.strip .cell:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+section{padding-block:clamp(64px,9vw,112px)}
+h2{font-size:clamp(28px,3vw,38px);line-height:1.15}
+.head{display:flex;flex-direction:column;gap:12px}
+.head .label{color:var(--red)}
+.head p{color:var(--char-2);max-width:40ch}
+
+/* lunch specials: the red panel */
+.lunch{background:var(--red);color:#fff}
+.lunch .head{grid-column:1/span 4}
+.lunch .head .label{color:#FFD9D6}
+.lunch .head p{color:#FFE7E4}
+.lunch .from{font:800 clamp(64px,8vw,104px)/.9 var(--round);letter-spacing:-.02em;margin-top:8px}
+.lunch .from small{font-size:.32em;font-weight:500;letter-spacing:0;display:block;margin-bottom:6px}
+.specials{grid-column:6/span 7;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(24px,3vw,48px);border-top:2px solid #fff}
+.specials li{display:flex;align-items:baseline;gap:10px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.35);min-width:0}
+.specials .n{font:500 18px/1.3 var(--round)}
+.specials .n .jp{display:block;font-size:13px;color:#FFD9D6;font-weight:400}
+.specials .lead{flex:1;min-width:10px;border-bottom:1px dotted rgba(255,255,255,.6);transform:translateY(-5px)}
+.specials .p{font:800 22px/1 var(--round);font-variant-numeric:tabular-nums}
+@media (max-width:900px){.lunch .head,.specials{grid-column:1/-1}.specials{margin-top:32px}}
+@media (max-width:560px){.specials{grid-template-columns:1fr}}
+
+/* bento tray */
+.bento .head{grid-column:1/span 4;align-self:start}
+.tray{grid-column:5/span 8;background:var(--char);padding:10px;border-radius:10px;display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:auto auto auto;gap:8px}
+.cmp{background:var(--rice);border-radius:4px;padding:20px 20px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.cmp .jp{font-size:13px;color:var(--char-2)}
+.cmp h3{font-size:20px;line-height:1.2}
+.cmp .p{font:800 24px/1 var(--round);color:var(--red);margin-top:auto;padding-top:14px;font-variant-numeric:tabular-nums}
+.cmp.photo{grid-row:1/span 2;padding:0;overflow:hidden;position:relative;min-height:320px}
+.cmp.photo img{position:absolute;inset:0}
+.cmp.kids{grid-column:1/-1;flex-direction:row;align-items:baseline;flex-wrap:wrap;gap:6px 14px;background:var(--white)}
+.cmp.kids .p{margin:0 0 0 auto;padding:0}
+.cmp.kids p{color:var(--char-2);font-size:15px}
+@media (max-width:980px){.bento .head,.tray{grid-column:1/-1}.tray{margin-top:32px}}
+@media (max-width:620px){.tray{grid-template-columns:1fr 1fr}.cmp.photo{grid-column:1/-1;grid-row:auto;min-height:0;aspect-ratio:4/3}.cmp{padding:16px}.cmp h3{font-size:18px}}
+
+/* printed menu */
+.menu{background:var(--white);border-top:1px solid var(--rule)}
+.menu-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px;margin-bottom:clamp(28px,4vw,48px)}
+.menu-top .note{font-size:15px;color:var(--char-2);max-width:46ch}
+.jump{position:sticky;top:66px;z-index:5;background:var(--white);border-block:1px solid var(--rule);overflow-x:auto;white-space:nowrap;scrollbar-width:none;margin-bottom:clamp(28px,4vw,44px)}
+.jump::-webkit-scrollbar{display:none}
+.jump .wrap{display:flex;gap:22px;padding-block:12px}
+.jump a{text-decoration:none;font:500 14px/1 var(--round);color:var(--char-2)}
+.jump a:hover{color:var(--red)}
+.courses{columns:2 400px;column-gap:clamp(32px,5vw,80px)}
+.course{break-inside:avoid;margin-bottom:clamp(36px,4vw,52px)}
+.course h3{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:10px;border-bottom:2px solid var(--red);font-size:22px}
+.course h3 .jp{font-size:16px;color:var(--red);font-weight:500}
+.course .sub{font-size:14px;color:var(--char-2);margin-top:8px}
+.item{display:flex;align-items:baseline;gap:10px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.item .name{font-weight:700;font-size:17px;min-width:0}
+.item .name .jp{font-weight:400;font-size:13.5px;color:var(--char-2);margin-left:8px;white-space:nowrap}
+.item .name .d{display:block;font-weight:400;font-size:14px;color:var(--char-2)}
+.item .lead{flex:1;min-width:12px;border-bottom:1px dotted #BDB4A4;transform:translateY(-5px)}
+.item .price{font:800 17px/1 var(--round);font-variant-numeric:tabular-nums}
+.menu-foot{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center;border-top:2px solid var(--char);padding-top:18px;font-size:14px;color:var(--char-2)}
+
+/* photo band */
+.band{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);row-gap:32px}
+.band .a{grid-column:1/span 5}
+.band .b{grid-column:6/span 3;margin-top:clamp(0px,8vw,110px)}
+.band .c{grid-column:9/span 4}
+.band .d{grid-column:2/span 4}
+.band .e{grid-column:7/span 5}
+@media (max-width:760px){.band > figure{grid-column:1/-1!important;margin-top:0!important}.band .b,.band .d{grid-column:1/span 9!important}}
+
+/* visit */
+.visit{border-top:1px solid var(--rule)}
+.visit .head{grid-column:1/span 4}
+.visit .body{grid-column:6/span 7;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px)}
+table.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.hours caption{text-align:left;margin-bottom:10px;color:var(--char-2)}
+table.hours th,table.hours td{text-align:left;font-weight:400;padding:10px 0;border-bottom:1px solid var(--rule);font-size:16px;vertical-align:top}
+table.hours td{text-align:right}
+table.hours tr.today th,table.hours tr.today td{font-weight:700;color:var(--red)}
+.hours-note{font-size:14px;color:var(--char-2);margin-top:12px}
+.where dl{margin:0;display:grid;gap:16px}
+.where dt{color:var(--char-2)}
+.where dd{margin:2px 0 0;font-size:16px}
+@media (max-width:900px){.visit .head,.visit .body{grid-column:1/-1}.visit .body{margin-top:28px}}
+@media (max-width:560px){.visit .body{grid-template-columns:1fr}}
+
+footer{background:var(--char);color:#CFC8BD;padding-block:44px 120px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:space-between;align-items:flex-start}
+footer .mark{color:#fff}
+footer .mark:hover{color:#fff}
+footer .cols{display:flex;flex-wrap:wrap;gap:8px 32px}
+footer a{color:#fff}
+footer .credits{flex-basis:100%;color:#9F978B;font-size:13px;border-top:1px solid #3C3936;padding-top:18px}
+
+/* mobile action bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:1fr 1.2fr 1fr;background:var(--white);border-top:1px solid var(--char);padding-bottom:env(safe-area-inset-bottom,0px)}
+.mbar a{padding:16px 6px;text-align:center;text-decoration:none;font:500 15px/1 var(--round)}
+.mbar a + a{border-left:1px solid var(--rule)}
+.mbar a.red{background:var(--red);color:#fff;border-left:0}
+@media (max-width:860px){.mbar{display:grid}}
+
+@media (prefers-reduced-motion:no-preference){.ph img,.cmp.photo img{animation:fade .5s ease both}@keyframes fade{from{opacity:0}}}
+</style>
+</head>
+<body>
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of Coco Bento. Preview photos are licensed stock; colours and details are taken from your shopfront, Instagram, menu and Google listing.</div>
+
+<header class="site">
+  <div class="wrap">
+    <!-- logo file: ask owner. Wordmark + plain red circle stand in for the sign emblem. -->
+    <a class="mark" href="#top" aria-label="Coco Bento, back to top"><span class="dot" aria-hidden="true"></span><b>Coco Bento</b></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-m" href="#lunch">Lunch specials</a>
+      <a class="hide-m" href="#bento">Bento</a>
+      <a class="hide-m" href="#menu">Menu</a>
+      <a class="hide-m" href="#visit">Hours</a>
+      <a class="btn small red" href="tel:+61413108568">Call<span class="hide-s">&nbsp;0413 108 568</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap grid">
+      <div class="sign" aria-hidden="true"><span class="dot"></span><span class="v">Coco Bento</span></div>
+      <div class="hero-text">
+        <p class="label">Local Japanese · Maroubra Plaza</p>
+        <h1>Bento, donburi, udon and sushi. Lunch from <em>$11</em>.</h1>
+        <p class="lede">We're at Unit 5 inside Maroubra Plaza, open weekdays for lunch and dinner. Eat in, take away, or have it delivered.</p>
+        <div class="actions">
+          <a class="btn red" href="#lunch">Lunch specials</a>
+          <a class="btn" href="#menu">Full menu</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <figure class="ph" style="--r:112%" data-shot="hero"></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip" aria-label="Quick info">
+    <div class="wrap">
+      <div class="cell" id="open-cell"><span class="label">Today</span><span class="val"><span class="state"></span><span id="open-text">Mon to Fri, 11:30am to 8:30pm</span></span></div>
+      <div class="cell"><span class="label">Find us</span><span class="val"><a href="https://www.google.com/maps/search/?api=1&amp;query=Coco+Bento+189+Maroubra+Rd+Maroubra+NSW+2035" target="_blank" rel="noopener">Unit 5, Maroubra Plaza</a></span></div>
+      <div class="cell"><span class="label">Call</span><span class="val"><a href="tel:+61413108568">0413 108 568</a></span></div>
+      <div class="cell"><span class="label">Service</span><span class="val">Dine-in · Takeaway · Delivery</span></div>
+    </div>
+  </div>
+
+  <!-- [CHECK] lunch special days/times and inclusions -->
+  <section class="lunch" id="lunch" aria-labelledby="lunch-h">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label">Lunch specials <span class="jp">ランチ</span></p>
+        <h2 id="lunch-h">Eight lunch plates.</h2>
+        <p class="from"><small>from</small>$11</p>
+        <p>Chicken, tofu or salmon from $11, up to eel on rice for $16.50. Eat in or take away.</p>
+      </div>
+      <ul class="specials" id="specials"></ul>
+    </div>
+  </section>
+
+  <section class="bento" id="bento" aria-labelledby="bento-h">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label">Bento <span class="jp">弁当</span></p>
+        <h2 id="bento-h">The box we're named after.</h2>
+        <p>Five bento, from the kids' box at $11.90 to tempura or sashimi at $21.90.</p>
+      </div>
+      <div class="tray" id="tray">
+        <div class="cmp photo" data-shot="bento"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="menu-top">
+        <div class="head">
+          <p class="label">Menu <span class="jp">お品書き</span></p>
+          <h2 id="menu-h">Everything else we cook</h2>
+        </div>
+        <p class="note">Mains, donburi, udon, tempura, sushi and sides. Add miso soup or rice to anything for $2. Prices in AUD.</p>
+      </div>
+    </div>
+    <nav class="jump" aria-label="Menu sections"><div class="wrap" id="jump"></div></nav>
+    <div class="wrap">
+      <div class="courses" id="courses"></div>
+      <div class="menu-foot">
+        <span>Dine-in, takeaway and delivery.</span>
+        <a class="btn small red" href="tel:+61413108568">Call 0413 108 568</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="From the kitchen">
+    <div class="wrap band">
+      <figure class="a" style="margin:0"><div class="ph" style="--r:80%" data-shot="unadon"></div><figcaption><b>Una Don</b> · grilled eel on rice, $17.90</figcaption></figure>
+      <figure class="b" style="margin:0"><div class="ph" style="--r:125%" data-shot="udon"></div><figcaption><b>Beef udon</b> · $13.90</figcaption></figure>
+      <figure class="c" style="margin:0"><div class="ph" style="--r:100%" data-shot="sashimi"></div><figcaption><b>Salmon sashimi</b> · $9.90</figcaption></figure>
+      <figure class="d" style="margin:0"><div class="ph" style="--r:100%" data-shot="tempura"></div><figcaption><b>Tempura</b> · small $8.90, large $15.90</figcaption></figure>
+      <figure class="e" style="margin:0"><div class="ph" style="--r:75%" data-shot="oyako"></div><figcaption><b>Oyako Don</b> · chicken and egg on rice, $14.90</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label">Hours &amp; location</p>
+        <h2 id="visit-h">Inside Maroubra Plaza, Unit 5.</h2>
+        <p>On Maroubra Road. Lunch and dinner on weekdays.</p>
+      </div>
+      <div class="body">
+        <div>
+          <!-- [CHECK] weekend hours not confirmed: Sat/Sun shown as "call us" -->
+          <table class="hours" id="hours">
+            <caption class="label">Opening hours</caption>
+            <tbody>
+              <tr data-day="1"><th scope="row">Monday</th><td>11:30am – 3pm<br>4 – 8:30pm</td></tr>
+              <tr data-day="2"><th scope="row">Tuesday</th><td>11:30am – 3pm<br>4 – 8:30pm</td></tr>
+              <tr data-day="3"><th scope="row">Wednesday</th><td>11:30am – 3pm<br>4 – 8:30pm</td></tr>
+              <tr data-day="4"><th scope="row">Thursday</th><td>11:30am – 3pm<br>4 – 8:30pm</td></tr>
+              <tr data-day="5"><th scope="row">Friday</th><td>11:30am – 3pm<br>4 – 8:30pm</td></tr>
+            </tbody>
+          </table>
+          <p class="hours-note">Weekends: call us on <a href="tel:+61413108568">0413 108 568</a> before you come.</p>
+        </div>
+        <div class="where">
+          <dl>
+            <div><dt class="label">Address</dt><dd>Unit 5/189 Maroubra Rd<br>Maroubra NSW 2035<br>(inside Maroubra Plaza)</dd></div>
+            <div><dt class="label">Phone</dt><dd><a href="tel:+61413108568">0413 108 568</a></dd></div>
+            <div><dt class="label">Instagram</dt><dd><a href="https://www.instagram.com/cocobento_maroubra/" target="_blank" rel="noopener">@cocobento_maroubra</a></dd></div>
+          </dl>
+          <p style="margin-top:20px"><a class="btn small" href="https://www.google.com/maps/search/?api=1&amp;query=Coco+Bento+189+Maroubra+Rd+Maroubra+NSW+2035" target="_blank" rel="noopener">Open in Google Maps</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="mark" href="#top"><span class="dot" aria-hidden="true"></span><b>Coco Bento</b></a>
+    <div class="cols">
+      <span>Unit 5/189 Maroubra Rd, Maroubra NSW 2035</span>
+      <a href="tel:+61413108568">0413 108 568</a>
+      <a href="https://www.instagram.com/cocobento_maroubra/" target="_blank" rel="noopener">@cocobento_maroubra</a>
+    </div>
+    <p class="credits">Concept site by Restauranting · <span id="credits"></span></p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+61413108568">Call</a>
+  <a class="red" href="https://www.google.com/maps/search/?api=1&amp;query=Coco+Bento+189+Maroubra+Rd+Maroubra+NSW+2035" target="_blank" rel="noopener">Directions</a>
+  <a href="#menu">Menu</a>
+</nav>
+
+<script>
+/* Menu data from the Google listing (AUD). null price = not confirmed, shown without a price. */
+const SPECIALS = [
+  ["Chicken Teriyaki","チキン照り焼き",11],
+  ["Tofu Teriyaki","豆腐照り焼き",11],
+  ["Salmon Set","サーモン定食",11],
+  ["Curry Don","カレー丼",13.5],
+  ["Beef Teriyaki","ビーフ照り焼き",15],
+  ["Grilled Mackerel","焼き鯖",15.5],
+  ["Sashimi Set","刺身定食",16.5],
+  ["Una Don","うな丼",16.5]
+];
+const BENTO = [
+  ["Bento Tempura","天ぷら弁当",21.9],
+  ["Bento Sashimi","刺身弁当",21.9],
+  ["Salmon Teriyaki","サーモン照り焼き弁当",17.9],
+  ["Salmon Steak","サーモンステーキ弁当",17.9]
+];
+const KIDS = ["Kids Bento","お子様弁当",11.9];
+const MENU = [
+  {id:"mains", en:"Hot mains", jp:"主菜", items:[
+    ["Wagyu Beef Misoyaki","和牛味噌焼き",18.9],["Beef Teriyaki","ビーフ照り焼き",14.9],["Spicy Pork","",14.9],
+    ["Chicken Teriyaki","チキン照り焼き",14.5],["Chicken Katsu","チキンカツ",14.5],["Tofu Teriyaki","豆腐照り焼き",14.5]]},
+  {id:"don", en:"Donburi", jp:"丼", sub:"Rice bowls.", items:[
+    ["Una Don","うな丼",17.9],["Tempura Don","天丼",15.9],["Katsu Don","カツ丼",14.9],["Curry Don","カレー丼",14.9],["Oyako Don","親子丼",14.9]]},
+  {id:"udon", en:"Udon", jp:"うどん", items:[
+    ["Tempura udon","天ぷらうどん",15.9],["Beef udon","肉うどん",13.9],["Chicken udon","鶏うどん",13.9],["Vegetable udon","野菜うどん",12.9],["Plain udon","かけうどん",9.9]]},
+  {id:"sushi", en:"Sushi & sashimi", jp:"寿司・刺身", items:[
+    ["Combo Salmon","",19.9],["Combo Small","",19.9],["Combo Large","",null],["Flame Grilled Nigiri Set","炙り握り",null],
+    ["Mix Nigiri","握り盛り合わせ",12.9],["Sashimi Salmon & Tuna","サーモン・マグロ刺身",18.9],["Mix Sashimi","刺身盛り合わせ",10.9],
+    ["Sashimi Tuna","マグロ刺身",10.9],["Sashimi Salmon","サーモン刺身",9.9]]},
+  {id:"tempura", en:"Tempura", jp:"天ぷら", items:[
+    ["Large","",15.9,"8 vegetable pieces and 2 prawns"],["Vegetable","野菜天ぷら",12.9],["Small","",8.9,"4 vegetable pieces and 1 prawn"]]},
+  {id:"sides", en:"Sides", jp:"一品", items:[
+    ["Grilled Mackerel","焼き鯖",9.9],["Soft Shell Crab Fritter","",9.9],["Chicken Karaage","唐揚げ",8.9],["Takoyaki","たこ焼き",8.9],
+    ["Seaweed Salad","海藻サラダ",8.9],["Agedashi Tofu","揚げ出し豆腐",6.9],["Eggplant with Sweet Miso","茄子味噌",6.9],
+    ["Gyoza","餃子",6.9],["Japanese Pickles","漬物",6.9],["Edamame","枝豆",5.9],["Tempura Prawn","海老天",3.9]]},
+  {id:"salads", en:"Salads", jp:"サラダ", items:[
+    ["Sashimi Salad","刺身サラダ",12.9],["Salmon Avocado","",12.9],["Cooked Tuna Avocado","",9.9],["Tofu Wakame","豆腐わかめ",9.9]]},
+  {id:"drinks", en:"Drinks, dessert & extras", jp:"飲み物", items:[
+    ["Ramune","ラムネ",4.2],["Sparkling Water","",4.9],["Calpis Water","カルピス",3.9],["Ice Lemon Tea","",3.9],["Hot Tea","お茶",3.9],
+    ["Coke, Coke Zero or Lemonade","",3.5],["Spring Water","",3.5],["Mochi or Black Sesame Ice Cream","",3.9],["Miso Soup","味噌汁",2],["Rice","ご飯",2]]}
+];
+
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const price = p => p == null ? "" : (Number.isInteger(p) ? String(p) : p.toFixed(2));
+const jpSpan = (s, cls = "jp") => { const j = el("span", cls, s); j.lang = "ja"; return j; };
+
+/* lunch specials */
+const sp = document.getElementById("specials");
+for (const [n, j, p] of SPECIALS) {
+  const li = el("li"), name = el("span", "n", n);
+  name.append(jpSpan(j));
+  li.append(name, el("span", "lead"), el("span", "p", price(p)));
+  sp.append(li);
+}
+
+/* bento tray compartments */
+const tray = document.getElementById("tray");
+for (const [n, j, p] of BENTO) {
+  const c = el("div", "cmp");
+  c.append(jpSpan(j), el("h3", null, n), el("span", "p", price(p)));
+  tray.append(c);
+}
+{
+  const c = el("div", "cmp kids");
+  c.append(el("h3", null, KIDS[0]), jpSpan(KIDS[1]), el("span", "p", price(KIDS[2])));
+  tray.append(c);
+}
+
+/* printed menu */
+const courses = document.getElementById("courses"), jump = document.getElementById("jump");
+const jb = el("a", null, "Lunch specials"); jb.href = "#lunch"; jump.append(jb);
+const jbb = el("a", null, "Bento"); jbb.href = "#bento"; jump.append(jbb);
+for (const c of MENU) {
+  const a = el("a", null, c.en); a.href = "#" + c.id; jump.append(a);
+  const box = el("div", "course"); box.id = c.id;
+  const h = el("h3", null, c.en); h.append(jpSpan(c.jp)); box.append(h);
+  if (c.sub) box.append(el("p", "sub", c.sub));
+  for (const [n, j, p, d] of c.items) {
+    const it = el("div", "item"), name = el("span", "name", n);
+    if (j) name.append(jpSpan(j));
+    if (d) name.append(el("span", "d", d));
+    it.append(name);
+    if (p != null) it.append(el("span", "lead"), el("span", "price", price(p)));
+    box.append(it);
+  }
+  courses.append(box);
+}
+
+/* open now, in Sydney time. Weekend hours unconfirmed: never claim closed on Sat/Sun. */
+const WEEKDAY = [[690, 900], [960, 1230]];
+const HOURS = {1: WEEKDAY, 2: WEEKDAY, 3: WEEKDAY, 4: WEEKDAY, 5: WEEKDAY};
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m / 60), mm = m % 60, h12 = ((h + 11) % 12) + 1; return h12 + (mm ? ":" + String(mm).padStart(2, "0") : "") + (h >= 12 ? "pm" : "am"); };
+function sydney(){
+  const p = new Intl.DateTimeFormat("en-AU", {timeZone:"Australia/Sydney", weekday:"long", hour:"numeric", minute:"numeric", hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => p.find(x => x.type === k)?.value;
+  return {day: DAYS.indexOf(g("weekday")), mins: (+g("hour") % 24) * 60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = sydney(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const cell = document.getElementById("open-cell"), txt = document.getElementById("open-text");
+  const today = HOURS[day];
+  cell.classList.remove("is-open");
+  if (!today) { txt.textContent = "Weekend: call 0413 108 568 for hours"; return; }
+  const cur = today.find(([a, b]) => mins >= a && mins < b);
+  if (cur) { cell.classList.add("is-open"); txt.textContent = "Open now, until " + fmt(cur[1]); return; }
+  const next = today.find(([a]) => mins < a);
+  if (next) { txt.textContent = (mins >= 900 ? "Back at " : "Opens at ") + fmt(next[0]) + " today"; return; }
+  txt.textContent = day === 5 ? "Closed for today" : "Closed · opens tomorrow 11:30am";
+}
+tick(); setInterval(tick, 60000);
+
+/* Licensed stock photos (Pexels licence, free for commercial use), resized per screen by Pexels' CDN. */
+const PHOTOS = {
+  hero:    {id:31251610, alt:"A Japanese bento box with several small dishes", by:"Anh Nguyen", eager:true, sizes:"(max-width:760px) 100vw, 42vw"},
+  bento:   {id:13065217, alt:"A bento box with miso soup and side dishes", by:"Marvin Sacdalan", sizes:"(max-width:620px) 100vw, 30vw"},
+  unadon:  {id:16569753, alt:"Grilled eel on rice in a bowl", by:"Cohesion Singapore", sizes:"(max-width:760px) 100vw, 42vw"},
+  udon:    {id:24246680, alt:"A bowl of udon with beef and spring onion", by:"Kyoz", sizes:"(max-width:760px) 75vw, 25vw"},
+  sashimi: {id:6788945,  alt:"Salmon sashimi with cucumber, wasabi and ginger", by:"Ramaz Photos", sizes:"(max-width:760px) 100vw, 33vw"},
+  tempura: {id:31416983, alt:"Crispy tempura in a bowl", by:"Zhen Ciang Huang", sizes:"(max-width:760px) 75vw, 33vw"},
+  oyako:   {id:37297720, alt:"Oyako don: chicken and egg on rice", by:"Gu Ko", sizes:"(max-width:760px) 100vw, 42vw"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll("[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async";
+  img.loading = p.eager ? "eager" : "lazy";
+  if (p.eager) img.fetchPriority = "high";
+  img.sizes = p.sizes;
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 900);
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + Object.values(PHOTOS).map(p => p.by).join(", ") + ". Preview photos are stock, not our food.";
+
+/* inside the Restauranting studio frame, hide the concept note */
+try { if (window.self !== window.top) document.querySelector(".preview")?.remove(); } catch {}
+</script>
+</body>
+</html>

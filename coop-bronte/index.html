@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>COOP · Bronte Beach</title>
+<meta name="description" content="COOP, on Bronte Beach. Seven days, coffee 6am to 3pm, food 6.30am to 2.30pm. Walk ins only.">
+<meta name="theme-color" content="#F8538D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://images.pexels.com">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "COOP",
+  "alternateName": "Coop Bronte",
+  "image": "https://restaurantingw.github.io/coop-bronte/logo.jpg",
+  "telephone": "+61434075233",
+  "address": {"@type": "PostalAddress", "streetAddress": "465 Bronte Rd", "addressLocality": "Bronte", "addressRegion": "NSW", "postalCode": "2024", "addressCountry": "AU"},
+  "servesCuisine": ["Cafe", "Brunch", "Coffee"],
+  "priceRange": "$$",
+  "acceptsReservations": false,
+  "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "06:00", "closes": "15:00"}],
+  "sameAs": ["https://www.instagram.com/coop.bronte/"],
+  "hasMenu": {"@type": "Menu", "url": "https://restaurantingw.github.io/coop-bronte/#menu"}
+}
+</script>
+<!--
+  Concept preview by Restauranting.
+  Brand capture: logo = their Instagram profile picture (saved locally as logo.jpg, 112px, low-res: ask owner for the vector file).
+  Pink #F8538D sampled from the logo. Green-on-black taken from their COOP merch hoodies.
+  Open questions:
+  - [CHECK] Corn fritters price (new dish, seen on Instagram only).
+  - [CHECK] Drunken Sailor: Google menu lists the noodle salad without salmon; Instagram shows gin cured salmon. Is the salmon standard or an add-on?
+  - [CHECK] VG = vegan / VGO = vegan option, as read from their menu marks.
+  - [CHECK] Are hoodies for sale at the counter? Are dogs welcome on the seating?
+  - [CHECK] Run club: still every Thursday 6am with @symetrie_? Meeting point?
+-->
+<style>
+:root{
+  --pink:#F8538D; --pink-deep:#D93272; --ink:#141113; --cream:#FFF5EA; --paper:#FFFBF5;
+  --green:#3CCB6E; --green-ink:#0E6B34; --mute:#6B5F62; --line:rgba(20,17,19,.14);
+  --display:"Bagel Fat One", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --gut:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font:400 17px/1.55 var(--body);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,28px)}
+
+/* concept note */
+.preview{background:var(--ink);color:#e9dfe2;font-size:13px;line-height:1.45;padding:9px var(--gut)}
+.preview a{color:#fff}
+
+/* header */
+header.top{background:var(--pink);color:#fff;position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;align-items:center;gap:16px;min-height:72px}
+.top .logo{width:56px;height:56px;border-radius:50%;flex:none}
+.top nav{display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px}
+.top nav a{text-decoration:none}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.walkin{font-family:var(--display);font-size:17px;letter-spacing:.01em;white-space:nowrap}
+.walkin small{font-family:var(--body);font-weight:500;font-size:13px;opacity:.9;margin-left:8px}
+
+/* hero poster */
+.hero{background:var(--pink);color:#fff;padding-bottom:clamp(28px,5vw,64px)}
+.hero .grid{align-items:end;row-gap:28px}
+.hero-photo{grid-column:1 / 8;position:relative;aspect-ratio:4/5;max-height:78vh;width:100%;background:#e94a83;overflow:hidden;border-radius:4px}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-copy{grid-column:8 / 13;padding-bottom:6px}
+.kicker{font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(44px,6.2vw,84px);line-height:.95;letter-spacing:-.01em;margin:14px 0 22px}
+.hero-copy p.lede{font-size:19px;max-width:30ch}
+.status{display:inline-flex;align-items:center;gap:10px;margin:22px 0 6px;background:#fff;color:var(--ink);padding:8px 14px;border-radius:999px;font-weight:600;font-size:15px}
+.status i{width:10px;height:10px;border-radius:50%;background:#b9aeb1;flex:none}
+.status.is-open i{background:var(--green)}
+.hours-mini{list-style:none;margin:16px 0 26px;font-size:16px;border-top:1.5px solid rgba(255,255,255,.5)}
+.hours-mini li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1.5px solid rgba(255,255,255,.5)}
+.hours-mini b{font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;border:2px solid currentColor;transition:background .15s,color .15s}
+.btn.solid{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn.solid:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn.line:hover{background:#fff;color:var(--pink-deep);border-color:#fff}
+
+/* merch-style strip */
+.strip{background:var(--ink);color:var(--green);font-family:var(--display);font-size:clamp(20px,2.6vw,30px);line-height:1.2;padding:18px 0}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:6px 28px}
+.strip span:not(:last-child)::after{content:"·";margin-left:28px;color:#fff}
+
+/* three plates */
+.plates{padding:clamp(48px,7vw,96px) 0 clamp(24px,4vw,48px)}
+.plates .grid{row-gap:22px}
+.plate{margin:0}
+.plate .ph{aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:#f1d9cf}
+.plate .ph img{width:100%;height:100%;object-fit:cover}
+.plate figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:12px;font-size:16px}
+.plate figcaption b{font-weight:700}
+.plate:nth-of-type(1){grid-column:1 / 5}
+.plate:nth-of-type(2){grid-column:5 / 9;margin-top:clamp(0px,6vw,80px)}
+.plate:nth-of-type(3){grid-column:9 / 13}
+.plates-head{grid-column:1 / 9;margin-bottom:clamp(18px,3vw,36px)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.4vw,56px);line-height:1;letter-spacing:-.005em}
+h2 em{font-style:normal;color:var(--pink)}
+.plates-head p{margin-top:14px;max-width:52ch;color:var(--mute)}
+
+/* menu */
+#menu{scroll-margin-top:72px;padding:clamp(40px,6vw,80px) 0 clamp(56px,8vw,110px)}
+.menu-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 32px;margin-bottom:22px}
+.key{font-size:14px;color:var(--mute);max-width:44ch}
+.key b{color:var(--ink);font-weight:700}
+.jump{position:sticky;top:72px;z-index:10;background:var(--cream);display:flex;gap:8px;overflow-x:auto;padding:12px 0;border-bottom:1.5px solid var(--ink);scrollbar-width:none;margin-bottom:8px}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:none;text-decoration:none;font-weight:600;font-size:14px;padding:7px 14px;border:1.5px solid var(--ink);border-radius:999px;background:var(--paper)}
+.jump a:hover{background:var(--pink);border-color:var(--pink);color:#fff}
+.courses{columns:2 420px;column-gap:clamp(28px,5vw,72px)}
+.course{break-inside:avoid;padding:30px 0 6px;scroll-margin-top:140px}
+.course h3{font-family:var(--display);font-weight:400;font-size:28px;line-height:1.1;display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.course h3 small{font-family:var(--body);font-size:14px;font-weight:500;color:var(--mute)}
+.item{padding:11px 0;border-bottom:1px solid var(--line)}
+.row{display:flex;align-items:baseline;gap:10px}
+.name{font-weight:700;font-size:17px}
+.marks{font-weight:600;font-size:12px;letter-spacing:.04em;color:var(--green-ink);margin-left:8px;white-space:nowrap}
+.flag{display:inline-block;font-family:var(--display);font-size:13px;background:var(--pink);color:#fff;padding:2px 9px 1px;border-radius:999px;margin-left:8px;vertical-align:2px;font-weight:400}
+.lead{flex:1;border-bottom:1.5px dotted rgba(20,17,19,.35);transform:translateY(-4px);min-width:16px}
+.price{font-weight:600;font-variant-numeric:tabular-nums}
+.desc{font-size:15px;color:var(--mute);margin-top:3px;max-width:52ch}
+.menu-note{margin-top:30px;font-size:15px;color:var(--mute)}
+
+/* after the swim */
+.after{background:var(--ink);color:#fff;padding:clamp(56px,8vw,110px) 0}
+.after h2{color:var(--green)}
+.after .intro{grid-column:1 / 7}
+.after .intro p{margin-top:16px;max-width:44ch;color:#d9cfd2;font-size:18px}
+.after-photo{grid-column:7 / 13;grid-row:1 / 3;aspect-ratio:3/2;overflow:hidden;border-radius:4px;background:#2a2427}
+.after-photo img{width:100%;height:100%;object-fit:cover}
+.notes{grid-column:1 / 13;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,28px);margin-top:clamp(36px,5vw,64px)}
+.note{border-top:2px solid var(--green);padding-top:16px}
+.note h3{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.1;margin-bottom:8px}
+.note p{color:#d9cfd2;font-size:16px;max-width:38ch}
+.note a.more{display:inline-block;margin-top:12px;font-weight:700;color:var(--green);text-underline-offset:4px}
+.after .grid{row-gap:24px;align-items:start}
+
+/* winter */
+.winter{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,28px);align-items:center;padding:clamp(48px,7vw,96px) 0;row-gap:24px}
+.winter .ph{grid-column:1 / 6;aspect-ratio:1/1;overflow:hidden;border-radius:4px;background:#d9d2cc}
+.winter .ph img{width:100%;height:100%;object-fit:cover}
+.winter .copy{grid-column:7 / 13}
+.winter .copy p{margin-top:14px;max-width:46ch;color:var(--mute)}
+
+/* find us */
+.find{background:var(--pink);color:#fff;padding:clamp(48px,7vw,96px) 0}
+.find .grid{row-gap:28px}
+.find .addr{grid-column:1 / 6}
+.find .addr p{font-size:19px;margin-top:16px}
+.find .addr a{font-weight:600}
+.find .addr .btns{margin-top:24px}
+.find table{grid-column:7 / 13;border-collapse:collapse;font-size:17px;width:100%;align-self:start}
+.find td{padding:10px 0;border-bottom:1.5px solid rgba(255,255,255,.5)}
+.find td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.find tr.today td{font-weight:700}
+.find tr.today td:first-child::after{content:" · today";font-weight:500}
+.find caption{text-align:left;font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding-bottom:10px}
+
+footer{background:var(--ink);color:#cfc5c8;font-size:14px;padding:40px 0 120px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center}
+footer .logo{width:84px;height:84px;border-radius:50%}
+footer p{max-width:60ch}
+footer a{color:#fff}
+
+/* mobile action bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;grid-template-columns:repeat(3,1fr);gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--ink)}
+.bar a{text-align:center;text-decoration:none;font-weight:700;font-size:15px;padding:12px 6px;border-radius:999px;background:#fff;color:var(--ink)}
+.bar a.pri{background:var(--pink);color:#fff}
+
+@media (max-width:900px){
+  .top nav{display:none}
+  .walkin{margin-left:auto}
+  .hero-photo,.hero-copy{grid-column:1 / -1}
+  .hero-photo{aspect-ratio:4/3;max-height:none}
+  .plates-head{grid-column:1 / -1}
+  .plate:nth-of-type(n){grid-column:span 6;margin-top:0}
+  .plate:nth-of-type(3){grid-column:1 / -1}
+  .plate:nth-of-type(3) .ph{aspect-ratio:3/2}
+  .after .intro,.after-photo{grid-column:1 / -1;grid-row:auto}
+  .notes{grid-template-columns:1fr}
+  .winter .ph,.winter .copy{grid-column:1 / -1}
+  .winter .ph{aspect-ratio:3/2}
+  .find .addr,.find table{grid-column:1 / -1}
+  .bar{display:grid}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .walkin small{display:none}
+  .top .logo{width:48px;height:48px}
+  .top .wrap{min-height:64px}
+  .jump{top:64px}
+  .plate:nth-of-type(n){grid-column:1 / -1}
+  .plate .ph{aspect-ratio:4/3}
+  .courses{columns:1}
+  .strip span:not(:last-child)::after{margin-left:14px}
+  .strip .wrap{gap:4px 14px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="preview">Concept preview by Restauranting. Not the official website of COOP. Preview photos are licensed stock; logo, colours and details are taken from your Instagram, menu and Google listing.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#top" aria-label="COOP home"><img class="logo" src="logo.jpg" alt="COOP logo" width="56" height="56"></a>
+    <nav aria-label="Sections">
+      <a href="#menu">Menu</a>
+      <a href="#after">Run club</a>
+      <a href="https://app.gift-it.com.au/buy/coopbronte" rel="noopener">Gift vouchers</a>
+      <a href="#find">Find us</a>
+    </nav>
+    <span class="walkin">Walk ins only<small>No bookings, just come down</small></span>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap grid">
+    <div class="hero-photo ph" data-shot="hero"></div>
+    <div class="hero-copy">
+      <p class="kicker">465 Bronte Rd · on the beach</p>
+      <h1>See you after your swim</h1>
+      <p class="lede">Coffee, beef and egg rolls, acai and a view of the water. Seven days, walk ins only.</p>
+      <div class="status" id="status"><i></i><span id="status-text">Seven days, 6am to 3pm</span></div>
+      <ul class="hours-mini">
+        <li><span>Coffee</span><b>6am – 3pm</b></li>
+        <li><span>Food</span><b>6.30am – 2.30pm</b></li>
+      </ul>
+      <div class="btns">
+        <a class="btn solid" href="#menu">See the menu</a>
+        <a class="btn line" href="https://www.google.com/maps/search/?api=1&query=COOP+465+Bronte+Rd+Bronte+NSW+2024" rel="noopener">Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-label="At a glance">
+  <div class="wrap"><span>Bronte Beach</span><span>seven days</span><span>coffee 6–3</span><span>food 6.30–2.30</span><span>walk ins only</span></div>
+</div>
+
+<section class="plates" aria-labelledby="plates-h">
+  <div class="wrap grid">
+    <div class="plates-head">
+      <h2 id="plates-h">Sandy feet <em>welcome</em></h2>
+      <p>One handers for the walk back up, bowls for the table, and a long list of smoothies and juices for after the swim.</p>
+    </div>
+    <figure class="plate"><div class="ph" data-shot="roll"></div><figcaption><b>Beef &amp; egg roll</b><span>19</span></figcaption></figure>
+    <figure class="plate"><div class="ph" data-shot="avo"></div><figcaption><b>Avocado toast, feta, dukkah</b><span>14</span></figcaption></figure>
+    <figure class="plate"><div class="ph" data-shot="acai"></div><figcaption><b>Acai bowl</b><span>19</span></figcaption></figure>
+  </div>
+</section>
+
+<section id="menu" aria-labelledby="menu-h">
+  <div class="wrap">
+    <div class="menu-head">
+      <h2 id="menu-h">The <em>menu</em></h2>
+      <p class="key"><b>GF</b> gluten free · <b>GFO</b> gluten free option · <b>VG</b> vegan · <b>VGO</b> vegan option · <b>DF</b> dairy free. Prices in AUD.</p>
+    </div>
+    <nav class="jump" id="jump" aria-label="Menu sections"></nav>
+    <div class="courses" id="courses"></div>
+    <p class="menu-note">Food 6.30am to 2.30pm, coffee until 3pm. Tell us about allergies when you order.</p>
+  </div>
+</section>
+
+<section class="after" id="after" aria-labelledby="after-h">
+  <div class="wrap grid">
+    <div class="intro">
+      <h2 id="after-h">After the swim, the run, the walk</h2>
+      <p>Dogs, wet hair and the same faces every morning. Connecting people on Gadigal land.</p>
+    </div>
+    <div class="after-photo ph" data-shot="baths"></div>
+    <div class="notes">
+      <div class="note">
+        <h3>Thursday run club</h3>
+        <p>6am every Thursday with our friends at @symetrie_. Run, then coffee.</p>
+        <a class="more" href="https://www.instagram.com/coop.bronte/" rel="noopener">Details on Instagram</a>
+      </div>
+      <div class="note">
+        <h3>Gift vouchers</h3>
+        <p>A coffee run or a long brunch by the water, sent to someone who deserves it.</p>
+        <a class="more" href="https://app.gift-it.com.au/buy/coopbronte" rel="noopener">Buy a voucher</a>
+      </div>
+      <div class="note">
+        <h3>COOP hoodies</h3>
+        <p>Black, with the bubble letters in green. Ask us at the counter.</p>
+        <a class="more" href="https://www.instagram.com/coop.bronte/" rel="noopener">@coop.bronte</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap winter" aria-labelledby="winter-h">
+  <div class="ph" data-shot="winter"></div>
+  <div class="copy">
+    <h2 id="winter-h">Bronte’s cuter in <em>winter</em></h2>
+    <p>Grab a hot one at 6am, watch the swell come in, stay for a sticky chai and the new crispy corn fritters.</p>
+  </div>
+</section>
+
+<section class="find" id="find" aria-labelledby="find-h">
+  <div class="wrap grid">
+    <div class="addr">
+      <h2 id="find-h">Find us</h2>
+      <p>465 Bronte Rd, Bronte NSW 2024<br>Right on Bronte Beach</p>
+      <p><a href="tel:+61434075233">0434 075 233</a><br><a href="https://www.instagram.com/coop.bronte/" rel="noopener">@coop.bronte</a></p>
+      <div class="btns">
+        <a class="btn solid" href="https://www.google.com/maps/search/?api=1&query=COOP+465+Bronte+Rd+Bronte+NSW+2024" rel="noopener">Open in Google Maps</a>
+        <a class="btn line" href="tel:+61434075233">Call us</a>
+      </div>
+    </div>
+    <table id="hours">
+      <caption>Coffee 6am – 3pm · Food 6.30am – 2.30pm</caption>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="logo" src="logo.jpg" alt="COOP logo" width="84" height="84" loading="lazy">
+    <p>COOP · 465 Bronte Rd, Bronte NSW 2024 · <a href="tel:+61434075233">0434 075 233</a> · Seven days · Walk ins only<br>
+    <span id="credits">Photos via Pexels</span> · Concept preview by Restauranting.</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a href="https://www.google.com/maps/search/?api=1&query=COOP+465+Bronte+Rd+Bronte+NSW+2024" rel="noopener">Directions</a>
+  <a href="tel:+61434075233">Call</a>
+  <a class="pri" href="#menu">Menu</a>
+</nav>
+
+<script>
+/* menu from their Google listing (AUD). Marks as printed on their menu. */
+const MENU = [
+  {id:"one-handers", name:"One handers", note:"on brioche", items:[
+    ["Beef & egg roll",19,"Beef patty, egg, hash brown, cheese, smokey BBQ.","GFO"],
+    ["Bacon & egg roll",19,"Bacon, egg, hash brown, cheese, tomato chutney, aioli.",""],
+    ["Vego roll",19,"Haloumi, egg, hash brown, rocket, chutney, aioli.",""]]},
+  {id:"brunch", name:"All day brunch", items:[
+    ["Crispy corn fritters",null,"Sliced avo, poached egg, labneh, house tomato.","","New"],
+    ["Avocado toast",14,"Smashed avo, feta, pomegranate, dukkah, lemon, dark rye.",""],
+    ["Med bowl",28,"House falafel, quinoa, avocado, tomato and cucumber salad, greens, hummus, pinenuts, lemon.","GF · VG"],
+    ["Acai bowl",19,"Acai, toasted granola, banana, berries.","VG · GFO"],
+    ["Bircher",16,"Coconut overnight oats, seasonal fruit, greek yoghurt, seeds, shaved dark choc, honey.","VGO"],
+    ["Toast",10,"Sourdough or dark rye (Nonie’s GF +2). PB, vegemite, berry jam or honey.",""],
+    ["Fruit toast",11,"With butter.",""],
+    ["Banana bread",8,"Whipped maple butter.",""],
+    ["Croissant",7,"Butter and jam.",""],
+    ["Ham & cheese croissant",12,"",""]]},
+  {id:"lunch", name:"Lunch", items:[
+    ["Drunken Sailor",28,"The OG. Gin cured salmon, soba noodle salad, cucumber, avocado, edamame, pickled ginger, crispy shallot, sesame.","","OG"],
+    ["Beetroot salad",22,"Roasted beetroot, feta, apricot, cherry tomatoes, greens, hazelnut, pomegranate molasses.","GF · VGO"],
+    ["Fish & chips",24,"","GF · DF"],
+    ["Bowl of fries",6,"","GF"]]},
+  {id:"burgers", name:"Burgers", note:"with fries", items:[
+    ["Chicken burger",26,"Buttermilk fried chicken, cheese, lettuce, pickles, chipotle aioli.",""],
+    ["Beef burger",26,"Patty, bacon, cheese, grilled pineapple, pickle, chipotle aioli.",""],
+    ["Fish burger",28,"Battered fish, cheese, lettuce, tartare.","GFO"],
+    ["Plant burger",26,"‘Beyond beef’, cheese, lettuce, tomato, pickle, chipotle aioli.","VGO · GFO"]]},
+  {id:"toasties", name:"Toasties", items:[
+    ["Chicken",18,"Spinach, cheddar, aioli.","GFO"],
+    ["Tuna",18,"Dill and caper, american cheese, mayo.","GFO"],
+    ["Ham",16,"Cheddar, tomato chutney.","GFO"],
+    ["Triple cheese",16,"","GFO"]]},
+  {id:"coffee", name:"Coffee & hot", note:"6am – 3pm", items:[
+    ["Cappuccino, flat white, latte, long black","5.50","",""],
+    ["Mocha","5.70","",""],
+    ["Piccolo · macchiato","4.20","",""],
+    ["Espresso","4","",""],
+    ["Chai latte · turmeric latte","5.50","",""],
+    ["Matcha latte","6","",""],
+    ["Sticky chai","7","",""],
+    ["Hot choc","4.50","",""],
+    ["Tea","5","",""]]},
+  {id:"cold", name:"Cold", items:[
+    ["Iced latte · iced chai · iced choc","6.50","",""],
+    ["Cold brew","7","",""],
+    ["Iced matcha","7.50","",""],
+    ["Milkshake","8","",""]]},
+  {id:"smoothies", name:"Smoothies", items:[
+    ["Mango · banana · mixed berry",12,"",""],
+    ["Bad Girl Ri Ri",14,"Mango, banana, turmeric, vanilla protein, coconut yoghurt, coconut water.",""],
+    ["Fruit Flexia",14,"Berry, banana, vanilla protein, coconut yoghurt, oat milk.",""],
+    ["Kimmy K",14,"Banana, vanilla protein, PB, coconut yoghurt, coconut water.",""]]},
+  {id:"juices", name:"Juices", note:"all 10", items:[
+    ["Orange",null,"",""],
+    ["Blaze It",null,"Beetroot, green apple, carrot, ginger, lime.",""],
+    ["Sweet Papi",null,"Pineapple, pear, green apple, lemon, mint.",""],
+    ["The Lulu",null,"Green apple, celery, pear, silver beet, lemon, ginger.",""]]}
+];
+const t = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const courses = document.getElementById("courses"), jump = document.getElementById("jump");
+for (const c of MENU) {
+  const a = t("a", null, c.name); a.href = "#" + c.id; jump.append(a);
+  const box = t("div", "course"); box.id = c.id;
+  const h = t("h3", null, c.name); if (c.note) h.append(t("small", null, c.note)); box.append(h);
+  for (const [n, p, d, m, flag] of c.items) {
+    const it = t("div", "item"), row = t("div", "row"), name = t("span", "name", n);
+    if (flag) name.append(t("span", "flag", flag));
+    if (m) name.append(t("span", "marks", m));
+    row.append(name);
+    if (p != null) row.append(t("span", "lead"), t("span", "price", String(p)));
+    it.append(row); if (d) it.append(t("p", "desc", d));
+    box.append(it);
+  }
+  courses.append(box);
+}
+
+/* open now, in Sydney time. Coffee 6:00-15:00, kitchen 6:30-14:30, seven days. */
+const OPEN = 360, CLOSE = 900, KITCHEN_OPEN = 390, KITCHEN_CLOSE = 870;
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m / 60), mm = m % 60, h12 = ((h + 11) % 12) + 1; return h12 + (mm ? "." + String(mm).padStart(2, "0") : "") + (h >= 12 ? "pm" : "am"); };
+const tbody = document.querySelector("#hours tbody");
+[1,2,3,4,5,6,0].forEach(d => {
+  const tr = t("tr"); tr.dataset.day = d;
+  tr.append(t("td", null, DAYS[d]), t("td", null, fmt(OPEN) + " – " + fmt(CLOSE)));
+  tbody.append(tr);
+});
+function now(){
+  const p = new Intl.DateTimeFormat("en-AU", {timeZone:"Australia/Sydney", weekday:"long", hour:"numeric", minute:"numeric", hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => p.find(x => x.type === k)?.value;
+  return {day: DAYS.indexOf(g("weekday")), mins: +g("hour") * 60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = now(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const box = document.getElementById("status"), txt = document.getElementById("status-text");
+  const open = mins >= OPEN && mins < CLOSE;
+  box.classList.toggle("is-open", open);
+  if (!open) txt.textContent = mins < OPEN ? "Opens at 6am today" : "Closed · back tomorrow at 6am";
+  else if (mins < KITCHEN_OPEN) txt.textContent = "Open now · kitchen from 6.30am";
+  else if (mins < KITCHEN_CLOSE) txt.textContent = "Open now · kitchen until 2.30pm";
+  else txt.textContent = "Open now · coffee until 3pm";
+}
+tick(); setInterval(tick, 60000);
+
+/* licensed stock photos (Pexels licence). Hotlinked from Pexels' CDN, sized per screen. */
+const PHOTOS = {
+  hero:   {id:3879297,  alt:"Bronte Beach with clear blue water and rocky shores", by:"katetrifo", eager:true, sizes:"(max-width:900px) 100vw, 58vw"},
+  roll:   {id:14415398, alt:"A breakfast roll held in hand outdoors", by:"connorscottmcmanus", sizes:"(max-width:520px) 100vw, (max-width:900px) 50vw, 33vw"},
+  avo:    {id:8335338,  alt:"Avocado toast with feta and chopped tomatoes", by:"fer-martinez-gonzalez", sizes:"(max-width:520px) 100vw, (max-width:900px) 50vw, 33vw"},
+  acai:   {id:5150303,  alt:"Acai bowl with banana, coconut and granola on a wooden table", by:"Roman Odintsov", sizes:"(max-width:900px) 100vw, 33vw"},
+  baths:  {id:7823945,  alt:"Bronte Baths and the coastline from above", by:"golimpio", sizes:"(max-width:900px) 100vw, 50vw"},
+  winter: {id:7823941,  alt:"Bronte Beach under a dramatic sky with waves rolling in", by:"golimpio", sizes:"(max-width:900px) 100vw, 42vw"}
+};
+/* also chosen as a spare: 14689202 (cappuccino in hard morning light, John Romanov) */
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async";
+  img.loading = p.eager ? "eager" : "lazy";
+  if (p.eager) img.fetchPriority = "high";
+  img.sizes = p.sizes;
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 1300);
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ");
+
+/* inside the Restauranting studio frame, hide the concept banner */
+try { if (window.self !== window.top) document.querySelector(".preview")?.remove(); } catch {}
+</script>
+</body>
+</html>

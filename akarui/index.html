@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Akarui Sushi Cafe · Randwick</title>
+<meta name="description" content="Akarui Sushi Cafe, 2 Belmore Rd, Randwick. A small Japanese cafe with a few Korean home-style dishes. Every plate made to order. Dine in or takeaway, Monday to Saturday.">
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<!--
+  CONCEPT NOTES (not visible)
+  Brand capture: low confidence. Source = shopfront photo described in the lead brief (black window frames,
+  tall vertical red lettering "...Sushi Cafe" on the glass; red / black / white). Instagram check pending.
+  Logo file: none found. "Akarui" is set as a wordmark in Shippori Mincho B1. LOGO TO REQUEST from the owners.
+  Open questions:
+  - Exact Japanese / Korean names the owners use on their printed menu (we used standard spellings; "Japche" kept as on their Google menu).
+  - Bulgogi clay-pot soup, kimchi, seafood soup, soba, udon and katsu curry come from review mentions, not the Google menu: confirm they are regular items.
+  - Is takeaway ordered by phone ahead, or in store only? Copy says "call ahead" as a suggestion.
+  - Vegetarian marks (V) are our reading of dish names; confirm with the kitchen (dashi / bonito).
+  - Thursday 9am opening: is there a breakfast or early menu?
+  - Payment methods, BYO, accessibility, seat count.
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Akarui Sushi Cafe","alternateName":"Akarui","servesCuisine":["Japanese","Sushi","Korean"],"priceRange":"$20–40","telephone":"+61 400 450 815",
+"address":{"@type":"PostalAddress","streetAddress":"2 Belmore Rd","addressLocality":"Randwick","addressRegion":"NSW","postalCode":"2031","addressCountry":"AU"},
+"sameAs":["https://www.facebook.com/akaruisushicafe/"],
+"hasMenu":"#menu","acceptsReservations":false,
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Friday","Saturday"],"opens":"11:00","closes":"15:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"09:00","closes":"15:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"17:00","closes":"21:00"}]}
+</script>
+<style>
+/* Direction "Shopfront glass": the Akarui window on Belmore Rd. Black window frames, tall red vertical lettering on white glass.
+   Story-led small family cafe. Mincho for headings (Japanese print), gothic body. Red used only where the sign uses it: lettering. */
+:root{
+  --paper:#F7F4EC; --paper-2:#EFEBE0; --ink:#141414; --ink-2:#5A564E; --rule:#D9D3C6; --red:#C8102E; --red-dk:#A10D25;
+  --mincho:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --gothic:"Zen Kaku Gothic New","Hiragino Sans","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+  --gut:clamp(16px,4vw,56px); --frame:6px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.7 var(--gothic);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--red)}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+p{margin:0}
+h1,h2,h3{font-family:var(--mincho);font-weight:800;margin:0;text-wrap:balance}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+.label{font:500 13px/1.3 var(--gothic);letter-spacing:.12em;text-transform:uppercase}
+[lang="ja"]{font-family:var(--mincho)}
+[lang="ko"]{font-family:var(--gothic)}
+.tate{writing-mode:vertical-rl;text-orientation:upright;font-family:var(--mincho);font-weight:800;color:var(--red);letter-spacing:.14em;line-height:1}
+
+/* concept note */
+.preview{background:var(--ink);color:#CFC9BD;font-size:13px;line-height:1.5;padding:9px var(--gut)}
+.preview b{color:#fff;font-weight:500}
+
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:var(--frame) solid var(--ink)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.mark{display:flex;align-items:baseline;gap:10px;text-decoration:none;min-width:0}
+.mark .w{font:800 26px/1 var(--mincho);letter-spacing:.01em}
+.mark .j{font:800 15px/1 var(--mincho);color:var(--red)}
+.mark .s{font:500 12px/1 var(--gothic);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px}
+.nav a{text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:500 15px/1 var(--gothic);padding:14px 20px;border:2px solid var(--ink);border-radius:0;text-decoration:none;background:transparent;color:var(--ink);transition:background .15s,color .15s,border-color .15s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.red{background:var(--red);border-color:var(--red);color:#fff}
+.btn.red:hover{background:var(--red-dk);border-color:var(--red-dk);color:#fff}
+.btn.small{padding:10px 14px;font-size:14px}
+@media (max-width:820px){.nav .hide-m{display:none}.mark .w{font-size:23px}.mark .s{display:none}}
+
+/* the window: black frame, a white glass pane with red vertical lettering, and a photo pane */
+.window{display:grid;grid-template-columns:minmax(64px,13%) 1fr;border:var(--frame) solid var(--ink);background:var(--ink);gap:var(--frame)}
+.window .glass{background:#fff;display:flex;justify-content:center;padding:22px 0}
+.window .glass .tate{font-size:clamp(26px,3.1vw,40px)}
+.ph{position:relative;margin:0;background:var(--paper-2);overflow:hidden}
+.ph::before{content:"";display:block;padding-top:var(--r,125%)}
+.ph>img{position:absolute;inset:0}
+
+/* hero */
+.hero{padding-block:clamp(28px,5vw,64px) clamp(40px,6vw,72px)}
+.hero-text{grid-column:1/span 5;align-self:end;display:flex;flex-direction:column;gap:22px}
+.hero-media{grid-column:7/span 6}
+h1{font-size:clamp(34px,4.2vw,50px);line-height:1.18;letter-spacing:.005em}
+h1 em{font-style:normal;color:var(--red)}
+.lede{font-size:18px;color:var(--ink-2);max-width:42ch}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:900px){.hero-text,.hero-media{grid-column:1/-1}.hero-media{order:-1;margin-bottom:28px}}
+
+/* status strip, framed like the window transom */
+.strip{border-block:var(--frame) solid var(--ink);background:#fff}
+.strip .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr}
+.strip .cell{padding:16px 18px 16px 0;display:flex;flex-direction:column;gap:3px;min-width:0}
+.strip .cell+.cell{padding-left:18px;border-left:1px solid var(--rule)}
+.strip .label{color:var(--ink-2);font-size:12px}
+.strip .val{font-size:16px;font-weight:500}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ink-2);margin-right:8px;vertical-align:1px}
+.is-open .dot{background:var(--red)}
+@media (max-width:900px){.strip .wrap{grid-template-columns:1fr 1fr}.strip .cell:nth-child(3){padding-left:0;border-left:0}.strip .cell:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+/* sections */
+section{padding-block:clamp(72px,10vw,124px)}
+h2{font-size:clamp(28px,3.1vw,38px);line-height:1.25}
+.sec-head{grid-column:1/span 4;display:flex;flex-direction:column;gap:14px;align-self:start}
+.sec-head .label{color:var(--red)}
+.sec-head p{color:var(--ink-2);max-width:34ch}
+
+/* story */
+.story .copy{grid-column:6/span 6;display:flex;flex-direction:column;gap:20px;max-width:60ch}
+.story .copy p:first-child{font:600 clamp(21px,2.1vw,25px)/1.6 var(--mincho)}
+.story .sig{font-size:15px;color:var(--ink-2)}
+.story .side{grid-column:1/span 4;margin-top:clamp(40px,6vw,64px)}
+.story .side figcaption{font-size:13px;color:var(--ink-2);margin-top:10px}
+.story .wide{grid-column:6/span 7;margin-top:clamp(40px,6vw,64px)}
+.story .wide .window{grid-template-columns:1fr}
+@media (max-width:900px){.sec-head,.story .copy{grid-column:1/-1}.story .copy{margin-top:24px}.story .side{grid-column:1/span 8}.story .wide{grid-column:1/-1;margin-top:28px}}
+
+/* menu */
+.menu{background:#fff;border-top:var(--frame) solid var(--ink)}
+.menu-top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);row-gap:20px;align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+.menu-top .h{grid-column:1/span 6;display:flex;flex-direction:column;gap:12px}
+.menu-top .h .label{color:var(--red)}
+.menu-top .key{grid-column:8/span 5;font-size:15px;color:var(--ink-2)}
+.menu-top .key b{color:var(--ink)}
+@media (max-width:900px){.menu-top .h,.menu-top .key{grid-column:1/-1}}
+.jump{position:sticky;top:72px;z-index:5;background:#fff;border-block:1px solid var(--rule);overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.jump::-webkit-scrollbar{display:none}
+.jump .wrap{display:flex;gap:22px;padding-block:12px}
+.jump a{text-decoration:none;font-size:14px;color:var(--ink-2)}
+.courses{columns:2 400px;column-gap:clamp(32px,5vw,80px);padding-top:clamp(32px,4vw,48px)}
+.course{break-inside:avoid;margin-bottom:clamp(36px,4vw,52px)}
+.course h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:4px}
+.course h3 .en{font-size:21px;line-height:1.2}
+.course h3 .ja{font:600 15px/1 var(--mincho);color:var(--red);letter-spacing:.1em}
+.course .note{font-size:14px;color:var(--ink-2);padding:10px 0 4px}
+.item{display:flex;align-items:baseline;gap:10px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.item .n{font-weight:500;font-size:16.5px}
+.item .d{display:block;font-size:14px;color:var(--ink-2);font-weight:400;line-height:1.5;margin-top:1px}
+.item .alt{margin-left:auto;font-size:14px;color:var(--ink-2);white-space:nowrap;padding-left:8px}
+.item .v{font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--red);margin-left:6px;vertical-align:1px}
+.choose{display:flex;flex-wrap:wrap;gap:6px;padding:12px 0 6px}
+.choose span{font-size:14px;border:1px solid var(--ink);padding:4px 9px;line-height:1.3}
+.choose span small{color:var(--red);font-size:12px;margin-left:4px}
+.menu-foot{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:center;border-top:2px solid var(--ink);padding-top:20px;font-size:15px;color:var(--ink-2)}
+
+/* dishes */
+.dishes{padding-block:clamp(56px,8vw,96px)}
+.panes{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);row-gap:28px}
+.panes figure{margin:0}
+.panes .a{grid-column:1/span 5}
+.panes .b{grid-column:6/span 4;margin-top:clamp(0px,7vw,96px)}
+.panes .c{grid-column:10/span 3}
+.panes .window{grid-template-columns:1fr}
+.panes figcaption{font-size:14px;color:var(--ink-2);margin-top:10px}
+.panes figcaption [lang]{color:var(--red);margin-right:6px}
+@media (max-width:760px){.panes .a,.panes .b{grid-column:1/-1;margin-top:0}.panes .c{grid-column:4/-1}}
+
+/* visit */
+.visit{background:var(--paper-2);border-top:var(--frame) solid var(--ink)}
+.visit .body{grid-column:6/span 7;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px)}
+table.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.hours caption{text-align:left;margin-bottom:10px;color:var(--ink-2)}
+table.hours th,table.hours td{text-align:left;font-weight:400;padding:10px 0;border-bottom:1px solid var(--rule);font-size:16px;vertical-align:top}
+table.hours td{text-align:right}
+table.hours tr.today th,table.hours tr.today td{font-weight:700}
+table.hours tr.today th{color:var(--red)}
+.where dl{margin:0 0 22px;display:grid;gap:16px}
+.where dt{color:var(--ink-2);margin-bottom:2px}
+.where dd{margin:0}
+@media (max-width:900px){.visit .body{grid-column:1/-1;grid-template-columns:1fr;margin-top:28px}}
+
+footer{background:var(--ink);color:#BDB7AB;padding-block:44px 110px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:space-between;align-items:flex-end}
+footer .mark .w{color:#fff}
+footer a:hover{color:#fff}
+
+/* mobile action bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:1.2fr 1fr 1fr;background:var(--paper);border-top:var(--frame) solid var(--ink);padding-bottom:env(safe-area-inset-bottom,0px)}
+.mbar a{padding:15px 6px;text-align:center;text-decoration:none;font-weight:500;font-size:15px}
+.mbar a+a{border-left:1px solid var(--rule)}
+.mbar a.red{background:var(--red);color:#fff}
+@media (max-width:820px){.mbar{display:grid}}
+@media (prefers-reduced-motion:no-preference){.ph img{animation:fade .5s ease both}@keyframes fade{from{opacity:0}}}
+</style>
+</head>
+<body>
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of Akarui Sushi Cafe. Preview photos are licensed stock; colours and details are taken from your shopfront, Google menu and listing.</div>
+
+<header class="site">
+  <div class="wrap">
+    <!-- Logo to request: no logo file found. Wordmark set in Shippori Mincho B1 until the owners send theirs. -->
+    <a class="mark" href="#top" aria-label="Akarui Sushi Cafe, home"><span class="w">Akarui</span><span class="j" lang="ja">明るい</span><span class="s">Sushi Cafe</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-m" href="#story">Who we are</a>
+      <a class="hide-m" href="#menu">Menu</a>
+      <a class="hide-m" href="#visit">Hours &amp; map</a>
+      <a class="btn small red" href="tel:+61400450815">Call<span class="hide-m">&nbsp;0400 450 815</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap grid">
+      <div class="hero-text">
+        <p class="label" style="color:var(--red)">Japanese &amp; Korean home cooking · Randwick</p>
+        <h1>Sushi, katsu and bibimbap, <em>made one by one</em> at the top of Belmore Road.</h1>
+        <p class="lede">A small cafe with a few tables, run by the two of us. Every plate is made when you order it, so it's fresh, and sometimes it takes a little while. Dine in or take away.</p>
+        <div class="actions">
+          <a class="btn red" href="#menu">See the menu</a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Akarui+Sushi+Cafe+2+Belmore+Rd+Randwick+NSW+2031" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="window">
+          <div class="glass"><span class="tate" lang="ja" aria-hidden="true">明るい寿司カフェ</span></div>
+          <figure class="ph" style="--r:118%" data-shot="hero"></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip" aria-label="Quick info">
+    <div class="wrap">
+      <div class="cell" id="open-cell"><span class="label">Today</span><span class="val"><span class="dot"></span><span id="open-text">Open Monday to Saturday</span></span></div>
+      <div class="cell"><span class="label">Find us</span><span class="val"><a href="https://www.google.com/maps/search/?api=1&amp;query=Akarui+Sushi+Cafe+2+Belmore+Rd+Randwick+NSW+2031" target="_blank" rel="noopener">2 Belmore Rd, Randwick</a></span></div>
+      <div class="cell"><span class="label">Call</span><span class="val"><a href="tel:+61400450815">0400 450 815</a></span></div>
+      <div class="cell"><span class="label">Eat</span><span class="val">Dine in or takeaway</span></div>
+    </div>
+  </div>
+
+  <section class="story" id="story">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <p class="label">Who we are</p>
+        <h2>One kitchen, one cook, one plate at a time.</h2>
+      </div>
+      <div class="copy">
+        <p>Akarui is the two of us: a couple, a small room with a few tables and one person cooking. Every order is made from the start when you place it.</p>
+        <p>The menu is mostly Japanese: sushi and sashimi, katsu, teriyaki, donburi with miso soup. Alongside it we cook a few Korean home-style dishes, like bulgogi soup in a clay pot, bibimbap and kimchi.</p>
+        <p>Because nothing is made ahead, a busy lunch can mean a short wait. We think it's worth it. If you're taking away, give us a call first and it'll be ready when you get here.</p>
+        <p class="sig"><span lang="ja">明るい</span> (akarui) means bright, cheerful. That's how we'd like you to leave.</p>
+      </div>
+      <figure class="side">
+        <div class="window"><div class="ph" style="--r:125%" data-shot="hands"></div></div>
+        <figcaption>Rolled to order.</figcaption>
+      </figure>
+      <div class="wide">
+        <div class="window"><figure class="ph" style="--r:62%" data-shot="sashimi"></figure></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-h" style="padding-bottom:clamp(56px,8vw,96px)">
+    <div class="wrap menu-top">
+      <div class="h">
+        <p class="label">Menu</p>
+        <h2 id="menu-h">Lunch and dinner, Monday to Saturday</h2>
+      </div>
+      <p class="key">Mains, sets and donburi come with rice and miso soup where noted. <b>V</b> vegetarian. Prices are on the board in store.</p>
+    </div>
+    <nav class="jump" aria-label="Menu sections"><div class="wrap" id="jump"></div></nav>
+    <div class="wrap">
+      <div class="courses" id="courses"></div>
+      <div class="menu-foot">
+        <span>Prices in store. Ask us about anything you can't see here.</span>
+        <a class="btn small" href="tel:+61400450815">Call to order takeaway</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dishes" aria-label="Dishes">
+    <div class="wrap panes">
+      <figure class="a"><div class="window"><div class="ph" style="--r:80%" data-shot="katsu"></div></div><figcaption><span lang="ja">とんかつ</span>Tonkatsu set, with rice and miso.</figcaption></figure>
+      <figure class="b"><div class="window"><div class="ph" style="--r:125%" data-shot="bibimbap"></div></div><figcaption><span lang="ko">비빔밥</span>Bibimbap, with beef, chicken, tofu or fish roe.</figcaption></figure>
+      <figure class="c"><div class="window"><div class="ph" style="--r:125%" data-shot="gyoza"></div></div><figcaption><span lang="ja">餃子</span>Pork gyoza.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <p class="label">Hours &amp; map</p>
+        <h2>At the top of Belmore Road, by Alison Road.</h2>
+        <p>Closed Sundays. Open from 9am on Thursdays.</p>
+      </div>
+      <div class="body">
+        <table class="hours" id="hours">
+          <caption class="label">Opening hours</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>11am – 3pm<br>5 – 9pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>11am – 3pm<br>5 – 9pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>11am – 3pm<br>5 – 9pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>9am – 3pm<br>5 – 9pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>11am – 3pm<br>5 – 9pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>11am – 3pm<br>5 – 9pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <div class="where">
+          <dl>
+            <div><dt class="label">Address</dt><dd>2 Belmore Rd<br>Randwick NSW 2031</dd></div>
+            <div><dt class="label">Phone</dt><dd><a href="tel:+61400450815">0400 450 815</a></dd></div>
+            <div><dt class="label">Service</dt><dd>Dine in or takeaway. A few tables, so groups please call ahead.</dd></div>
+            <div><dt class="label">Follow</dt><dd><a href="https://www.facebook.com/akaruisushicafe/" target="_blank" rel="noopener">Facebook · Akarui Sushi Cafe</a></dd></div>
+          </dl>
+          <a class="btn small" href="https://www.google.com/maps/search/?api=1&amp;query=Akarui+Sushi+Cafe+2+Belmore+Rd+Randwick+NSW+2031" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <!-- Logo to request -->
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span class="mark"><span class="w">Akarui</span><span class="j" lang="ja">明るい</span></span>
+      <span>Akarui Sushi Cafe · 2 Belmore Rd, Randwick NSW 2031 · <a href="tel:+61400450815">0400 450 815</a></span>
+    </div>
+    <span>Concept by Restauranting · <span id="credits"></span></span>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a class="red" href="tel:+61400450815">Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Akarui+Sushi+Cafe+2+Belmore+Rd+Randwick+NSW+2031" target="_blank" rel="noopener">Directions</a>
+  <a href="#menu">Menu</a>
+</nav>
+
+<script>
+/* Menu from the restaurant's Google listing (no prices published). [name, Japanese/Korean name, lang, description, veg] */
+const MENU = [
+  {id:"entree", en:"Entree", ja:"前菜", items:[
+    ["Edamame","枝豆","ja","",1],["Gyoza","餃子","ja","Pork",0],["Agedashi tofu","揚げ出し豆腐","ja","",0],
+    ["Takoyaki","たこ焼き","ja","Octopus",0],["Shumai","焼売","ja","Prawn",0],["Ohitashi","おひたし","ja","",0],
+    ["Korokke","コロッケ","ja","Potato croquette",0],["Karaage","唐揚げ","ja","Chicken",0],["Yakitori","焼き鳥","ja","Chicken",0],
+    ["Harumaki","春巻き","ja","Spring roll",0],["Japche","잡채","ko","Stir-fried potato noodle",0],
+    ["Mixed tempura","天ぷら","ja","",0],["Prawn skewers","","","",0],["Ebi tempura","海老天","ja","",0]]},
+  {id:"main", en:"Main set", ja:"定食", items:[
+    ["Teriyaki","照り焼き","ja","Chicken, tofu, beef, perch or salmon",0],["Tonkatsu","とんかつ","ja","Pork",0],
+    ["Chicken katsu","チキンカツ","ja","",0],["Fish katsu","フィッシュカツ","ja","",0],["Chilli fried chicken","","","",0],
+    ["Chilli pork","","","",0],["Chicken karaage","唐揚げ","ja","",0],["Tempura main","天ぷら","ja","",0]]},
+  {id:"combo", en:"Akarui combination", ja:"明るいセット", note:"With rice and miso soup. Pick a sushi or sashimi plate, or the Akarui combo with one hot dish.", items:[
+    ["Sashimi combo","","","",0],["Sushi combo","","","",0],["Sushi roll combo","","","",0],["Sushi & sashimi combo","","","",0],["Akarui combo","","","Choose one:",0]],
+    choose:[["Teriyaki chicken"],["Teriyaki fish"],["Karaage"],["Yakiniku beef"],["Katsu"],["Yaki-udon"],["Tempura"],["Udon"],["Unakyu (eel)","+$5"],["Teriyaki salmon","+$4"]]},
+  {id:"don", en:"Donburi", ja:"丼", note:"With miso soup.", items:[
+    ["Teriyaki chicken don","照り焼き丼","ja","",0],["Oyako don","親子丼","ja","Chicken and egg",0],["Katsu don","カツ丼","ja","",0],
+    ["Unagi don","うな丼","ja","Eel",0],["Sashimi don","刺身丼","ja","",0],["Ebi ten don","海老天丼","ja","Prawn tempura",0],
+    ["Omu-raisu","オムライス","ja","Chicken fried rice in an omelette",0],["Gyudon","牛丼","ja","Beef",0],
+    ["Bibimbap","비빔밥","ko","Beef, chicken, tofu or fish roe, with egg",0]]},
+  /* [CHECK] the next section is built from review mentions, not the Google menu */
+  {id:"korean", en:"Soups, noodles & Korean", ja:"汁物・麺", items:[
+    ["Bulgogi soup","뚝배기 불고기","ko","Ttukbaegi bulgogi, in a clay pot",0],["Kimchi","김치","ko","",0],
+    ["Seafood soup","","","",0],["Udon","うどん","ja","",0],["Soba","そば","ja","",0],["Katsu curry","カツカレー","ja","",0]]},
+  {id:"salad", en:"Salad", ja:"サラダ", items:[
+    ["Seaweed salad","","","",1],["Tofu & seaweed","","","",0],["Tofu & garden","","","",0],["Chuka wakame","中華わかめ","ja","",0],
+    ["Crab meat salad","","","",0],["Akarui combination","","","Gyoza, harumaki, takoyaki and shumai, two of each",0],
+    ["Sashimi salad","","","",0],["Soft shell crab salad","","","",0],["Salmon & soba noodle salad","","","",0]]},
+  {id:"sashimi", en:"Sashimi", ja:"刺身", items:[
+    ["Salmon","","","",0,"8 pc"],["Tuna","","","",0,"8 pc"],["M","","","Salmon 8, tuna 4",0,"12 pc"],["L","","","Salmon 12, king 6, tuna 6",0,"24 pc"]]},
+  {id:"sushi", en:"Sushi plates", ja:"寿司", items:[
+    ["S","","","Nigiri 5, hosomaki 4",0],["M","","","Nigiri 8, salmon & avocado roll 6",0],["Salmon only","","","",0],["Tuna only","","","",0],["L","","","",0],
+    ["D","","","Nigiri 20, hosomaki 12, prawn roll 8",0],["Sushi à la carte","","","Two pieces",0],["Temaki","手巻き","ja","Hand rolls",0]]},
+  {id:"rolls", en:"Sushi rolls", ja:"巻き寿司", items:[
+    ["California","","","",0],["Unakyu","鰻きゅう","ja","Eel and cucumber",0],["Tempura prawn","","","",0],["Teriyaki salmon","","","",0],
+    ["Katsu & cream cheese","","","Salmon or chicken",0],["Teriyaki chicken","","","",0],["Salmon & avocado","","","",0],
+    ["Chicken katsu & avocado","","","",0],["Soft shell crab & avocado","","","",0],["Tuna & avocado","","","Raw or cooked",0],
+    ["Vegetarian","","","",1],["Avocado","","","",1],["Cucumber","","","",1]]}
+];
+const courses = document.getElementById("courses"), jump = document.getElementById("jump");
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+for (const c of MENU) {
+  const a = el("a", null, c.en); a.href = "#" + c.id; jump.append(a);
+  const box = el("div", "course"); box.id = c.id;
+  const h = el("h3"); h.append(el("span", "en", c.en)); const j = el("span", "ja", c.ja); j.lang = "ja"; h.append(j); box.append(h);
+  if (c.note) box.append(el("p", "note", c.note));
+  for (const [n, alt, lang, d, v, qty] of c.items) {
+    const it = el("div", "item"), left = el("span", "n", n);
+    if (v) left.append(el("span", "v", "V"));
+    if (d) left.append(el("span", "d", d));
+    it.append(left);
+    if (alt || qty) { const r = el("span", "alt", alt || qty); if (lang) r.lang = lang; it.append(r); }
+    box.append(it);
+  }
+  if (c.choose) { const ch = el("div", "choose"); for (const [x, up] of c.choose) { const s = el("span", null, x); if (up) s.append(el("small", null, up)); ch.append(s); } box.append(ch); }
+  courses.append(box);
+}
+
+/* open now, in Sydney time. Minutes from midnight. */
+const HOURS = {0:[],1:[[660,900],[1020,1260]],2:[[660,900],[1020,1260]],3:[[660,900],[1020,1260]],4:[[540,900],[1020,1260]],5:[[660,900],[1020,1260]],6:[[660,900],[1020,1260]]};
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m / 60), mm = m % 60, h12 = ((h + 11) % 12) + 1; return h12 + (mm ? ":" + String(mm).padStart(2, "0") : "") + (h >= 12 ? "pm" : "am"); };
+function sydneyNow(){
+  const p = new Intl.DateTimeFormat("en-AU", {timeZone:"Australia/Sydney", weekday:"long", hour:"numeric", minute:"numeric", hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => p.find(x => x.type === k)?.value;
+  return {day: DAYS.indexOf(g("weekday")), mins: +g("hour") * 60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = sydneyNow(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const cell = document.getElementById("open-cell"), txt = document.getElementById("open-text");
+  const cur = HOURS[day].find(([a, b]) => mins >= a && mins < b);
+  cell.classList.toggle("is-open", !!cur);
+  if (cur) { txt.textContent = "Open now, until " + fmt(cur[1]); return; }
+  const next = HOURS[day].find(([a]) => mins < a);
+  if (next) { txt.textContent = (HOURS[day][0][0] < mins ? "Back at " : "Opens at ") + fmt(next[0]) + " today"; return; }
+  for (let i = 1; i <= 7; i++) { const d = (day + i) % 7; if (HOURS[d].length) { txt.textContent = "Closed · opens " + (i === 1 ? "tomorrow" : DAYS[d]) + " " + fmt(HOURS[d][0][0]); return; } }
+}
+tick(); setInterval(tick, 60000);
+
+/* licensed stock photos (Pexels licence, free for commercial use), hotlinked from Pexels' CDN with srcset */
+const PHOTOS = {
+  hero:     {id:8951108,  alt:"Hands rolling a salmon sushi roll on a bamboo mat", by:"Ivan S", eager:true, sizes:"(max-width:900px) 88vw, 44vw"},
+  hands:    {id:15387046, alt:"Close-up of hands shaping sushi", by:"yesehoon", sizes:"(max-width:900px) 66vw, 30vw"},
+  sashimi:  {id:36805689, alt:"Salmon sashimi on a black plate with wasabi", by:"fox-58267", sizes:"(max-width:900px) 100vw, 56vw"},
+  katsu:    {id:31417183, alt:"Tonkatsu with shredded cabbage, rice and dipping sauce", by:"Zhen Ciang Huang", sizes:"(max-width:760px) 100vw, 40vw"},
+  bibimbap: {id:7491952,  alt:"Bibimbap in a stone pot with side dishes", by:"minchephoto", sizes:"(max-width:760px) 100vw, 32vw"},
+  gyoza:    {id:7719909,  alt:"Gyoza dumplings with soy sauce on a red plate", by:"panerai", sizes:"(max-width:760px) 75vw, 24vw"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = p.sizes;
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 1300);
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ");
+
+/* inside the Restauranting studio frame, drop the concept banner */
+try { if (window.self !== window.top) document.querySelector(".preview")?.remove(); } catch {}
+</script>
+</body>
+</html>

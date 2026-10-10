@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ToMo Ramen · Bondi Junction</title>
+<meta name="description" content="Authentic Japanese ramen at 106 Ebley St, Bondi Junction. Tori paitan, Tokyo shoyu and shio, tonkotsu and two vegetable bowls. BYO.">
+<meta name="theme-color" content="#111111">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<!--
+  Creative brief (Restauranting)
+  Direction: "Late counter" — room & mood ramen bar. Black room, cream type, one red: the bowl in their logo.
+  Type: Dela Gothic One (heavy Japanese poster gothic, matches the chunky stacked logo) + Zen Kaku Gothic New (clean body, proper Japanese glyphs).
+  Palette (from logo): #111111 black (background), #F2E6CF cream (type), #D3352B ramen red (accent, numbers, marks).
+  Logo: local logo.jpg (112px source, from Instagram profile picture). Ask owner for a larger/vector file before going live.
+  Sources: Google listing + Google menu photos (menu, prices, hours), Instagram @tomoramen_bondi (bio, stamp card, Local Gems, BYO, logo).
+  Open questions:
+  - Stamp card: summer event. Confirm it is still running and its end date.
+  - Gluten-free noodle swap: confirm it works for every ramen (broths may contain gluten; soy-based shoyu tare likely does).
+  - Spicy Tori Paitan / Spicy Pork: no separate topping list on the menu; described here as the spicy versions of the base bowls. Confirm.
+  - Vegan Shoyu: confirm fully vegan (name suggests yes). Tomato Vege has parmesan, so marked vegetarian only.
+  - Matcha warabi mochi: new on Instagram, no price seen. Shown without price.
+  - Ordering/delivery platform: none found, so the action bar uses Call / Directions / Menu.
+  - Japanese names for the bowls are our typesetting suggestion; confirm with the kitchen.
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"ToMo Ramen","alternateName":"ToMo Ramen Bondi","servesCuisine":["Japanese","Ramen"],"priceRange":"$$","telephone":"+61 452 640 814",
+"address":{"@type":"PostalAddress","streetAddress":"106 Ebley St","addressLocality":"Bondi Junction","addressRegion":"NSW","postalCode":"2022","addressCountry":"AU"},
+"sameAs":["https://www.instagram.com/tomoramen_bondi/"],
+"hasMenu":"#ramen","acceptsReservations":false,
+"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"BYO","value":true},{"@type":"LocationFeatureSpecification","name":"Outdoor seating","value":true}],
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday","Monday","Tuesday"],"opens":"11:30","closes":"20:30"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday","Saturday"],"opens":"11:30","closes":"21:00"}]}
+</script>
+<style>
+:root{
+  --ink:#111111; --ink-2:#1A1817; --ink-3:#24211F;
+  --cream:#F2E6CF; --cream-2:#CFC3AD; --cream-3:#8E8576;
+  --red:#D3352B; --red-2:#E5564C;
+  --rule:rgba(242,230,207,.16);
+  --disp:"Dela Gothic One","Zen Kaku Gothic New",system-ui,sans-serif;
+  --body:"Zen Kaku Gothic New",system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
+  --gut:clamp(16px,4vw,48px);
+  --s1:13px; --s2:17px; --s3:22px; --s4:clamp(30px,4.2vw,44px); --s5:clamp(44px,7.4vw,92px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--cream);font:400 var(--s2)/1.6 var(--body);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red-2);outline-offset:3px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,28px)}
+.jp{font-family:var(--body);font-weight:700;letter-spacing:.04em}
+.kicker{font:700 var(--s1)/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--red-2)}
+.disp{font-family:var(--disp);font-weight:400;letter-spacing:.01em;line-height:1.02}
+
+/* concept note */
+.preview{background:var(--cream);color:var(--ink);font-size:12.5px;line-height:1.45;padding:7px var(--gut)}
+.preview b{font-weight:700}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(17,17,17,.94);border-bottom:1px solid var(--rule)}
+@supports (backdrop-filter:blur(1px)){header{background:rgba(17,17,17,.86);backdrop-filter:blur(8px)}}
+.bar{display:flex;align-items:center;gap:20px;height:72px}
+.bar .logo img{width:56px;height:56px}
+.bar nav{display:flex;gap:22px;margin-left:auto;font-size:15px;font-weight:500}
+.bar nav a{text-decoration:none;color:var(--cream-2)}
+.bar nav a:hover{color:var(--cream)}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--cream-2);white-space:nowrap}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--cream-3);flex:none}
+.is-open .dot{background:var(--red);box-shadow:0 0 0 3px rgba(211,53,43,.25)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border:1px solid var(--cream);border-radius:2px;font:700 15px/1 var(--body);letter-spacing:.04em;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.btn:hover{background:var(--cream);color:var(--ink)}
+.btn.red{background:var(--red);border-color:var(--red);color:var(--cream)}
+.btn.red:hover{background:var(--red-2);border-color:var(--red-2);color:var(--cream)}
+.bar .btn{min-height:40px;padding:0 16px}
+
+/* hero */
+.hero{padding:clamp(28px,5vw,64px) 0 clamp(40px,6vw,80px)}
+.hero .grid{align-items:end;row-gap:28px}
+.hero-copy{grid-column:1/span 6;position:relative;padding-bottom:6px}
+.hero h1{font-size:var(--s5);margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .lede{max-width:34ch;color:var(--cream-2);font-size:clamp(17px,1.5vw,19px)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-photo{grid-column:7/span 6;position:relative}
+.vert{position:absolute;top:0;left:calc(-1 * clamp(28px,3.4vw,44px));writing-mode:vertical-rl;font:700 clamp(20px,2vw,26px)/1 var(--body);letter-spacing:.3em;color:var(--red)}
+.ph{position:relative;background:var(--ink-3);overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.r45{aspect-ratio:4/5}.ph.r32{aspect-ratio:3/2}.ph.r11{aspect-ratio:1/1}.ph.r34{aspect-ratio:3/4}
+.ph figcaption,.cap{font-size:var(--s1);color:var(--cream-3);margin-top:10px}
+.facts{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--rule);margin-top:clamp(28px,4vw,48px)}
+.facts div{flex:1 1 200px;padding:16px 20px 0 0;font-size:15px;color:var(--cream-2)}
+.facts b{display:block;font:700 var(--s1)/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--cream);margin-bottom:4px}
+
+/* ramen board */
+section{padding:clamp(56px,8vw,112px) 0}
+.sec-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 20px;margin-bottom:clamp(28px,4vw,44px)}
+.sec-head h2{font-size:var(--s4)}
+.sec-head .jp{font-size:var(--s3);color:var(--red)}
+.sec-head p{flex-basis:100%;max-width:60ch;color:var(--cream-2)}
+#ramen{background:var(--ink-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,4vw,64px);border-top:2px solid var(--cream)}
+.bowl{display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:6px;padding:22px 0 24px;border-bottom:1px solid var(--rule)}
+.bowl .no{grid-row:1/span 3;font:400 clamp(30px,3.4vw,40px)/.9 var(--disp);color:var(--red);min-width:1.6em}
+.bowl h3{font:400 var(--s3)/1.15 var(--disp);letter-spacing:.01em}
+.bowl h3 small{display:block;font:700 13px/1.4 var(--body);letter-spacing:.12em;color:var(--cream-3);margin-top:5px}
+.bowl .price{font:700 var(--s3)/1.15 var(--body);font-variant-numeric:tabular-nums}
+.bowl .broth{grid-column:2/span 2;font-size:15px;font-weight:700;color:var(--cream)}
+.bowl .tops{grid-column:2/span 2;font-size:15px;color:var(--cream-2);max-width:52ch}
+.mk{display:inline-block;font:700 11px/1 var(--body);letter-spacing:.08em;padding:4px 6px 3px;border:1px solid currentColor;border-radius:2px;margin-left:8px;vertical-align:2px}
+.mk.hot{color:var(--red-2)} .mk.vg,.mk.v{color:var(--cream-2)}
+.gf-band{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px 24px;margin-top:36px;padding:20px 24px;border:1px solid var(--red);border-left-width:6px}
+.gf-band strong{font:400 var(--s3)/1.1 var(--disp);color:var(--cream)}
+.gf-band p{color:var(--cream-2);font-size:15px}
+.gf-band .p{font:700 var(--s3)/1 var(--body);white-space:nowrap}
+.menu-notes{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:22px;font-size:14px;color:var(--cream-3)}
+.menu-notes .sur{color:var(--cream)}
+
+/* rest of menu */
+.split .grid{row-gap:40px}
+.mood{grid-column:1/span 5}
+.mood .ph{position:sticky;top:96px}
+.rest{grid-column:7/span 6;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(20px,3vw,40px);row-gap:44px}
+.course h3{display:flex;align-items:baseline;gap:12px;font:400 var(--s3)/1.1 var(--disp);padding-bottom:12px;border-bottom:2px solid var(--cream);margin-bottom:6px}
+.course h3 span{font:700 14px/1 var(--body);letter-spacing:.1em;color:var(--red-2)}
+.course.wide{grid-column:1/-1}
+.course.wide .items{columns:2;column-gap:clamp(20px,3vw,40px)}
+.item{break-inside:avoid;padding:10px 0;border-bottom:1px solid var(--rule)}
+.item .row{display:flex;align-items:baseline;gap:10px}
+.item .nm{font-weight:700;font-size:16px}
+.item .lead{flex:1;border-bottom:1px dotted var(--cream-3);transform:translateY(-4px);min-width:12px}
+.item .pr{font-weight:700;font-variant-numeric:tabular-nums;font-size:16px}
+.item .d{font-size:14px;color:var(--cream-3);margin-top:2px}
+
+/* photo strip */
+.strip{padding:0}
+.strip .grid{row-gap:16px}
+.strip .a{grid-column:1/span 4}.strip .b{grid-column:5/span 5}.strip .c{grid-column:10/span 3;align-self:end}
+
+/* card + byo */
+.perks .grid{row-gap:40px}
+.stamp{grid-column:1/span 7;background:var(--cream);color:var(--ink);padding:clamp(22px,3vw,36px);border-radius:3px;position:relative}
+.stamp .kicker{color:var(--red)}
+.stamp h2{font-size:var(--s4);margin:10px 0 8px}
+.stamp p{max-width:44ch}
+.stamps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(8px,1.4vw,14px);margin-top:24px;max-width:460px}
+.stamps span{aspect-ratio:1;border:2px solid var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 12px/1.1 var(--body);text-align:center;letter-spacing:.04em}
+.stamps span.goal{background:var(--red);border-color:var(--red);color:var(--cream)}
+.stamp small{display:block;margin-top:18px;font-size:13px;color:#5b544a}
+.byo{grid-column:9/span 4;align-self:center}
+.byo .big{font:400 clamp(64px,9vw,120px)/.9 var(--disp);color:var(--red)}
+.byo h2{font-size:var(--s3);margin:14px 0 10px}
+.byo p{color:var(--cream-2)}
+.gem{margin-top:28px;padding-top:18px;border-top:1px solid var(--rule);font-size:15px;color:var(--cream-2)}
+.gem b{color:var(--cream)}
+
+/* visit */
+#visit{border-top:1px solid var(--rule)}
+#visit .grid{row-gap:36px}
+.where{grid-column:1/span 5}
+.where address{font-style:normal;font:400 var(--s4)/1.1 var(--disp);margin:14px 0 18px}
+.where p{color:var(--cream-2);margin-bottom:6px}
+.where .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hours{grid-column:7/span 6}
+.now{display:flex;align-items:center;gap:10px;font-weight:700;font-size:var(--s3);margin:14px 0 18px}
+.now .dot{width:12px;height:12px}
+table{width:100%;border-collapse:collapse;font-size:16px}
+td{padding:11px 0;border-bottom:1px solid var(--rule)}
+td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+tr.today td{color:var(--cream);font-weight:700}
+tr.today td:first-child::before{content:"";display:inline-block;width:8px;height:8px;background:var(--red);border-radius:50%;margin-right:10px;vertical-align:1px}
+tr.closed td{color:var(--cream-3)}
+td{color:var(--cream-2)}
+
+footer{border-top:1px solid var(--rule);padding:40px 0 120px;font-size:14px;color:var(--cream-3)}
+footer .grid{row-gap:20px;align-items:start}
+footer .logo{grid-column:1/span 2}
+footer .logo img{width:80px;height:80px}
+footer .f1{grid-column:3/span 4}
+footer .f2{grid-column:7/span 6}
+footer a{color:var(--cream-2)}
+
+/* mobile action bar */
+.action{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;grid-template-columns:repeat(3,1fr);background:var(--ink);border-top:1px solid var(--rule);padding:8px 8px calc(8px + env(safe-area-inset-bottom));gap:8px}
+.action a{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:52px;border:1px solid var(--rule);border-radius:2px;text-decoration:none;font:700 14px/1.1 var(--body);letter-spacing:.04em}
+.action a small{font-weight:500;font-size:11px;color:var(--cream-3);margin-top:3px;letter-spacing:.06em}
+.action a.red{background:var(--red);border-color:var(--red)}
+.action a.red small{color:var(--cream)}
+
+.fade{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s ease}
+.fade.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  .bar nav{display:none}
+  .bar .status{margin-left:auto}
+  .hero-copy,.hero-photo{grid-column:1/-1}
+  .vert{display:none}
+  .board{grid-template-columns:1fr}
+  .mood{grid-column:1/-1}.mood .ph{position:static;aspect-ratio:3/2}
+  .rest{grid-column:1/-1}
+  .stamp,.byo{grid-column:1/-1}
+  .where,.hours{grid-column:1/-1}
+  footer .logo{grid-column:1/-1}footer .f1,footer .f2{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .bar{height:64px}.bar .logo img{width:48px;height:48px}.bar .btn{display:none}
+  .rest{grid-template-columns:1fr}
+  .course.wide .items{columns:1}
+  .strip .a,.strip .b{grid-column:span 6}.strip .c{display:none}
+  .gf-band{grid-template-columns:1fr auto}.gf-band p{grid-column:1/-1;grid-row:2}
+  .action{display:grid}
+  .bowl{column-gap:12px}
+}
+</style>
+</head>
+<body>
+<div class="preview">Concept preview by <b>Restauranting</b>. Not the official website of ToMo Ramen. Preview photos are licensed stock; logo, colours and details are taken from your Instagram, menu and Google listing.</div>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="ToMo Ramen, back to top"><img src="logo.jpg" width="56" height="56" alt="ToMo Ramen logo"></a>
+    <nav aria-label="Sections"><a href="#ramen">Ramen</a><a href="#more">Rice &amp; sides</a><a href="#card">Stamp card</a><a href="#visit">Hours &amp; map</a></nav>
+    <span class="status" id="status-top"><span class="dot"></span><span class="st">Ebley St, Bondi Junction</span></span>
+    <a class="btn red" href="tel:+61452640814">Call 0452 640 814</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap grid">
+      <div class="hero-copy fade">
+        <p class="kicker">Ebley St · Bondi Junction</p>
+        <h1 class="disp">Authentic Japanese ramen. <em>Eight&nbsp;bowls.</em></h1>
+        <p class="lede">Creamy chicken paitan, Tokyo shoyu and shio, rich tonkotsu and two vegetable broths. Bring your own bottle, grab a seat inside or out.</p>
+        <div class="ctas"><a class="btn red" href="#ramen">See the bowls</a><a class="btn" href="#visit" id="hero-hours">Hours &amp; map</a></div>
+      </div>
+      <figure class="hero-photo fade">
+        <span class="vert jp" lang="ja" aria-hidden="true">ラーメン</span>
+        <div class="ph r45" data-shot="hero"></div>
+      </figure>
+      <div class="facts">
+        <div><b>Today</b><span id="today-line">11:30am to 9pm, Wednesdays closed</span></div>
+        <div><b>BYO</b>Wine and beer welcome</div>
+        <div><b>Seating</b>Inside and outdoor tables</div>
+        <div><b>Phone</b><a href="tel:+61452640814">0452 640 814</a></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="ramen">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="disp">Ramen</h2><span class="jp" lang="ja">ラーメン</span>
+        <p>Eight bowls on three broths: chicken, pork and vegetable. The meat bowls all come with a soft egg.</p>
+      </div>
+      <div class="board" id="board"></div>
+      <div class="gf-band fade">
+        <strong>Gluten-free noodles</strong>
+        <span class="p">+$4</span>
+        <p>Swap the noodles in your bowl for gluten-free ones. Extra serve of GF noodles $6.</p>
+      </div>
+      <!-- CHECK: confirm GF swap applies to every ramen and whether broths/tare are gluten-free -->
+      <div class="menu-notes">
+        <span class="sur"><b>10% surcharge on weekends and public holidays.</b></span>
+        <span><span class="mk hot" style="margin-left:0">HOT</span> spicy</span>
+        <span><span class="mk vg" style="margin-left:0">VG</span> vegan</span>
+        <span><span class="mk v" style="margin-left:0">V</span> vegetarian</span>
+        <span>Prices in AUD.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="split" id="more">
+    <div class="wrap grid">
+      <div class="mood"><figure class="ph r34" data-shot="mood"></figure></div>
+      <div class="rest" id="rest"></div>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="Photos">
+    <div class="wrap grid">
+      <figure class="a fade"><div class="ph r45" data-shot="paitan"></div></figure>
+      <figure class="b fade"><div class="ph r32" data-shot="sides"></div></figure>
+      <figure class="c fade"><div class="ph r34" data-shot="tebo"></div></figure>
+    </div>
+  </section>
+
+  <section class="perks" id="card">
+    <div class="wrap grid">
+      <!-- Current offer: summer stamp card. CHECK: still running? end date? -->
+      <div class="stamp fade">
+        <p class="kicker">Summer stamp card · on now</p>
+        <h2 class="disp">Ten bowls, one on us.</h2>
+        <p>One stamp per visit. Five stamps gets you a free side, ten gets you a free ramen. Ask for a card at the counter.</p>
+        <div class="stamps" aria-label="Stamp card: free side at 5 stamps, free ramen at 10">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span class="goal">FREE<br>SIDE</span>
+          <span>6</span><span>7</span><span>8</span><span>9</span><span class="goal">FREE<br>RAMEN</span>
+        </div>
+        <small>Summer event. While it lasts.</small>
+      </div>
+      <div class="byo fade">
+        <div class="big">BYO</div>
+        <h2 class="disp">Bring a bottle.</h2>
+        <p>We're BYO. Bring wine or beer, we'll bring the ramen. Prefer to skip it: we have non-alcoholic beer, Ramune, Calpis and cold green tea in the fridge.</p>
+        <p class="gem">Ranked <b>#2 in Bondi Junction Local Gems</b>. Thank you, Bondi Junction.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap grid">
+      <div class="where">
+        <p class="kicker">Find us</p>
+        <address>106 Ebley St<br>Bondi Junction</address>
+        <p>NSW 2022. Walk-in, no bookings needed. <!-- CHECK: confirm walk-in only --></p>
+        <p>Outdoor tables out front.</p>
+        <div class="ctas">
+          <a class="btn red" href="https://www.google.com/maps/search/?api=1&amp;query=ToMo%20Ramen%20106%20Ebley%20St%20Bondi%20Junction%20NSW%202022" target="_blank" rel="noopener">Directions</a>
+          <a class="btn" href="tel:+61452640814">0452 640 814</a>
+          <a class="btn" href="https://www.instagram.com/tomoramen_bondi/" target="_blank" rel="noopener">@tomoramen_bondi</a>
+        </div>
+      </div>
+      <div class="hours">
+        <p class="kicker">Hours</p>
+        <p class="now" id="open-cell"><span class="dot"></span><span id="open-text">Sun–Tue 11:30am–8:30pm · Thu–Sat 11:30am–9pm</span></p>
+        <table id="hours">
+          <tbody>
+            <tr data-day="1"><td>Monday</td><td>11:30am – 8:30pm</td></tr>
+            <tr data-day="2"><td>Tuesday</td><td>11:30am – 8:30pm</td></tr>
+            <tr data-day="3" class="closed"><td>Wednesday</td><td>Closed</td></tr>
+            <tr data-day="4"><td>Thursday</td><td>11:30am – 9pm</td></tr>
+            <tr data-day="5"><td>Friday</td><td>11:30am – 9pm</td></tr>
+            <tr data-day="6"><td>Saturday</td><td>11:30am – 9pm</td></tr>
+            <tr data-day="0"><td>Sunday</td><td>11:30am – 8:30pm</td></tr>
+          </tbody>
+        </table>
+        <p class="cap">10% surcharge on weekends and public holidays.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div class="logo"><img src="logo.jpg" width="80" height="80" alt="ToMo Ramen logo" loading="lazy"></div>
+    <div class="f1">ToMo Ramen<br>106 Ebley St, Bondi Junction NSW 2022<br><a href="tel:+61452640814">0452 640 814</a> · <a href="https://www.instagram.com/tomoramen_bondi/" target="_blank" rel="noopener">Instagram</a></div>
+    <div class="f2"><span id="credits">Photos via Pexels</span>. Concept preview by Restauranting, not the official ToMo Ramen website.</div>
+  </div>
+</footer>
+
+<nav class="action" aria-label="Quick actions">
+  <a href="tel:+61452640814">Call<small>0452 640 814</small></a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=ToMo%20Ramen%20106%20Ebley%20St%20Bondi%20Junction%20NSW%202022" target="_blank" rel="noopener">Directions<small>Ebley St</small></a>
+  <a class="red" href="#ramen">Menu<small id="act-status">8 bowls</small></a>
+</nav>
+
+<script>
+/* ramen: [no, name, japanese, price, broth, toppings, marks] */
+const RAMEN = [
+  ["Tori Paitan","鶏白湯",26,"Rich chicken broth","Sous vide chicken, pork chashu, soft egg, crispy onion, mushroom, scallion.",""],
+  ["Spicy Tori Paitan","辛 鶏白湯",26,"Rich chicken broth, with chilli","The Tori Paitan, made spicy.","HOT"],
+  ["Tokyo Shoyu","東京醤油",24,"Soy and dashi chicken broth","Sous vide chicken, chashu, soft egg, red onion, mushroom, scallion.",""],
+  ["Tokyo Shio","東京塩",24,"Sea salt and yuzu dashi chicken broth","Sous vide chicken, soft egg, lime.",""],
+  ["Tonkotsu","豚骨",25,"Rich pork broth","Chashu, soft egg, mushroom, scallion.",""],
+  ["Spicy Pork","辛 豚骨",25,"Rich pork broth, with chilli","The Tonkotsu, made spicy.","HOT"],
+  ["Vegan Shoyu","ヴィーガン醤油",25,"Vegetable broth","White mushroom, roasted tomato, baby bok choy, crispy tofu.","VG"],
+  ["Tomato Vege Ramen","トマトラーメン",25,"Vegetable and tomato broth","Mushroom, bok choy, red onion, tomato, parmesan, rocket.","V"]
+];
+/* CHECK: Tokyo Shio topping list was truncated on the Google menu ("soft egg...") */
+const MORE = [
+  {en:"Rice", jp:"ご飯", items:[["Chicken Karaage Curry Rice",25,"With salad and miso."],["Chicken Katsu Curry Rice",26,"With salad and miso."]]},
+  {en:"Sides", jp:"サイド", items:[["Prawn Gyoza",13,"5 pieces."],["Pork Gyoza",13,"5 pieces."],["Vege Gyoza",13,"6 pieces."],["Chicken Karaage",13,"5 pieces."],["Jalapeño Cream Cheese",14,"5 pieces."],["Edamame",8,""],["Seaweed Salad",8,""]]},
+  {en:"Extras", jp:"トッピング", items:[["Extra noodles","4.50",""],["Gluten-free noodle swap",4,""],["Extra GF noodles",6,""],["Rice","3.50",""],["Soft egg",4,""],["Pork or chicken chashu","4.50",""],["Miso soup",4,""],["Parmesan",2,""]]},
+  {en:"Dessert", jp:"デザート", items:[["Matcha warabi mochi","","New."],["Cheesecake",7,""],["Tiramisu",7,""],["Green Tea Ice Cream",5,""]]},
+  {en:"Drinks", jp:"飲み物", wide:true, items:[["Soft drink cans",4,""],["Water",4,""],["Sparkling water",5,""],["Calpis",5,""],["Ramune",6,""],["Peach or lemon iced tea",6,""],["Cold green tea",6,""],["Hot green tea",4,""],["Non-alcoholic beer",8,""],["BYO","","Bring your own wine or beer."]]}
+];
+/* CHECK: matcha warabi mochi price; "miso" extra assumed to be miso soup; "egg" extra assumed soft egg */
+const t = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const board = document.getElementById("board");
+RAMEN.forEach(([n, jp, p, broth, tops, mk], i) => {
+  const b = t("article","bowl fade");
+  b.append(t("span","no",String(i+1).padStart(2,"0")));
+  const h = t("h3",null,n);
+  if (mk) h.append(t("span","mk " + ({HOT:"hot",VG:"vg",V:"v"})[mk], mk));
+  const s = t("small",null,jp); s.lang = "ja"; h.append(s);
+  b.append(h, t("span","price","$" + p), t("p","broth",broth), t("p","tops",tops));
+  board.append(b);
+});
+const rest = document.getElementById("rest");
+for (const c of MORE) {
+  const box = t("div","course fade" + (c.wide ? " wide" : ""));
+  const h = t("h3",null,c.en); const j = t("span",null,c.jp); j.lang = "ja"; h.append(j); box.append(h);
+  const list = t("div","items");
+  for (const [n, p, d] of c.items) {
+    const it = t("div","item"), row = t("div","row");
+    row.append(t("span","nm",n), t("span","lead"), t("span","pr", p === "" ? "" : "$" + p));
+    it.append(row); if (d) it.append(t("p","d",d));
+    list.append(it);
+  }
+  box.append(list); rest.append(box);
+}
+
+/* open now, in Sydney time */
+const HOURS = {0:[[690,1230]],1:[[690,1230]],2:[[690,1230]],3:[],4:[[690,1260]],5:[[690,1260]],6:[[690,1260]]};
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m/60), mm = m%60, h12 = ((h+11)%12)+1; return h12 + (mm ? ":" + String(mm).padStart(2,"0") : "") + (h >= 12 ? "pm" : "am"); };
+function now(){
+  const p = new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => p.find(x => x.type === k)?.value;
+  return {day: DAYS.indexOf(g("weekday")), mins: +g("hour")*60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = now(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const today = HOURS[day];
+  document.getElementById("today-line").textContent = today.length ? DAYS[day] + ", " + fmt(today[0][0]) + " to " + fmt(today[0][1]) : "Closed Wednesdays";
+  const cur = today.find(([a,b]) => mins >= a && mins < b);
+  let msg;
+  if (cur) msg = "Open now, until " + fmt(cur[1]);
+  else {
+    const next = today.find(([a]) => mins < a);
+    if (next) msg = "Opens " + fmt(next[0]) + " today";
+    else for (let i = 1; i <= 7; i++) { const d = (day+i)%7; if (HOURS[d].length) { msg = "Closed · opens " + (i === 1 ? "tomorrow" : DAYS[d]) + " " + fmt(HOURS[d][0][0]); break; } }
+  }
+  document.getElementById("open-text").textContent = msg;
+  document.querySelector("#status-top .st").textContent = cur ? "Open until " + fmt(cur[1]) : "Closed now";
+  document.getElementById("act-status").textContent = cur ? "Open now" : "8 bowls";
+  document.getElementById("open-cell").classList.toggle("is-open", !!cur);
+  document.getElementById("status-top").classList.toggle("is-open", !!cur);
+}
+tick(); setInterval(tick, 60000);
+
+/* licensed stock photos (Pexels licence). Hotlinked from Pexels' CDN with srcset. */
+const PHOTOS = {
+  hero:   {id:4224210,  alt:"A bowl of ramen with egg, meat and greens in low, dramatic light", by:"alleksana", eager:true},
+  mood:   {id:34692771, alt:"Ramen lifted with chopsticks in a dim restaurant lit by neon", by:"eden-fc-620771246"},
+  paitan: {id:27219790, alt:"Ramen with soft-boiled egg, chicken and vegetables in a creamy broth", by:"imvitordiniz"},
+  sides:  {id:1860200,  alt:"Gyoza, edamame and karaage on a table", by:"valeriya"},
+  tebo:   {id:18848769, alt:"Noodle strainers hanging in a ramen kitchen", by:"axp-photography-500641970"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+const SIZES = {hero:"(max-width:980px) 100vw, 50vw", mood:"(max-width:980px) 100vw, 42vw", paitan:"(max-width:640px) 50vw, 33vw", sides:"(max-width:640px) 50vw, 42vw", tebo:"25vw"};
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = SIZES[f.dataset.shot];
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 900);
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ");
+
+/* subtle fade-in */
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), {rootMargin:"0px 0px -8% 0px"}) : null;
+document.querySelectorAll(".fade").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+
+try { if (window.self !== window.top) document.querySelector(".preview")?.remove(); } catch {}
+</script>
+</body>
+</html>

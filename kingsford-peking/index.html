@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Kingsford Peking Restaurant · Peking duck on Anzac Parade</title>
+<meta name="description" content="Peking duck with hand-made pancakes, xiao long bao, dumplings, Shanghai noodles, Sichuan dishes and Uyghur cumin lamb ribs. 498 Anzac Parade, Kingsford, near UNSW.">
+<meta name="theme-color" content="#5A2E17">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<!--
+  CONCEPT NOTES (Restauranting, not shown on page)
+  Direction "Lacquer & badge": the banquet menu card of a northern Chinese restaurant, set in their own logo colours.
+  Duck brown = the room (header, hero, footer); cream = the menu paper; amber = wayfinding and the Order action.
+  Brand source: logo + full menu from their Yumbo Jumbo ordering page; hours, phone, address from Google. No Instagram found.
+  OPEN QUESTIONS:
+  - Hours: Google says Tue–Sun 10am–3pm & 4:15–9:15pm; the ordering page says 4–9pm for dinner. Page uses Google hours. [CHECK with owner]
+  - Prices are the online-ordering prices; in-house prices may differ. [CHECK]
+  - Chinese dish names are standard renderings matched to the English; confirm against the printed in-house menu. [CHECK]
+  - V / chilli marks inferred from dish names only. [CHECK]
+  - "Chinaman's Hat" (31.05) left off this preview pending the owner's preferred name. [CHECK]
+  - Two-course whole duck pancake count, and whether the 2nd course uses the duck meat, not stated on the ordering page. [CHECK]
+  - Bookings / group banquets: not known whether they take bookings. [CHECK]
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Kingsford Peking Restaurant","servesCuisine":["Chinese","Peking duck","Sichuan","Shanghainese"],"priceRange":"$$","telephone":"+61 2 8040 6979",
+"address":{"@type":"PostalAddress","streetAddress":"498 Anzac Parade","addressLocality":"Kingsford","addressRegion":"NSW","postalCode":"2032","addressCountry":"AU"},
+"hasMenu":"#menu","acceptsReservations":false,
+"potentialAction":{"@type":"OrderAction","target":"https://kingsfordpekingrestaurant.yumbojumbo.com.au/"},
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"15:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"16:15","closes":"21:15"}]}
+</script>
+<style>
+:root{
+  --duck:#5A2E17; --duck-2:#47230F; --duck-3:#6E3A20; --amber:#E39A2D; --amber-ink:#9A570C; --cream:#FBF5EA; --cream-2:#F4EADA;
+  --ink:#2A1A10; --ink-2:#6B5646; --rule:#E2D4BF; --rule-d:#7A4A30; --red:#A3271C; --on-duck:#F6EBDD; --on-duck-2:#D8C2AC;
+  --serif:"Noto Serif SC","Songti SC","STSong",Georgia,serif;
+  --sans:"Public Sans","Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+  --gut:clamp(16px,4vw,56px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+img{display:block;max-width:100%}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+[lang^="zh"]{font-family:var(--serif)}
+.label{font:700 12.5px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+
+/* concept note */
+.preview{background:var(--duck-2);color:var(--on-duck-2);font-size:13px;line-height:1.45;padding:9px var(--gut)}
+.preview b{color:#fff;font-weight:500}
+
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:var(--duck);color:var(--on-duck);border-bottom:1px solid var(--rule-d)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;min-width:0}
+.brand img{width:60px;height:60px;object-fit:contain;overflow:hidden;font-size:0}
+.brand span{font:500 15px/1.25 var(--serif);color:var(--on-duck-2)}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px}
+.nav a{text-decoration:none}
+.nav a:hover{color:var(--amber)}
+@media (max-width:820px){.nav .hide-m,.brand span{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:700 15px/1 var(--sans);padding:14px 20px;border:1.5px solid currentColor;border-radius:2px;text-decoration:none;cursor:pointer;background:transparent;transition:background .15s,color .15s,border-color .15s}
+.btn.amber{background:var(--amber);border-color:var(--amber);color:var(--duck-2)}
+.btn.amber:hover{background:#F0AE4A;border-color:#F0AE4A;color:var(--duck-2)}
+.btn.ghost-d{color:var(--on-duck)}
+.btn.ghost-d:hover{background:var(--on-duck);color:var(--duck)}
+.btn.ghost{color:var(--duck)}
+.btn.ghost:hover{background:var(--duck);color:var(--cream)}
+.btn.small{padding:11px 15px;font-size:14px}
+
+/* photo frames */
+.ph{position:relative;margin:0;background:var(--cream-2);overflow:hidden}
+.ph::before{content:"";display:block;padding-top:var(--r,125%)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+figcaption.cap{font-size:13.5px;color:var(--ink-2);margin-top:10px}
+figcaption.cap [lang^="zh"]{color:var(--amber-ink);margin-right:6px}
+
+/* hero */
+.hero{background:var(--duck);color:var(--on-duck);padding-block:clamp(32px,5vw,72px) 0}
+.hero .grid{align-items:end}
+.hero-text{grid-column:1/span 5;padding-bottom:clamp(32px,5vw,72px);display:flex;flex-direction:column;gap:22px}
+.hero-text .zh{font:700 clamp(40px,5vw,64px)/1 var(--serif);color:var(--amber);letter-spacing:.06em}
+h1{font:700 clamp(30px,3.4vw,44px)/1.14 var(--serif);margin:0;color:#fff;text-wrap:balance;letter-spacing:-.005em}
+.lede{font-size:18px;color:var(--on-duck-2);max-width:42ch}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.status{display:flex;align-items:center;gap:10px;font-size:15px;color:var(--on-duck);border-top:1px solid var(--rule-d);padding-top:18px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--on-duck-2);flex:none}
+.is-open .dot{background:#7BC47F}
+.hero-media{grid-column:7/span 6;margin-bottom:-56px;position:relative;z-index:1}
+@media (max-width:900px){
+  .hero-text,.hero-media{grid-column:1/-1}
+  .hero-media{order:-1;margin:0 calc(var(--gut)*-1) 28px}
+  .hero-media .ph{--r:85%!important}
+  .hero-text{padding-bottom:40px}
+  .hero{padding-top:0}
+}
+
+/* duck */
+section{padding-block:clamp(72px,9vw,120px)}
+.duck{padding-top:clamp(96px,11vw,150px)}
+.sec-head{grid-column:1/span 4;display:flex;flex-direction:column;gap:14px;align-self:start}
+.sec-head .label{color:var(--amber-ink)}
+h2{font:700 clamp(27px,3vw,38px)/1.15 var(--serif);margin:0;color:var(--duck);text-wrap:balance}
+h2 [lang^="zh"]{display:block;font-size:.62em;color:var(--amber-ink);letter-spacing:.08em;margin-bottom:6px}
+.sec-head p{color:var(--ink-2);max-width:36ch}
+.duck-card{grid-column:6/span 7;border:1px solid var(--duck);padding:6px}
+.duck-card .in{border:1px solid var(--rule);padding:clamp(18px,3vw,32px)}
+table.ducks{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.ducks th,table.ducks td{padding:16px 0;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+table.ducks thead th{font:700 12.5px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);padding-top:0;border-bottom:1.5px solid var(--duck)}
+table.ducks thead th:not(:first-child),table.ducks td{text-align:right;width:22%;padding-left:12px}
+table.ducks tbody th{font-weight:400}
+table.ducks .course{display:flex;gap:12px;align-items:baseline}
+table.ducks .n{font:700 22px/1 var(--serif);color:var(--amber-ink);min-width:1.2em}
+table.ducks .what b{display:block;font:700 18px/1.3 var(--serif);color:var(--duck)}
+table.ducks .what small{display:block;font-size:14.5px;color:var(--ink-2);margin-top:4px;max-width:40ch}
+table.ducks .what small [lang^="zh"]{color:var(--amber-ink)}
+table.ducks td{font-weight:700;font-size:18px;color:var(--duck)}
+table.ducks td small{display:block;font-weight:400;font-size:13px;color:var(--ink-2);margin-top:3px}
+table.ducks tr.crispy th,table.ducks tr.crispy td{border-bottom:0}
+.duck-foot{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center;margin-top:20px;font-size:14.5px;color:var(--ink-2)}
+.duck-photos{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:inherit;margin-top:clamp(48px,7vw,88px);align-items:start}
+.duck-photos .a{grid-column:1/span 5}
+.duck-photos .b{grid-column:7/span 6;margin-top:clamp(0px,8vw,110px)}
+@media (max-width:900px){.sec-head,.duck-card{grid-column:1/-1}.duck-card{margin-top:28px}.duck-photos .a{grid-column:1/span 10}.duck-photos .b{grid-column:3/-1;margin-top:24px}}
+@media (max-width:520px){table.ducks thead th:not(:first-child),table.ducks td{width:auto;padding-left:10px}table.ducks td small{font-size:12px;white-space:nowrap}table.ducks .course{gap:8px}table.ducks .what small{font-size:13.5px}table.ducks td{font-size:16px}}
+
+/* menu */
+.menu{background:var(--cream-2);border-top:1px solid var(--rule);padding-bottom:clamp(56px,7vw,96px)}
+.menu-top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);row-gap:20px;align-items:end;margin-bottom:clamp(28px,4vw,44px)}
+.menu-top > div{grid-column:1/span 6}
+.menu-top .key{grid-column:8/span 5;font-size:14.5px;color:var(--ink-2)}
+.menu-top .key b{color:var(--duck)}
+@media (max-width:900px){.menu-top > div,.menu-top .key{grid-column:1/-1}}
+.jump{position:sticky;top:76px;z-index:5;background:var(--duck);color:var(--on-duck);overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.jump::-webkit-scrollbar{display:none}
+.jump .wrap{display:flex;gap:22px;padding-block:12px}
+.jump a{text-decoration:none;font-size:14.5px;display:inline-flex;gap:6px;align-items:baseline}
+.jump a span{font:500 13px/1 var(--serif);color:var(--amber)}
+.jump a:hover{color:var(--amber)}
+.courses{columns:2 440px;column-gap:clamp(32px,5vw,80px);margin-top:clamp(32px,4vw,48px)}
+.sect{break-inside:avoid-column;margin-bottom:clamp(36px,4vw,52px)}
+.sect h3{margin:0;padding-bottom:10px;border-bottom:1.5px solid var(--duck);display:flex;align-items:baseline;gap:14px}
+.sect h3 .zh{font:700 26px/1 var(--serif);color:var(--duck);letter-spacing:.06em}
+.sect h3 .en{font:700 12.5px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink)}
+.sect .note{font-size:14px;color:var(--ink-2);padding-top:8px}
+.item{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.item .nm{min-width:0}
+.item .en{font-weight:500;font-size:16.5px}
+.item .zh{font:500 14.5px/1 var(--serif);color:var(--ink-2);margin-left:8px;white-space:nowrap}
+.item .mk{font:700 11px/1 var(--sans);letter-spacing:.06em;margin-left:7px;padding:2px 4px;border:1px solid currentColor;border-radius:2px;vertical-align:2px;white-space:nowrap}
+.mk.v{color:#4F6B2E}.mk.h{color:var(--red)}
+.item .lead{flex:1;border-bottom:1px dotted #BFA88C;transform:translateY(-5px);min-width:14px}
+.item .pr{font-weight:700;font-variant-numeric:tabular-nums;color:var(--duck)}
+.menu-foot{display:flex;flex-wrap:wrap;gap:14px 32px;justify-content:space-between;align-items:center;border-top:1.5px solid var(--duck);padding-top:20px;font-size:14.5px;color:var(--ink-2)}
+
+/* regions */
+.regions .copy{grid-column:6/span 6;display:flex;flex-direction:column;gap:18px;font-size:18px;max-width:60ch}
+.regions .copy p:first-child{font:500 clamp(21px,2vw,25px)/1.45 var(--serif);color:var(--duck)}
+.regions dl{margin:8px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;border-top:1.5px solid var(--duck)}
+.regions dl div{padding:14px 0;border-bottom:1px solid var(--rule)}
+.regions dt{font:700 12.5px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink);margin-bottom:5px}
+.regions dd{margin:0;font-size:15.5px}
+.band{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:inherit;row-gap:28px;margin-top:clamp(48px,7vw,88px)}
+.band .x{grid-column:1/span 4}.band .y{grid-column:5/span 4;margin-top:clamp(0px,5vw,64px)}.band .z{grid-column:9/span 4}
+@media (max-width:900px){.regions .copy{grid-column:1/-1;margin-top:24px}}
+@media (max-width:760px){.band .x,.band .y,.band .z{grid-column:1/-1;margin-top:0}.regions dl{grid-template-columns:1fr}}
+
+/* visit */
+.visit{background:var(--duck);color:var(--on-duck)}
+.visit h2{color:#fff}
+.visit h2 [lang^="zh"],.visit .sec-head .label{color:var(--amber)}
+.visit .sec-head p{color:var(--on-duck-2)}
+.visit .body{grid-column:6/span 7;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px)}
+table.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.hours caption{text-align:left;margin-bottom:10px;color:var(--amber)}
+table.hours th,table.hours td{text-align:left;font-weight:400;padding:10px 0;border-bottom:1px solid var(--rule-d);font-size:15.5px;vertical-align:top}
+table.hours td{text-align:right;color:var(--on-duck-2)}
+table.hours tr.today th,table.hours tr.today td{font-weight:700;color:#fff}
+table.hours tr.today th::after{content:"today";font:700 10.5px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--duck-2);background:var(--amber);padding:3px 5px;border-radius:2px;margin-left:8px;vertical-align:2px}
+.where dl{margin:0;display:grid;gap:18px}
+.where dt{color:var(--amber);margin-bottom:4px}
+.where dd{margin:0;font-size:16px}
+.where dd a{text-decoration-color:var(--amber)}
+.where .actions{margin-top:24px}
+@media (max-width:900px){.visit .body{grid-column:1/-1;grid-template-columns:1fr;margin-top:28px}}
+
+footer{background:var(--duck-2);color:var(--on-duck-2);padding-block:36px 110px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:space-between;align-items:center}
+footer .f-brand{display:flex;align-items:center;gap:14px}
+footer img{width:72px;height:72px;object-fit:contain;overflow:hidden;font-size:0}
+footer .credits{max-width:60ch}
+@media (min-width:821px){footer{padding-bottom:40px}}
+
+/* mobile action bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:1fr 1fr 1.3fr;background:var(--duck);border-top:1px solid var(--rule-d);padding-bottom:env(safe-area-inset-bottom,0px)}
+.mbar a{padding:16px 8px;text-align:center;text-decoration:none;font-weight:700;font-size:15px;color:var(--on-duck)}
+.mbar a + a{border-left:1px solid var(--rule-d)}
+.mbar a.solid{background:var(--amber);color:var(--duck-2);border-left:0}
+@media (max-width:820px){.mbar{display:grid}}
+
+@media (prefers-reduced-motion:no-preference){.ph img{animation:fade .5s ease both}@keyframes fade{from{opacity:0}}}
+</style>
+</head>
+<body>
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of Kingsford Peking Restaurant. Preview photos are licensed stock; logo, menu, colours and details are taken from your online ordering page and Google listing.</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="https://kingsfordpekingrestaurant.yumbojumbo.com.au/thumbnails/store/logo/120/kin/kingsford-peking-restaurant.png?v=1770701806" alt="Kingsford Peking Restaurant logo" width="60" height="60"><span>498 Anzac Parade<br>Kingsford</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-m" href="#duck">Peking duck</a>
+      <a class="hide-m" href="#menu">Menu</a>
+      <a class="hide-m" href="#visit">Hours</a>
+      <a class="btn small amber" href="https://kingsfordpekingrestaurant.yumbojumbo.com.au/" target="_blank" rel="noopener">Order online</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap grid">
+      <div class="hero-text">
+        <p class="zh" lang="zh-Hans">北京烤鸭</p>
+        <h1>Peking duck in pancakes we make by hand, on Anzac Parade.</h1>
+        <p class="lede">Half or whole, one, two or three courses. Plus xiao long bao, dumplings, Shanghai noodles, Sichuan dishes and Uyghur cumin lamb ribs. Lunch and dinner, Tuesday to Sunday, near UNSW.</p>
+        <div class="actions">
+          <a class="btn amber" href="https://kingsfordpekingrestaurant.yumbojumbo.com.au/" target="_blank" rel="noopener">Order pickup or delivery</a>
+          <a class="btn ghost-d" href="#menu">See the menu</a>
+        </div>
+        <p class="status" id="status"><span class="dot"></span><span id="open-text">Open Tuesday to Sunday</span></p>
+      </div>
+      <div class="hero-media">
+        <figure class="ph" style="--r:112%" data-shot="hero"></figure>
+      </div>
+    </div>
+  </div>
+
+  <section class="duck" id="duck" aria-labelledby="duck-h">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <p class="label">The house duck</p>
+        <h2 id="duck-h"><span lang="zh-Hans">烤鸭 · 一鸭三吃</span>One duck, up to three courses.</h2>
+        <p>Start with the carved duck and our hand-made pancakes. Add a second course, or go all the way to the duck and cabbage soup. Half a duck suits two; a whole duck feeds the table.</p>
+      </div>
+      <div class="duck-card">
+        <div class="in">
+          <table class="ducks">
+            <thead><tr><th scope="col">Peking duck</th><th scope="col">Half</th><th scope="col">Whole</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><div class="course"><span class="n">1</span><span class="what"><b>One course</b><small>Carved Peking duck with our hand-made pancakes.</small></span></div></th><td>43.30<small>6 pancakes</small></td><td>76.75<small>12 pancakes</small></td></tr>
+              <tr><th scope="row"><div class="course"><span class="n">2</span><span class="what"><b>Two course</b><small>The duck and pancakes, then fried noodle or san choy bow <span lang="zh-Hans">生菜包</span>.</small></span></div></th><td>54.45<small>12 pancakes</small></td><td>87.90</td></tr>
+              <tr><th scope="row"><div class="course"><span class="n">3</span><span class="what"><b>Three course</b><small>All of the above, finished with duck and cabbage soup <span lang="zh-Hans">鸭汤</span>.</small></span></div></th><td>71.20</td><td>104.65</td></tr>
+              <tr class="crispy"><th scope="row"><div class="course"><span class="n" aria-hidden="true">·</span><span class="what"><b>Crispy duck <span lang="zh-Hans" style="font-size:.85em;color:var(--amber-ink)">香酥鸭</span></b><small>Our other duck, fried crisp.</small></span></div></th><td>43.30</td><td>76.75</td></tr>
+            </tbody>
+          </table>
+          <div class="duck-foot">
+            <span>Extra hand-made pancakes (6) 12.30 · hand-made bao (4) 12.30</span>
+            <a class="btn small ghost" href="https://kingsfordpekingrestaurant.yumbojumbo.com.au/" target="_blank" rel="noopener">Order a duck</a>
+          </div>
+        </div>
+      </div>
+      <div class="duck-photos">
+        <figure class="a" style="margin:0"><div class="ph" style="--r:125%" data-shot="wrap"></div><figcaption class="cap"><span lang="zh-Hans">薄饼</span>Duck, rolled into a pancake.</figcaption></figure>
+        <figure class="b" style="margin:0"><div class="ph" style="--r:72%" data-shot="xlb"></div><figcaption class="cap"><span lang="zh-Hans">小笼包</span>Xiao long bao, eight to a steamer.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="menu-top">
+        <div>
+          <p class="label" style="color:var(--amber-ink);margin-bottom:12px">Lunch &amp; dinner</p>
+          <h2 id="menu-h"><span lang="zh-Hans">菜单</span>The full menu</h2>
+        </div>
+        <p class="key">Made for sharing: a few dishes, rice or noodles, and the duck if you're celebrating. <b>V</b> vegetarian · <b style="color:var(--red)">Hot</b> chilli heat. Prices in AUD.</p>
+      </div>
+    </div>
+    <!-- Prices below are the online-ordering prices from the Yumbo Jumbo page; in-house prices may differ. [CHECK] -->
+    <nav class="jump" aria-label="Menu sections"><div class="wrap" id="jump"><a href="#duck">Duck <span lang="zh-Hans">烤鸭</span></a></div></nav>
+    <div class="wrap">
+      <div class="courses" id="courses"></div>
+      <div class="menu-foot">
+        <span>Pickup and delivery through our own ordering page.</span>
+        <a class="btn small ghost" href="https://kingsfordpekingrestaurant.yumbojumbo.com.au/" target="_blank" rel="noopener">Start an order</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="regions" aria-labelledby="regions-h">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <p class="label">From the kitchen</p>
+        <h2 id="regions-h"><span lang="zh-Hans">南北风味</span>North, south, east and west on one menu.</h2>
+      </div>
+      <div class="copy">
+        <p>Peking duck is where we start, but our kitchen cooks right across China.</p>
+        <dl>
+          <div><dt>Beijing &amp; Shandong</dt><dd>Peking duck, shallot pancakes, crispy Shan Dong chicken, beef in Peking sauce</dd></div>
+          <div><dt>Shanghai</dt><dd>Xiao long bao, hand-made Shanghai noodles, braised pork knuckle</dd></div>
+          <div><dt>Sichuan</dt><dd>Boiled fish, boiled beef, mapo tofu, hot &amp; spicy crayfish</dd></div>
+          <div><dt>Xinjiang</dt><dd>Uyghur cumin lamb ribs</dd></div>
+        </dl>
+      </div>
+      <div class="band">
+        <figure class="x" style="margin:0"><div class="ph" style="--r:125%" data-shot="dumpling"></div><figcaption class="cap"><span lang="zh-Hans">锅贴</span>Pan-fried dumplings.</figcaption></figure>
+        <figure class="y" style="margin:0"><div class="ph" style="--r:125%" data-shot="noodle"></div><figcaption class="cap"><span lang="zh-Hans">手工面</span>Noodles, made by hand.</figcaption></figure>
+        <figure class="z" style="margin:0"><div class="ph" style="--r:125%" data-shot="sichuan"></div><figcaption class="cap"><span lang="zh-Hans">川菜</span>Sichuan heat, as hot as it should be.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <p class="label">Hours &amp; location</p>
+        <h2 id="visit-h"><span lang="zh-Hans">营业时间</span>On Anzac Parade, near UNSW.</h2>
+        <p>Closed Mondays. Lunch from 10am, dinner from 4:15pm.</p>
+      </div>
+      <div class="body">
+        <!-- Google hours used (dinner 4:15–9:15pm). Ordering page lists 4–9pm. [CHECK] -->
+        <table class="hours" id="hours">
+          <caption class="label">Opening hours</caption>
+          <tbody>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>10am – 3pm<br>4:15 – 9:15pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>10am – 3pm<br>4:15 – 9:15pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>10am – 3pm<br>4:15 – 9:15pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>10am – 3pm<br>4:15 – 9:15pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>10am – 3pm<br>4:15 – 9:15pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>10am – 3pm<br>4:15 – 9:15pm</td></tr>
+            <tr data-day="1"><th scope="row">Monday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <div class="where">
+          <dl>
+            <div><dt class="label">Address</dt><dd>498 Anzac Parade<br>Kingsford NSW 2032</dd></div>
+            <div><dt class="label">Phone</dt><dd><a href="tel:+61280406979">(02) 8040 6979</a></dd></div>
+            <div><dt class="label">Takeaway &amp; delivery</dt><dd>Order on <a href="https://kingsfordpekingrestaurant.yumbojumbo.com.au/" target="_blank" rel="noopener">our own ordering page</a>, or call us.</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn small amber" href="https://www.google.com/maps/search/?api=1&amp;query=Kingsford+Peking+Restaurant+498+Anzac+Parade+Kingsford+NSW+2032" target="_blank" rel="noopener">Directions</a>
+            <a class="btn small ghost-d" href="tel:+61280406979">Call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand"><img src="https://kingsfordpekingrestaurant.yumbojumbo.com.au/thumbnails/store/logo/120/kin/kingsford-peking-restaurant.png?v=1770701806" alt="Kingsford Peking Restaurant logo" width="72" height="72" loading="lazy"><span>Kingsford Peking Restaurant<br>498 Anzac Parade, Kingsford · (02) 8040 6979</span></div>
+    <span class="credits">Concept by Restauranting · <span id="credits"></span></span>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+61280406979">Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Kingsford+Peking+Restaurant+498+Anzac+Parade+Kingsford+NSW+2032" target="_blank" rel="noopener">Directions</a>
+  <a class="solid" href="https://kingsfordpekingrestaurant.yumbojumbo.com.au/" target="_blank" rel="noopener">Order</a>
+</nav>
+
+<script>
+/* menu: [English, Chinese, price, mark]  mark: "v" vegetarian, "h" hot. Online-ordering prices. */
+const MENU = [
+  {id:"entree", en:"Entrée", zh:"头盘", items:[
+    ["Spring rolls (4)","春卷",14.30],
+    ["In-house dim sims (4)","自制点心",14.30],
+    ["Grilled corn ribs","烤玉米排",14.30,"v"],
+    ["San choy bow (4)","生菜包",22.10],
+    ["Peking shallot pancake (2)","葱油饼",14.30,"v"],
+    ["Pan-fried dumplings (8)","锅贴",22.10],
+    ["Xiao long bao (8)","小笼包",21.00],
+    ["Vegetarian dumplings (8)","素饺子",21.00,"v"],
+    ["Boiled dumplings (8)","水饺",21.00],
+    ["Prawn dumplings (8)","虾饺",22.10],
+    ["Scallop dumplings (8)","带子饺",23.25],
+    ["Baked sesame pockets with pork mince (8)","肉末烧饼",23.25],
+    ["Short soup","云吞汤",14.30],
+    ["Combination short soup","什锦云吞汤",19.90],
+    ["Wonton noodle soup","云吞面",21.00],
+    ["Cucumber salad in chilli garlic","蒜泥拍黄瓜",14.30,"v h"],
+    ["Sour spicy seaweed salad","酸辣海带丝",14.30,"v h"]]},
+  {id:"seafood", en:"Seafood", zh:"海鲜", note:"King prawn cutlets, your way: salt & pepper, salted egg yolk, honey, garlic, snow pea, hot & spicy or wasabi.", items:[
+    ["King prawn cutlets","大虾",33.25],
+    ["Satay king prawn","沙爹大虾",33.25],
+    ["Hokkaido scallop with snow pea","荷兰豆北海道带子",33.25],
+    ["Salt & pepper calamari","椒盐鱿鱼",33.25],
+    ["Salted egg calamari","咸蛋黄鱿鱼",33.25],
+    ["Fish fillet with vegetables","时蔬鱼片",33.25],
+    ["Fish fillet in XO","XO酱鱼片",33.25],
+    ["Sichuan boiled fish","水煮鱼",33.25,"h"],
+    ["Sichuan boiled fish with pickles","酸菜鱼",33.25,"h"],
+    ["Salt & pepper soft shell crab","椒盐软壳蟹",33.25],
+    ["Pipis in XO","XO酱炒蚬",44.40],
+    ["Barramundi","金目鲈",47.75],
+    ["Hot & spicy crayfish","香辣小龙虾",46.85,"h"]], after:"Barramundi with ginger & shallot, black bean, salt & pepper, or sweet & sour."},
+  {id:"chicken", en:"Chicken", zh:"鸡", items:[
+    ["Wind and sand grilled chicken","风沙鸡",31.05],
+    ["Crispy skin chicken","脆皮鸡",31.05],
+    ["Crispy Shan Dong chicken","山东烧鸡",31.05],
+    ["Shredded chicken in Peking sauce, with pancakes","京酱鸡丝配薄饼",31.05],
+    ["Satay chicken","沙爹鸡",31.05],
+    ["Hot & spicy chicken","香辣鸡",31.05,"h"],
+    ["Curry chicken","咖喱鸡",31.05],
+    ["Honey chicken","蜜汁鸡",31.05],
+    ["Lemon chicken","柠檬鸡",31.05],
+    ["Salt & pepper grilled quail (2)","椒盐鹌鹑",34.40]]},
+  {id:"meat", en:"Beef, lamb & pork", zh:"牛 · 羊 · 猪", items:[
+    ["Uyghur cumin lamb ribs","新疆孜然羊排",35.50],
+    ["Sichuan boiled beef","水煮牛肉",34.40,"h"],
+    ["Dry-fried shredded beef in Peking sauce","京酱干煸牛肉丝",31.05],
+    ["Mongolian beef","蒙古牛肉",31.05],
+    ["Satay beef","沙爹牛肉",31.05],
+    ["Wagyu beef with mushroom in XO","XO酱蘑菇和牛",33.25],
+    ["Satay wagyu beef stew","沙爹和牛煲",33.25],
+    ["Fillet steak: Chinese style, wasabi or black pepper teriyaki","牛柳",33.25],
+    ["Beef with green beans in XO","XO酱四季豆牛肉",31.05],
+    ["Pork ribs in Peking sauce","京都排骨",31.05],
+    ["Salt & pepper pork ribs","椒盐排骨",31.05],
+    ["Sweet & sour pork","咕噜肉",31.05],
+    ["Hakka braised pork with preserved vegetable","梅菜扣肉",32.15],
+    ["Slow-cooked braised pork knuckle","红烧肘子",48.90]]},
+  {id:"tofu", en:"Tofu, eggplant & greens", zh:"豆腐 · 蔬菜", items:[
+    ["Mapo tofu","麻婆豆腐",28.80,"h"],
+    ["Home-made tofu","家常豆腐",28.80],
+    ["Salt & pepper tofu","椒盐豆腐",28.80],
+    ["Sichuan deep-fried tofu","川味炸豆腐",28.80,"h"],
+    ["Salted egg tofu soup with vegetables","咸蛋豆腐时蔬",28.80],
+    ["Seafood & tofu clay pot","海鲜豆腐煲",29.95],
+    ["Braised eggplant & pork mince clay pot","肉末茄子煲",28.80],
+    ["Crispy salted egg eggplant","咸蛋黄茄子",28.80],
+    ["Omelette","芙蓉蛋",31.05],
+    ["Crab meat omelette","蟹肉芙蓉蛋",35.50],
+    ["Green beans with beef mince in XO","XO酱肉末四季豆",27.70],
+    ["Beef with bitter melon","苦瓜牛肉",27.70],
+    ["Wok-tossed broccoli or Chinese broccoli","炒西兰花 / 芥兰",26.60,"v"]]},
+  {id:"soup", en:"Soup", zh:"汤", items:[
+    ["Clay pot chicken & cabbage","砂锅白菜鸡",24.35],
+    ["Minced beef thick soup","西湖牛肉羹",24.35],
+    ["Seafood tofu soup","海鲜豆腐汤",24.35],
+    ["Sweet corn chicken soup","鸡蓉粟米羹",12.10],
+    ["Hot & sour soup","酸辣汤",12.10,"h"]]},
+  {id:"rice", en:"Rice & noodles", zh:"饭 · 面", items:[
+    ["Signature fried rice","招牌炒饭",25.45],
+    ["Mud crab fried rice","蟹肉炒饭",31.05],
+    ["King prawn fried rice","大虾炒饭",23.25],
+    ["BBQ pork fried rice","叉烧炒饭",21.00],
+    ["Pineapple chicken fried rice","菠萝鸡肉炒饭",21.00],
+    ["Egg fried rice","蛋炒饭",21.00,"v"],
+    ["Shanghai hand-made noodles","上海手工粗炒",21.00],
+    ["XO braised beef noodles","XO酱红烧牛肉面",21.00],
+    ["XO seafood fried noodles","XO酱海鲜炒面",22.10],
+    ["Combination chow mein","什锦炒面",23.25],
+    ["Vegetable chow mein","素炒面",21.00,"v"],
+    ["Singapore noodles","星洲炒米",21.00],
+    ["Beef hor fun","干炒牛河",21.00],
+    ["King prawn hor fun in egg gravy","滑蛋虾仁河粉",23.25],
+    ["Seafood laksa","海鲜叻沙",23.25],
+    ["Jasmine rice","白饭",7.65,"v"]]},
+  {id:"sweet", en:"Pancakes, bao & sweets", zh:"面点 · 甜品", items:[
+    ["Hand-made pancakes (6)","手工薄饼",12.30,"v"],
+    ["Hand-made bao (4)","手工荷叶包",12.30,"v"],
+    ["Red-bean pancake","豆沙锅饼",17.85,"v"],
+    ["Deep-fried ice cream","炸雪糕",14.50],
+    ["Deep-fried banana","炸香蕉",14.50,"v"],
+    ["Ice cream","雪糕",10.05]]}
+];
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const zh = (tag, cls, txt) => { const n = el(tag, cls, txt); n.lang = "zh-Hans"; return n; };
+const courses = document.getElementById("courses"), jump = document.getElementById("jump");
+for (const s of MENU) {
+  const a = el("a", null, s.en + " "); a.href = "#" + s.id; a.append(zh("span", null, s.zh)); jump.append(a);
+  const box = el("div", "sect"); box.id = s.id;
+  const h = el("h3"); h.append(zh("span", "zh", s.zh), el("span", "en", s.en)); box.append(h);
+  if (s.note) box.append(el("p", "note", s.note));
+  for (const [en, cn, p, m] of s.items) {
+    const it = el("div", "item"), nm = el("span", "nm");
+    nm.append(el("span", "en", en), zh("span", "zh", cn));
+    for (const k of (m || "").split(" ").filter(Boolean)) {
+      const mk = el("span", "mk " + k, k === "v" ? "V" : "Hot");
+      mk.title = k === "v" ? "Vegetarian" : "Chilli heat"; nm.append(mk);
+    }
+    it.append(nm, el("span", "lead"), el("span", "pr", p.toFixed(2)));
+    box.append(it);
+  }
+  if (s.after) box.append(el("p", "note", s.after));
+  courses.append(box);
+}
+
+/* open now, in Sydney time. Google hours: Tue–Sun 10:00–15:00 and 16:15–21:15, Monday closed. */
+const SPLIT = [[600, 900], [975, 1275]];
+const HOURS = {0:SPLIT, 1:[], 2:SPLIT, 3:SPLIT, 4:SPLIT, 5:SPLIT, 6:SPLIT};
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m / 60), mm = m % 60, h12 = ((h + 11) % 12) + 1; return h12 + (mm ? ":" + String(mm).padStart(2, "0") : "") + (h >= 12 ? "pm" : "am"); };
+function now() {
+  const p = new Intl.DateTimeFormat("en-AU", {timeZone:"Australia/Sydney", weekday:"long", hour:"numeric", minute:"numeric", hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => (p.find(x => x.type === k) || {}).value;
+  return {day: DAYS.indexOf(g("weekday")), mins: +g("hour") * 60 + +g("minute")};
+}
+function tick() {
+  const {day, mins} = now(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const box = document.getElementById("status"), txt = document.getElementById("open-text");
+  const cur = HOURS[day].find(([a, b]) => mins >= a && mins < b);
+  box.classList.toggle("is-open", !!cur);
+  if (cur) { txt.textContent = "Open now, until " + fmt(cur[1]); return; }
+  const next = HOURS[day].find(([a]) => mins < a);
+  if (next) { txt.textContent = (HOURS[day][0][1] <= mins ? "Between services · back at " : "Opens today at ") + fmt(next[0]); return; }
+  for (let i = 1; i <= 7; i++) { const d = (day + i) % 7; if (HOURS[d].length) { txt.textContent = "Closed now · opens " + (i === 1 ? "tomorrow" : DAYS[d]) + " at " + fmt(HOURS[d][0][0]); return; } }
+}
+tick(); setInterval(tick, 60000);
+
+/* licensed stock photos (Pexels licence), served from Pexels' CDN with srcset */
+const PHOTOS = {
+  hero:     {id:5848595,  alt:"Sliced Peking duck with pancakes, cucumber and sauces", by:"Polina Tankilevitch", eager:true, sizes:"(max-width:900px) 100vw, 50vw"},
+  wrap:     {id:5848610,  alt:"Hands rolling Peking duck into a thin pancake", by:"Polina Tankilevitch", sizes:"(max-width:900px) 84vw, 42vw"},
+  xlb:      {id:6752827,  alt:"Shanghai-style xiao long bao in a bamboo steamer", by:"Jonas F", sizes:"(max-width:900px) 84vw, 50vw"},
+  dumpling: {id:7287723,  alt:"Pan-fried dumplings on a wooden board with chopsticks", by:"Ann Tarazevich", sizes:"(max-width:760px) 100vw, 33vw"},
+  noodle:   {id:27523594, alt:"A cook stretching hand-made noodles in a restaurant kitchen", by:"Khang Vo Chi", sizes:"(max-width:760px) 100vw, 33vw"},
+  sichuan:  {id:38027763, alt:"Spicy Sichuan chicken with scallions and sesame in chilli sauce", by:"Li Chunyu", sizes:"(max-width:760px) 100vw, 33vw"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = p.sizes;
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 1300);
+  img.addEventListener("error", () => img.remove());
+  f.append(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ");
+
+/* inside the Restauranting studio frame, drop the concept note */
+try { if (window.self !== window.top) { const n = document.querySelector(".preview"); if (n) n.remove(); } } catch (e) {}
+</script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>coffee roooom · Coogee</title>
+<meta name="description" content="Coffee Roooom, 256 Arden St, Coogee. Coffee, focaccia and Tuga pastries across from Coogee Beach. Open 7 days from 6am.">
+<meta name="theme-color" content="#384430">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<!--
+  Creative brief (Restauranting)
+  Direction: "the feed, brought to life" - poster archetype, menu-first, beach combos up top.
+  Brand: logo.jpg (IG profile picture, 112px, low-res: ask owner for a vector/hi-res file).
+  Colours sampled from logo: green #384430, cream #FFFFF3 (page uses a warmer cream #F3EEDF for paper).
+  Accent terracotta #C2643D, taken from the ceramic-cup idea, used sparingly.
+  Type: Sniglet 800 (rounded, chunky lowercase, echoes the logo) + Outfit (geometric body).
+  Open questions:
+  - No public phone, so no Call button. Confirm they don't want one.
+  - Is "Order from the Sands" available on the delivery link, or only at the counter?
+  - Does the single origin rotate daily (menu says "of the day") - could post today's bean here.
+  - Dietary marks: only items named vegetarian are marked V. Confirm GF/VG options.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Coffee Roooom",
+  "image": "logo.jpg",
+  "servesCuisine": ["Coffee", "Cafe", "Focaccia", "Pastries"],
+  "priceRange": "$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "256 Arden St",
+    "addressLocality": "Coogee",
+    "addressRegion": "NSW",
+    "postalCode": "2034",
+    "addressCountry": "AU"
+  },
+  "sameAs": ["https://www.instagram.com/coffeeroom_coogee/"],
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "06:00", "closes": "14:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "06:00", "closes": "15:00"}
+  ],
+  "potentialAction": {
+    "@type": "OrderAction",
+    "target": "https://www.order.store/store/coffeeroooom/2iOKjV7CRyy6qlKsrf2ipA"
+  },
+  "hasMenu": {
+    "@type": "Menu",
+    "hasMenuSection": [
+      {"@type": "MenuSection", "name": "Order from the Sands", "hasMenuItem": [
+        {"@type": "MenuItem", "name": "Ham Focaccia & Small Iced Coffee", "offers": {"@type": "Offer", "price": "20.00", "priceCurrency": "AUD"}},
+        {"@type": "MenuItem", "name": "Vegetarian Focaccia & Small Iced Coffee", "offers": {"@type": "Offer", "price": "20.00", "priceCurrency": "AUD"}},
+        {"@type": "MenuItem", "name": "Mortadella Focaccia & Small Iced Coffee", "offers": {"@type": "Offer", "price": "20.00", "priceCurrency": "AUD"}}
+      ]},
+      {"@type": "MenuSection", "name": "Focaccias", "hasMenuItem": [
+        {"@type": "MenuItem", "name": "Parmaaaa", "description": "Ham, mozzarella, pickled pineapple, Calabrian chilli", "offers": {"@type": "Offer", "price": "16.00", "priceCurrency": "AUD"}},
+        {"@type": "MenuItem", "name": "Baloneeee", "description": "Mortadella, provolone, shaved zucchini, basil pistachio pesto", "offers": {"@type": "Offer", "price": "16.00", "priceCurrency": "AUD"}},
+        {"@type": "MenuItem", "name": "Salameeee", "description": "Fennel salami, olive tapenade, marinated eggplant, guindilla peppers, mozzarella", "offers": {"@type": "Offer", "price": "16.00", "priceCurrency": "AUD"}},
+        {"@type": "MenuItem", "name": "Vegetarianaaaa", "description": "Artichoke, capsicum, mozzarella, semi-dried tomato almond pesto", "offers": {"@type": "Offer", "price": "16.00", "priceCurrency": "AUD"}}
+      ]}
+    ]
+  }
+}
+</script>
+<style>
+:root{
+  --green:#384430; --green-2:#2C3626; --cream:#FFFFF3; --paper:#F3EEDF; --line:#D9D2BC;
+  --ink:#24291F; --muted:#5E6455; --clay:#C2643D;
+  --display:"Sniglet", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --body:"Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* scale: 15 / 18 / 24 / 40 / clamp hero */
+  --s1:.9375rem; --s2:1.125rem; --s3:1.5rem; --s4:clamp(2rem,5vw,2.75rem); --s5:clamp(2.75rem,9vw,5.5rem);
+  --gut:clamp(16px,4vw,40px); --r:10px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:400 var(--s2)/1.55 var(--body);overflow-x:hidden;padding-bottom:72px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,24px)}
+h1,h2,h3,.disp{font-family:var(--display);font-weight:800;text-transform:lowercase;letter-spacing:-.01em;line-height:.98}
+.eyebrow{font:500 var(--s1)/1.3 var(--body);letter-spacing:.02em;text-transform:lowercase;color:var(--muted)}
+
+/* concept note */
+.preview{background:var(--green-2);color:#D8DBC8;font-size:.8125rem;line-height:1.45;padding:8px var(--gut)}
+.preview p{max-width:1180px;margin:0 auto}
+
+/* header */
+.top{background:var(--green);color:var(--cream)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.bar img{width:56px;height:56px;border-radius:8px}
+.bar nav{display:flex;gap:clamp(12px,3vw,28px);font-size:var(--s1);font-weight:500;text-transform:lowercase}
+.bar nav a{text-decoration:none;opacity:.85}
+.bar nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+@media (max-width:560px){.bar nav a:not(.keep){display:none}}
+
+/* hero */
+.hero{padding:clamp(28px,6vw,72px) 0 clamp(36px,7vw,88px)}
+.hero-copy{grid-column:1/8;align-self:end}
+.hero h1{font-size:var(--s5);color:var(--cream)}
+.hero h1 em{font-style:normal;color:#E7B08F}
+.hero .lede{margin-top:20px;max-width:34ch;color:#E3E5D3;font-size:var(--s2)}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:9px 16px 9px 12px;border:1.5px solid rgba(255,255,243,.35);border-radius:999px;font-size:var(--s1);font-weight:500}
+.status i{width:10px;height:10px;border-radius:50%;background:#A9AE9C}
+.status.is-open i{background:#9FD27E;box-shadow:0 0 0 3px rgba(159,210,126,.25)}
+.hero-ph{grid-column:8/13;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;background:var(--green-2)}
+.hero-ph img{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){
+  .hero-copy,.hero-ph{grid-column:1/-1}
+  .hero-ph{order:-1;aspect-ratio:3/2;margin-bottom:28px}
+}
+
+/* sands combos */
+.sands{background:var(--cream);border-bottom:1.5px solid var(--line)}
+.sands-in{padding-block:clamp(40px,7vw,80px)}
+.sands-head{grid-column:1/6}
+.sands-head h2{font-size:var(--s4);color:var(--green)}
+.sands-head p{margin-top:14px;max-width:36ch;color:var(--muted)}
+.price-tag{display:inline-block;margin-top:20px;font:800 var(--s4)/1 var(--display);color:var(--clay)}
+.price-tag small{font:500 var(--s1) var(--body);color:var(--muted);margin-left:6px}
+.combos{grid-column:7/13;list-style:none;padding:0;align-self:center}
+.combos li{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;padding:16px 0;border-top:1.5px solid var(--line);font-size:var(--s3);font-family:var(--display);font-weight:400;text-transform:lowercase;color:var(--green)}
+.combos li:last-child{border-bottom:1.5px solid var(--line)}
+.combos li span{font:400 var(--s1) var(--body);color:var(--muted);margin-left:auto;text-transform:none}
+.combos li b{font-weight:800}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font:600 var(--s1) var(--body);text-decoration:none;background:var(--green);color:var(--cream);transition:background .2s}
+.btn:hover{background:var(--green-2)}
+.btn.ghost{background:transparent;color:var(--green);border:1.5px solid var(--green)}
+.btn.ghost:hover{background:var(--green);color:var(--cream)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+@media (max-width:860px){.sands-head,.combos{grid-column:1/-1}.combos{margin-top:28px}}
+
+/* feed */
+.feed{padding-block:clamp(48px,8vw,96px)}
+.feed-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.feed-head h2{font-size:var(--s4);color:var(--green)}
+.feed-head a{font-size:var(--s1);font-weight:500;color:var(--green)}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(4px,1vw,10px)}
+.tile{position:relative;aspect-ratio:1/1;border-radius:6px;overflow:hidden;background:var(--line)}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.tile:hover img{transform:scale(1.03)}
+.tile figcaption{position:absolute;left:10px;bottom:10px;right:10px;font:800 clamp(.95rem,2.6vw,1.5rem)/1 var(--display);color:var(--cream);text-transform:lowercase;text-shadow:0 1px 10px rgba(20,24,16,.55)}
+.tile.type{background:var(--green);display:flex;align-items:center;justify-content:center;padding:12px}
+.tile.type p{font:800 clamp(1rem,4.4vw,2.5rem)/1.02 var(--display);color:var(--cream);text-transform:lowercase;text-align:left;overflow-wrap:anywhere}
+.tile.type.clay{background:var(--clay)}
+.feed-note{margin-top:22px;max-width:60ch;color:var(--muted);font-size:var(--s1)}
+
+/* menu */
+.menu{background:var(--cream);border-block:1.5px solid var(--line);padding-block:clamp(48px,8vw,96px)}
+.menu-head{grid-column:1/-1;display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+.menu-head h2{font-size:var(--s4);color:var(--green)}
+.key{font-size:var(--s1);color:var(--muted)}
+.jump{grid-column:1/-1;display:flex;gap:8px;overflow-x:auto;padding:6px 0 18px;scrollbar-width:none}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:none;padding:7px 14px;border:1.5px solid var(--line);border-radius:999px;font-size:var(--s1);text-decoration:none;text-transform:lowercase;color:var(--green)}
+.jump a:hover{border-color:var(--green)}
+.cols{grid-column:1/-1;columns:2 380px;column-gap:clamp(24px,5vw,72px)}
+.section{break-inside:avoid;padding:22px 0 10px}
+.section h3{font-size:var(--s3);color:var(--green);padding-bottom:10px;border-bottom:2px solid var(--green);margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.section h3 small{font:400 var(--s1) var(--body);color:var(--muted);text-transform:none}
+.item{padding:9px 0;border-bottom:1px dotted var(--line)}
+.row{display:flex;align-items:baseline;gap:10px}
+.name{font-weight:600}
+.lead{flex:1;min-width:12px}
+.price{font-variant-numeric:tabular-nums;font-weight:500}
+.mark{display:inline-block;margin-left:6px;padding:0 6px;border-radius:4px;font-size:.75rem;font-weight:600;color:var(--green);border:1px solid var(--green);vertical-align:2px}
+.desc{font-size:var(--s1);color:var(--muted);max-width:52ch}
+.item.stretch .name{font:800 1.25rem/1.2 var(--display);text-transform:lowercase;color:var(--green)}
+
+/* visit */
+.visit{padding-block:clamp(48px,8vw,96px)}
+.visit-a{grid-column:1/6}
+.visit-a h2{font-size:var(--s4);color:var(--green)}
+.visit-a p{margin-top:14px;max-width:36ch}
+.visit-b{grid-column:7/13}
+table{width:100%;border-collapse:collapse;font-size:var(--s2)}
+td{padding:12px 0;border-bottom:1.5px solid var(--line)}
+td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+tr.today td{color:var(--clay);font-weight:600}
+.visit-ph{grid-column:1/-1;margin-top:clamp(32px,6vw,64px);aspect-ratio:21/9;border-radius:var(--r);overflow:hidden;background:var(--line)}
+.visit-ph img{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){.visit-a,.visit-b{grid-column:1/-1}.visit-b{margin-top:28px}.visit-ph{aspect-ratio:4/3}}
+
+/* sign-off */
+.bye{background:var(--green);color:var(--cream);padding:clamp(56px,10vw,120px) 0 40px}
+.bye h2{font-size:clamp(3rem,13vw,9rem);overflow-wrap:anywhere;letter-spacing:-.02em;color:var(--cream)}
+.bye-row{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:24px;margin-top:clamp(36px,6vw,64px);padding-top:24px;border-top:1.5px solid rgba(255,255,243,.2);font-size:var(--s1);color:#CDD1BE}
+.bye-row img{width:72px;height:72px;border-radius:10px}
+.bye-row a{color:var(--cream)}
+.credits{margin-top:18px;font-size:.8125rem;color:#A9AE9C;max-width:80ch}
+
+/* mobile action bar */
+.actions{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:8px;padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom));background:rgba(243,238,223,.97);border-top:1.5px solid var(--line)}
+.actions a{display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:999px;font:600 var(--s1) var(--body);text-decoration:none;color:var(--green);border:1.5px solid var(--green)}
+.actions a.solid{background:var(--green);color:var(--cream)}
+@media (min-width:861px){
+  body{padding-bottom:0}
+  .actions{left:auto;right:24px;bottom:24px;width:auto;grid-template-columns:auto auto auto;border:1.5px solid var(--line);border-radius:999px;padding:8px}
+  .actions a{padding:0 20px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="preview"><p>Concept preview by Restauranting. Not the official website of Coffee Roooom. Preview photos are licensed stock; logo, colours and details are taken from your Instagram, menu and listing.</p></div>
+
+<header class="top">
+  <div class="wrap bar">
+    <a href="#top" aria-label="Coffee Roooom home"><img src="logo.jpg" alt="Coffee Roooom logo" width="56" height="56"></a>
+    <nav aria-label="Main">
+      <a href="#sands">from the sands</a>
+      <a class="keep" href="#menu">menu</a>
+      <a href="#visit">hours</a>
+      <a class="keep" href="https://www.order.store/store/coffeeroooom/2iOKjV7CRyy6qlKsrf2ipA" target="_blank" rel="noopener">order</a>
+    </nav>
+  </div>
+
+  <section class="wrap grid hero" id="top">
+    <div class="hero-copy">
+      <p class="eyebrow" style="color:#C9CDB9">256 arden st · coogee · open 7 days</p>
+      <h1 style="margin-top:14px">coffee across from the <em>sand</em></h1>
+      <p class="lede">Single origin espresso, fat focaccias and Tuga pastries, poured into ceramic cups from 6am. Cross the road and you're on the beach.</p>
+      <p class="status" id="status" aria-live="polite"><i></i><span id="status-text">Open 7 days from 6am</span></p>
+    </div>
+    <figure class="hero-ph" data-shot="hero"></figure>
+  </section>
+</header>
+
+<main>
+  <section class="sands" id="sands">
+    <div class="wrap grid sands-in">
+      <div class="sands-head">
+        <p class="eyebrow">beach combos</p>
+        <h2 style="margin-top:10px">order from the sands</h2>
+        <p>A focaccia and a small iced coffee, made to carry across Arden St and eat with your feet in the sand.</p>
+        <p class="price-tag">$20 <small>each combo</small></p>
+        <div class="btns">
+          <a class="btn" href="https://www.order.store/store/coffeeroooom/2iOKjV7CRyy6qlKsrf2ipA" target="_blank" rel="noopener">Order now</a>
+          <a class="btn ghost" href="#menu">Full menu</a>
+        </div>
+      </div>
+      <ul class="combos">
+        <li><b>ham</b> focaccia <span>+ small iced coffee</span></li>
+        <li><b>mortadella</b> focaccia <span>+ small iced coffee</span></li>
+        <li><b>vegetarian</b> focaccia <span>+ small iced coffee</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="feed wrap" aria-labelledby="feed-h">
+    <div class="feed-head">
+      <h2 id="feed-h">what's on the counter</h2>
+      <a href="https://www.instagram.com/coffeeroom_coogee/" target="_blank" rel="noopener">@coffeeroom_coogee</a>
+    </div>
+    <div class="tiles">
+      <figure class="tile" data-shot="baloney"><figcaption>baloneeee</figcaption></figure>
+      <div class="tile type"><p>parmaaaa</p></div>
+      <figure class="tile" data-shot="iced"><figcaption>iced latte weather</figcaption></figure>
+      <figure class="tile" data-shot="flat"><figcaption>in ceramic, always</figcaption></figure>
+      <figure class="tile" data-shot="nata"><figcaption>tuga tarts</figcaption></figure>
+      <div class="tile type clay"><p>single origin of the day</p></div>
+    </div>
+    <p class="feed-note">Our pastries come from Tuga Pastries: Portuguese tarts, almond and butter croissants, banana bread and sour cherry friands. The espresso is a single origin that changes; ask us what's in the hopper.</p>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-h">
+    <div class="wrap grid">
+      <div class="menu-head">
+        <h2 id="menu-h">the menu</h2>
+        <p class="key"><span class="mark" style="margin-left:0">V</span> vegetarian · prices in AUD</p>
+      </div>
+      <nav class="jump" id="jump" aria-label="Menu sections"></nav>
+      <div class="cols" id="cols"></div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap grid">
+      <div class="visit-a">
+        <p class="eyebrow">find us</p>
+        <h2 id="visit-h" style="margin-top:10px">256 arden st, coogee</h2>
+        <p>Right across from Coogee Beach. Grab a coffee before the swim, a focaccia after.</p>
+        <div class="btns">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Coffee+Roooom+256+Arden+St+Coogee+NSW+2034" target="_blank" rel="noopener">Directions</a>
+          <a class="btn ghost" href="https://www.instagram.com/coffeeroom_coogee/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="visit-b">
+        <table id="hours" aria-label="Opening hours">
+          <tbody>
+            <tr data-day="1"><td>Monday</td><td>6am – 2pm</td></tr>
+            <tr data-day="2"><td>Tuesday</td><td>6am – 2pm</td></tr>
+            <tr data-day="3"><td>Wednesday</td><td>6am – 2pm</td></tr>
+            <tr data-day="4"><td>Thursday</td><td>6am – 2pm</td></tr>
+            <tr data-day="5"><td>Friday</td><td>6am – 2pm</td></tr>
+            <tr data-day="6"><td>Saturday</td><td>6am – 3pm</td></tr>
+            <tr data-day="0"><td>Sunday</td><td>6am – 3pm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="visit-ph" data-shot="beach"></figure>
+    </div>
+  </section>
+</main>
+
+<footer class="bye">
+  <div class="wrap">
+    <h2>see you sooooon</h2>
+    <div class="bye-row">
+      <img src="logo.jpg" alt="Coffee Roooom logo" width="72" height="72">
+      <p>Coffee Roooom · 256 Arden St, Coogee NSW 2034<br>Mon–Fri 6am–2pm · Sat–Sun 6am–3pm<br><a href="https://www.instagram.com/coffeeroom_coogee/" target="_blank" rel="noopener">@coffeeroom_coogee</a> · <a href="https://www.order.store/store/coffeeroooom/2iOKjV7CRyy6qlKsrf2ipA" target="_blank" rel="noopener">order delivery</a></p>
+    </div>
+    <p class="credits" id="credits"></p>
+  </div>
+</footer>
+
+<nav class="actions" aria-label="Quick actions">
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Coffee+Roooom+256+Arden+St+Coogee+NSW+2034" target="_blank" rel="noopener">Directions</a>
+  <a class="solid" href="https://www.order.store/store/coffeeroooom/2iOKjV7CRyy6qlKsrf2ipA" target="_blank" rel="noopener">Order</a>
+  <a href="#menu">Menu</a>
+</nav>
+
+<script>
+/* menu: [name, price, description, mark, stretched-name style] */
+const MENU = [
+  {id:"sands", name:"Order from the sands", note:"focaccia + small iced coffee", items:[
+    ["Ham focaccia & small iced coffee","20","","",0],
+    ["Mortadella focaccia & small iced coffee","20","","",0],
+    ["Vegetarian focaccia & small iced coffee","20","","V",0]]},
+  {id:"focaccia", name:"Focaccias", note:"lunch", items:[
+    ["Parmaaaa","16","Ham, mozzarella, pickled pineapple, Calabrian chilli.","",1],
+    ["Baloneeee","16","Mortadella, provolone, shaved zucchini, basil pistachio pesto.","",1],
+    ["Salameeee","16","Fennel salami, olive tapenade, marinated eggplant, guindilla peppers, mozzarella.","",1],
+    ["Vegetarianaaaa","16","Artichoke, capsicum, mozzarella, semi-dried tomato almond pesto.","V",1]]},
+  {id:"breakfast", name:"Breakfast", note:"", items:[
+    ["Croissant square","16","Ham, mozzarella, tomato, basil pistachio pesto.","",0],
+    ["Three cheese toastie","13","Cheddar, provolone, mozzarella, dijon, pickled jalapeños, sourdough.","",0],
+    ["Chia pudding","8","Chia, almond milk, agave, cranberries, paleo granola.","",0],
+    ["Bounty oats","8","Oats, coconut milk, desiccated coconut, agave, choc chips.","",0],
+    ["Greek yoghurt","8","Blue Mountains honey and walnuts.","",0],
+    ["Toast","6","Butter & Vegemite, PB & honey, or our strawberry balsamic jam.","",0],
+    ["Soft or runny eggs","3","","",0]]},
+  {id:"sweets", name:"Sweets", note:"by Tuga Pastries", items:[
+    ["Almond croissant","7.50","","",0],
+    ["Banana bread","7","","",0],
+    ["Butter croissant","6","","",0],
+    ["Portuguese tart","5.50","","",0],
+    ["Sour cherry friand","5.50","","",0]]},
+  {id:"coffee", name:"Coffee & hot", note:"", items:[
+    ["Espresso","5","Single origin of the day.","",0],
+    ["Flat white, latte, cappuccino","5","Also piccolo, macchiato, mocha.","",0],
+    ["Long black","5.30","","",0],
+    ["Batch brew","6.90","","",0],
+    ["Turmeric latte","5","Made in house.","",0],
+    ["Hojicha latte","5","","",0],
+    ["Hot chocolate","5","Or the adaptogenic one.","",0],
+    ["Tea","5","","",0],
+    ["Babycino","1.65","","",0]]},
+  {id:"cold", name:"Cold", note:"", items:[
+    ["Cold brew","6.90","","",0],
+    ["Iced latte","6.90","","",0],
+    ["Iced long black","6","","",0],
+    ["Pure orange","10","","",0],
+    ["Orange immunity","10","Orange, turmeric, ginger.","",0],
+    ["Green detox","10","Apple, kiwi, celery, kale, lime, ginger.","",0]]}
+];
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const cols = document.getElementById("cols"), jump = document.getElementById("jump");
+for (const s of MENU) {
+  const a = el("a", null, s.name); a.href = "#m-" + s.id; jump.append(a);
+  const box = el("div", "section"); box.id = "m-" + s.id;
+  const h = el("h3", null, s.name); if (s.note) h.append(el("small", null, s.note)); box.append(h);
+  for (const [n, p, d, m, st] of s.items) {
+    const it = el("div", "item" + (st ? " stretch" : "")), row = el("div", "row"), name = el("span", "name", n);
+    if (m) { const mk = el("span", "mark", m); mk.title = "Vegetarian"; name.append(mk); }
+    row.append(name, el("span", "lead"), el("span", "price", "$" + p));
+    it.append(row); if (d) it.append(el("p", "desc", d));
+    box.append(it);
+  }
+  cols.append(box);
+}
+
+/* open now, in Sydney time. minutes from midnight */
+const HOURS = {0:[360,900],1:[360,840],2:[360,840],3:[360,840],4:[360,840],5:[360,840],6:[360,900]};
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m/60), mm = m%60, h12 = ((h+11)%12)+1; return h12 + (mm ? ":" + String(mm).padStart(2,"0") : "") + (h >= 12 ? "pm" : "am"); };
+function sydneyNow(){
+  const p = new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => (p.find(x => x.type === k) || {}).value;
+  return {day: DAYS.indexOf(g("weekday")), mins: +g("hour")*60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = sydneyNow(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const box = document.getElementById("status"), txt = document.getElementById("status-text");
+  const [o, c] = HOURS[day], open = mins >= o && mins < c;
+  box.classList.toggle("is-open", open);
+  if (open) txt.textContent = "Open now, until " + fmt(c);
+  else if (mins < o) txt.textContent = "Opens at " + fmt(o) + " today";
+  else txt.textContent = "Closed now · back tomorrow at " + fmt(HOURS[(day+1)%7][0]);
+}
+tick(); setInterval(tick, 60000);
+
+/* licensed stock photos (Pexels licence). Served from Pexels' CDN, resized per screen. */
+const PHOTOS = {
+  hero:    {id:6105197,  alt:"Coogee Beach from above on a sunny summer day, swimmers and sunbathers on the sand", by:"mannydream", eager:true, sizes:"(max-width:860px) 100vw, 40vw"},
+  baloney: {id:16533156, alt:"Mortadella and cheese sandwich on a wooden board", by:"Kei Scampa"},
+  iced:    {id:33766721, alt:"Iced coffee on a sunny outdoor table", by:"soc-nang-d-ng"},
+  flat:    {id:33216070, alt:"Flat white with latte art on a wooden table", by:"thiagomobile"},
+  nata:    {id:34315407, alt:"Portuguese custard tart with an espresso on a wooden board", by:"Travel with Lenses"},
+  beach:   {id:36877474, alt:"A sunny day on Coogee Beach with the buildings of Coogee behind", by:"talharesitoglu", sizes:"100vw"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll("[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = p.sizes || "(max-width:700px) 33vw, 380px";
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 900);
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ") + ". Concept preview by Restauranting.";
+
+/* inside the Restauranting studio frame, hide the concept banner */
+try { if (window.self !== window.top) { const pv = document.querySelector(".preview"); if (pv) pv.remove(); } } catch (e) {}
+</script>
+</body>
+</html>
