@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>mæda · Japanese home-style brunch, Newtown</title>
+<meta name="description" content="Maeda, 549 King St Newtown. Japanese home-style brunch since 2011: onigiri, miso salmon, shokupan French toast, house-made sodas and Japanese teas. Walk in, no bookings.">
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Zen+Old+Mincho:wght@400;600&display=swap">
+<!--
+  Creative brief (Restauranting, concept preview)
+  Direction "Cup card": the stacked lowercase serif wordmark between thin square brackets printed on their takeaway cup,
+  carried into a white Japanese cafe menu card. Archetype: refined minimal Japanese cafe, menu-first.
+  Type: Bodoni Moda (wordmark, headings, prices; matches the high-contrast serif on the cup) + Zen Old Mincho (body and Japanese).
+  Palette: paper #FAF8F3, ink #141414, kraft #C9B48E (secondary, the cup / tea band), umeboshi #B5473F (single small accent: status, hover).
+  Logo: their cup photo (logo.jpg, from Instagram) as the avatar in header and footer; wordmark set in type as they print it.
+  Photos (Pexels, stock): 30874703 hero, 39181742 onigiri, 31313476 katsu sandwich, 33490794 French toast, 1860194 karaage, 35042573 tea, 911810 matcha latte.
+
+  Open questions for the owner:
+  - Google lists a menu PDF on irp.cdn-website.com. Do you already have a website (that domain is a Duda site builder CDN)? If so, confirm before pitching.
+  - Prices are from the Google Maps menu; please confirm they are current.
+  - Pour over "from 7": confirm the range. Sweet poteto price and which weekends it runs.
+  - Cinnamon scroll: price and days.
+  - Do you take phone calls? No phone number is listed, so the site uses email only.
+  - Any dietary marks beyond the GF wafu dressing and vegan amazake?
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Maeda","alternateName":"mæda","description":"Japanese home-style brunch in Newtown since 2011.","servesCuisine":["Japanese","Brunch","Cafe"],"priceRange":"$$","email":"maedanewtown@gmail.com","acceptsReservations":false,"foundingDate":"2011",
+"sameAs":["https://www.instagram.com/maedanewtown/"],
+"address":{"@type":"PostalAddress","streetAddress":"549 King St","addressLocality":"Newtown","addressRegion":"NSW","postalCode":"2042","addressCountry":"AU"},
+"hasMenu":"#menu",
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"15:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"08:00","closes":"15:00"}]}
+</script>
+<style>
+/* Direction "Cup card". White paper, black serif, one kraft band, one small red.
+   12-column grid, left-aligned, vertical Japanese labels as wayfinding. */
+:root{
+  --paper:#FAF8F3; --paper-2:#F2EEE5; --ink:#141414; --ink-2:#5B574F; --rule:#DCD6CA;
+  --kraft:#C9B48E; --kraft-2:#BDA67C; --ume:#B5473F;
+  --serif:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --body:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",Georgia,serif;
+  --gut:clamp(16px,4vw,56px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.75 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1px}
+a:hover{color:var(--ume)}
+:focus-visible{outline:1.5px solid var(--ume);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:400}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+[lang="ja"]{font-family:var(--body);font-feature-settings:"palt"}
+.label{font:400 13px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.vert{writing-mode:vertical-rl;text-orientation:mixed;letter-spacing:.2em}
+
+/* the wordmark, set as they print it on the cup */
+.wm{position:relative;display:inline-flex;flex-direction:column;align-items:center;font:400 1em/.86 var(--serif);font-optical-sizing:auto;padding:.16em .62em .26em;color:var(--ink)}
+.wm::before,.wm::after{content:"";position:absolute;top:0;bottom:0;width:.2em;border:max(1px,.018em) solid currentColor}
+.wm::before{left:0;border-right:0}
+.wm::after{right:0;border-left:0}
+.wm span{display:block}
+
+/* preview note */
+.preview{background:var(--ink);color:#D8D2C6;font-size:13px;line-height:1.5;padding:9px var(--gut)}
+.preview b{color:#fff;font-weight:600}
+
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--rule)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:42px;height:42px;border-radius:50%;border:1px solid var(--rule)}
+.brand b{font:400 24px/1 var(--serif);letter-spacing:.01em}
+.nav{display:flex;gap:28px;font-size:15px}
+.nav a{text-decoration:none}
+.nav small{display:block;font-size:11px;color:var(--ink-2);letter-spacing:.12em;line-height:1.2}
+@media (max-width:760px){.nav{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(36px,6vw,80px) clamp(48px,7vw,96px)}
+.hero-mark{grid-column:1/span 3;display:flex;align-items:flex-start;gap:clamp(14px,2vw,28px)}
+.hero-mark .wm{font-size:clamp(72px,9.4vw,138px)}
+.hero-mark .vert{font-size:14px;color:var(--ink-2);padding-top:.4em}
+.hero-mark .vert b{color:var(--ink);font-weight:400}
+.hero-photo{grid-column:4/-1;aspect-ratio:3/2;background:var(--paper-2);position:relative;overflow:hidden}
+.hero-text{grid-column:4/span 5;margin-top:32px}
+.hero-text h1{font:400 clamp(28px,3.1vw,40px)/1.18 var(--serif);letter-spacing:-.005em;max-width:20ch}
+.hero-text p{margin-top:18px;max-width:46ch;color:var(--ink-2)}
+.status{grid-column:10/-1;margin-top:38px;border-top:1px solid var(--ink);padding-top:14px;font-size:15px;line-height:1.6}
+.status .now{display:flex;align-items:center;gap:10px;font-size:17px;color:var(--ink)}
+.status .now::before{content:"";width:8px;height:8px;border-radius:50%;border:1.5px solid var(--ink-2);flex:none}
+.status.is-open .now::before{background:var(--ume);border-color:var(--ume)}
+.status p{color:var(--ink-2)}
+.status a{display:inline-block;margin-top:10px}
+@media (max-width:900px){
+  .hero-mark{grid-column:1/-1;margin-bottom:28px;align-items:stretch}
+  .hero-mark .wm{font-size:78px}
+  .hero-mark .intro{display:flex;flex-direction:column;justify-content:flex-end;font:400 22px/1.3 var(--serif);max-width:15ch}
+  .hero-photo{grid-column:1/-1}
+  .hero-text{grid-column:1/-1}
+  .status{grid-column:1/-1;margin-top:28px}
+}
+@media (min-width:901px){.hero-mark .intro{display:none}}
+
+/* section heads: vertical Japanese + horizontal English */
+.sec{padding-block:clamp(56px,8vw,112px);border-top:1px solid var(--rule)}
+.side{grid-column:1/span 2;display:flex;gap:14px;align-items:flex-start}
+.side .vert{font-size:26px;line-height:1;letter-spacing:.24em}
+.side .label{writing-mode:vertical-rl;padding-top:2px}
+.side-col{grid-column:1/span 2}
+.side-sticky{position:sticky;top:96px}
+h2{font:400 clamp(28px,3.1vw,40px)/1.15 var(--serif)}
+@media (max-width:900px){
+  .side{grid-column:1/-1;margin-bottom:22px;align-items:center}
+  .side .vert{writing-mode:horizontal-tb;font-size:22px;letter-spacing:.12em}
+  .side .label{writing-mode:horizontal-tb}
+  .side-sticky{position:static}
+  .side-col{grid-column:1/-1}
+}
+
+/* the menu card */
+.card{grid-column:3/-1;display:grid;grid-template-columns:repeat(10,minmax(0,1fr));column-gap:inherit}
+.card .food{grid-column:1/span 6}
+.card .drink{grid-column:8/-1}
+.card-head{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;margin-bottom:clamp(28px,4vw,48px)}
+.card-head p{font-size:14px;color:var(--ink-2)}
+.course{margin-bottom:46px}
+.course h3{display:flex;align-items:baseline;gap:12px;font:400 22px/1.2 var(--serif);padding-bottom:10px;border-bottom:1px solid var(--ink);margin-bottom:6px}
+.course h3 span[lang]{font-size:14px;color:var(--ink-2);letter-spacing:.14em}
+.item{padding:13px 0 12px;border-bottom:1px solid var(--rule)}
+.row{display:flex;align-items:baseline;gap:10px}
+.name{font-weight:600;font-size:17px;line-height:1.4}
+.name small{font-weight:400;font-size:13px;color:var(--ink-2);margin-left:10px;letter-spacing:.06em;white-space:nowrap}
+.mark{font:400 11px/1 var(--body);letter-spacing:.1em;border:1px solid var(--ink-2);padding:3px 4px 2px;margin-left:8px;vertical-align:2px;color:var(--ink-2)}
+.lead{flex:1;border-bottom:1px dotted #B8B1A4;transform:translateY(-5px);min-width:16px}
+.price{font:400 19px/1 var(--serif);font-variant-numeric:lining-nums;white-space:nowrap}
+.desc{font-size:15px;line-height:1.6;color:var(--ink-2);margin-top:4px;max-width:58ch}
+.adds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}
+.adds .item{padding:9px 0 8px}
+.adds .name{font-weight:400;font-size:16px}
+.key{font-size:13px;color:var(--ink-2);margin-top:-18px}
+@media (max-width:900px){
+  .card{grid-column:1/-1}
+  .card .food,.card .drink{grid-column:1/-1}
+}
+@media (max-width:420px){.adds{grid-template-columns:1fr}.name small{display:block;margin-left:0}}
+
+/* plates */
+.plates{padding-block:clamp(40px,6vw,88px)}
+.plates figure{margin:0}
+.ph{background:var(--paper-2);position:relative;overflow:hidden}
+.p-oni{grid-column:1/span 5;grid-row:1/span 2}
+.p-oni .ph{aspect-ratio:4/5}
+.p-katsu{grid-column:7/-1}
+.p-katsu .ph{aspect-ratio:3/2}
+.p-ft{grid-column:7/span 3;margin-top:28px!important}
+.p-kara{grid-column:10/span 3;margin-top:28px!important}
+.p-ft .ph,.p-kara .ph{aspect-ratio:1/1}
+figcaption{font-size:14px;line-height:1.5;margin-top:10px;color:var(--ink-2)}
+figcaption b{font-weight:600;color:var(--ink)}
+figcaption [lang]{margin-right:8px;color:var(--ink)}
+@media (max-width:760px){
+  .p-oni{grid-column:1/-1;grid-row:auto}
+  .p-katsu{grid-column:1/-1;margin-top:28px!important}
+  .p-ft{grid-column:1/span 6}
+  .p-kara{grid-column:7/-1}
+}
+
+/* tea, on kraft */
+.tea{background:var(--kraft);border-top:0}
+.tea .label{color:#3D3427}
+.tea-photos{grid-column:1/span 5}
+.tea-photos .t1{aspect-ratio:4/5}
+.tea-photos figure{margin:0}
+.tea-photos .t2wrap{width:58%;margin:-22% 0 0 auto!important;position:relative;border:8px solid var(--kraft)}
+.tea-photos .t2{aspect-ratio:1/1}
+.tea-photos figcaption{color:#3D3427}
+.tea-list{grid-column:7/-1}
+.tea-list h2{max-width:16ch}
+.tea-list .intro{margin-top:16px;max-width:46ch;color:#2E271D}
+.teas{margin-top:34px;border-top:1px solid var(--ink)}
+.tea-row{display:grid;grid-template-columns:9em 1fr auto;gap:4px 18px;align-items:baseline;padding:16px 0 14px;border-bottom:1px solid rgba(20,20,20,.28)}
+.tea-row .jp{font-size:22px;line-height:1.2;letter-spacing:.06em}
+.tea-row .en{font-size:16px;line-height:1.4}
+.tea-row .en small{display:block;font-size:13px;color:#3D3427;letter-spacing:.04em}
+.tea-row .price{font-size:19px}
+.sodas{margin-top:42px}
+.sodas h3{font:400 22px/1.2 var(--serif);display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid var(--ink);padding-bottom:10px}
+.sodas ul{list-style:none;margin:0;padding:0}
+.sodas li{display:grid;grid-template-columns:9em 1fr;gap:18px;align-items:baseline;padding:11px 0 10px;border-bottom:1px solid rgba(20,20,20,.28)}
+.sodas li [lang]{font-size:15px}
+@media (max-width:900px){
+  .tea-photos{grid-column:1/-1;margin-bottom:40px}
+  .tea-list{grid-column:1/-1}
+}
+@media (max-width:420px){.tea-row{grid-template-columns:6.2em 1fr auto;gap:2px 12px}.tea-row .jp{font-size:19px}.sodas li{grid-template-columns:7.6em 1fr;gap:12px}}
+
+/* weekends */
+.weekend .body{grid-column:3/span 6}
+.weekend .body p{margin-top:18px;max-width:52ch;color:var(--ink-2)}
+.weekend aside{grid-column:10/-1;align-self:end;font-size:15px;color:var(--ink-2);border-left:1px solid var(--ink);padding-left:18px}
+.weekend aside b{display:block;font:400 19px/1.3 var(--serif);color:var(--ink);margin-bottom:6px}
+@media (max-width:900px){.weekend .body{grid-column:1/-1}.weekend aside{grid-column:1/-1;margin-top:28px}}
+
+/* visit */
+.visit .addr{grid-column:3/span 4}
+.visit .addr address{font-style:normal;font:400 clamp(24px,2.6vw,32px)/1.25 var(--serif);margin-top:14px}
+.visit .addr p{margin-top:18px;color:var(--ink-2);max-width:36ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:400 15px/1 var(--body);letter-spacing:.04em;padding:14px 18px;border:1px solid var(--ink);border-radius:0;text-decoration:none;transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.solid:hover{background:var(--ume);border-color:var(--ume);color:#fff}
+.visit .hours{grid-column:8/-1}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:16px}
+td{padding:12px 0 11px;border-bottom:1px solid var(--rule);vertical-align:baseline}
+td:last-child{text-align:right;font-family:var(--serif);font-size:18px}
+tr.today td{color:var(--ume)}
+tr.today td:first-child::after{content:"  today";font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.hours .note{margin-top:16px;font-size:15px;color:var(--ink-2)}
+@media (max-width:900px){.visit .addr,.visit .hours{grid-column:1/-1}.visit .hours{margin-top:40px}}
+
+/* footer */
+footer{border-top:1px solid var(--ink);padding-block:48px 120px;font-size:14px;color:var(--ink-2)}
+footer .grid{row-gap:24px}
+.f-mark{grid-column:1/span 3;display:flex;gap:18px;align-items:flex-start}
+.f-mark .wm{font-size:40px}
+.f-mark img{width:64px;height:64px;border-radius:50%;border:1px solid var(--rule)}
+.f-info{grid-column:4/span 4;line-height:1.7}
+.f-credit{grid-column:8/-1;line-height:1.6}
+@media (max-width:760px){.f-mark,.f-info,.f-credit{grid-column:1/-1}footer{padding-bottom:110px}}
+@media (min-width:761px){footer{padding-bottom:56px}}
+
+/* mobile action bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:repeat(3,1fr);background:var(--paper);border-top:1px solid var(--ink);padding-bottom:env(safe-area-inset-bottom,0px)}
+.bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:11px 4px 10px;text-decoration:none;font-size:15px;border-left:1px solid var(--rule)}
+.bar a:first-child{border-left:0;background:var(--ink);color:var(--paper)}
+.bar a small{font-size:11px;letter-spacing:.12em;color:inherit;opacity:.7}
+@media (min-width:761px){.bar{display:none}}
+
+.ph img{opacity:0;transition:opacity .5s ease}
+.ph img.in{opacity:1}
+@media (prefers-reduced-motion:reduce){.ph img{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of Maeda. Preview photos are licensed stock; logo, colours and details are taken from your Instagram, Google listing and menu.</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Maeda, back to top"><img src="logo.jpg" alt="Maeda logo" width="42" height="42"><b>mæda</b></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#menu"><small lang="ja">お品書き</small>Menu</a>
+      <a href="#tea"><small lang="ja">お茶</small>Tea</a>
+      <a href="#visit"><small lang="ja">アクセス</small>Visit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap grid" aria-label="Maeda">
+    <div class="hero-mark">
+      <span class="wm" role="img" aria-label="mæda"><span>m</span><span>æ</span><span>d</span><span>a</span></span>
+      <p class="vert" lang="ja"><b>家庭の朝ごはん</b>　ニュータウン　2011</p>
+      <p class="intro">Since 2011.<br>549 King St, Newtown.</p>
+    </div>
+    <div class="hero-photo ph" data-shot="hero"></div>
+    <div class="hero-text">
+      <h1>Japanese home-style brunch on King Street, since 2011.</h1>
+      <p>Miso salmon and onigiri, overnight-soaked shokupan French toast, karaage in a milk bun. Sodas we make ourselves, and a list of Japanese teas we take seriously.</p>
+    </div>
+    <div class="status" id="status" aria-live="polite">
+      <p class="now" id="open-text">Weekdays 7am to 3pm, weekends 8am to 3pm</p>
+      <p>Kitchen closes 2:30pm. No bookings, just walk in.</p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Maeda%20549%20King%20St%20Newtown%20NSW%202042" target="_blank" rel="noopener">549 King St, Newtown</a>
+    </div>
+  </section>
+
+  <section class="sec" id="menu" aria-labelledby="menu-h">
+    <div class="wrap grid">
+      <div class="side-col"><div class="side side-sticky"><span class="vert" lang="ja">お品書き</span><span class="label">The card</span></div></div>
+      <div class="card">
+        <div class="card-head">
+          <h2 id="menu-h">All day, from opening</h2>
+          <p>Prices in AUD. <span class="mark" style="margin:0">GF</span> gluten-free option &nbsp;<span class="mark" style="margin:0">VG</span> vegan</p>
+        </div>
+        <div class="food" id="food"></div>
+        <div class="drink" id="drink"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="plates wrap grid" aria-label="From the kitchen">
+    <figure class="p-oni"><div class="ph" data-shot="onigiri"></div><figcaption><span lang="ja">おにぎり</span><b>Onigiri</b>, with the breakfast plate or on the side, 5</figcaption></figure>
+    <figure class="p-katsu"><div class="ph" data-shot="katsu"></div><figcaption><span lang="ja">ハンバーグカツ</span><b>Katsu hamburg steak</b> on shokupan with Japanese curry sauce, 19.50</figcaption></figure>
+    <figure class="p-ft"><div class="ph" data-shot="toast"></div><figcaption><span lang="ja">フレンチトースト</span><b>Custard French toast</b>, 18.50</figcaption></figure>
+    <figure class="p-kara"><div class="ph" data-shot="karaage"></div><figcaption><span lang="ja">唐揚げ</span><b>Karaage</b>, add to anything, 6</figcaption></figure>
+  </section>
+
+  <section class="sec tea" id="tea" aria-labelledby="tea-h">
+    <div class="wrap grid">
+      <div class="tea-photos">
+        <figure><div class="ph t1" data-shot="tea"></div></figure>
+        <figure class="t2wrap"><div class="ph t2" data-shot="matcha"></div></figure>
+        <figcaption style="margin-top:10px"><span lang="ja">抹茶ラテ</span>Kagoshima matcha latte, or houjicha, 6</figcaption>
+      </div>
+      <div class="tea-list">
+        <p class="label"><span lang="ja">日本茶</span> &nbsp;Tea</p>
+        <h2 id="tea-h" style="margin-top:12px">Leaves from Kagoshima, Kirishima and Nagano.</h2>
+        <p class="intro">Green, roasted, buckwheat and Japanese black tea, with where each one comes from written on the card.</p>
+        <div class="teas" id="teas"></div>
+        <div class="sodas">
+          <h3><span>House-made sodas <small lang="ja" style="font-size:14px;letter-spacing:.14em;color:#3D3427">自家製ソーダ</small></span><span class="price">6.50</span></h3>
+          <ul>
+            <li><span lang="ja">柚子ジンジャー</span><span>Yuzu ginger</span></li>
+            <li><span lang="ja">コーラ&amp;スパイス</span><span>Cola &amp; spices</span></li>
+            <li><span lang="ja">紫蘇と梅</span><span>Shiso &amp; umeboshi plum</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec weekend" aria-labelledby="wk-h">
+    <div class="wrap grid">
+      <div class="side"><span class="vert" lang="ja">週末</span><span class="label">Weekends</span></div>
+      <div class="body">
+        <h2 id="wk-h"><span lang="ja" style="font-size:.7em;letter-spacing:.1em;margin-right:12px">スイートポテト</span>Sweet poteto</h2>
+        <p>On weekends, while the season lasts, we bake sweet poteto from Japanese sweet potato. Banana bread, carrot cake with yuzu cream cheese and cinnamon scrolls come out of our oven too.</p>
+      </div>
+      <aside><b>Watch our Instagram</b>Seasonal specials go up on <a href="https://www.instagram.com/maedanewtown/" target="_blank" rel="noopener">@maedanewtown</a> first.</aside>
+    </div>
+  </section>
+
+  <section class="sec visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap grid">
+      <div class="side"><span class="vert" lang="ja">アクセス</span><span class="label">Visit</span></div>
+      <div class="addr">
+        <h2 id="visit-h">Walk in. We don't take bookings.</h2>
+        <address>549 King St<br>Newtown NSW 2042</address>
+        <p>For anything else, email us.</p>
+        <div class="btns">
+          <a class="btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=Maeda%20549%20King%20St%20Newtown%20NSW%202042" target="_blank" rel="noopener">Directions</a>
+          <a class="btn" href="mailto:maedanewtown@gmail.com">maedanewtown@gmail.com</a>
+        </div>
+      </div>
+      <div class="hours">
+        <p class="label">Hours</p>
+        <table id="hours" aria-label="Opening hours">
+          <tr data-day="1"><td>Monday</td><td>7am – 3pm</td></tr>
+          <tr data-day="2"><td>Tuesday</td><td>7am – 3pm</td></tr>
+          <tr data-day="3"><td>Wednesday</td><td>7am – 3pm</td></tr>
+          <tr data-day="4"><td>Thursday</td><td>7am – 3pm</td></tr>
+          <tr data-day="5"><td>Friday</td><td>7am – 3pm</td></tr>
+          <tr data-day="6"><td>Saturday</td><td>8am – 3pm</td></tr>
+          <tr data-day="0"><td>Sunday</td><td>8am – 3pm</td></tr>
+        </table>
+        <p class="note">The kitchen closes at 2:30pm.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div class="f-mark"><img src="logo.jpg" alt="Maeda logo" width="64" height="64" loading="lazy"><span class="wm" aria-hidden="true"><span>m</span><span>æ</span><span>d</span><span>a</span></span></div>
+    <div class="f-info">Maeda, since 2011<br>549 King St, Newtown NSW 2042<br><a href="mailto:maedanewtown@gmail.com">maedanewtown@gmail.com</a> · <a href="https://www.instagram.com/maedanewtown/" target="_blank" rel="noopener">Instagram</a></div>
+    <div class="f-credit"><span id="credits">Photos via Pexels</span>. Preview photos are licensed stock; a live site uses Maeda's own.<br>Concept by Restauranting.</div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Maeda%20549%20King%20St%20Newtown%20NSW%202042" target="_blank" rel="noopener"><small id="bar-status">549 King St</small>Directions</a>
+  <a href="mailto:maedanewtown@gmail.com"><small>No bookings</small>Email</a>
+  <a href="https://www.instagram.com/maedanewtown/" target="_blank" rel="noopener"><small>Specials</small>Instagram</a>
+</nav>
+
+<script>
+/* menu from the Google Maps menu (AUD). [name, japanese, price, description, mark] */
+const FOOD = [
+  {en:"All day", ja:"終日", items:[
+    ["Breakfast plate","朝ごはん","25.50","Miso salmon, pickled hot mustard onigiri, shimeji, sweet baked omelette, nimono, pickled daikon, prawn pasta salad.",""],
+    ["Super fluffy custard French toast","フレンチトースト","18.50","Shokupan soaked overnight, berries, banana, maple.",""],
+    ["Katsu hamburg steak","ハンバーグカツ","19.50","Wagyu katsu hamburg on shokupan, Japanese curry sauce, house pickle, mustard seed, coleslaw.",""],
+    ["Breakkie roll","角煮","16","Braised pork kakuni, fried egg, kimchi sauce, brioche.",""],
+    ["Fried karaage chicken roll","唐揚げ","16","Coleslaw, teriyaki mayo, milk bun.",""],
+    ["Burrata & shimeji mushroom","しめじ","22","Shimeji and king oyster, miso pickled garlic, burrata, sourdough, parmesan, nori, house chilli oil.",""],
+    ["Avo on toast","","16.50","Sourdough or rye, yuzu sour cream, edamame cheese crisps, poached egg, avocado oil.",""],
+    ["Mizuna & tofu salad","水菜と豆腐","16","Apple, avocado, cabbage, edamame, pumpkin seeds, silken tofu. Wafu apple dressing (GF) or creamy green tea sesame.","GF"],
+    ["Puffed barley & mixed beans porridge","","19","Chia, poached pear, seasonal fruit, honeycomb.",""],
+    ["Toast","トースト","6.50","Sourdough, rye or bagel, with vegemite, jam, honey or peanut butter.",""],
+    ["Kid's meal","お子様ランチ","10","Karaage with chips, or onigiri.",""]]},
+  {en:"Baked here", ja:"自家製", items:[
+    ["Banana bread","","6.50","Add ice cream, 4.",""],
+    ["Carrot cake","","8","With yuzu cream cheese.",""],
+    ["Sweet poteto","スイートポテト","","Japanese sweet potato. Weekends, in season.",""]]},
+  {en:"On the side", ja:"追加", adds:true, items:[
+    ["Poached egg","","4"],["Avocado","","5"],["Bacon","","5"],["Kakuni","角煮","5"],
+    ["Karaage","唐揚げ","6"],["Onigiri","おにぎり","5"],["Hot chips","","7"],["Miso salmon","","10"]]}
+];
+const DRINK = [
+  {en:"Coffee", ja:"コーヒー", items:[
+    ["Milk coffee","","4.50","",""],
+    ["Black","","4.50","Rotating single origin.",""],
+    ["Filter","","5","",""],
+    ["Cold brew","水出し","5","Ethiopia Chelbessa, natural.",""],
+    ["Pour over","ハンドドリップ","from 7","",""],
+    ["Jelly affogato","コーヒーゼリー","8","Espresso jelly, vanilla ice cream, espresso, nut clusters.",""]]},
+  {en:"Also to drink", ja:"ドリンク", items:[
+    ["Kagoshima matcha latte","抹茶ラテ","6","",""],
+    ["Houjicha latte","ほうじ茶ラテ","6","",""],
+    ["Amazake","甘酒","6","Warm fermented rice drink with ginger.","VG"],
+    ["Aomori apple juice","青森りんご","7","",""],
+    ["Cold-pressed green detox","","7.50","",""],
+    ["Sticky chai","","5","",""],
+    ["Hot chocolate","","5","",""],
+    ["French mint hot chocolate","","5","",""]]}
+];
+const TEAS = [
+  ["煎茶","Sencha","Kagoshima","5"],
+  ["玉露","Gyokuro","Kirishima","7"],
+  ["ほうじ玄米茶","Houji genmaicha","Roasted green tea and rice","5"],
+  ["そば茶","Soba cha","Azumino, Nagano","5"],
+  ["和紅茶","Wakoucha","Japanese black tea","5"],
+  ["鉄観音","Oolong","Tieguanyin","5"],
+  ["","Chamomile & ginger","","7"]
+];
+const t = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const ja = (tag, cls, txt) => { const n = t(tag, cls, txt); n.lang = "ja"; return n; };
+function render(list, el){
+  for (const c of list) {
+    const box = t("div","course"), h = t("h3");
+    h.append(t("span",null,c.en), ja("span",null,c.ja)); box.append(h);
+    const body = c.adds ? t("div","adds") : box;
+    for (const [n, j, p, d, m] of c.items) {
+      const it = t("div","item"), row = t("div","row"), name = t("span","name",n);
+      if (j) name.append(ja("small",null,j));
+      if (m) name.append(t("span","mark",m));
+      row.append(name, t("span","lead"), t("span","price",p || "·"));
+      it.append(row); if (d) it.append(t("p","desc",d));
+      body.append(it);
+    }
+    if (c.adds) box.append(body);
+    el.append(box);
+  }
+}
+render(FOOD, document.getElementById("food"));
+render(DRINK, document.getElementById("drink"));
+const teas = document.getElementById("teas");
+for (const [j, n, o, p] of TEAS) {
+  const r = t("div","tea-row"), en = t("span","en",n);
+  if (o) en.append(t("small",null,o));
+  r.append(ja("span","jp",j), en, t("span","price",p));
+  teas.append(r);
+}
+
+/* open now, in Sydney time. Minutes from midnight; kitchen closes 30 minutes before close. */
+const HOURS = {0:[480,900],1:[420,900],2:[420,900],3:[420,900],4:[420,900],5:[420,900],6:[480,900]};
+const KITCHEN = 870;
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m/60), mm = m%60, h12 = ((h+11)%12)+1; return h12 + (mm ? ":" + String(mm).padStart(2,"0") : "") + (h >= 12 ? "pm" : "am"); };
+function now(){
+  const p = new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => (p.find(x => x.type === k) || {}).value;
+  return {day: DAYS.indexOf(g("weekday")), mins: +g("hour")*60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = now(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const box = document.getElementById("status"), txt = document.getElementById("open-text"), bar = document.getElementById("bar-status");
+  const [a, b] = HOURS[day], open = mins >= a && mins < b;
+  box.classList.toggle("is-open", open);
+  let s;
+  if (open && mins < KITCHEN) s = "Open now, kitchen until 2:30pm";
+  else if (open) s = "Open until 3pm, kitchen closed";
+  else if (mins < a) s = "Opens at " + fmt(a) + " today";
+  else s = "Closed · opens tomorrow " + fmt(HOURS[(day+1)%7][0]);
+  txt.textContent = s;
+  bar.textContent = open ? "Open now" : "Closed now";
+}
+tick(); setInterval(tick, 60000);
+
+/* licensed stock photos (Pexels licence), served from Pexels' CDN with srcset */
+const PHOTOS = {
+  hero:    {id:30874703, alt:"Three onigiri wrapped in nori on a wooden board", by:"Pexels", eager:true, sizes:"(max-width:900px) 100vw, 75vw"},
+  onigiri: {id:39181742, alt:"Homemade tuna onigiri with nori on a plate", by:"Pexels", sizes:"(max-width:760px) 100vw, 42vw"},
+  katsu:   {id:31313476, alt:"A wagyu katsu sandwich on soft white bread", by:"Alex Gonzo", sizes:"(max-width:760px) 100vw, 50vw"},
+  toast:   {id:33490794, alt:"French toast with berries and syrup on a wooden table", by:"urianrivera", sizes:"(max-width:760px) 50vw, 25vw"},
+  karaage: {id:1860194,  alt:"Crispy Japanese fried chicken with a dipping sauce on a ceramic plate", by:"Valeriya", sizes:"(max-width:760px) 50vw, 25vw"},
+  tea:     {id:35042573, alt:"A Japanese teapot and a cup of green tea on a wooden table", by:"Travel with Lenses", sizes:"(max-width:900px) 100vw, 42vw"},
+  matcha:  {id:911810,   alt:"A matcha latte with latte art on a wooden table", by:"minan1398", sizes:"(max-width:900px) 58vw, 24vw"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async";
+  img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = p.sizes;
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 1300);
+  img.addEventListener("load", () => img.classList.add("in"));
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ");
+
+/* inside the Restauranting studio frame, hide the concept note */
+try { if (window.self !== window.top) document.querySelector(".preview").remove(); } catch (e) {}
+</script>
+</body>
+</html>

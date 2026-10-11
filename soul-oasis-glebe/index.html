@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Soul Oasis · All-day cafe, Glebe Point Road</title>
+<meta name="description" content="Soul Oasis Glebe Cafe, 34 Glebe Point Rd. Shakshuka, halloumi stacks, burgers, chicken hangers, smoothies and good coffee. Tuesday to Sunday, 7am to 3pm.">
+<!-- logo file: ask owner. Their Instagram avatar is an interior photo, so "Soul Oasis" is set as a wordmark in Young Serif. -->
+<!-- Direction "Arched window": the lime-washed room, arched mirrors and windows, orange and green pendant lamps. Arches frame every photo. -->
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["Restaurant","CafeOrCoffeeShop"],"name":"Soul Oasis Glebe Cafe","servesCuisine":["Cafe","Breakfast","Brunch","Burgers"],"telephone":"+61 422 958 975",
+"address":{"@type":"PostalAddress","streetAddress":"34 Glebe Point Rd","addressLocality":"Glebe","addressRegion":"NSW","postalCode":"2037","addressCountry":"AU"},
+"sameAs":["https://www.instagram.com/souloasisglebe/"],
+"hasMenu":{"@type":"Menu","name":"All-day menu","hasMenuSection":[
+{"@type":"MenuSection","name":"Breakfast","hasMenuItem":[{"@type":"MenuItem","name":"Soul's Breakfast Shakshuka"},{"@type":"MenuItem","name":"Halloumi & Mushroom Stack"},{"@type":"MenuItem","name":"Oasis Pancake"},{"@type":"MenuItem","name":"Chorizo & Potato Frittata"}]},
+{"@type":"MenuSection","name":"Burgers","hasMenuItem":[{"@type":"MenuItem","name":"Soul Oasis Classic"},{"@type":"MenuItem","name":"Chili Samurai"},{"@type":"MenuItem","name":"Eggplant Parmi"}]},
+{"@type":"MenuSection","name":"Lunch","hasMenuItem":[{"@type":"MenuItem","name":"Chicken Hanger"},{"@type":"MenuItem","name":"Prawn Hanger"},{"@type":"MenuItem","name":"Chicken Parma"}]}]},
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:00","closes":"15:00"}]}
+</script>
+<style>
+:root{
+  --lime:#D9DC6A; --lime-2:#E7E99A; --sun:#F2C230; --orange:#EE8A2E; --leaf:#4F7A3A; --leaf-ink:#3E6230;
+  --paper:#FFFDF5; --paper-2:#F7F3E3; --ink:#2B2A22; --ink-2:#5C5A4C; --rule:#E2DDC8;
+  --serif:"Young Serif",Georgia,"Times New Roman",serif;
+  --sans:"Nunito Sans","Segoe UI",system-ui,sans-serif;
+  --gut:clamp(16px,4vw,56px);
+  --arch:999px 999px 4px 4px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--leaf-ink)}
+:focus-visible{outline:2px solid var(--leaf);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+p,h1,h2,h3{margin:0}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+.label{font:700 12.5px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--leaf-ink)}
+
+/* type scale: 13 / 17 / 22 / 32 / 52 */
+h1{font:400 clamp(36px,5vw,58px)/1.04 var(--serif);letter-spacing:-.01em;text-wrap:balance}
+h2{font:400 clamp(28px,3.4vw,40px)/1.1 var(--serif);text-wrap:balance}
+h3{font:400 22px/1.2 var(--serif)}
+
+.preview{background:var(--ink);color:#DCD8C4;font-size:13px;padding:9px var(--gut);line-height:1.45}
+.preview b{color:#fff;font-weight:600}
+
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--rule)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;font:400 25px/1 var(--serif);letter-spacing:-.005em;white-space:nowrap}
+.mark small{font:600 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--leaf-ink);padding-top:4px}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px}
+.nav a{text-decoration:none}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;background:var(--paper-2);white-space:nowrap}
+.dot{width:8px;height:8px;border-radius:50%;background:#A39F8A;flex:none}
+.is-open .dot{background:var(--leaf)}
+@media (max-width:860px){.nav .hide-m{display:none}.mark small{display:none}}
+@media (max-width:400px){.mark{font-size:22px}.status{font-size:13px;padding:7px 11px}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;font:700 15px/1 var(--sans);padding:15px 22px;border-radius:999px;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:transparent;transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.fill{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.btn.fill:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+
+/* arch frames, after the mirrors and windows in the room */
+.arch{margin:0;border-radius:var(--arch);overflow:hidden;background:var(--lime-2);aspect-ratio:var(--ar,4/5);max-width:100%}
+figcaption{font-size:14px;color:var(--ink-2);margin-top:12px}
+figcaption b{display:block;font:400 17px/1.3 var(--serif);color:var(--ink);margin-bottom:2px}
+
+/* hero: the lime wall */
+.hero{background:var(--lime);padding-block:clamp(36px,6vw,80px) 0;overflow:hidden}
+.hero .grid{align-items:end}
+.hero-text{grid-column:1/span 6;padding-bottom:clamp(40px,6vw,88px);display:flex;flex-direction:column;gap:22px}
+.hero-text .lede{font-size:19px;max-width:42ch}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.hero-media{grid-column:8/span 5;position:relative}
+.hero-media .arch{--ar:4/5.3;border:10px solid var(--paper);border-bottom:0;background:var(--paper)}
+.lamps{position:absolute;top:-6px;left:-28px;display:flex;flex-direction:column;align-items:center;gap:0}
+.lamps i{display:block;width:1px;height:46px;background:var(--ink)}
+.lamps b{display:block;width:30px;height:16px;border-radius:30px 30px 4px 4px;background:var(--orange)}
+.lamps.two{left:auto;right:-22px;top:-6px}
+.lamps.two i{height:84px}
+.lamps.two b{background:var(--leaf)}
+@media (max-width:900px){
+  .hero-text,.hero-media{grid-column:1/-1}
+  .hero-text{padding-bottom:32px}
+  .hero-media{max-width:440px;margin-inline:auto;width:100%;padding-inline:20px}
+  .lamps{left:-4px}.lamps.two{right:-4px}
+}
+
+/* info strip */
+.strip{border-bottom:1px solid var(--rule);background:var(--paper)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.strip .cell{padding:18px 18px 18px 0;min-width:0;display:flex;flex-direction:column;gap:3px}
+.strip .cell + .cell{padding-left:18px;border-left:1px solid var(--rule)}
+.strip .k{font-size:13px;color:var(--ink-2)}
+.strip .v{font-weight:700;font-size:16px}
+@media (max-width:860px){.strip .wrap{grid-template-columns:1fr 1fr}.strip .cell:nth-child(3){padding-left:0;border-left:0}.strip .cell:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+section{padding-block:clamp(72px,9vw,120px)}
+
+/* three arches */
+.trio .head{grid-column:1/span 5;display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(36px,5vw,60px)}
+.trio .head p{color:var(--ink-2);max-width:44ch}
+.trio .note{grid-column:8/span 5;align-self:end;margin-bottom:clamp(36px,5vw,60px);font-size:15px;color:var(--ink-2);max-width:40ch}
+.trio figure.a{grid-column:1/span 4}
+.trio figure.b{grid-column:5/span 4;margin-top:clamp(0px,5vw,64px)}
+.trio figure.c{grid-column:9/span 4}
+.trio figure{margin:0}
+@media (max-width:760px){.trio .head,.trio .note{grid-column:1/-1}.trio .note{margin-top:-20px}
+  .trio figure.a,.trio figure.b,.trio figure.c{grid-column:1/-1;margin-top:0}
+  .trio figure.b,.trio figure.c{margin-top:36px}
+  .trio figure.b{padding-left:18%}.trio figure.c{padding-right:18%}}
+
+/* menu */
+.menu{background:var(--paper-2);border-block:1px solid var(--rule)}
+.menu-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px 40px;margin-bottom:12px}
+.menu-top .key{font-size:15px;color:var(--ink-2);max-width:46ch}
+.jump{position:sticky;top:68px;z-index:5;background:var(--paper-2);border-bottom:1px solid var(--rule);overflow-x:auto;white-space:nowrap;scrollbar-width:none;margin-bottom:clamp(28px,4vw,48px)}
+.jump::-webkit-scrollbar{display:none}
+.jump .wrap{display:flex;gap:8px;padding-block:12px}
+.jump a{text-decoration:none;font-size:14px;font-weight:600;padding:7px 14px;border-radius:999px;border:1px solid var(--rule);background:var(--paper)}
+.jump a:hover{border-color:var(--leaf);color:var(--leaf-ink)}
+.courses{columns:2 400px;column-gap:clamp(36px,6vw,96px)}
+.course{break-inside:avoid;margin-bottom:clamp(36px,4vw,56px)}
+.course h3{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:10px;border-bottom:1.5px solid var(--ink);margin-bottom:4px}
+.course h3 span{font:700 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--leaf-ink)}
+.item{padding:13px 0;border-bottom:1px solid var(--rule)}
+.item .name{font-weight:700;font-size:17px}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--sun);border-radius:999px;padding:3px 8px;margin-left:8px;vertical-align:2px}
+.item .desc{font-size:15px;color:var(--ink-2);margin-top:2px;max-width:52ch}
+.list{padding:13px 0;font-size:16px;line-height:1.75;border-bottom:1px solid var(--rule)}
+.list b{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:700;line-height:1.4}
+.menu-foot{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:center;border-top:1.5px solid var(--ink);padding-top:20px;font-size:15px;color:var(--ink-2)}
+
+/* pause: the bio */
+.pause{background:var(--lime)}
+.pause .quote{grid-column:1/span 7;display:flex;flex-direction:column;gap:22px;align-self:center}
+.pause .quote p.big{font:400 clamp(26px,3vw,36px)/1.25 var(--serif);max-width:24ch}
+.pause .quote p{max-width:50ch}
+.pause figure{grid-column:9/span 4;margin:0}
+.pause .arch{--ar:4/5;border:10px solid var(--paper);background:var(--paper)}
+.pause figcaption{color:var(--ink)}
+@media (max-width:860px){.pause .quote,.pause figure{grid-column:1/-1}.pause figure{margin-top:40px;max-width:380px}}
+
+/* near */
+.near .head{grid-column:1/span 4;display:flex;flex-direction:column;gap:14px}
+.near .rows{grid-column:6/span 7;border-top:1.5px solid var(--ink)}
+.near .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:20px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.near .row h3{font-size:20px}
+.near .row p{color:var(--ink-2);font-size:16px}
+@media (max-width:860px){.near .head,.near .rows{grid-column:1/-1}.near .rows{margin-top:28px}.near .row{grid-template-columns:1fr;gap:4px}}
+
+/* visit */
+.visit{border-top:1px solid var(--rule)}
+.visit .head{grid-column:1/span 4;display:flex;flex-direction:column;gap:14px}
+.visit .head .closed{display:inline-block;align-self:flex-start;background:var(--orange);color:var(--ink);font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px}
+.visit .body{grid-column:6/span 7;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px)}
+table.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.hours caption{text-align:left;margin-bottom:10px}
+table.hours th,table.hours td{text-align:left;font-weight:400;padding:10px 0;border-bottom:1px solid var(--rule);font-size:16px}
+table.hours td{text-align:right}
+table.hours tr.today th,table.hours tr.today td{font-weight:700}
+table.hours tr.today th::after{content:" · today";font-weight:400;color:var(--leaf-ink);font-size:14px}
+.where dl{margin:0 0 20px;display:grid;gap:16px}
+.where dt{margin-bottom:3px}
+.where dd{margin:0}
+@media (max-width:860px){.visit .head,.visit .body{grid-column:1/-1}.visit .body{grid-template-columns:1fr;margin-top:28px}}
+
+footer{background:var(--ink);color:#D6D2BE;padding-block:48px 120px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px 48px;justify-content:space-between;align-items:flex-end}
+footer .mark{color:var(--lime);font-size:30px}
+footer a:hover{color:var(--lime)}
+footer .cr{max-width:60ch;color:#A9A592}
+@media (min-width:861px){footer{padding-bottom:48px}}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:repeat(3,minmax(0,1fr));background:var(--paper);border-top:1px solid var(--ink);padding-bottom:env(safe-area-inset-bottom,0px)}
+.mbar a{padding:16px 6px;text-align:center;text-decoration:none;font-weight:700;font-size:15px}
+.mbar a + a{border-left:1px solid var(--rule)}
+.mbar a.fill{background:var(--orange)}
+@media (max-width:860px){.mbar{display:grid}}
+
+@media (prefers-reduced-motion:no-preference){.arch img{animation:fade .6s ease both}@keyframes fade{from{opacity:0}}}
+</style>
+</head>
+<body>
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of Soul Oasis Glebe Cafe. Preview photos are licensed stock; colours and details are taken from your Instagram, menu and Google listing.</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Soul Oasis, home">Soul Oasis <small>Glebe</small></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-m" href="#menu">Menu</a>
+      <a class="hide-m" href="#visit">Hours &amp; map</a>
+      <span class="status" id="status"><span class="dot"></span><span id="status-text">Tue–Sun, 7am–3pm</span></span>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap grid">
+      <div class="hero-text">
+        <p class="label">All-day cafe · 34 Glebe Point Rd</p>
+        <h1>Soulful sips &amp; mindful bites.</h1>
+        <p class="lede">Shakshuka with our house-made chilli sauce, halloumi stacks, proper burgers and a smoothie bar, in a sunny room at the bottom of Glebe Point Road. Your oasis of calm in every cup and plate.</p>
+        <div class="actions">
+          <a class="btn fill" href="#menu">See the menu</a>
+          <a class="btn" href="tel:+61422958975">Call 0422 958 975</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <span class="lamps" aria-hidden="true"><i></i><b></b></span>
+        <span class="lamps two" aria-hidden="true"><i></i><b></b></span>
+        <figure class="arch" data-shot="hero"></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip" aria-label="Quick info">
+    <div class="wrap">
+      <div class="cell" id="open-cell"><span class="k">Today</span><span class="v" id="open-text">Tue–Sun, 7am–3pm</span></div>
+      <div class="cell"><span class="k">Find us</span><span class="v"><a href="https://www.google.com/maps/search/?api=1&amp;query=Soul+Oasis+Glebe+Cafe+34+Glebe+Point+Rd+Glebe+NSW+2037" target="_blank" rel="noopener">34 Glebe Point Rd</a></span></div>
+      <div class="cell"><span class="k">Call</span><span class="v"><a href="tel:+61422958975">0422 958 975</a></span></div>
+      <div class="cell"><span class="k">Mondays</span><span class="v">Closed</span></div>
+    </div>
+  </div>
+
+  <section class="trio" aria-labelledby="trio-h">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label">Breakfast till close</p>
+        <h2 id="trio-h">Eggs at 7, pancakes at 2.</h2>
+        <p>The whole breakfast menu runs until we close, so come whenever the day lets you.</p>
+      </div>
+      <p class="note">Halloumi &amp; Mushroom Stack: truffle mushrooms, grilled halloumi, beetroot hummus, za'atar and balsamic. The one we'd order first.</p>
+      <!-- [CHECK] confirm breakfast is served all day (inferred from a single 7am–3pm menu) -->
+      <figure class="a"><div class="arch" data-shot="stack"></div><figcaption><b>Halloumi &amp; Mushroom Stack</b>Beetroot hummus, za'atar, balsamic.</figcaption></figure>
+      <figure class="b"><div class="arch" data-shot="pancake"></div><figcaption><b>Oasis Pancake</b>Berry compote, whipped cream, dulce de leche, maple.</figcaption></figure>
+      <figure class="c"><div class="arch" data-shot="smoothie"></div><figcaption><b>Mango smoothie</b>Or green, açaí, strawberry.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="menu-top">
+        <div>
+          <p class="label" style="margin-bottom:12px">The menu</p>
+          <h2 id="menu-h">Breakfast, burgers, hangers &amp; the drinks bar</h2>
+        </div>
+        <p class="key"><span class="tag" style="margin:0 4px 0 0">House</span> marks our signatures. Ask us about vegetarian swaps and the kids menu.</p>
+      </div>
+    </div>
+    <nav class="jump" aria-label="Menu sections"><div class="wrap" id="jump"></div></nav>
+    <div class="wrap">
+      <!-- Prices omitted: the Google menu shows delivery-app prices. [CHECK] in-store prices from owner. -->
+      <div class="courses" id="courses"></div>
+      <div class="menu-foot">
+        <span>Dine in or take away. Prices at the counter.</span>
+        <a class="btn" href="tel:+61422958975" style="padding:11px 18px;font-size:14px">Call ahead for takeaway</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pause" aria-labelledby="pause-h">
+    <div class="wrap grid">
+      <div class="quote">
+        <p class="label" id="pause-h">Find your peace</p>
+        <p class="big">Where tranquility meets taste. One sip at a time.</p>
+        <p>Lime walls, arched mirrors, orange and green lamps over white bistro chairs. Sit down, and Nusrat will look after you. Coffee, matcha and three kinds of chai, sticky, dirty or vanilla, and if you're lucky there's a snail in your latte.</p>
+        <!-- [CHECK] confirm Nusrat (named in a review as owner/host) is happy to be named; confirm the snail latte art is a regular thing -->
+      </div>
+      <figure><div class="arch" data-shot="latte"></div><figcaption>Flat whites, lattes, matcha and chai from 7am.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="near" aria-labelledby="near-h">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label">Between classes</p>
+        <h2 id="near-h">At the Broadway end of Glebe Point Road.</h2>
+      </div>
+      <div class="rows">
+        <div class="row"><h3>UTS &amp; Sydney Uni</h3><p>A short walk from both campuses. Bring the laptop, stay for a second coffee.</p></div>
+        <div class="row"><h3>Glebe Markets</h3><p>Just up the road. Brunch here first, then the stalls.</p></div>
+        <div class="row"><h3>Broadway</h3><p>Number 34 is right at the Broadway end, so it's an easy stop on the way in or out.</p></div>
+      </div>
+      <!-- [CHECK] exact walking times not given; kept general -->
+    </div>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label">Hours &amp; map</p>
+        <h2 id="visit-h">Open six days, 7am to 3pm.</h2>
+        <span class="closed">Closed Mondays</span>
+      </div>
+      <div class="body">
+        <table class="hours" id="hours">
+          <caption class="label">Opening hours</caption>
+          <tbody>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>7am – 3pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>7am – 3pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>7am – 3pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>7am – 3pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>7am – 3pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>7am – 3pm</td></tr>
+            <tr data-day="1"><th scope="row">Monday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <div class="where">
+          <dl>
+            <div><dt class="label">Address</dt><dd>34 Glebe Point Rd<br>Glebe NSW 2037</dd></div>
+            <div><dt class="label">Phone</dt><dd><a href="tel:+61422958975">0422 958 975</a></dd></div>
+            <div><dt class="label">Instagram</dt><dd><a href="https://www.instagram.com/souloasisglebe/" target="_blank" rel="noopener">@souloasisglebe</a></dd></div>
+          </dl>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Soul+Oasis+Glebe+Cafe+34+Glebe+Point+Rd+Glebe+NSW+2037" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="mark" href="#top">Soul Oasis</a>
+      <p style="margin-top:12px">34 Glebe Point Rd, Glebe · Tue–Sun 7am–3pm · <a href="https://www.instagram.com/souloasisglebe/" target="_blank" rel="noopener">@souloasisglebe</a></p>
+    </div>
+    <p class="cr">Concept by Restauranting. <span id="credits"></span></p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+61422958975">Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Soul+Oasis+Glebe+Cafe+34+Glebe+Point+Rd+Glebe+NSW+2037" target="_blank" rel="noopener">Directions</a>
+  <a class="fill" href="https://www.instagram.com/souloasisglebe/" target="_blank" rel="noopener">Instagram</a>
+</nav>
+
+<script>
+/* menu: names and descriptions from the Google listing. No prices (listing shows delivery prices). */
+const MENU = [
+  {id:"breakfast", name:"Breakfast", sub:"All day", items:[
+    ["Soul's Breakfast Shakshuka","With our house-made chilli sauce.",1],
+    ["Shakshuka with Avocado","",0],
+    ["Halloumi & Mushroom Stack","Truffle mushrooms, grilled halloumi, beetroot hummus, za'atar, balsamic.",1],
+    ["Egg Benedict","",0],
+    ["Vegetarian Breakfast","",0],
+    ["Potato Hash","",0],
+    ["Chorizo & Potato Frittata","Baked in cast iron.",0],
+    ["Oasis Pancake","Berry compote, whipped cream, dulce de leche, maple.",1],
+    ["Belgian Liège Waffle","",0],
+    ["Brekky Burger","",0],
+    ["BLT","",0],
+    ["Avo & Feta","With vinaigrette.",0],
+    ["Granola Bowl","",0]]},
+  {id:"burgers", name:"Burgers", sub:"", items:[
+    ["Soul Oasis Classic","",1],
+    ["Double Soul & Cheese","",0],
+    ["Beefy Cheese Please","",0],
+    ["Grilled Chikky","",0],
+    ["Chili Samurai","",0],
+    ["Schnitzel Slaw","",0],
+    ["Eggplant Parmi","",0]]},
+  {id:"lunch", name:"Lunch", sub:"Hangers & more", items:[
+    ["Chicken Hanger","Skewers marinated overnight, with chips, salad and beetroot hummus.",1],
+    ["Prawn Hanger","",0],
+    ["Chicken Parma","",0],
+    ["Creamy Mushroom Chicken","",0]]},
+  {id:"salads", name:"Salads", sub:"", items:[
+    ["Cauliflower Salad","Beetroot hummus, lemon tahini.",0],
+    ["Grilled Salad","",0],
+    ["Garden Salad","",0]]},
+  {id:"drinks", name:"Drinks bar", sub:"", lists:[
+    ["Coffee & tea","Coffee · Matcha · Sticky chai · Dirty chai · Vanilla chai · Teas"],
+    ["Smoothies","Green · Açaí · Strawberry · Mango"],
+    ["Frappés","Lemon lime mint · Coffee"],
+    ["Shakes","Nutella · Chocolate flake, and more"]]},
+  {id:"kids", name:"Kids", sub:"", lists:[["Kids menu","Ask us what's on today."]]}
+];
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const courses = document.getElementById("courses"), jump = document.getElementById("jump");
+for (const c of MENU) {
+  const a = el("a", null, c.name); a.href = "#" + c.id; jump.append(a);
+  const box = el("div", "course"); box.id = c.id;
+  const h = el("h3", null, c.name); if (c.sub) h.append(el("span", null, c.sub)); box.append(h);
+  for (const [n, d, house] of (c.items || [])) {
+    const it = el("div", "item"), nm = el("div", "name", n);
+    if (house) nm.append(el("span", "tag", "House"));
+    it.append(nm); if (d) it.append(el("p", "desc", d));
+    box.append(it);
+  }
+  for (const [t, body] of (c.lists || [])) {
+    const l = el("p", "list"); l.append(el("b", null, t), document.createTextNode(body)); box.append(l);
+  }
+  courses.append(box);
+}
+
+/* open now, in Sydney time. Tue–Sun 7:00–15:00, Monday closed. */
+const HOURS = {0:[[420,900]],1:[],2:[[420,900]],3:[[420,900]],4:[[420,900]],5:[[420,900]],6:[[420,900]]};
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m/60), mm = m%60, h12 = ((h+11)%12)+1; return h12 + (mm ? ":" + String(mm).padStart(2,"0") : "") + (h >= 12 ? "pm" : "am"); };
+function sydneyNow(){
+  const p = new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => (p.find(x => x.type === k) || {}).value;
+  return {day: DAYS.indexOf(g("weekday")), mins: (+g("hour") % 24) * 60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = sydneyNow(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const cur = HOURS[day].find(([a,b]) => mins >= a && mins < b);
+  let msg;
+  if (cur) msg = "Open now, until " + fmt(cur[1]);
+  else {
+    const next = HOURS[day].find(([a]) => mins < a);
+    if (next) msg = "Opens " + fmt(next[0]) + " today";
+    else for (let i = 1; i <= 7; i++) { const d = (day+i)%7; if (HOURS[d].length) { msg = "Closed · opens " + (i === 1 ? "tomorrow" : DAYS[d]) + " " + fmt(HOURS[d][0][0]); break; } }
+  }
+  document.getElementById("open-text").textContent = msg;
+  document.getElementById("status-text").textContent = cur ? "Open till " + fmt(cur[1]) : "Closed now";
+  document.getElementById("status").classList.toggle("is-open", !!cur);
+}
+tick(); setInterval(tick, 60000);
+
+/* licensed stock photos (Pexels licence). Served from Pexels' CDN, resized per screen. */
+const PHOTOS = {
+  hero:     {id:30892286, alt:"Shakshuka in a skillet with crusty bread, by a sunlit window", by:"Oleksandr Plakhota", eager:true, sizes:"(max-width:900px) 90vw, 40vw"},
+  stack:    {id:5836624,  alt:"Grilled halloumi on toast with avocado", by:"Roman Odintsov"},
+  pancake:  {id:6529790,  alt:"Pancakes topped with syrup and fresh berries", by:"RDNE Stock project"},
+  smoothie: {id:8813997,  alt:"Mango smoothie in a glass with fresh mango slices", by:"Foyu"},
+  latte:    {id:33216070, alt:"Flat white with latte art on a wooden table", by:"thiagomobile", sizes:"(max-width:860px) 90vw, 33vw"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll("[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = p.sizes || "(max-width:760px) 90vw, 33vw";
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 900);
+  img.addEventListener("error", () => img.remove());
+  f.append(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + Object.values(PHOTOS).map(p => p.by).join(", ") + ".";
+
+try { if (window.self !== window.top) document.querySelector(".preview").remove(); } catch (e) {}
+</script>
+</body>
+</html>

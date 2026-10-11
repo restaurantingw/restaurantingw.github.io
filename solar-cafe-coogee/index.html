@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Solar Cafe · Brazilian–Australian cafe, Coogee</title>
+<meta name="description" content="Solar Cafe on Dudley St, Coogee. Pão de queijo, pão na chapa, Solar plates and unique coffees. Open 6:30am weekdays, 7am weekends, till 2:30pm.">
+<meta name="theme-color" content="#8E9152">
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<!--
+  Direction "Sunrise timetable": the day as a sun arc from 6:30am to 2:30pm, olive + cream two-tone like their logo,
+  a three-line horizon (CSS rules only, logo itself is the image file). Corben (soft, rounded, sunny serif) + Hanken Grotesk.
+  Open questions:
+  - Google lists shorter kitchen hours than the Instagram bio (Mon–Fri 6:30–2:30, Sat–Sun 7–2:30). Which are right? Kitchen close time?
+  - Address: Google "Shop 4/63A Dudley St", Instagram "63a Dudley St". Using Google's.
+  - Prices not known, so none shown. Which dishes are vegetarian (to mark V)?
+  - Descriptions for Solar Avo, Solar Bowl, Solar Break Burger, Mushroom Salad not known; left as names only.
+  - Okay to name the dogs (True Man and Happy)? Link to the Solar Cafe song clip (YouTube?) for the live site.
+  - Is the cheese bread baked in-house? Copy avoids claiming it.
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Solar Cafe","slogan":"Where Life Grows & Energy Flows","servesCuisine":["Brazilian","Australian","Cafe"],"telephone":"+61 416 080 634","acceptsReservations":true,
+"image":"https://restaurantingw.github.io/solar-cafe-coogee/logo.jpg",
+"sameAs":["https://www.instagram.com/solarcafecoogee/"],
+"address":{"@type":"PostalAddress","streetAddress":"Shop 4/63A Dudley St","addressLocality":"Coogee","addressRegion":"NSW","postalCode":"2034","addressCountry":"AU"},
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:30","closes":"14:30"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"07:00","closes":"14:30"}],
+"hasMenu":{"@type":"Menu","hasMenuSection":[
+{"@type":"MenuSection","name":"The Solar plates","hasMenuItem":[{"@type":"MenuItem","name":"Solar Benny","description":"Eggs benedict on a crispy base"},{"@type":"MenuItem","name":"Solar Avo"},{"@type":"MenuItem","name":"Solar Big Happiness","description":"Our big breakfast"},{"@type":"MenuItem","name":"Solar Bowl"},{"@type":"MenuItem","name":"Solar Break Burger"}]},
+{"@type":"MenuSection","name":"Eggs, toast & salads","hasMenuItem":[{"@type":"MenuItem","name":"Bacon & Egg Roll"},{"@type":"MenuItem","name":"Eggs Your Way"},{"@type":"MenuItem","name":"Eggs with Halloumi"},{"@type":"MenuItem","name":"Avocado Toast"},{"@type":"MenuItem","name":"Cottage Cheese Sourdough"},{"@type":"MenuItem","name":"Mushroom Salad"},{"@type":"MenuItem","name":"Fries"}]},
+{"@type":"MenuSection","name":"From Brazil & the oven","hasMenuItem":[{"@type":"MenuItem","name":"Pão de queijo","description":"Brazilian cheese bread"},{"@type":"MenuItem","name":"Pão na chapa","description":"Brazilian griddled buttered bread"},{"@type":"MenuItem","name":"Blueberry & Lemon Muffin"}]},
+{"@type":"MenuSection","name":"Cups","hasMenuItem":[{"@type":"MenuItem","name":"Pistachio Latte"},{"@type":"MenuItem","name":"Orange Latte"},{"@type":"MenuItem","name":"Churros Coffee"},{"@type":"MenuItem","name":"Hot Chocolate"},{"@type":"MenuItem","name":"Specialty Coffee"}]}]}}
+</script>
+<style>
+:root{
+  --olive:#8E9152; --olive-d:#4B4E2A; --olive-dd:#3A3C20; --cream:#F3EEDC; --cream-2:#E9E3CB; --light:#FFFCF0;
+  --ink:#23241A; --ink-2:#55573A; --sun:#E58B3A; --rule:#CFC8AE; --br-g:#2A8C4A; --br-y:#F2C230;
+  --disp:"Corben",Georgia,serif; --sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --gut:clamp(16px,4.5vw,64px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--sun);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+p{margin:0}
+h1,h2,h3{font-family:var(--disp);font-weight:400;margin:0;text-wrap:balance}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+.label{font:700 12.5px/1.3 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+
+/* three-line horizon, the cafe's wave lines as plain rules */
+.horizon{display:grid;gap:5px;width:100%}
+.horizon i{display:block;height:0;border-top:1.5px solid currentColor}
+.horizon i:nth-child(2){margin-inline:6% 0}
+.horizon i:nth-child(3){margin-inline:14% 0}
+
+.preview{background:var(--olive-dd);color:#E3DEC6;font-size:13px;line-height:1.45;padding:9px var(--gut)}
+.preview b{color:var(--light);font-weight:500}
+
+/* header shares the logo's olive so the badge sits in it seamlessly */
+header.site{position:sticky;top:0;z-index:10;background:var(--olive);color:var(--ink)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--light);min-width:0}
+.brand img{width:52px;height:52px;flex:none}
+.brand span{font:700 19px/1 var(--disp);letter-spacing:.01em;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px;font-weight:500}
+.nav a{text-decoration:none}
+.nav a:hover{text-decoration:underline}
+@media (max-width:820px){.nav .hide-m{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 15px/1 var(--sans);padding:15px 22px;border:1.5px solid var(--ink);border-radius:999px;text-decoration:none;background:transparent;color:var(--ink);transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--cream)}
+.btn.sun{background:var(--sun);border-color:var(--sun);color:var(--ink)}
+.btn.sun:hover{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+.btn.small{padding:10px 16px;font-size:14px}
+
+/* photo frames */
+.ph{position:relative;margin:0;background:var(--cream-2);overflow:hidden}
+.ph::before{content:"";display:block;padding-top:var(--r,125%)}
+.ph>img{position:absolute;inset:0}
+.cap{font-size:14px;color:var(--ink-2);margin-top:10px;display:flex;gap:10px;align-items:baseline}
+.cap b{font:400 17px/1.2 var(--disp);color:var(--ink)}
+
+/* hero */
+.hero{background:var(--olive);padding-block:clamp(24px,5vw,72px) 0;overflow:hidden}
+.hero .grid{align-items:end}
+.hero-text{grid-column:1/span 7;padding-bottom:clamp(32px,5vw,72px);display:flex;flex-direction:column;gap:22px}
+.hero .kick{display:flex;align-items:center;gap:10px;color:var(--ink)}
+.hero .kick .br{display:inline-flex;gap:3px}
+.hero .kick .br i{width:7px;height:7px;border-radius:50%;background:var(--br-g)}
+.hero .kick .br i+i{background:var(--br-y)}
+h1{color:var(--light);font-size:clamp(42px,6.4vw,84px);line-height:1.02;letter-spacing:-.01em}
+.hero .lede{font-size:clamp(17px,1.5vw,19px);max-width:44ch;color:var(--ink)}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.hero .btn.ghost{border-color:var(--ink)}
+.hero-media{grid-column:8/span 5;position:relative}
+.hero-media .ph{--r:122%;border-radius:999px 999px 0 0}
+.hero-media .ring{position:absolute;inset:-14px -14px 0 -14px;border:1.5px solid var(--light);border-bottom:0;border-radius:999px 999px 0 0;pointer-events:none}
+@media (max-width:900px){
+  .hero-text,.hero-media{grid-column:1/-1}
+  .hero-media{width:min(78%,420px);margin:8px 0 0 auto;order:2}
+  .hero-text{padding-bottom:8px}
+}
+
+/* today: sun arc */
+.today{background:var(--cream);border-bottom:1px solid var(--rule)}
+.today .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(20px,4vw,56px);align-items:center;padding-block:28px}
+.arcbox{width:200px;color:var(--olive-d)}
+.arc{position:relative;width:100%;aspect-ratio:2/1}
+.arc::before{content:"";position:absolute;inset:0;border:1.5px dashed var(--olive);border-bottom:0;border-radius:200px 200px 0 0}
+.arc .sundot{position:absolute;left:var(--x,0%);top:var(--y,100%);width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 5px var(--cream);transition:left .6s,top .6s}
+.arc.closed .sundot{background:var(--cream);border:1.5px solid var(--olive)}
+.arcbox .horizon{margin-top:3px}
+.arcbox .ends{display:flex;justify-content:space-between;font-size:12.5px;font-weight:500;color:var(--ink-2);margin-top:6px;font-variant-numeric:tabular-nums}
+.status{display:flex;flex-direction:column;gap:4px;min-width:0}
+.status .now{font:400 clamp(22px,2.4vw,30px)/1.15 var(--disp)}
+.status .hrs{color:var(--ink-2);font-size:15.5px}
+.quick{display:flex;flex-direction:column;gap:6px;font-size:15.5px;text-align:left}
+.quick a{font-weight:500}
+@media (max-width:860px){.today .wrap{grid-template-columns:auto 1fr}.quick{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;gap:6px 22px;border-top:1px solid var(--rule);padding-top:16px}}
+@media (max-width:480px){.arcbox{width:132px}.status .now{font-size:21px}}
+
+section{padding-block:clamp(72px,10vw,128px)}
+h2{font-size:clamp(30px,3.6vw,46px);line-height:1.08}
+.sec-label{color:var(--olive-d);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sec-label::before{content:"";width:28px;border-top:1.5px solid var(--sun)}
+
+/* Brazil */
+.brasil .intro{grid-column:1/span 5;display:flex;flex-direction:column;gap:20px}
+.brasil .intro p{max-width:42ch;color:var(--ink-2);font-size:18px}
+.brasil .goods{grid-column:7/span 6;list-style:none;margin:0;padding:0;counter-reset:g}
+.brasil .goods li{display:grid;grid-template-columns:44px 1fr;gap:4px 16px;padding:22px 0;border-top:1px solid var(--rule)}
+.brasil .goods li:last-child{border-bottom:1px solid var(--rule)}
+.brasil .goods li::before{counter-increment:g;content:"0" counter(g);grid-row:span 2;font:500 13px/2.3 var(--sans);color:var(--ink-2);letter-spacing:.08em}
+.brasil .goods h3{font-size:clamp(24px,2.6vw,32px);line-height:1.15}
+.brasil .goods h3 small{font:400 15px/1 var(--sans);color:var(--ink-2);margin-left:10px;letter-spacing:0}
+.brasil .goods p{color:var(--ink-2);max-width:48ch}
+.brasil .photo{grid-column:1/span 5;margin-top:clamp(36px,5vw,56px)}
+.brasil .photo .ph{--r:80%}
+@media (max-width:900px){.brasil .intro,.brasil .goods,.brasil .photo{grid-column:1/-1}.brasil .goods{margin-top:32px;order:3}.brasil .photo{order:2;margin-top:28px}}
+
+/* menu: deep olive card stock, cream print */
+.menu{background:var(--olive-d);color:var(--cream)}
+.menu .sec-label{color:var(--cream)}
+.menu-top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.menu-top>div{grid-column:1/span 7}
+.menu-top .note{grid-column:9/span 4;font-size:15px;color:#D9D3BA}
+@media (max-width:900px){.menu-top>div,.menu-top .note{grid-column:1/-1}.menu-top .note{margin-top:16px}}
+.courses{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);row-gap:clamp(40px,5vw,64px)}
+.course{grid-column:span 6;min-width:0}
+.course.sig{grid-column:1/-1}
+.course h3{font-size:24px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1.5px solid var(--cream)}
+.course h3 span{font:500 13px/1 var(--sans);letter-spacing:.06em;color:#D9D3BA}
+.course ul{list-style:none;margin:0;padding:0}
+.course li{padding:13px 0;border-bottom:1px solid rgba(243,238,220,.22);display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px}
+.course li b{font-weight:700;font-size:17.5px}
+.course li em{font-style:normal;color:#D9D3BA;font-size:15px}
+.course.sig ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));column-gap:clamp(16px,2vw,28px)}
+.course.sig li{flex-direction:column;gap:2px;border-bottom:0;border-top:1px solid rgba(243,238,220,.22);padding-top:16px}
+.course.sig li b{font:400 23px/1.15 var(--disp)}
+.course.sig li:first-child{border-top-color:var(--sun)}
+@media (max-width:760px){.course{grid-column:1/-1}}
+.menu-foot{margin-top:clamp(40px,5vw,64px);display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;color:#D9D3BA;font-size:15px}
+.menu-foot .horizon{color:var(--cream);max-width:180px}
+.menu .btn{border-color:var(--cream);color:var(--cream)}
+.menu .btn:hover{background:var(--cream);color:var(--olive-d)}
+
+/* plates band */
+.band{padding-block:clamp(64px,9vw,112px) 0}
+.band .grid{row-gap:32px}
+.band .p1{grid-column:1/span 5}
+.band .p2{grid-column:7/span 3;margin-top:clamp(0px,8vw,112px)}
+.band .p3{grid-column:10/span 3}
+.band .p4{grid-column:2/span 4}
+@media (max-width:760px){.band .p1,.band .p4{grid-column:1/-1}.band .p2{grid-column:1/span 6;margin-top:0}.band .p3{grid-column:7/span 6;margin-top:48px}.band .p4{grid-column:3/-1}}
+
+/* out the front */
+.front .head{grid-column:1/span 5}
+.front .list{grid-column:7/span 6;display:grid;gap:0;margin:0}
+.front .list div{padding:20px 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,150px) 1fr;gap:4px 24px}
+.front .list div:last-child{border-bottom:1px solid var(--rule)}
+.front dt{font:400 19px/1.3 var(--disp)}
+.front dd{margin:0;color:var(--ink-2)}
+.front .wide{grid-column:1/-1;margin-top:clamp(48px,7vw,88px)}
+.front .wide .ph{--r:42%}
+@media (max-width:900px){.front .head,.front .list{grid-column:1/-1}.front .list{margin-top:28px}.front .wide .ph{--r:66%}}
+@media (max-width:520px){.front .list div{grid-template-columns:1fr}}
+
+/* visit */
+.visit{background:var(--olive);color:var(--ink)}
+.visit .sec-label{color:var(--ink)}
+.visit .sec-label::before{border-color:var(--light)}
+.visit h2{color:var(--light)}
+.visit .head{grid-column:1/span 5;display:flex;flex-direction:column;gap:20px}
+.visit .body{grid-column:7/span 6;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,48px)}
+table.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.hours caption{text-align:left;margin-bottom:8px}
+table.hours th,table.hours td{text-align:left;font-weight:400;padding:10px 0;border-bottom:1px solid rgba(35,36,26,.28);font-size:16px}
+table.hours td{text-align:right}
+table.hours tr.today th,table.hours tr.today td{font-weight:700}
+table.hours tr.today th::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--sun);margin-right:8px;box-shadow:0 0 0 1.5px var(--ink)}
+.where dl{margin:0;display:grid;gap:16px}
+.where dt{margin-bottom:2px}
+.where dd{margin:0;font-size:16px}
+.where .btn{margin-top:22px}
+@media (max-width:900px){.visit .head,.visit .body{grid-column:1/-1}.visit .body{margin-top:32px}}
+@media (max-width:560px){.visit .body{grid-template-columns:1fr}}
+
+footer{background:var(--olive-d);color:#D9D3BA;font-size:14px;padding-block:40px 120px}
+footer .wrap{display:grid;grid-template-columns:auto 1fr;gap:20px 28px;align-items:center}
+footer img{width:72px;height:72px}
+footer .meta{display:flex;flex-wrap:wrap;gap:6px 28px;justify-content:space-between}
+footer .meta b{color:var(--cream);font:700 17px/1.2 var(--disp)}
+footer a{color:var(--cream)}
+@media (max-width:640px){footer .meta{flex-direction:column}}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:1fr 1fr 1.25fr;background:var(--olive);border-top:1.5px solid var(--ink);padding-bottom:env(safe-area-inset-bottom,0px)}
+.mbar a{padding:16px 6px;text-align:center;text-decoration:none;font-weight:700;font-size:15px;color:var(--ink)}
+.mbar a+a{border-left:1px solid rgba(35,36,26,.35)}
+.mbar a.sun{background:var(--sun)}
+@media (max-width:820px){.mbar{display:grid}}
+
+@media (prefers-reduced-motion:no-preference){.ph img{animation:fade .6s ease both}@keyframes fade{from{opacity:0}}}
+</style>
+</head>
+<body>
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of Solar Cafe. Preview photos are licensed stock; logo, colours and details are taken from your Instagram and Google listing.</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="logo.jpg" alt="Solar Cafe logo" width="52" height="52"><span>Solar Cafe</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-m" href="#brasil">From Brazil</a>
+      <a class="hide-m" href="#menu">Menu</a>
+      <a class="hide-m" href="#visit">Hours &amp; map</a>
+      <a class="btn small sun" href="https://ig.me/m/solarcafecoogee" target="_blank" rel="noopener">Reserve via DM</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap grid">
+      <div class="hero-text">
+        <p class="label kick"><span class="br" aria-hidden="true"><i></i><i></i></span>Brazilian–Australian cafe · Dudley St, Coogee</p>
+        <h1>Where life grows &amp; energy flows.</h1>
+        <p class="lede">Pão de queijo, pão na chapa and coffees you won't find down the road, next to Solar plates built for a Coogee morning. Doors open 6:30am weekdays, 7am weekends.</p>
+        <div class="actions">
+          <a class="btn sun" href="#menu">See the menu</a>
+          <a class="btn ghost" href="https://ig.me/m/solarcafecoogee" target="_blank" rel="noopener">Book a table by DM</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <figure class="ph" data-shot="hero"></figure>
+        <span class="ring" aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="today" aria-label="Today">
+    <div class="wrap">
+      <div class="arcbox" aria-hidden="true">
+        <div class="arc closed" id="arc"><span class="sundot"></span></div>
+        <div class="horizon"><i></i><i></i><i></i></div>
+        <div class="ends"><span id="arc-open">6:30am</span><span>2:30pm</span></div>
+      </div>
+      <div class="status">
+        <span class="label" style="color:var(--ink-2)">Today</span>
+        <p class="now" id="open-text">Open every day from early</p>
+        <p class="hrs">Mon–Fri 6:30am–2:30pm · Sat–Sun 7am–2:30pm</p>
+      </div>
+      <div class="quick">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Solar+Cafe+63A+Dudley+St+Coogee+NSW+2034" target="_blank" rel="noopener">Shop 4/63A Dudley St</a>
+        <a href="tel:+61416080634">0416 080 634</a>
+        <a href="https://www.instagram.com/solarcafecoogee/" target="_blank" rel="noopener">@solarcafecoogee</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="brasil" id="brasil">
+    <div class="wrap grid">
+      <div class="intro">
+        <p class="label sec-label">Do Brasil</p>
+        <h2>The best goods from Brazil, on Dudley Street.</h2>
+        <p>We're a little bit Brazil and a little bit Coogee. The cheese bread, the griddled bread and the coffees are from Brazil. The eggs, the avo and the big breakfasts are Sydney mornings, done the Solar way.</p>
+      </div>
+      <ol class="goods">
+        <li><h3>Pão de queijo <small>cheese bread</small></h3><p>Brazil's favourite snack. Small, warm, golden cheese bread to have with your coffee or take for the walk.</p></li>
+        <li><h3>Pão na chapa <small>griddled bread</small></h3><p>Bread buttered and pressed on the griddle until it's crisp. A Brazilian breakfast in two bites.</p></li>
+        <li><h3>Unique coffees</h3><p>Pistachio latte, orange latte, churros coffee. And specialty coffee, done straight, for the purists.</p></li>
+      </ol>
+      <figure class="photo" style="margin-inline:0;margin-bottom:0">
+        <div class="ph" data-shot="brasil"></div>
+        <figcaption class="cap"><b>Pão de queijo</b> with coffee</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="menu-top">
+        <div>
+          <p class="label sec-label">Menu</p>
+          <h2 id="menu-h">Breakfast and lunch, sunrise to 2:30.</h2>
+        </div>
+        <p class="note">Lots of vegetarian options; ask us and we'll point you to them. Full menu and prices at the counter.</p>
+      </div>
+      <div class="courses" id="courses"></div>
+      <div class="menu-foot">
+        <div class="horizon" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span>Want a table for the weekend? Send us a DM.</span>
+        <a class="btn small" href="https://ig.me/m/solarcafecoogee" target="_blank" rel="noopener">Message us on Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="band" aria-label="Plates and cups">
+    <div class="wrap grid">
+      <figure class="p1" style="margin:0"><div class="ph" style="--r:120%" data-shot="benny"></div><figcaption class="cap"><b>Solar Benny</b> eggs benedict on a crispy base</figcaption></figure>
+      <figure class="p2" style="margin:0"><div class="ph" style="--r:130%" data-shot="cup"></div><figcaption class="cap"><b>Specialty coffee</b></figcaption></figure>
+      <figure class="p3" style="margin:0"><div class="ph" style="--r:130%" data-shot="avo"></div><figcaption class="cap"><b>Avocado toast</b></figcaption></figure>
+      <figure class="p4" style="margin:0"><div class="ph" style="--r:100%" data-shot="big"></div><figcaption class="cap"><b>Solar Big Happiness</b> our big breakfast</figcaption></figure>
+    </div>
+  </div>
+
+  <section class="front" id="front">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label sec-label">Out the front</p>
+        <h2>Pull up a chair. Grab a blanket. Say hi to the dogs.</h2>
+      </div>
+      <dl class="list">
+        <div><dt>Our dogs</dt><dd>True Man and Happy live here too. They'll probably say hello before we do. Your dog is welcome.</dd></div>
+        <div><dt>Blankets</dt><dd>On cooler mornings there are blankets for the outside tables. Just ask.</dd></div>
+        <div><dt>Bookings</dt><dd>We take reservations by Instagram DM. Or just walk in.</dd></div>
+        <div><dt>Hoodies</dt><dd>Solar Cafe hoodies, for taking a bit of the sun home.</dd></div>
+        <div><dt>Our song</dt><dd>Yes, we have our own song. The clip is on our Instagram.</dd></div>
+      </dl>
+      <figure class="wide" style="margin-inline:0;margin-bottom:0">
+        <div class="ph" data-shot="sunrise"></div>
+        <figcaption class="cap"><b>Coogee Beach</b> early, before the first coffee</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap grid">
+      <div class="head">
+        <p class="label sec-label">Find us</p>
+        <h2>Shop 4, 63A Dudley St, Coogee.</h2>
+        <p style="max-width:40ch">Open seven days, from 6:30am on weekdays and 7am on weekends.</p>
+      </div>
+      <div class="body">
+        <table class="hours" id="hours">
+          <caption class="label">Opening hours</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>6:30am – 2:30pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>6:30am – 2:30pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>6:30am – 2:30pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>6:30am – 2:30pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>6:30am – 2:30pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>7am – 2:30pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>7am – 2:30pm</td></tr>
+          </tbody>
+        </table>
+        <div class="where">
+          <dl>
+            <div><dt class="label">Address</dt><dd>Shop 4/63A Dudley St<br>Coogee NSW 2034</dd></div>
+            <div><dt class="label">Phone</dt><dd><a href="tel:+61416080634">0416 080 634</a></dd></div>
+            <div><dt class="label">Reservations</dt><dd><a href="https://ig.me/m/solarcafecoogee" target="_blank" rel="noopener">DM @solarcafecoogee</a></dd></div>
+          </dl>
+          <a class="btn small" href="https://www.google.com/maps/search/?api=1&amp;query=Solar+Cafe+63A+Dudley+St+Coogee+NSW+2034" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="logo.jpg" alt="Solar Cafe logo" width="72" height="72" loading="lazy">
+    <div class="meta">
+      <span><b>Solar Cafe</b><br>Where Life Grows &amp; Energy Flows · <a href="https://www.instagram.com/solarcafecoogee/" target="_blank" rel="noopener">@solarcafecoogee</a></span>
+      <span>Concept by Restauranting · <span id="credits"></span></span>
+    </div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+61416080634">Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Solar+Cafe+63A+Dudley+St+Coogee+NSW+2034" target="_blank" rel="noopener">Directions</a>
+  <a class="sun" href="https://www.instagram.com/solarcafecoogee/" target="_blank" rel="noopener">Instagram</a>
+</nav>
+
+<script>
+/* menu as data; no prices known yet, so none are shown */
+const MENU = [
+  {id:"solar", name:"The Solar plates", sub:"Our signatures", sig:true, items:[
+    ["Solar Benny","Eggs benedict on a crispy base"],["Solar Avo",""],["Solar Big Happiness","Our big breakfast"],["Solar Bowl",""],["Solar Break Burger",""]]},
+  {id:"eggs", name:"Eggs, toast & salads", sub:"All morning", items:[
+    ["Bacon & Egg Roll",""],["Eggs Your Way",""],["Eggs with Halloumi",""],["Avocado Toast",""],["Cottage Cheese Sourdough",""],["Mushroom Salad",""],["Fries",""]]},
+  {id:"oven", name:"From Brazil & the oven", sub:"Bakes", items:[
+    ["Pão de queijo","Brazilian cheese bread"],["Pão na chapa","Brazilian griddled buttered bread"],["Blueberry & Lemon Muffins",""]]},
+  {id:"cups", name:"Cups", sub:"Coffee & more", items:[
+    ["Pistachio Latte",""],["Orange Latte",""],["Churros Coffee",""],["Hot Chocolate",""],["Specialty Coffee",""]]}
+];
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const courses = document.getElementById("courses");
+for (const c of MENU) {
+  const box = el("div", "course" + (c.sig ? " sig" : "")); box.id = "m-" + c.id;
+  const h = el("h3", null, c.name); h.append(el("span", null, c.sub)); box.append(h);
+  const ul = el("ul");
+  for (const [n, d] of c.items) { const li = el("li"); li.append(el("b", null, n)); if (d) li.append(el("em", null, d)); ul.append(li); }
+  box.append(ul); courses.append(box);
+}
+
+/* open-now and the sun's place on the arc, in Sydney time */
+const HOURS = {0:[420,870],1:[390,870],2:[390,870],3:[390,870],4:[390,870],5:[390,870],6:[420,870]};
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m/60), mm = m%60, h12 = ((h+11)%12)+1; return h12 + (mm ? ":" + String(mm).padStart(2,"0") : "") + (h >= 12 ? "pm" : "am"); };
+function sydneyNow(){
+  const p = new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => (p.find(x => x.type === k) || {}).value;
+  return {day: DAYS.indexOf(g("weekday")), mins: (+g("hour") % 24) * 60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = sydneyNow(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const [a, b] = HOURS[day], arc = document.getElementById("arc"), txt = document.getElementById("open-text");
+  document.getElementById("arc-open").textContent = fmt(a);
+  const open = mins >= a && mins < b;
+  const f = open ? (mins - a) / (b - a) : (mins >= b ? 1 : 0);
+  arc.style.setProperty("--x", (50 - 50 * Math.cos(Math.PI * f)).toFixed(2) + "%");
+  arc.style.setProperty("--y", (100 - 100 * Math.sin(Math.PI * f)).toFixed(2) + "%");
+  arc.classList.toggle("closed", !open);
+  if (open) { txt.textContent = "Open now, until " + fmt(b); return; }
+  if (mins < a) { txt.textContent = "Opening at " + fmt(a) + " this morning"; return; }
+  const n = (day + 1) % 7; txt.textContent = "Closed for today · back tomorrow at " + fmt(HOURS[n][0]);
+}
+tick(); setInterval(tick, 60000);
+
+/* licensed stock photos (Pexels licence, free for commercial use), resized per screen by Pexels' CDN */
+const PHOTOS = {
+  hero:    {id:37778433, alt:"Freshly baked pão de queijo, Brazilian cheese bread, in a woven basket", by:"Giovanna Kamimura", eager:true, sizes:"(max-width:900px) 78vw, 40vw"},
+  brasil:  {id:34520997, alt:"Cheese bread rolls on a plate with cups of coffee", by:"Emanuel Pedro", sizes:"(max-width:900px) 100vw, 40vw"},
+  benny:   {id:11288960, alt:"Eggs benedict on a wooden table", by:"Ekrulila", sizes:"(max-width:760px) 100vw, 40vw"},
+  cup:     {id:31139336, alt:"Cappuccino with heart latte art on a wooden table", by:"Magda Ehlers", sizes:"(max-width:760px) 50vw, 25vw"},
+  avo:     {id:350346, alt:"Avocado toast and coffee on a wooden table, from above", by:"Brigitte Tohm", sizes:"(max-width:760px) 50vw, 25vw"},
+  big:     {id:8525158, alt:"Breakfast plate with fried eggs, toast, avocado and hash browns", by:"Adnan Karimi", sizes:"(max-width:760px) 85vw, 33vw"},
+  sunrise: {id:31663210, alt:"Sunrise over Coogee Beach with gentle waves and clouds", by:"Hallie Evans", sizes:"100vw"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = p.sizes; img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 1300);
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ");
+
+/* inside the Restauranting studio frame, hide the concept note */
+try { if (window.self !== window.top) { const n = document.querySelector(".preview"); if (n) n.remove(); } } catch (e) {}
+</script>
+</body>
+</html>
