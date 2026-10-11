@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Milk Crate · Breakfast, toasties &amp; coffee from 6am · Waterloo</title>
+<meta name="description" content="Milk Crate, Meriton Retail Waterloo, Unit 9/1 Crystal St. Fresh coffee, toasties, wraps and B&amp;Es, grab &amp; go daily. Open 6am weekdays, 6:30am weekends.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com">
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<!--
+  Creative brief (Restauranting concept, Milk Crate Waterloo)
+  Direction "Rainbow crate": the black square + rainbow-striped block caps of their Instagram logo, with the pale-pink frame
+  around CRATE reused as the site's only line work. Menu sits in a crate grid (compartments, thin pink rules), one stripe colour per compartment.
+  Type: Titan One (heavy rounded block caps, the weight of their logo lettering) + Atkinson Hyperlegible (plain, friendly, built for legibility; fits "Where love lives").
+  Palette (from logo): #0A0A0A black, stripes #E53935 #FB8C00 #FDD835 #43A047 #1E88E5 #8E24AA, frame pink #F3C6CF, white.
+  Sources: Instagram @milkcratewaterloosydney (logo, captions), Uber Eats menu, Google listing (address, phone, hours, attributes).
+  Open questions:
+  [CHECK] Address: Google says Unit 9/1 Crystal St (Meriton Retail Waterloo); some Instagram posts say 25 Danks St. Using Crystal St.
+  [CHECK] No prices published apart from the weekday coffee deal, so the menu shows no prices.
+  [CHECK] Uber Eats store URL not captured; delivery mentioned as text only. Add the link at go-live.
+  [CHECK] Big Breakky, Big Boss Bagel, Grilled Halloumi Burger Stack, Bolo Toastie, Magic Mushroom Toastie, Cheeky Jaffle: no published descriptions, shown by name only.
+  [CHECK] Dietary marks only where the listed ingredients make it obvious (V). Confirm with owner.
+  [CHECK] Grab & go deal: confirm the $3.80 small coffee is with any grab & go item, Mon to Fri.
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Milk Crate Waterloo","url":"https://restaurantingw.github.io/milk-crate-waterloo/","image":"https://restaurantingw.github.io/milk-crate-waterloo/logo.jpg","telephone":"+61 407 021 116","servesCuisine":["Cafe","Breakfast","Coffee"],"slogan":"Fresh coffee. Fresh food. Fresh start.",
+"address":{"@type":"PostalAddress","streetAddress":"Unit 9, 1 Crystal St (Meriton Retail Waterloo)","addressLocality":"Waterloo","addressRegion":"NSW","postalCode":"2017","addressCountry":"AU"},
+"sameAs":["https://www.instagram.com/milkcratewaterloosydney/"],
+"hasMenu":"https://restaurantingw.github.io/milk-crate-waterloo/#menu",
+"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Dogs welcome","value":true},{"@type":"LocationFeatureSpecification","name":"Outdoor seating","value":true}],
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"15:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"06:30","closes":"15:00"}]}
+</script>
+<style>
+/* Direction "Rainbow crate". Black is the ground, as in their logo. Rainbow stripes are used as bands and markers only,
+   never as body colour. Pale pink is the frame line (the box around CRATE). 12-col grid, left-aligned. */
+:root{
+  --ink:#0A0A0A; --ink-2:#161616; --white:#FFFFFF; --soft:#CFCAC4; --mute:#9A948D;
+  --pink:#F3C6CF;
+  --r:#E53935; --o:#FB8C00; --y:#FDD835; --g:#43A047; --b:#1E88E5; --p:#8E24AA;
+  --paper:#FFFFFF; --paper-ink:#0A0A0A; --paper-2:#5A5550; --paper-rule:#E7E2DE;
+  --display:"Titan One","Arial Black",Impact,sans-serif;
+  --sans:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gut:clamp(16px,4vw,56px);
+  --stripes:linear-gradient(180deg,var(--r) 0 16.7%,var(--o) 16.7% 33.4%,var(--y) 33.4% 50%,var(--g) 50% 66.7%,var(--b) 66.7% 83.4%,var(--p) 83.4% 100%);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ink);color:var(--white);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+img{display:block;max-width:100%}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:400}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+.label{font:700 12.5px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.d{font-family:var(--display);letter-spacing:.01em;text-transform:uppercase}
+
+/* the six-band stripe, as a rule */
+.bands{height:18px;background:var(--stripes)}
+.bands.thin{height:12px}
+
+/* preview note */
+.preview{background:#1C1C1C;color:var(--soft);font-size:13px;line-height:1.45;padding:9px var(--gut)}
+.preview b{color:var(--white)}
+
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:var(--ink);border-bottom:1px solid #262626}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:52px;height:52px}
+.brand span{font-size:14px;color:var(--soft);line-height:1.2}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px}
+.nav a{text-decoration:none}
+.nav a:hover{color:var(--pink)}
+@media (max-width:820px){.nav .hide-m{display:none}.brand span{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 15px/1 var(--sans);padding:15px 20px;border:1.5px solid var(--pink);border-radius:2px;text-decoration:none;color:var(--white);background:transparent;transition:background .15s,color .15s}
+.btn:hover{background:var(--pink);color:var(--ink)}
+.btn.solid{background:var(--white);border-color:var(--white);color:var(--ink)}
+.btn.solid:hover{background:var(--pink);border-color:var(--pink)}
+.btn.small{padding:10px 14px;font-size:14px}
+
+/* photo frames */
+.ph{position:relative;margin:0;background:#1F1F1F;overflow:hidden}
+.ph::before{content:"";display:block;padding-top:var(--ratio,125%)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.framed{border:1.5px solid var(--pink);padding:10px}
+
+/* hero */
+.hero{padding-block:clamp(32px,6vw,80px) clamp(40px,6vw,80px)}
+.hero-text{grid-column:1/span 6;display:flex;flex-direction:column;gap:24px;align-self:center}
+.hero-media{grid-column:8/span 5}
+.kicker{color:var(--pink)}
+h1{font:400 clamp(44px,4.4vw,62px)/1.02 var(--display);text-transform:uppercase;letter-spacing:.005em}
+h1 .line{display:block}
+.striped{background:var(--stripes);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;background-size:100% 1em;background-repeat:repeat-y;background-position:0 .04em}
+.lede{font-size:19px;color:var(--soft);max-width:40ch}
+.status{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--mute);flex:none}
+.status.is-open .dot{background:var(--g);box-shadow:0 0 0 4px rgba(67,160,71,.22)}
+.status small{font-weight:400;color:var(--mute);font-size:15px}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.early{display:flex;align-items:baseline;gap:14px;border-top:1px solid #2A2A2A;padding-top:18px}
+.early b{font:400 34px/1 var(--display);color:var(--y)}
+.early span{color:var(--soft);font-size:15px;max-width:30ch}
+@media (max-width:900px){h1{font-size:clamp(30px,8.4vw,46px)}.hero-text,.hero-media{grid-column:1/-1}.hero-media{order:-1;margin-bottom:28px}.hero-media .ph{--ratio:90%!important}}
+
+/* weekday deal */
+.deal{background:var(--y);color:var(--ink)}
+.deal .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);align-items:center;padding-block:clamp(28px,4vw,44px)}
+.deal .label{grid-column:1/span 3}
+.deal p.big{grid-column:4/span 6;font:400 clamp(24px,2.8vw,36px)/1.12 var(--display);text-transform:uppercase}
+.deal p.small{grid-column:10/span 3;font-size:15px;line-height:1.45}
+@media (max-width:900px){.deal .label,.deal p.big,.deal p.small{grid-column:1/-1}.deal p.big{margin:10px 0 8px}}
+
+/* sections */
+section{padding-block:clamp(64px,9vw,120px)}
+h2{font:400 clamp(30px,3.6vw,46px)/1.05 var(--display);text-transform:uppercase}
+.sec-head{display:flex;flex-direction:column;gap:14px}
+.sec-head .label{color:var(--pink)}
+.sec-head p{color:var(--soft);max-width:42ch}
+
+/* toastie feature (white, to break the black) */
+.toastie{background:var(--paper);color:var(--paper-ink)}
+.toastie .media{grid-column:1/span 6}
+.toastie .copy{grid-column:8/span 5;display:flex;flex-direction:column;gap:20px;align-self:center}
+.toastie .label{color:var(--paper-2)}
+.toastie h2{font-size:clamp(34px,4.4vw,60px)}
+.toastie .what{font-size:19px;max-width:38ch}
+.toastie .framed{border-color:var(--ink)}
+.also{margin:4px 0 0;padding:0;list-style:none;border-top:2px solid var(--ink)}
+.also li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--paper-rule);font-weight:700}
+.also li span{font-weight:400;color:var(--paper-2);text-align:right}
+.toastie .btn{border-color:var(--ink);color:var(--ink);align-self:flex-start}
+.toastie .btn:hover{background:var(--ink);color:var(--white)}
+@media (max-width:900px){.toastie .media,.toastie .copy{grid-column:1/-1}.toastie .copy{margin-top:32px}}
+
+/* menu: the crate */
+.menu-top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);margin-bottom:clamp(32px,5vw,56px);align-items:end}
+.menu-top .sec-head{grid-column:1/span 6}
+.menu-top .key{grid-column:9/span 4;font-size:14px;color:var(--mute)}
+.crate{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1.5px solid var(--pink);border-left:1.5px solid var(--pink)}
+.cell{overflow-wrap:break-word;border-right:1.5px solid var(--pink);border-bottom:1.5px solid var(--pink);padding:0 clamp(18px,2vw,28px) 26px;min-width:0}
+.cell h3{display:flex;align-items:center;gap:12px;font:400 20px/1.1 var(--display);text-transform:uppercase;padding:22px 0 14px;margin:0 0 4px;border-bottom:1px solid #2C2C2C}
+.cell h3 i{width:22px;height:10px;flex:none;background:var(--c)}
+.item{padding:12px 0;border-bottom:1px solid #222}
+.item:last-child{border-bottom:0}
+.item .name{font-weight:700;font-size:17px}
+.item .mark{font-size:11.5px;font-weight:700;letter-spacing:.08em;color:var(--pink);margin-left:8px;vertical-align:1px}
+.item .desc{font-size:15px;line-height:1.5;color:var(--soft);margin-top:2px}
+@media (max-width:1000px){.crate{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.crate{grid-template-columns:1fr}.menu-top .sec-head,.menu-top .key{grid-column:1/-1}.menu-top .key{margin-top:14px}}
+.menu-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;margin-top:22px;font-size:14.5px;color:var(--mute)}
+
+/* love */
+.love .copy{grid-column:1/span 5;display:flex;flex-direction:column;gap:20px}
+.love .copy p{font-size:18px;color:var(--soft);max-width:44ch}
+.love .copy p.first{font-size:clamp(21px,2.1vw,25px);line-height:1.4;color:var(--white)}
+.love ul.facts{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #2A2A2A}
+.love ul.facts li{padding:14px 0;border-bottom:1px solid #2A2A2A;font-weight:700;font-size:16px}
+.love ul.facts li::before{content:"";display:inline-block;width:8px;height:8px;margin-right:10px;background:var(--c);vertical-align:1px}
+.pics{grid-column:7/span 6;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(12px,1.6vw,20px);align-items:start}
+.pics .a{grid-column:1/span 4}
+.pics .b{grid-column:5/span 2;margin-top:clamp(40px,8vw,120px)}
+.pics .c{grid-column:2/span 3}
+.pics .note{grid-column:5/span 2;font-size:13px;line-height:1.45;color:var(--mute);align-self:end}
+@media (max-width:900px){.love .copy,.pics{grid-column:1/-1}.pics{margin-top:40px}}
+
+/* visit */
+.visit{border-top:1px solid #222}
+.visit .sec-head{grid-column:1/span 4}
+.visit .body{grid-column:6/span 7;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px)}
+table.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.hours caption{text-align:left;margin-bottom:10px;color:var(--pink)}
+table.hours th,table.hours td{text-align:left;font-weight:400;padding:11px 0;border-bottom:1px solid #2A2A2A;font-size:16px}
+table.hours td{text-align:right}
+table.hours tr.today th,table.hours tr.today td{font-weight:700;color:var(--y)}
+.where dl{margin:0;display:grid;gap:18px}
+.where dt{color:var(--pink);margin-bottom:4px}
+.where dd{margin:0;font-size:16px}
+.where .btn{margin-top:22px}
+@media (max-width:900px){.visit .sec-head,.visit .body{grid-column:1/-1}.visit .body{grid-template-columns:1fr;margin-top:28px}}
+
+footer{padding-block:40px 120px;font-size:14px;color:var(--mute)}
+footer .wrap{display:grid;grid-template-columns:auto 1fr;gap:20px 32px;align-items:start}
+footer img{width:84px;height:84px}
+footer .cols{display:flex;flex-wrap:wrap;gap:12px 36px;justify-content:space-between}
+footer .cols p{max-width:52ch}
+@media (max-width:640px){footer .wrap{grid-template-columns:1fr}}
+
+/* mobile action bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:1.2fr 1.2fr 1fr;background:var(--ink);border-top:1.5px solid var(--pink);padding-bottom:env(safe-area-inset-bottom,0px)}
+.mbar a{padding:16px 6px;text-align:center;text-decoration:none;font-weight:700;font-size:15px}
+.mbar a + a{border-left:1px solid #2C2C2C}
+.mbar a.solid{background:var(--white);color:var(--ink)}
+@media (max-width:820px){.mbar{display:grid}}
+
+@media (prefers-reduced-motion:no-preference){.ph img{animation:fade .5s ease both}@keyframes fade{from{opacity:0}}}
+</style>
+</head>
+<body>
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of Milk Crate Waterloo. Preview photos are licensed stock; logo, colours and details are taken from your Instagram, Uber Eats menu and Google listing.</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="logo.jpg" alt="Milk Crate logo" width="52" height="52"><span>Meriton Retail<br>Waterloo</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-m" href="#menu">Menu</a>
+      <a class="hide-m" href="#toastie">Toasties</a>
+      <a class="hide-m" href="#visit">Hours &amp; map</a>
+      <a class="btn small" href="tel:+61407021116">Call 0407 021 116</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap grid">
+      <div class="hero-text">
+        <p class="label kicker">Hello, Waterloo · Crystal St</p>
+        <h1><span class="line">Fresh coffee.</span><span class="line">Fresh food.</span><span class="line striped">Fresh start.</span></h1>
+        <p class="lede">Your quick breakfast spot. Toasties, wraps, B&amp;Es and coffee, ready fast. Grab &amp; go menu every day.</p>
+        <p class="status" id="status"><span class="dot"></span><span id="status-text">Mon to Fri 6am to 3pm · Sat &amp; Sun 6:30am to 3pm</span></p>
+        <div class="actions">
+          <a class="btn solid" href="#menu">See the menu</a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Milk+Crate+Waterloo+1+Crystal+St+Waterloo+NSW+2017" target="_blank" rel="noopener">Directions</a>
+        </div>
+        <p class="early"><b>6am</b><span>Doors open at six on weekdays, half past on weekends. Coffee is on while Waterloo wakes up.</span></p>
+      </div>
+      <div class="hero-media">
+        <div class="framed"><figure class="ph" data-shot="hero" style="--ratio:120%"></figure></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bands" aria-hidden="true"></div>
+  <aside class="deal" aria-label="Weekday coffee deal">
+    <div class="wrap">
+      <p class="label">Grab &amp; go · Weekdays</p>
+      <p class="big">Add a small coffee for just $3.80 on weekdays.</p>
+      <p class="small">With any grab &amp; go, Monday to Friday. Toastie in one hand, coffee in the other.</p>
+    </div>
+  </aside>
+
+  <section class="toastie" id="toastie">
+    <div class="wrap grid">
+      <div class="media"><div class="framed"><figure class="ph" data-shot="toastie" style="--ratio:100%"></figure></div></div>
+      <div class="copy">
+        <p class="label">The one to try</p>
+        <h2>Cheesy Kimchi Ramen Toastie</h2>
+        <p class="what">Three cheeses, kimchi and ramen pressed into sourdough, finished with shaved parmesan.</p>
+        <ul class="also" aria-label="More toasties and jaffles">
+          <li>Bolo Toastie <span>Toastie</span></li>
+          <li>Magic Mushroom Toastie <span>Toastie</span></li>
+          <li>Cheeky Jaffle <span>Jaffle</span></li>
+          <li>Banana, Peanut Butter &amp; Jelly <span>Jaffle</span></li>
+        </ul>
+        <a class="btn" href="#menu">Full menu</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="menu-top">
+        <div class="sec-head">
+          <p class="label">The crate</p>
+          <h2>What's in it</h2>
+          <p>Everything's made to grab and go, or stay a while out front.</p>
+        </div>
+        <p class="key">V vegetarian. Ask us about anything else on your mind; we're happy to help.</p>
+      </div>
+      <div class="crate" id="crate"></div>
+      <div class="menu-foot"><span>Delivery on Uber Eats.</span><span>Specials go up on <a href="https://www.instagram.com/milkcratewaterloosydney/" target="_blank" rel="noopener">our Instagram</a>.</span></div>
+    </div>
+  </section>
+
+  <div class="bands thin" aria-hidden="true"></div>
+
+  <section class="love" id="love">
+    <div class="wrap grid">
+      <div class="copy">
+        <div class="sec-head"><p class="label">Where love lives</p><h2>Everyone's welcome</h2></div>
+        <p class="first">A cafe in Meriton Retail Waterloo with a rainbow on the sign. Fresh coffee, fresh food, and a fresh start to your day.</p>
+        <p>Bring the dog, bring the kids, grab a seat outside or take it to go. We appreciate you.</p>
+        <ul class="facts">
+          <li style="--c:var(--r)">Dogs welcome</li>
+          <li style="--c:var(--o)">Outdoor seating</li>
+          <li style="--c:var(--g)">Kid friendly</li>
+          <li style="--c:var(--b)">Vegetarian options</li>
+        </ul>
+      </div>
+      <div class="pics">
+        <figure class="ph a" data-shot="avo" style="--ratio:110%"></figure>
+        <figure class="ph b" data-shot="coffee" style="--ratio:130%"></figure>
+        <figure class="ph c" data-shot="juice" style="--ratio:100%"></figure>
+        <p class="note">Photos shown are placeholders: we'd swap in your own shots.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <p class="label">Find us</p>
+        <h2>Open from 6am</h2>
+        <p>Inside Meriton Retail Waterloo, on Crystal St.</p>
+      </div>
+      <div class="body">
+        <table class="hours" id="hours">
+          <caption class="label">Hours</caption>
+          <tr data-day="1"><th>Monday</th><td>6am – 3pm</td></tr>
+          <tr data-day="2"><th>Tuesday</th><td>6am – 3pm</td></tr>
+          <tr data-day="3"><th>Wednesday</th><td>6am – 3pm</td></tr>
+          <tr data-day="4"><th>Thursday</th><td>6am – 3pm</td></tr>
+          <tr data-day="5"><th>Friday</th><td>6am – 3pm</td></tr>
+          <tr data-day="6"><th>Saturday</th><td>6:30am – 3pm</td></tr>
+          <tr data-day="0"><th>Sunday</th><td>6:30am – 3pm</td></tr>
+        </table>
+        <div class="where">
+          <dl>
+            <div><dt class="label">Address</dt><dd>Unit 9, 1 Crystal St<br>Meriton Retail Waterloo<br>Waterloo NSW 2017</dd></div>
+            <div><dt class="label">Phone</dt><dd><a href="tel:+61407021116">0407 021 116</a></dd></div>
+            <div><dt class="label">Instagram</dt><dd><a href="https://www.instagram.com/milkcratewaterloosydney/" target="_blank" rel="noopener">@milkcratewaterloosydney</a></dd></div>
+          </dl>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Milk+Crate+Waterloo+1+Crystal+St+Waterloo+NSW+2017" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="bands thin" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <img src="logo.jpg" alt="Milk Crate logo" width="84" height="84">
+    <div class="cols">
+      <p>Milk Crate Waterloo · Unit 9, 1 Crystal St, Waterloo NSW 2017 · <a href="tel:+61407021116">0407 021 116</a><br>Fresh coffee. Fresh food. Fresh start.</p>
+      <p><span id="credits">Photos via Pexels</span>. Concept preview by Restauranting.</p>
+    </div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a class="solid" href="tel:+61407021116">Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Milk+Crate+Waterloo+1+Crystal+St+Waterloo+NSW+2017" target="_blank" rel="noopener">Directions</a>
+  <a href="https://www.instagram.com/milkcratewaterloosydney/" target="_blank" rel="noopener">Instagram</a>
+</nav>
+
+<script>
+/* Menu from Uber Eats + Instagram. No prices published, so none shown. [name, description, mark] */
+const MENU = [
+  {t:"B&Es, wraps & bagels", c:"--r", items:[
+    ["Our BAE","The fancy B&E. Crispy bacon, egg, avocado, spinach, chilli jam, aioli and cheese.",""],
+    ["Classic B&E","Bacon, two eggs, hash brown, cheese and BBQ sauce.",""],
+    ["Breakkie Wrap","Two eggs, bacon, cheese and BBQ.",""],
+    ["Chicken Avo Wrap","Grilled chicken, avocado, spinach, cheese and aioli.",""],
+    ["Big Boss Bagel","",""],
+    ["Grilled Halloumi Burger Stack","",""]]},
+  {t:"Plates & bowls", c:"--o", items:[
+    ["Avocado Toast","Sourdough, cherry tomatoes, feta, poached eggs and balsamic.","V"],
+    ["The Olivia 2.0","Three chilli scrambled eggs, green shallot, grilled asparagus and tomatoes on brioche loaf.","V"],
+    ["Big Breakky","",""],
+    ["Yoghurt & Granola","With fruit, chia and honey.","V"]]},
+  {t:"Toasties", c:"--y", items:[
+    ["Cheesy Kimchi Ramen Toastie","Three cheeses, kimchi, ramen and shaved parmesan on sourdough.",""],
+    ["Bolo Toastie","",""],
+    ["Magic Mushroom Toastie","",""]]},
+  {t:"Jaffles", c:"--g", items:[
+    ["Cheeky Jaffle","",""],
+    ["Banana, Peanut Butter & Jelly Jaffle","","V"]]},
+  {t:"Juice, shakes & smoothies", c:"--b", items:[
+    ["Beets By Danks","",""],
+    ["Fresh OJ","",""],
+    ["Shakes & smoothies","",""]]},
+  {t:"Coffee, tea & sweet", c:"--p", items:[
+    ["Coffee & tea","Small coffee $3.80 with any grab & go on weekdays.",""],
+    ["Muffin","Mystery flavour. Ask us what it is today.",""],
+    ["Sweet treats","",""]]}
+];
+/* [CHECK] Beets By Danks and sweet treats: get descriptions from owner. */
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const crate = document.getElementById("crate");
+for (const s of MENU) {
+  const cell = el("div", "cell"); cell.style.setProperty("--c", "var(" + s.c + ")");
+  const h = el("h3"); h.append(el("i"), document.createTextNode(s.t)); cell.append(h);
+  for (const [n, d, m] of s.items) {
+    const it = el("div", "item"), name = el("div", "name", n);
+    if (m) { const k = el("span", "mark", m); k.title = "Vegetarian"; name.append(k); }
+    it.append(name); if (d) it.append(el("p", "desc", d));
+    cell.append(it);
+  }
+  crate.append(cell);
+}
+
+/* open-now in Sydney time. Minutes from midnight. */
+const HOURS = {0:[[390,900]],1:[[360,900]],2:[[360,900]],3:[[360,900]],4:[[360,900]],5:[[360,900]],6:[[390,900]]};
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m/60), mm = m%60, h12 = ((h+11)%12)+1; return h12 + (mm ? ":" + String(mm).padStart(2,"0") : "") + (h >= 12 ? "pm" : "am"); };
+function sydneyNow(){
+  const p = new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => (p.find(x => x.type === k) || {}).value;
+  return {day: DAYS.indexOf(g("weekday")), mins: (+g("hour") % 24) * 60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = sydneyNow(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const box = document.getElementById("status"), txt = document.getElementById("status-text");
+  const cur = HOURS[day].find(([a,b]) => mins >= a && mins < b);
+  box.classList.toggle("is-open", !!cur);
+  if (cur) { txt.textContent = "Open now, until " + fmt(cur[1]); return; }
+  const next = HOURS[day].find(([a]) => mins < a);
+  if (next) { txt.textContent = "Closed · opens " + fmt(next[0]) + " today"; return; }
+  for (let i = 1; i <= 7; i++) { const d = (day+i)%7; if (HOURS[d].length) { txt.textContent = "Closed · opens " + (i === 1 ? "tomorrow" : DAYS[d]) + " " + fmt(HOURS[d][0][0]); return; } }
+}
+tick(); setInterval(tick, 60000);
+
+/* Licensed stock (Pexels licence), hotlinked from the Pexels CDN with srcset. Placeholders until the owner's photos. */
+const PHOTOS = {
+  hero:   {id:6529599,  alt:"Bacon and egg sandwich on sourdough, sitting on a wooden crate", by:"RDNE Stock project", eager:true, sizes:"(max-width:900px) 100vw, 40vw"},
+  toastie:{id:23531332, alt:"A freshly pressed grilled cheese toastie, cheese melting out the side", by:"Anthony Rahayel", sizes:"(max-width:900px) 100vw, 50vw"},
+  avo:    {id:7936964,  alt:"Avocado toast topped with a poached egg", by:"Nicola Barts", sizes:"(max-width:900px) 66vw, 33vw"},
+  coffee: {id:36851643, alt:"Flat white with a heart in the latte art", by:"Anne-Marie", sizes:"(max-width:900px) 33vw, 16vw"},
+  juice:  {id:17612820, alt:"Fresh orange juice over ice with a whole orange, on black", by:"Shameel Mukkath", sizes:"(max-width:900px) 50vw, 25vw"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = p.sizes;
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 900);
+  img.addEventListener("error", () => img.remove());
+  f.append(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ");
+</script>
+</body>
+</html>

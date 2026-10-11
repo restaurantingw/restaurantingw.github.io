@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Booth Waterloo · All-day brunch &amp; Zest coffee, Bourke St</title>
+<meta name="description" content="The Booth, 834 Bourke Street, Waterloo. All-day brunch, coffee by Zest, signature nitro drinks and a table for everyone. Open 7 days.">
+<meta name="theme-color" content="#0E4A3B">
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400;1,7..72,500&family=Red+Hat+Text:wght@400;500;600&display=swap">
+<!--
+  Creative brief (concept): "A table for everyone".
+  Brand source: logo.jpg (their Instagram profile picture, @thebooth.waterloo): forest-green circle, white brush-script BW monogram, "MADE TO GATHER" in sand spaced caps.
+  Palette in their roles: forest green #0E4A3B primary, sand #C8B48C secondary lines/labels, cream #F6F1E6 ground, white, pandan #7DB46C as a tiny accent only.
+  Type: Literata (warm bookish serif for headings, never imitating the brush monogram) + Red Hat Text (spaced caps labels like their "MADE TO GATHER", and body).
+  Motif: booth-back arches on photo frames and stitched (dashed) upholstery lines on the specials board.
+  Open questions:
+  - Prices for brunch, specials and drinks not visible: shown without prices. Ask owner for the full menu.
+  - "Reserve a table" and "Order online" exist on Google; platform unknown. Linked to Call + Instagram until owner confirms the booking/ordering links.
+  - Specials rotate; current list taken from recent Instagram posts.
+  - Public holiday hours assumed same as the usual day.
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"The Booth Waterloo","alternateName":"The Booth","slogan":"Made To Gather","servesCuisine":["Cafe","All-day brunch"],"telephone":"+61 2 8018 5114","acceptsReservations":true,
+"address":{"@type":"PostalAddress","streetAddress":"834 Bourke Street","addressLocality":"Waterloo","addressRegion":"NSW","postalCode":"2017","addressCountry":"AU"},
+"sameAs":["https://www.instagram.com/thebooth.waterloo/"],
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:30","closes":"15:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"07:00","closes":"15:00"}],
+"hasMenu":{"@type":"Menu","name":"The Booth menu","hasMenuSection":[
+{"@type":"MenuSection","name":"Wraps & Rolls","hasMenuItem":[
+{"@type":"MenuItem","name":"Bacon & Egg","offers":{"@type":"Offer","price":"14","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Kransky & Egg","offers":{"@type":"Offer","price":"16","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Breakkie","offers":{"@type":"Offer","price":"21","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Chipotle BBQ Mushroom","offers":{"@type":"Offer","price":"18","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Teriyaki Chicken","offers":{"@type":"Offer","price":"18","priceCurrency":"AUD"}}]},
+{"@type":"MenuSection","name":"All Day Brunch","hasMenuItem":[
+{"@type":"MenuItem","name":"King prawn linguine"},{"@type":"MenuItem","name":"Kaya toast"},{"@type":"MenuItem","name":"Biscoff pancakes"},{"@type":"MenuItem","name":"Beef rendang benedict"}]}]}}
+</script>
+<style>
+:root{
+  --green:#0E4A3B; --green-2:#0A3A2E; --sand:#C8B48C; --sand-ink:#8A7550; --cream:#F6F1E6; --cream-2:#EDE5D3; --white:#FFFFFF;
+  --ink:#16302A; --ink-2:#4C5A54; --pandan:#7DB46C;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --sans:"Red Hat Text","Helvetica Neue",Arial,sans-serif;
+  --gut:clamp(16px,4vw,56px);
+  --arch:999px 999px 6px 6px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+p,h1,h2,h3,figure{margin:0}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2.2vw,32px)}
+.label{font:600 12px/1.3 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--sand-ink)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em}
+h2{font-size:clamp(30px,4vw,44px);line-height:1.1;margin:.35em 0 .45em}
+h2 em,h1 em{font-style:italic;font-weight:400}
+.lede{font-size:19px;line-height:1.55;color:var(--ink-2);max-width:34em}
+section{padding:clamp(64px,9vw,120px) 0}
+
+/* concept note */
+.preview{background:var(--green-2);color:#CFC7B3;font-size:13px;line-height:1.45;padding:9px var(--gut)}
+.preview b{color:#fff;font-weight:500}
+
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:var(--cream);border-bottom:1px solid var(--cream-2)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.brand img{width:46px;height:46px;border-radius:50%;flex:none}
+.brand span{font:600 12px/1.25 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--green);white-space:nowrap}
+.brand small{display:block;color:var(--sand-ink);font-weight:500}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px}
+.nav a{text-decoration:none}
+.nav a:not(.btn):hover{color:var(--sand-ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px/1 var(--sans);padding:15px 22px;border-radius:999px;border:1.5px solid currentColor;text-decoration:none;transition:background .15s,color .15s,border-color .15s;white-space:nowrap}
+.btn.fill{background:var(--green);border-color:var(--green);color:var(--white)}
+.btn.fill:hover{background:var(--green-2)}
+.btn.sand{background:var(--sand);border-color:var(--sand);color:var(--green-2)}
+.btn.sand:hover{background:var(--cream)}
+.btn.ghost-light{color:var(--cream)}
+.btn.ghost-light:hover{background:var(--cream);color:var(--green)}
+
+/* hero */
+.hero{background:var(--green);color:var(--cream);padding:clamp(48px,7vw,96px) 0 0;overflow:hidden}
+.hero .grid{align-items:end}
+.hero-copy{grid-column:1 / span 6;padding-bottom:clamp(48px,7vw,96px)}
+.hero .label{color:var(--sand)}
+.hero h1{font-size:clamp(40px,5.6vw,68px);line-height:1.04;margin:22px 0 24px;color:var(--white)}
+.hero h1 em{color:var(--sand)}
+.hero p.lede{color:#D8D2C2}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:30px;font:500 15px/1.3 var(--sans);padding:10px 16px 10px 14px;border:1px solid rgba(200,180,140,.45);border-radius:999px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--sand);flex:none}
+.is-open .dot{background:var(--pandan);box-shadow:0 0 0 4px rgba(125,180,108,.22)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero-photo{grid-column:8 / span 5;aspect-ratio:4/5;border-radius:var(--arch);overflow:hidden;background:var(--green-2);border:10px solid var(--green-2);border-bottom:0;margin-bottom:-1px}
+.hero-photo img{border-radius:999px 999px 0 0}
+.seat{height:18px;background:var(--green-2)}
+
+/* photo frames */
+.ph{position:relative;overflow:hidden;background:var(--cream-2)}
+.ph.arch{border-radius:var(--arch)}
+figcaption{font-size:14px;color:var(--ink-2);margin-top:12px}
+
+/* specials board */
+.board-wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2.2vw,32px);align-items:start}
+.board-intro{grid-column:1 / span 5}
+.board{grid-column:7 / span 6;background:var(--green);color:var(--cream);border-radius:28px;padding:10px}
+.board-in{border:1.5px dashed rgba(200,180,140,.6);border-radius:20px;padding:clamp(26px,3.6vw,44px)}
+.board .label{color:var(--sand)}
+.board ol{list-style:none;margin:20px 0 0;padding:0}
+.board li{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid rgba(200,180,140,.3);font:400 clamp(21px,2.3vw,26px)/1.25 var(--serif)}
+.board li:first-child{border-top:0}
+.board li small{font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--sand);flex:none;width:2.2em}
+.board li i{display:block;font:400 15px/1.45 var(--sans);font-style:normal;color:#C9C3B2;margin-top:4px}
+.board .note{font-size:14px;color:#C9C3B2;margin-top:18px}
+
+/* classics */
+.classics{background:var(--white)}
+.classics-head{grid-column:1 / span 7}
+.c-items{grid-column:1 / -1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2.2vw,32px);row-gap:48px;margin-top:48px}
+.c-item h3{font-size:24px;line-height:1.2;margin:18px 0 8px}
+.c-item p{color:var(--ink-2);max-width:32em}
+.c-item .ph{aspect-ratio:4/5}
+.c1{grid-column:1 / span 5}
+.c2{grid-column:7 / span 4;margin-top:120px}
+.c3{grid-column:1 / span 4}
+.c3,.c4{border-top:1.5px solid var(--sand);padding-top:16px}
+.c3 h3,.c4 h3{font-size:22px;margin:0 0 8px}
+.c4{grid-column:6 / span 4;align-self:end}
+.c-text{grid-column:10 / span 3;align-self:end;border-top:1.5px solid var(--sand);padding-top:16px}
+.c-text h3{font-size:22px;margin:0 0 8px}
+.photo-note{grid-column:1 / -1;font-size:14px;color:var(--sand-ink);margin-top:8px}
+
+/* menu */
+.menu-head{grid-column:1 / span 6}
+.menu-aside{grid-column:8 / span 5;align-self:end;color:var(--ink-2)}
+.menu{margin-top:56px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2.2vw,32px);row-gap:56px}
+.course{grid-column:span 6}
+.course h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:26px;padding-bottom:12px;border-bottom:1.5px solid var(--green);margin-bottom:6px}
+.course h3 span{font:600 11.5px/1.3 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--sand-ink);text-align:right}
+.item{padding:14px 0;border-bottom:1px solid var(--cream-2)}
+.row{display:flex;align-items:baseline;gap:10px}
+.name{font:500 18px/1.3 var(--serif)}
+.tag{font:600 10.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--green);background:#E3EEDC;padding:4px 7px;border-radius:999px;margin-left:8px;vertical-align:2px;white-space:nowrap}
+.lead{flex:1;border-bottom:1px dotted var(--sand);transform:translateY(-4px);min-width:16px}
+.price{font:500 17px/1 var(--sans);font-variant-numeric:tabular-nums}
+.desc{font-size:15.5px;color:var(--ink-2);margin-top:4px;max-width:36em}
+.also{grid-column:1 / -1;font-size:15px;color:var(--ink-2);border-top:1.5px solid var(--sand);padding-top:18px}
+.also b{font-weight:600;color:var(--ink)}
+
+/* coffee */
+.coffee{background:var(--green);color:var(--cream)}
+.coffee .label{color:var(--sand)}
+.coffee h2{color:var(--white)}
+.coffee .lede{color:#D8D2C2}
+.coffee-copy{grid-column:1 / span 6;align-self:center}
+.coffee-photo{grid-column:8 / span 5;aspect-ratio:4/5;border:10px solid var(--green-2)}
+.drinks{list-style:none;padding:0;margin:32px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.drinks li{padding:14px 0;border-top:1px solid rgba(200,180,140,.35);font:400 19px/1.3 var(--serif)}
+.drinks li span{display:block;font:400 14px/1.4 var(--sans);color:#BDB6A3;margin-top:3px}
+.drinks .pandan{color:var(--white)}
+.drinks .pandan::after{content:"New";font:600 10.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--green-2);background:var(--pandan);padding:4px 7px;border-radius:999px;margin-left:10px;vertical-align:3px}
+
+/* visit */
+.visit-copy{grid-column:1 / span 5}
+.visit-photo{grid-column:8 / span 5;align-self:center}
+.hours{width:100%;border-collapse:collapse;margin-top:26px;font-size:16px}
+.hours td{padding:11px 0;border-bottom:1px solid var(--cream-2)}
+.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr.today td{font-weight:600;color:var(--green)}
+.hours tr.today td:first-child::after{content:"Today";font:600 10.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;background:var(--green);color:var(--cream);padding:4px 7px;border-radius:999px;margin-left:10px;vertical-align:2px}
+.facts{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.facts li{font-size:14px;border:1px solid var(--sand);border-radius:999px;padding:7px 14px}
+.addr{font:400 24px/1.3 var(--serif);margin-top:8px}
+.visit-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.reserve{margin-top:22px;font-size:15.5px;color:var(--ink-2)}
+
+/* footer */
+footer{background:var(--green-2);color:#CFC7B3;padding:56px 0 calc(48px + 76px);font-size:14.5px}
+footer .grid{row-gap:28px}
+.f-brand{grid-column:1 / span 4;display:flex;gap:16px;align-items:center}
+.f-brand img{width:84px;height:84px;border-radius:50%;flex:none}
+.f-brand p{font:600 12px/1.5 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--sand)}
+.f-col{grid-column:span 3}
+.f-col a{text-decoration:none}
+.f-col a:hover{color:var(--white)}
+.f-small{grid-column:1 / -1;border-top:1px solid rgba(200,180,140,.25);padding-top:20px;font-size:13px;color:#9FA79F}
+
+/* mobile action bar */
+.actionbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:repeat(3,1fr);background:var(--green);border-top:1px solid var(--green-2);padding-bottom:env(safe-area-inset-bottom,0px)}
+.actionbar a{display:flex;align-items:center;justify-content:center;height:58px;color:var(--cream);font:600 15px/1 var(--sans);text-decoration:none;border-left:1px solid rgba(200,180,140,.25)}
+.actionbar a:first-child{border-left:0;background:var(--sand);color:var(--green-2)}
+
+@media (max-width:960px){
+  .nav .hide-m{display:none}
+  .hero-copy{grid-column:1 / -1;padding-bottom:40px}
+  .hero-photo{grid-column:2 / span 10;aspect-ratio:1/1}
+  .board-intro,.board{grid-column:1 / -1}
+  .board{margin-top:32px}
+  .classics-head{grid-column:1 / -1}
+  .c1{grid-column:1 / span 6}.c2{grid-column:7 / span 6;margin-top:64px}
+  .c3{grid-column:1 / span 6}.c4{grid-column:7 / span 6}.c-text{grid-column:1 / -1}
+  .menu-head,.menu-aside{grid-column:1 / -1}.menu-aside{margin-top:12px}
+  .course{grid-column:1 / -1}
+  .coffee-copy,.coffee-photo{grid-column:1 / -1}.coffee-photo{margin-top:40px;aspect-ratio:1/1}
+  .visit-copy,.visit-photo{grid-column:1 / -1}.visit-photo{margin-top:40px;max-width:520px}
+  .f-brand{grid-column:1 / -1}.f-col{grid-column:span 6}
+}
+@media (max-width:640px){
+  body{font-size:16.5px}
+  .nav .btn{padding:11px 16px;font-size:14px}
+  .brand span{font-size:11px;letter-spacing:.16em}
+  .hero-photo{grid-column:1 / -1}
+  .c1,.c2,.c3,.c4{grid-column:1 / -1;margin-top:0}
+  .drinks{grid-template-columns:1fr}
+  .f-col{grid-column:1 / -1}
+  .actionbar{display:grid}
+  .hero-actions .btn{flex:1}
+}
+@media (max-width:380px){.brand small{display:none}}
+</style>
+</head>
+<body>
+
+<div class="preview"><b>Concept preview by Restauranting.</b> Not the official website of The Booth Waterloo. Preview photos are licensed stock; logo, colours and details are taken from your Instagram, menu and Google listing.</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Booth Waterloo, home">
+      <img src="logo.jpg" alt="The Booth Waterloo logo" width="46" height="46">
+      <span>The Booth<small>Waterloo</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-m" href="#specials">On the board</a>
+      <a class="hide-m" href="#menu">Menu</a>
+      <a class="hide-m" href="#coffee">Coffee</a>
+      <a class="hide-m" href="#visit">Visit</a>
+      <a class="btn fill" href="tel:+61280185114">Call to book</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap grid">
+    <div class="hero-copy">
+      <p class="label">All day brunch · Made to gather</p>
+      <h1 id="h1">Come by for breakfast, <em>stay for lunch.</em></h1>
+      <p class="lede">All-day brunch, good coffee and a table for everyone, on Bourke Street in Waterloo. Catch up over coffee or settle in for a little longer. There's always room at The Booth.</p>
+      <div class="status" id="status"><span class="dot"></span><span id="open-text">Open 7 days</span></div>
+      <div class="hero-actions">
+        <a class="btn sand" href="#menu">See the menu</a>
+        <a class="btn ghost-light" href="https://www.google.com/maps/search/?api=1&amp;query=The+Booth+834+Bourke+Street+Waterloo+NSW+2017" target="_blank" rel="noopener">Directions</a>
+      </div>
+    </div>
+    <figure class="hero-photo ph" data-shot="hero"></figure>
+  </div>
+  <div class="seat" aria-hidden="true"></div>
+</section>
+
+<section id="specials" aria-labelledby="h-specials">
+  <div class="wrap board-wrap">
+    <div class="board-intro">
+      <p class="label">Specials board</p>
+      <h2 id="h-specials">What's on the board <em>right now.</em></h2>
+      <p class="lede">Alongside the all-day menu, the kitchen keeps a rotating board. These are the ones we've been plating lately, next to our signature king prawn linguine.</p>
+    </div>
+    <div class="board" aria-label="Current specials">
+      <div class="board-in">
+        <p class="label">The Booth · Specials</p>
+        <ol>
+          <li><small>01</small><span>King prawn linguine<i>Our signature.</i></span></li>
+          <li><small>02</small><span>Beef rendang benedict</span></li>
+          <li><small>03</small><span>Soft shell crab croissant</span></li>
+          <li><small>04</small><span>Soy maple glazed salmon</span></li>
+          <li><small>05</small><span>Steak sandwich</span></li>
+        </ol>
+        <p class="note">Specials change. Ask at the counter, or check <a href="https://www.instagram.com/thebooth.waterloo/" target="_blank" rel="noopener">@thebooth.waterloo</a> for what's new.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="classics" aria-labelledby="h-classics">
+  <div class="wrap grid">
+    <div class="classics-head">
+      <p class="label">The Booth upgrade</p>
+      <h2 id="h-classics">The classics, but <em>not as you know them.</em></h2>
+      <p class="lede">Your favourite brunch staples, given a little Booth upgrade.</p>
+    </div>
+    <div class="c-items">
+      <article class="c-item c1">
+        <div class="ph arch" data-shot="pancakes"></div>
+        <h3>Pancakes, the full breakfast way</h3>
+        <p>Two fluffy pancakes with fried eggs, bacon, baked beans, maple and whipped honey butter.</p>
+      </article>
+      <article class="c-item c2">
+        <div class="ph arch" data-shot="kaya"></div>
+        <h3>Kaya toast</h3>
+        <p>Sweet coconut jam on crisp toast, with a chunk of butter.</p>
+      </article>
+      <article class="c-item c3">
+        <h3>Poached eggs, upgraded</h3>
+        <p>Sautéed spinach, balsamic cherry tomatoes, pickled radish and crispy lotus root chips.</p>
+      </article>
+      <article class="c-item c4">
+        <h3>Biscoff pancakes</h3>
+        <p>Buttermilk pancakes, biscoff mascarpone and crumb, seasonal fruit, vanilla ice cream and warm biscoff sauce.</p>
+      </article>
+      <div class="c-text">
+        <h3>Beef rendang benedict</h3>
+        <p>Beef rendang on a brunch benny. On the specials board.</p>
+      </div>
+      <p class="photo-note">Photos shown are placeholders: we'd swap in your own shots.</p>
+    </div>
+  </div>
+</section>
+
+<section id="menu" aria-labelledby="h-menu">
+  <div class="wrap">
+    <div class="grid">
+      <div class="menu-head">
+        <p class="label">The menu</p>
+        <h2 id="h-menu">All day brunch, <em>wraps &amp; rolls.</em></h2>
+      </div>
+      <p class="menu-aside">Brunch is served all day, every day we're open, and every wrap is toasted.</p>
+    </div>
+    <div class="menu" id="courses"></div>
+  </div>
+</section>
+
+<section class="coffee" id="coffee" aria-labelledby="h-coffee">
+  <div class="wrap grid">
+    <div class="coffee-copy">
+      <p class="label">Coffee by Zest</p>
+      <h2 id="h-coffee">Good coffee, <em>and something colder.</em></h2>
+      <p class="lede">We pour Zest Coffee's Signature Blend, brew Tea by Zest, and keep a line-up of signature nitro drinks for the warmer days.</p>
+      <ul class="drinks">
+        <li>Signature Blend<span>Espresso and milk coffee, by Zest</span></li>
+        <li>Signature nitro drinks<span>Ask what's pouring</span></li>
+        <li class="pandan">Pandan cold foam<span>Our newest drink</span></li>
+        <li>Chilled coffee<span>Zest, over ice</span></li>
+        <li>Tea by Zest<span>From Zest</span></li>
+        <li>Juice, shakes &amp; smoothies<span>Fresh juice, milkshakes, smoothies</span></li>
+      </ul>
+    </div>
+    <figure class="coffee-photo ph arch" data-shot="iced"></figure>
+  </div>
+</section>
+
+<section id="visit" aria-labelledby="h-visit">
+  <div class="wrap grid">
+    <div class="visit-copy">
+      <p class="label">Made to gather</p>
+      <h2 id="h-visit">A table for <em>everyone.</em></h2>
+      <p class="addr">834 Bourke Street<br>Waterloo NSW 2017</p>
+      <table class="hours" id="hours" aria-label="Opening hours">
+        <tr data-day="1"><td>Monday</td><td>6:30am – 3pm</td></tr>
+        <tr data-day="2"><td>Tuesday</td><td>6:30am – 3pm</td></tr>
+        <tr data-day="3"><td>Wednesday</td><td>6:30am – 3pm</td></tr>
+        <tr data-day="4"><td>Thursday</td><td>6:30am – 3pm</td></tr>
+        <tr data-day="5"><td>Friday</td><td>6:30am – 3pm</td></tr>
+        <tr data-day="6"><td>Saturday</td><td>7am – 3pm</td></tr>
+        <tr data-day="0"><td>Sunday</td><td>7am – 3pm</td></tr>
+      </table>
+      <ul class="facts">
+        <li>Open public holidays</li>
+        <li>Dogs welcome</li>
+        <li>Outdoor seating</li>
+        <li>Brunch all day</li>
+      </ul>
+      <p class="reserve">Coming with a group? Give us a call or send us a message on Instagram and we'll save you a table.</p>
+      <div class="visit-actions">
+        <a class="btn fill" href="tel:+61280185114">(02) 8018 5114</a>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=The+Booth+834+Bourke+Street+Waterloo+NSW+2017" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+    <figure class="visit-photo">
+      <div class="ph arch" data-shot="room" style="aspect-ratio:4/5"></div>
+    </figure>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div class="f-brand">
+      <img src="logo.jpg" alt="The Booth Waterloo logo" width="84" height="84" loading="lazy">
+      <p>The Booth<br>Waterloo</p>
+    </div>
+    <div class="f-col">
+      834 Bourke Street<br>Waterloo NSW 2017<br>
+      <a href="tel:+61280185114">(02) 8018 5114</a>
+    </div>
+    <div class="f-col">
+      Mon–Fri 6:30am – 3pm<br>Sat–Sun 7am – 3pm<br>
+      <a href="https://www.instagram.com/thebooth.waterloo/" target="_blank" rel="noopener">Instagram @thebooth.waterloo</a>
+    </div>
+    <p class="f-small"><span id="credits">Photos via Pexels</span>. Concept site by Restauranting.</p>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Quick actions">
+  <a href="tel:+61280185114">Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=The+Booth+834+Bourke+Street+Waterloo+NSW+2017" target="_blank" rel="noopener">Directions</a>
+  <a href="https://www.instagram.com/thebooth.waterloo/" target="_blank" rel="noopener">Instagram</a>
+</nav>
+
+<script>
+/* menu: only what we could confirm. Prices only where published (wraps). */
+const MENU = [
+  {id:"brunch", name:"All day brunch", note:"Served till close", items:[
+    ["King prawn linguine", null, "Our signature.", "Signature"],
+    ["Beef rendang benedict", null, "From the specials board.", "Special"],
+    ["Poached eggs", null, "Sautéed spinach, balsamic cherry tomatoes, pickled radish, crispy lotus root chips.", ""],
+    ["Pancake breakfast", null, "Two fluffy pancakes, fried eggs, bacon, baked beans, maple, whipped honey butter.", ""],
+    ["Biscoff pancakes", null, "Buttermilk pancakes, biscoff mascarpone and crumb, seasonal fruit, vanilla ice cream, warm biscoff sauce.", ""],
+    ["Kaya toast", null, "Sweet coconut jam, crisp toast, a chunk of butter.", ""]
+  ]},
+  {id:"wraps", name:"Wraps & rolls", note:"All toasted · panini roll +1", items:[
+    ["Bacon & Egg", 14, "Two fried eggs, streaky bacon, your sauce: tomato, BBQ, chipotle mayo or aioli.", ""],
+    ["Kransky & Egg", 16, "Kransky, fried egg, American cheese, house tomato relish.", ""],
+    ["Breakkie", 21, "Fried egg, streaky bacon, American cheese, hash brown, caramelised onion, chipotle mayo.", ""],
+    ["Chipotle BBQ Mushroom", 18, "Smoky chipotle BBQ glaze, spinach, caramelised onion, Swiss, mayo.", ""],
+    ["Teriyaki Chicken", 18, "Teriyaki thigh, spinach, tomato, Swiss, Japanese mayo.", ""]
+  ]}
+];
+const courses = document.getElementById("courses");
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+for (const c of MENU) {
+  const box = el("div", "course"); box.id = "menu-" + c.id;
+  const h = el("h3", null, c.name); h.append(el("span", null, c.note)); box.append(h);
+  for (const [n, p, d, tag] of c.items) {
+    const it = el("div", "item"), row = el("div", "row"), name = el("span", "name", n);
+    if (tag) name.append(el("span", "tag", tag));
+    row.append(name);
+    if (p != null) row.append(el("span", "lead"), el("span", "price", String(p)));
+    it.append(row);
+    if (d) it.append(el("p", "desc", d));
+    box.append(it);
+  }
+  courses.append(box);
+}
+const also = el("p", "also");
+also.append(el("b", null, "Also on the menu: "), document.createTextNode("Bakery, Something On The Side, Fresh Juice, Milkshakes, Smoothies, Signature Nitro Drinks and Tea by Zest. Ask us for the full list."));
+courses.append(also);
+
+/* open now, in Sydney time. Minutes from midnight. */
+const HOURS = {0:[[420,900]],1:[[390,900]],2:[[390,900]],3:[[390,900]],4:[[390,900]],5:[[390,900]],6:[[420,900]]};
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m/60), mm = m%60, h12 = ((h+11)%12)+1; return h12 + (mm ? ":" + String(mm).padStart(2,"0") : "") + (h >= 12 ? "pm" : "am"); };
+function sydneyNow(){
+  const p = new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => (p.find(x => x.type === k) || {}).value;
+  return {day: DAYS.indexOf(g("weekday")), mins: (+g("hour") % 24) * 60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = sydneyNow(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const box = document.getElementById("status"), txt = document.getElementById("open-text");
+  const cur = HOURS[day].find(([a,b]) => mins >= a && mins < b);
+  box.classList.toggle("is-open", !!cur);
+  if (cur) { txt.textContent = "Open now · until " + fmt(cur[1]) + " today"; return; }
+  const next = HOURS[day].find(([a]) => mins < a);
+  if (next) { txt.textContent = "Closed · opens " + fmt(next[0]) + " today"; return; }
+  for (let i = 1; i <= 7; i++) { const d = (day+i)%7; if (HOURS[d].length) { txt.textContent = "Closed · opens " + (i === 1 ? "tomorrow" : DAYS[d]) + " " + fmt(HOURS[d][0][0]); return; } }
+}
+tick(); setInterval(tick, 60000);
+
+/* licensed stock photos (Pexels licence), served from Pexels' CDN with srcset */
+const PHOTOS = {
+  hero:     {id:27976900, alt:"King prawn linguine in a rich tomato sauce", by:"Andre", eager:true, sizes:"(max-width:960px) 92vw, 40vw"},
+  pancakes: {id:6864216,  alt:"Pancakes with crispy bacon on a white plate", by:"Eva Bronzini", sizes:"(max-width:640px) 100vw, (max-width:960px) 50vw, 40vw"},
+  kaya:     {id:10066804, alt:"Buttered toast with a cup of coffee, ready for breakfast", by:"Arief Setiawan", sizes:"(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw"},
+  iced:     {id:32542054, alt:"Iced coffee with milk foam and ice on a wooden table", by:"Sóc Năng Động", sizes:"(max-width:960px) 100vw, 40vw"},
+  room:     {id:18617718, alt:"A warm cafe room with wooden chairs and green accents", by:"Beyzaa Yurtkuran", sizes:"(max-width:960px) 100vw, 50vw"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = p.sizes;
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 1300);
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Photos via Pexels: " + [...new Set(Object.values(PHOTOS).map(p => p.by))].join(", ");
+
+/* hide the concept note when framed inside the studio page */
+try { if (window.self !== window.top) { const n = document.querySelector(".preview"); if (n) n.remove(); } } catch (e) {}
+</script>
+</body>
+</html>

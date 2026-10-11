@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Hunter's Corner · Redfern</title>
+<meta name="description" content="Hunter's Corner, 89 Pitt St Redfern. Specialty coffee by Ona, all-day brekkie, a back courtyard and the Woof Club. Weekdays from 6:30am.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://images.pexels.com">
+<!--
+  Creative brief (Restauranting concept)
+  Direction: "Corner plaque". A pale blue-grey corner terrace with a burgundy blade sign, a brushed-steel plaque
+  and timber window frames. The site borrows those three objects: blue-grey wash = facade, burgundy = blade sign
+  (used for wayfinding and the menu), steel = plaque around the wordmark and hairlines, timber = photo frames (windows).
+  Archetype: neighbourhood corner terrace, practical utility + small story. Hours big (weekday 6:30am).
+  Type: Marcellus SC (engraved, plaque-like small caps; lowercase input renders as small caps, matching their IG) + Onest (friendly lowercase sans).
+  logo file: ask owner. No logo file exists (IG avatar is a storefront photo). The wordmark is set type plus a generic
+  crossed fork-and-knife glyph that echoes the steel plaque; it is not a trace of their plaque.
+  Open questions:
+  - Public holiday hours: we know they open on public holidays, not the hours. Shown as "open public holidays" only.
+  - Woof Club: is it dogs in the courtyard, inside, or both? Any perks? We only say dogs are welcome.
+  - Prices for burgers, salad bowls, toasties, burritos, drinks and cakes not seen: those sections are listed without items or prices.
+  - Delivery is listed on Google but no ordering link found: no order button.
+  - Is Hunter's Corner on a corner of Pitt St with a cross street worth naming in directions?
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Hunter's Corner","servesCuisine":["Cafe","Breakfast","Brunch","Coffee"],"priceRange":"$$","telephone":"+61 2 8540 6429","url":"https://restaurantingw.github.io/hunters-corner-redfern/","sameAs":["https://www.instagram.com/hunterscorner.redfern/"],
+"address":{"@type":"PostalAddress","streetAddress":"89 Pitt St","addressLocality":"Redfern","addressRegion":"NSW","postalCode":"2016","addressCountry":"AU"},
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:30","closes":"15:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"07:00","closes":"15:30"}],
+"hasMenu":{"@type":"Menu","name":"All Day Menu","hasMenuSection":{"@type":"MenuSection","name":"All Day","hasMenuItem":[
+{"@type":"MenuItem","name":"Toast","offers":{"@type":"Offer","price":"7","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Brekky Burger","offers":{"@type":"Offer","price":"16","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Halloumi & Mushroom Burger","offers":{"@type":"Offer","price":"16","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Smashed Avo on Rye","offers":{"@type":"Offer","price":"24","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Chilli Scrambled Eggs","offers":{"@type":"Offer","price":"24","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Big Breakfast","offers":{"@type":"Offer","price":"26","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Vegie Breakfast","offers":{"@type":"Offer","price":"24","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Corn & Zucchini Fritters","offers":{"@type":"Offer","price":"25","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Eggs Benny","offers":{"@type":"Offer","price":"20","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Short Stack Pancakes","offers":{"@type":"Offer","price":"26","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Tim Tam Pancakes","offers":{"@type":"Offer","price":"20","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Maple Spiced Granola","offers":{"@type":"Offer","price":"19","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Acai Berry Bowl","offers":{"@type":"Offer","price":"17","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Nourish Bowl","offers":{"@type":"Offer","price":"23","priceCurrency":"AUD"}},
+{"@type":"MenuItem","name":"Eggs on Toast","offers":{"@type":"Offer","price":"16","priceCurrency":"AUD"}}]}}}
+</script>
+<style>
+/* Direction "Corner plaque": facade blue-grey, blade-sign burgundy, plaque steel, window timber. */
+:root{
+  --facade:#C9D6DE; --facade-2:#DCE5EA; --sign:#7A1F2B; --sign-2:#62161F; --steel:#A8ADB0; --timber:#8A5A3B;
+  --ink:#1F2328; --ink-2:#4C5258; --paper:#FAF8F4; --rule:#DAD6CF;
+  --sc:"Marcellus SC","Times New Roman",serif;
+  --sans:"Onest","Helvetica Neue",Arial,sans-serif;
+  --gut:clamp(16px,4vw,56px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--sign)}
+:focus-visible{outline:2px solid var(--sign);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+p{margin:0}
+h1,h2,h3{margin:0;font-family:var(--sc);font-weight:400;text-wrap:balance}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gut)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+.label{font:500 15px/1.3 var(--sans);letter-spacing:.1em;text-transform:lowercase;font-variant:small-caps}
+
+/* concept note */
+.preview{background:var(--ink);color:#CCD2D6;font-size:13px;line-height:1.45;padding:9px var(--gut)}
+.preview b{color:#fff;font-weight:500}
+
+/* wordmark (set type + generic glyph; logo file: ask owner) */
+.mark{display:inline-flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;color:var(--ink)}
+.mark svg{width:22px;height:22px;stroke:currentColor}
+.mark .nm{font:400 15px/1 var(--sc);letter-spacing:.22em;padding-left:.22em;white-space:nowrap}
+.mark:hover{color:var(--ink)}
+
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--steel)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+header.site .mark{flex-direction:row;gap:12px}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px}
+.nav a{text-decoration:none}
+.blade{display:inline-flex;align-items:center;gap:8px;background:var(--sign);color:#fff;padding:9px 14px;font-size:14px;font-weight:500;text-decoration:none;border-radius:2px;white-space:nowrap}
+.blade:hover{color:#fff;background:var(--sign-2)}
+.dot{width:7px;height:7px;border-radius:50%;background:#C7CCCF;flex:none}
+.is-open .dot{background:#7FD19A}
+@media (max-width:860px){.nav .hide-m{display:none}}
+@media (max-width:420px){header.site .mark .nm{font-size:13px;letter-spacing:.16em}}
+
+/* timber-framed photos (the windows) */
+.ph{position:relative;margin:0;background:var(--facade-2);overflow:hidden;border:7px solid var(--timber);max-width:100%}
+.ph::before{content:"";display:block;padding-top:var(--r,125%)}
+.ph>img{position:absolute;inset:0}
+
+/* hero: the facade */
+.hero{background:var(--facade);padding-block:clamp(32px,6vw,80px)}
+.hero .copy{grid-column:1/span 6;display:flex;flex-direction:column;gap:22px;align-self:center}
+.plaque{align-self:flex-start;border:1px solid var(--steel);outline:1px solid var(--steel);outline-offset:4px;background:#E4E8EA;padding:18px 26px 16px;position:relative;margin:5px}
+.plaque::before,.plaque::after{content:"";position:absolute;width:5px;height:5px;border-radius:50%;background:var(--steel);top:8px}
+.plaque::before{left:8px}.plaque::after{right:8px}
+.plaque .mark svg{width:30px;height:30px}
+.plaque .mark .nm{font-size:clamp(17px,2vw,22px)}
+h1{font-size:clamp(34px,4.6vw,58px);line-height:1.04;letter-spacing:.01em}
+.lede{font-size:18px;color:var(--ink-2);max-width:40ch}
+.hours-big{display:grid;grid-template-columns:auto auto;justify-content:start;gap:2px 28px;border-top:1px solid var(--ink);padding-top:16px;margin-top:4px}
+.hours-big .k{font-size:14px;color:var(--ink-2)}
+.hours-big .v{font:400 clamp(30px,3.4vw,44px)/1.05 var(--sc);font-variant-numeric:lining-nums}
+.hero .media{grid-column:8/span 5}
+@media (max-width:900px){.hero .copy,.hero .media{grid-column:1/-1}.hero .media{order:-1;margin-bottom:28px}.hero .media .ph{--r:90%!important}}
+
+/* quick strip */
+.strip{border-bottom:1px solid var(--steel);background:var(--paper)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.strip .cell{padding:16px 16px 16px 0;display:flex;flex-direction:column;gap:2px;min-width:0}
+.strip .cell+.cell{padding-left:16px;border-left:1px solid var(--rule)}
+.strip .k{font-size:13px;color:var(--ink-2)}
+.strip .v{font-size:16px;font-weight:500;display:flex;align-items:center;gap:8px}
+#open-cell .dot{background:#9AA0A4}
+#open-cell.is-open .dot{background:#2F8A53}
+@media (max-width:900px){.strip .wrap{grid-template-columns:1fr 1fr}.strip .cell:nth-child(3){padding-left:0;border-left:0}.strip .cell:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+/* sections + corner brackets */
+section{padding-block:clamp(72px,10vw,124px)}
+h2{font-size:clamp(28px,3.2vw,40px);line-height:1.1;letter-spacing:.01em}
+.corner{position:relative;padding:14px 0 0 18px}
+.corner::before{content:"";position:absolute;left:0;top:0;width:28px;height:28px;border-left:2px solid var(--timber);border-top:2px solid var(--timber)}
+.corner .label{color:var(--sign);display:block;margin-bottom:10px}
+
+/* the little corners */
+.corners .head{grid-column:1/span 5;display:flex;flex-direction:column;gap:18px}
+.corners .head p{color:var(--ink-2);max-width:36ch}
+.corners .list{grid-column:7/span 6;display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4vw,48px) clamp(24px,3vw,40px)}
+.corners .list h3{font-size:22px;line-height:1.2;margin-bottom:8px}
+.corners .list p{font-size:16px;color:var(--ink-2);max-width:34ch}
+.corners .list .no{font:400 14px/1 var(--sc);color:var(--timber);letter-spacing:.12em;margin-bottom:10px;display:block}
+.corners .pics{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:inherit;margin-top:clamp(48px,7vw,88px);align-items:end}
+.corners .pics .a{grid-column:1/span 4}
+.corners .pics .b{grid-column:6/span 7}
+figcaption{font-size:14px;color:var(--ink-2);margin-top:10px}
+@media (max-width:900px){.corners .head,.corners .list{grid-column:1/-1}.corners .list{margin-top:40px}.corners .pics .a{grid-column:1/span 9}.corners .pics .b{grid-column:4/-1;margin-top:24px}}
+@media (max-width:520px){.corners .list{grid-template-columns:1fr}}
+
+/* menu: the blade sign as menu header */
+.menu{background:#fff;border-block:1px solid var(--steel)}
+.menu .top{display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:space-between;align-items:end;margin-bottom:clamp(28px,4vw,44px)}
+.menu .key{font-size:14px;color:var(--ink-2);max-width:46ch}
+.signbar{background:var(--sign);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;border-radius:2px}
+.signbar h3{font-size:20px;letter-spacing:.14em}
+.signbar span{font-size:14px;opacity:.85}
+.items{columns:2 380px;column-gap:clamp(32px,5vw,72px);margin-top:8px}
+.item{break-inside:avoid;padding:15px 0;border-bottom:1px solid var(--rule)}
+.item .row{display:flex;align-items:baseline;gap:10px}
+.item .name{font-weight:600;font-size:17px}
+.item .marks{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--sign);margin-left:8px}
+.item .lead{flex:1;border-bottom:1px dotted var(--steel);transform:translateY(-4px);min-width:12px}
+.item .price{font-weight:500;font-variant-numeric:tabular-nums}
+.item .desc{font-size:15px;color:var(--ink-2);margin-top:3px;max-width:50ch}
+.more{margin-top:clamp(40px,5vw,60px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);row-gap:28px;align-items:start}
+.more .txt{grid-column:1/span 8;border-top:1.5px solid var(--ink);padding-top:18px}
+.more .txt p{color:var(--ink-2);font-size:16px;max-width:52ch}
+.more ul{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.more li{border:1px solid var(--steel);padding:6px 12px;font-size:15px;border-radius:2px}
+@media (max-width:900px){.more .txt{grid-column:1/-1}}
+
+/* out the back */
+.back{padding:0;background:var(--facade)}
+.back .grid{align-items:stretch}
+.back .pic{grid-column:1/span 7;margin-inline-start:calc(var(--gut)*-1)}
+.back .pic .ph{height:100%;border-width:0 7px 0 0}
+.back .pic .ph::before{padding-top:72%}
+.back .txt{grid-column:9/span 4;padding-block:clamp(56px,8vw,104px);display:flex;flex-direction:column;gap:18px;align-self:center}
+.back .txt p{color:var(--ink-2);max-width:36ch}
+.back .txt .big{font:400 clamp(22px,2.2vw,28px)/1.3 var(--sc);color:var(--ink);letter-spacing:.01em}
+@media (max-width:900px){.back .pic{grid-column:1/-1;margin-inline:calc(var(--gut)*-1)}.back .pic .ph{border-width:0 0 7px 0}.back .txt{grid-column:1/-1}}
+
+/* woof club */
+.woof{background:var(--sign);color:#F4E9EA}
+.woof .corner::before{border-color:#E0B9BE}
+.woof .corner .label{color:#F0CDD1}
+.woof h2{color:#fff}
+.woof .txt{grid-column:1/span 5;display:flex;flex-direction:column;gap:18px;align-self:center}
+.woof .txt p{max-width:38ch;color:#EBD7D9}
+.woof .media{grid-column:7/span 6}
+.woof .ph{border-color:#5A1720}
+.woof .note{font-size:14px;color:#E0B9BE}
+@media (max-width:900px){.woof .txt,.woof .media{grid-column:1/-1}.woof .media{margin-top:32px}}
+
+/* visit */
+.visit .head{grid-column:1/span 4}
+.visit .body{grid-column:6/span 7;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px)}
+table.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.hours th,table.hours td{text-align:left;font-weight:400;padding:11px 0;border-bottom:1px solid var(--rule);font-size:16px}
+table.hours td{text-align:right}
+table.hours tr.today th,table.hours tr.today td{font-weight:600;color:var(--sign)}
+.ph-note{font-size:14px;color:var(--ink-2);margin-top:12px}
+.where dl{margin:0;display:grid;gap:16px}
+.where dt{font-size:13px;color:var(--ink-2)}
+.where dd{margin:0;font-size:16px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;padding:12px 18px;border:1.5px solid var(--ink);border-radius:2px;text-decoration:none;font-weight:500;font-size:15px;transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.solid{background:var(--sign);border-color:var(--sign);color:#fff}
+.btn.solid:hover{background:var(--sign-2);border-color:var(--sign-2)}
+@media (max-width:900px){.visit .head,.visit .body{grid-column:1/-1}.visit .body{margin-top:28px;grid-template-columns:1fr}}
+
+footer{background:var(--facade);padding-block:44px 120px;font-size:14px;color:var(--ink-2)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:flex-start}
+footer .mark{color:var(--ink)}
+footer .cols{display:flex;flex-direction:column;gap:6px;max-width:60ch}
+
+/* mobile action bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:repeat(3,1fr);background:var(--paper);border-top:1px solid var(--steel);padding-bottom:env(safe-area-inset-bottom,0px)}
+.mbar a{padding:16px 6px;text-align:center;text-decoration:none;font-weight:500;font-size:15px}
+.mbar a+a{border-left:1px solid var(--rule)}
+.mbar a.solid{background:var(--sign);color:#fff;border-left:0}
+@media (max-width:860px){.mbar{display:grid}}
+
+@media (prefers-reduced-motion:no-preference){.ph img{animation:fade .5s ease both}@keyframes fade{from{opacity:0}}}
+</style>
+</head>
+<body>
+<div class="preview" role="note"><b>Concept preview by Restauranting.</b> Not the official website of Hunter's Corner. Preview photos are licensed stock; colours and details are taken from your Instagram, storefront and Google listing.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="fk" viewBox="0 0 32 32" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- generic crossed fork and knife -->
+    <path d="M7 5l20 22"/><path d="M5 9.5L9.5 5"/><path d="M4 7.5l3-3"/><path d="M5 9.5c1.6 1.6 3.6 1.6 4.5 0.7"/>
+    <path d="M25 5c-3 1.5-6 5-7.5 8l2 2"/><path d="M19.5 15L5 27"/>
+  </symbol>
+</svg>
+
+<header class="site">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Hunter's Corner, home"><svg aria-hidden="true"><use href="#fk"/></svg><span class="nm">HUNTER'S CORNER</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-m" href="#menu">menu</a>
+      <a class="hide-m" href="#back">out the back</a>
+      <a class="hide-m" href="#woof">woof club</a>
+      <a class="blade" href="#visit" id="head-status"><span class="dot"></span><span id="head-text">hours</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap grid">
+      <div class="copy">
+        <div class="plaque"><span class="mark"><svg aria-hidden="true"><use href="#fk"/></svg><span class="nm">HUNTER'S CORNER</span></span></div>
+        <h1>your fav little corner in redfern.</h1>
+        <p class="lede">Specialty coffee, brekkie and familiar faces at 89 Pitt St. Proudly serving Ona Coffee, with a sunny hideaway out the back.</p>
+        <div class="hours-big" aria-label="Opening hours">
+          <span class="k">weekdays</span><span class="k">weekends</span>
+          <span class="v">6:30–3</span><span class="v">7–3:30</span>
+        </div>
+      </div>
+      <div class="media">
+        <figure class="ph" style="--r:122%" data-shot="hero"></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip" aria-label="Quick info">
+    <div class="wrap">
+      <div class="cell" id="open-cell"><span class="k">today</span><span class="v"><span class="dot"></span><span id="open-text">Open 7 days</span></span></div>
+      <div class="cell"><span class="k">find us</span><span class="v"><a href="https://www.google.com/maps/search/?api=1&amp;query=Hunter%27s+Corner+89+Pitt+St+Redfern+NSW+2016" target="_blank" rel="noopener">89 Pitt St, Redfern</a></span></div>
+      <div class="cell"><span class="k">call</span><span class="v"><a href="tel:+61285406429">(02) 8540 6429</a></span></div>
+      <div class="cell"><span class="k">public holidays</span><span class="v">We're open</span></div>
+    </div>
+  </div>
+
+  <section class="corners" id="corners">
+    <div class="wrap grid">
+      <div class="head corner">
+        <span class="label">the little corners</span>
+        <h2>came for the coffee, stay for the little corners.</h2>
+        <p>A small terrace on Pitt St, open from 6:30 on weekdays for the early crowd and a bit later on weekends for everyone else.</p>
+      </div>
+      <div class="list">
+        <div><span class="no">no. 1</span><h3>the coffee</h3><p>Ona Coffee, made properly, from the first one at 6:30am.</p></div>
+        <div><span class="no">no. 2</span><h3>brekkie, all day</h3><p>Eggs benny, fritters, a big breakfast, Tim Tam pancakes. The full list is below.</p></div>
+        <div><span class="no">no. 3</span><h3>the protein smoothie</h3><p>Our best-seller for the gym crowd. Grab one on the way back from training.</p></div>
+        <div><span class="no">no. 4</span><h3>everyone's welcome</h3><p>Tiny humans, furry regulars, familiar faces. Pull up a seat.</p></div>
+      </div>
+      <div class="pics">
+        <figure style="margin:0" class="a">
+          <div class="ph" style="--r:125%" data-shot="coffee"></div>
+          <figcaption>Proudly serving Ona Coffee.</figcaption>
+        </figure>
+        <figure style="margin:0" class="b">
+          <div class="ph" style="--r:66.6%" data-shot="pancakes"></div>
+          <figcaption>Short stack: buttermilk, mascarpone, blueberry compote, maple.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="top">
+        <div class="corner"><span class="label">the menu</span><h2 id="menu-h">brekkie, all day</h2></div>
+        <p class="key"><b>V</b> vegetarian · <b>GF</b> gluten-free · <b>VG opt</b> vegan option. Prices in AUD.</p>
+      </div>
+      <div class="signbar"><h3>ALL DAY</h3><span>every day, open to close</span></div>
+      <div class="items" id="items"></div>
+      <div class="more">
+        <div class="txt">
+          <p>Also on at the counter. Ask us what's on today.</p>
+          <ul>
+            <li>burgers &amp; fries</li><li>salad bowls</li><li>toasties &amp; burritos</li><li>cakes &amp; pastries</li><li>coffee &amp; hot drinks</li><li>cold drinks &amp; smoothies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="back" id="back">
+    <div class="wrap grid">
+      <div class="pic"><figure class="ph" data-shot="courtyard"></figure></div>
+      <div class="txt corner">
+        <span class="label">out the back</span>
+        <h2>our little hideaway</h2>
+        <p class="big">sunny mornings, slow coffees, no rush.</p>
+        <p>Take your coffee out the back to the courtyard and stay a while.</p>
+        <p style="font-size:14px">Photos shown are placeholders: we'd swap in your own shots.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="woof" id="woof">
+    <div class="wrap grid">
+      <div class="txt corner">
+        <span class="label">woof club</span>
+        <h2>furry regulars welcome.</h2>
+        <p>Dogs are part of the family here. Bring yours along for the morning coffee run and say hello.</p>
+        <p>Kids too: tiny humans, furry regulars, everyone's welcome here.</p>
+        <p class="note">Follow the Woof Club on <a href="https://www.instagram.com/hunterscorner.redfern/" target="_blank" rel="noopener">@hunterscorner.redfern</a>.</p>
+      </div>
+      <div class="media"><figure class="ph" style="--r:80%" data-shot="dog"></figure></div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap grid">
+      <div class="head corner">
+        <span class="label">come say hi</span>
+        <h2>89 pitt st, redfern</h2>
+      </div>
+      <div class="body">
+        <div>
+          <table class="hours" id="hours">
+            <caption class="label" style="text-align:left;margin-bottom:8px;color:var(--ink-2)">opening hours</caption>
+            <tr data-day="1"><th>Monday</th><td>6:30am – 3pm</td></tr>
+            <tr data-day="2"><th>Tuesday</th><td>6:30am – 3pm</td></tr>
+            <tr data-day="3"><th>Wednesday</th><td>6:30am – 3pm</td></tr>
+            <tr data-day="4"><th>Thursday</th><td>6:30am – 3pm</td></tr>
+            <tr data-day="5"><th>Friday</th><td>6:30am – 3pm</td></tr>
+            <tr data-day="6"><th>Saturday</th><td>7am – 3:30pm</td></tr>
+            <tr data-day="0"><th>Sunday</th><td>7am – 3:30pm</td></tr>
+          </table>
+          <p class="ph-note">Open public holidays too.</p>
+        </div>
+        <div class="where">
+          <dl>
+            <div><dt>address</dt><dd>89 Pitt St, Redfern NSW 2016</dd></div>
+            <div><dt>phone</dt><dd><a href="tel:+61285406429">(02) 8540 6429</a></dd></div>
+            <div><dt>instagram</dt><dd><a href="https://www.instagram.com/hunterscorner.redfern/" target="_blank" rel="noopener">@hunterscorner.redfern</a></dd></div>
+            <div><dt>good to know</dt><dd>Dogs and kids welcome · vegetarian options · back courtyard</dd></div>
+          </dl>
+          <div class="btns">
+            <a class="btn solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Hunter%27s+Corner+89+Pitt+St+Redfern+NSW+2016" target="_blank" rel="noopener">Directions</a>
+            <a class="btn" href="tel:+61285406429">Call us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mark"><svg aria-hidden="true"><use href="#fk"/></svg><span class="nm">HUNTER'S CORNER</span></span>
+    <div class="cols">
+      <span>89 Pitt St, Redfern NSW 2016 · (02) 8540 6429 · weekdays 6:30am–3pm, weekends 7am–3:30pm</span>
+      <span id="credits"></span>
+      <span>Concept preview by Restauranting. Not the official website of Hunter's Corner.</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+61285406429">Call</a>
+  <a class="solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Hunter%27s+Corner+89+Pitt+St+Redfern+NSW+2016" target="_blank" rel="noopener">Directions</a>
+  <a href="https://www.instagram.com/hunterscorner.redfern/" target="_blank" rel="noopener">Instagram</a>
+</nav>
+
+<script>
+/* All Day menu, as listed on Google Maps (AUD) */
+const MENU = [
+  ["Toast", 7, "", "V"],
+  ["Eggs on Toast", 16, "", ""],
+  ["Brekky Burger", 16, "Bacon, fried egg, cheese, hash brown, tomato relish, milk bun.", ""],
+  ["Halloumi & Mushroom Burger", 16, "Grilled halloumi, mushroom, fried egg, hash brown, relish.", ""],
+  ["Eggs Benny", 20, "Bacon, smoked salmon or florentine.", "GF"],
+  ["Smashed Avo on Rye", 24, "Persian feta, cherry tomatoes, pomegranate, baby radish, soft poached egg, dark rye.", ""],
+  ["Chilli Scrambled Eggs", 24, "3-egg scramble, sriracha, Persian feta, tomatoes, shallots, toast.", ""],
+  ["Vegie Breakfast", 24, "Vegan option with falafel and beet hummus.", "VG opt"],
+  ["Corn & Zucchini Fritters", 25, "Cherry tomatoes, house relish, smashed avo, poached egg.", ""],
+  ["Big Breakfast", 26, "Bacon, chorizo, two poached eggs, hash brown, halloumi, tomatoes, mushrooms, sourdough.", ""],
+  ["Short Stack Pancakes", 26, "Buttermilk, mascarpone, blueberry compote, maple.", ""],
+  ["Tim Tam Pancakes", 20, "Dark choc chips, vanilla ice cream, maple and Tim Tams.", ""],
+  ["Maple Spiced Granola", 19, "Greek yoghurt, chia, blueberry compote, seasonal fruit.", ""],
+  ["Acai Berry Bowl", 17, "", "V"],
+  ["Nourish Bowl", 23, "Kale, quinoa, cabbage, radish, pistachio dukkah, beetroot hummus, edamame, smashed avo, lemon vinaigrette.", "V · GF"]
+];
+const box = document.getElementById("items");
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+for (const [n, p, d, m] of MENU) {
+  const it = el("div", "item"), row = el("div", "row"), name = el("span", "name", n);
+  if (m) name.append(el("span", "marks", m));
+  row.append(name, el("span", "lead"), el("span", "price", String(p)));
+  it.append(row); if (d) it.append(el("p", "desc", d));
+  box.append(it);
+}
+
+/* open now, in Sydney time */
+const HOURS = {0:[[420,930]],1:[[390,900]],2:[[390,900]],3:[[390,900]],4:[[390,900]],5:[[390,900]],6:[[420,930]]};
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = m => { const h = Math.floor(m/60), mm = m%60, h12 = ((h+11)%12)+1; return h12 + (mm ? ":" + String(mm).padStart(2,"0") : "") + (h >= 12 ? "pm" : "am"); };
+function now(){
+  const p = new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = k => p.find(x => x.type === k)?.value;
+  return {day: DAYS.indexOf(g("weekday")), mins: (+g("hour") % 24)*60 + +g("minute")};
+}
+function tick(){
+  const {day, mins} = now(); if (day < 0) return;
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.day === day));
+  const cell = document.getElementById("open-cell"), txt = document.getElementById("open-text");
+  const head = document.getElementById("head-status"), htxt = document.getElementById("head-text");
+  const cur = HOURS[day].find(([a,b]) => mins >= a && mins < b);
+  cell.classList.toggle("is-open", !!cur); head.classList.toggle("is-open", !!cur);
+  let long, short;
+  if (cur) { long = "Open now, until " + fmt(cur[1]); short = "open till " + fmt(cur[1]); }
+  else {
+    const next = HOURS[day].find(([a]) => mins < a);
+    if (next) { long = "Opens at " + fmt(next[0]) + " today"; short = "opens " + fmt(next[0]); }
+    else { const d = (day+1)%7; long = "Closed · opens tomorrow " + fmt(HOURS[d][0][0]); short = "opens " + fmt(HOURS[d][0][0]); }
+  }
+  txt.textContent = long; htxt.textContent = short;
+}
+tick(); setInterval(tick, 60000);
+
+/* licensed stock photos (Pexels licence), hotlinked from Pexels' CDN with srcset */
+const PHOTOS = {
+  hero:      {id:11288960, alt:"Eggs benedict on a wooden table", by:"ekrulila", eager:true, sizes:"(max-width:900px) 100vw, 40vw"},
+  coffee:    {id:33216070, alt:"A flat white with latte art on a wooden table", by:"thiagomobile", sizes:"(max-width:900px) 75vw, 33vw"},
+  pancakes:  {id:12697521, alt:"A stack of pancakes with fresh blueberries and syrup", by:"andrew-harris-263452200", sizes:"(max-width:900px) 75vw, 58vw"},
+  courtyard: {id:32434551, alt:"A small outdoor cafe courtyard with chairs among green plants", by:"little-forest", sizes:"(max-width:900px) 100vw, 58vw"},
+  dog:       {id:35629974, alt:"A small terrier beside a water bowl at an outdoor cafe in the sun", by:"levsi", sizes:"(max-width:900px) 100vw, 50vw"}
+};
+const src = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+document.querySelectorAll(".ph[data-shot]").forEach(f => {
+  const p = PHOTOS[f.dataset.shot]; if (!p) return;
+  const img = new Image();
+  img.alt = p.alt; img.decoding = "async"; img.loading = p.eager ? "eager" : "lazy";
+  img.sizes = p.sizes;
+  img.srcset = [600, 900, 1300, 1800].map(w => src(p.id, w) + " " + w + "w").join(", ");
+  img.src = src(p.id, 1300);
+  img.addEventListener("error", () => img.remove());
+  f.prepend(img);
+});
+document.getElementById("credits").textContent = "Preview photos via Pexels: " + Object.values(PHOTOS).map(p => p.by).join(", ") + ".";
+
+try { if (window.self !== window.top) document.querySelector(".preview")?.remove(); } catch {}
+</script>
+</body>
+</html>
