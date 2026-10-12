@@ -329,19 +329,14 @@ footer a{color:#fff}
 .save b{display:block;font:850 76px/.85 var(--sans);font-stretch:66%;color:var(--mustard)}
 .save span{display:block;margin-top:10px;font-size:16px;line-height:1.4}
 .save sup a{color:rgba(255,255,255,.6);text-decoration:none;font-size:11px}
-.about{padding:110px 0;background:var(--white);border-top:1px solid var(--line)}
-.about .wrap{display:grid;grid-template-columns:380px 1fr;gap:64px;align-items:center}
-.me{margin:0;position:relative;isolation:isolate}
-.me img,.me-ph{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;background:var(--mint)}
-.me-ph{display:grid;place-items:center;font:850 140px/1 var(--sans);font-stretch:66%;color:var(--leaf)}
-.me::after{content:"";position:absolute;inset:auto -14px -14px auto;width:70%;height:70%;border-radius:24px;background:var(--mustard);z-index:-1}
-.about h2{color:var(--forest)}
-.about .lede{margin-top:20px}
-.about p+p{margin-top:16px;color:var(--ink-2);max-width:36em}
-.about .sig{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.about .btn.line{border-color:var(--forest);color:var(--forest)}
-@media (max-width:980px){.cmphead{grid-template-columns:1fr;gap:28px}.about .wrap{grid-template-columns:1fr;gap:40px}.me{max-width:320px}}
-@media (max-width:600px){.about{padding:76px 0}.save b{font-size:64px}}
+.about{padding:44px 0;background:var(--white);border-top:1px solid var(--line)}
+.note-me{display:flex;gap:18px;align-items:center;max-width:720px}
+.note-me img{flex:none;width:64px;height:64px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px var(--mustard)}
+.note-me p{font-size:16px;line-height:1.5;color:var(--ink-2)}
+.note-me b{color:var(--ink)}
+.note-me a{color:var(--forest);font-weight:700}
+@media (max-width:980px){.cmphead{grid-template-columns:1fr;gap:28px}}
+@media (max-width:600px){.save b{font-size:64px}.note-me{align-items:flex-start}}
 </style>
 </head>
 <body>
@@ -353,7 +348,6 @@ footer a{color:#fff}
       <a href="#google">Why</a>
       <a href="#how">How it works</a>
       <a href="#price">Pricing</a>
-      <a href="#about">About</a>
       <a class="btn primary" href="#contact">Free preview</a>
     </nav>
   </div>
@@ -496,7 +490,7 @@ footer a{color:#fff}
       <table>
         <thead><tr><th scope="col"></th><th scope="col" class="us"><span class="ushead"><span class="badge sm" aria-hidden="true">R</span><span>Restauranting<small>That's us</small></span></span></th><th scope="col">DIY builder</th><th scope="col">Typical agency</th></tr></thead>
         <tbody>
-          <tr class="hl"><th scope="row">First-year cost</th><td class="us">From $588 <em>over 80% less</em></td><td>Plan fees, plus your time</td><td>From $3,500, plus hosting</td></tr>
+          <tr class="hl"><th scope="row">First-year cost</th><td class="us">Over 80% less <em>than an agency</em></td><td>Plan fees, plus your time</td><td>From $3,500, plus hosting</td></tr>
           <tr><th scope="row">Upfront cost</th><td class="us">$0</td><td>Low, plus your nights</td><td>About $3,500 to $8,500</td></tr>
           <tr><th scope="row">Time to go live</th><td class="us">7 days</td><td>Whenever you get to it</td><td>4 to 8 weeks</td></tr>
           <tr><th scope="row">Design</th><td class="us">Custom, for your place</td><td>A template</td><td>Custom</td></tr>
@@ -506,7 +500,7 @@ footer a{color:#fff}
         </tbody>
       </table>
     </div>
-    <p class="fine">Agency figures based on published Australian restaurant web design pricing.<sup><a href="#sources">2</a></sup> Our first-year figure is for a small café on the no-setup plan ($49 a month).<sup><a href="#sources">3</a></sup></p>
+    <p class="fine">Agency figures based on published Australian restaurant web design pricing.<sup><a href="#sources">2</a></sup></p>
   </div>
 </section>
 
@@ -533,12 +527,9 @@ footer a{color:#fff}
 
 <section class="about" id="about">
   <div class="wrap">
-    <figure class="me"><img src="jero.jpg" alt="Jero, founder of Restauranting" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'me-ph',textContent:'J'}))"></figure>
-    <div>
-      <h2 class="display">Hi, I'm Jero.</h2>
-      <p class="lede">I started Restauranting because some of the best food in Sydney comes from places you'd never find online: a corner café with a queue every morning, a family kitchen with a handwritten menu and no website.</p>
-      <p>I'm originally from Mexico City and now live in Bondi, with a background in business and finance. I work with every restaurant personally: I'll come to your place, have a coffee, and look after your site after it goes live. You deal with me, not a call centre.</p>
-      <div class="sig"><a class="btn dark" href="sms:+61493535046?&amp;body=Hi%20Jero%2C%20">Text me · 0493 535 046</a><a class="btn line" href="https://www.instagram.com/restauranting.wrld/" rel="noopener">@restauranting.wrld</a></div>
+    <div class="note-me">
+      <img src="jero.jpg" alt="Jero" width="64" height="64">
+      <p><b>Hi, I'm Jero, the founder.</b> Originally from Mexico City, now in Bondi. I work with every restaurant personally, from the first coffee to every update after launch. You deal with me, not a call centre. <a href="sms:+61493535046?&amp;body=Hi%20Jero%2C%20">Text me</a></p>
     </div>
   </div>
 </section>
@@ -575,7 +566,7 @@ footer a{color:#fff}
 
 <div class="sticky" id="sticky" aria-hidden="true"><a class="btn primary" href="#contact" tabindex="-1">Free preview</a><a class="btn ghost" href="sms:+61493535046?&amp;body=Hi%20Jero%2C%20I%27d%20like%20a%20free%20website%20preview%20for%20my%20restaurant%3A%20" tabindex="-1">Text Jero</a></div>
 <footer><div class="wrap"><span>© 2026 Restauranting · Bondi, Sydney</span><span><a href="khao-hom/">See a full sample site</a></span></div>
-<div class="wrap src" id="sources"><p>1. MGH diner survey, 1,101 US adults, reported by Restaurant Dive (2019). 2. Published Australian restaurant web design pricing, e.g. Spark Interact ($3,500 to $8,500, 4 to 8 weeks). Uber Eats delivery fee ceiling of 30%: Uber Australia newsroom (2020). 3. Restauranting small-café plan, $49 a month with no setup fee ($588 in year one), compared with the lowest published agency build price of $3,500, before the agency's hosting and update fees. Larger venues have a different monthly fee, agreed upfront.</p></div></footer>
+<div class="wrap src" id="sources"><p>1. MGH diner survey, 1,101 US adults, reported by Restaurant Dive (2019). 2. Published Australian restaurant web design pricing, e.g. Spark Interact ($3,500 to $8,500, 4 to 8 weeks). Uber Eats delivery fee ceiling of 30%: Uber Australia newsroom (2020). 3. A small café on our no-setup plan, over its first year, compared with the lowest published agency build price ($3,500) before the agency's hosting and update fees. Every venue's fee is agreed with them upfront.</p></div></footer>
 
 <script>
 (function(){
