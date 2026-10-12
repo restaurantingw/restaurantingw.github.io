@@ -608,7 +608,7 @@ footer a{color:#fff}
         <button type="button" data-k="kebab" aria-pressed="false">Late-night kebabs</button>
         <button type="button" data-k="cafe" aria-pressed="false">Beach café</button>
       </div>
-      <p class="cap">A few sample sites we've designed (fictional restaurants). Scroll inside the phone, or tap a style.</p>
+      <p class="cap">A few sample sites we've designed (fictional restaurants). Touch the phone to take over, or tap a style.</p>
     </div>
   </div>
 </section>
@@ -769,16 +769,25 @@ footer a{color:#fff}
   document.querySelectorAll('img[data-id]').forEach(img=>{const id=img.dataset.id;img.src=src(id,700);img.srcset=`${src(id,400)} 400w, ${src(id,700)} 700w`;img.sizes='330px';img.loading='lazy';img.decoding='async'});
 
   const sites=[...document.querySelectorAll('.site')], btns=[...document.querySelectorAll('.picker button')];
-  const keys=btns.map(b=>b.dataset.k); let i=0, timer=null, idle=null, inView=true;
+  const keys=btns.map(b=>b.dataset.k); let i=0, inView=true, playing=false, raf=0, tmr=0, idle=0, autoScrolling=false;
   const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function show(k){i=keys.indexOf(k);sites.forEach(s=>{const on=s.dataset.k===k;s.classList.toggle('on',on);if(on){const sc=s.querySelector('.sc');if(sc)sc.scrollTop=0;s.classList.remove('scrolled')}});btns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k))}
-  function start(){if(reduce||timer)return;timer=setInterval(()=>{if(inView&&!document.hidden)show(keys[(i+1)%keys.length])},4200)}
-  function stop(){clearInterval(timer);timer=null}
-  function pause(ms){stop();clearTimeout(idle);idle=setTimeout(start,ms)}
-  btns.forEach(b=>b.addEventListener('click',()=>{show(b.dataset.k);pause(9000)}));
+  const cur=()=>sites[i].querySelector('.sc');
+  function show(k){i=keys.indexOf(k);sites.forEach(s=>{const on=s.dataset.k===k;s.classList.toggle('on',on);if(on){const sc=s.querySelector('.sc');if(sc){autoScrolling=true;sc.scrollTop=0;requestAnimationFrame(()=>autoScrolling=false)}s.classList.remove('scrolled')}});btns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k))}
+  const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+  function scrollTo(sc,to,ms,done){const from=sc.scrollTop,t0=performance.now();autoScrolling=true;
+    const step=now=>{if(!playing){autoScrolling=false;return}const t=Math.min(1,(now-t0)/ms);sc.scrollTop=from+(to-from)*ease(t);if(t<1)raf=requestAnimationFrame(step);else{autoScrolling=false;done&&done()}};raf=requestAnimationFrame(step)}
+  function wait(ms,fn){clearTimeout(tmr);tmr=setTimeout(()=>{if(!playing)return;if(!inView||document.hidden){wait(800,fn);return}fn()},ms)}
+  function play(){ // one sample: rest, glide down the page, rest, next sample
+    const sc=cur(); if(!sc){wait(4000,next);return}
+    wait(1400,()=>{const max=sc.scrollHeight-sc.clientHeight;scrollTo(sc,max,Math.max(2600,max*6.5),()=>wait(1100,next))})}
+  function next(){show(keys[(i+1)%keys.length]);play()}
+  function start(){if(reduce||playing)return;playing=true;play()}
+  function stop(){playing=false;cancelAnimationFrame(raf);clearTimeout(tmr);autoScrolling=false}
+  function handOver(ms){stop();clearTimeout(idle);idle=setTimeout(start,ms)}
+  btns.forEach(b=>b.addEventListener('click',()=>{handOver(9000);show(b.dataset.k)}));
   const screen=document.getElementById('screen');
-  ['pointerdown','touchstart','wheel'].forEach(ev=>screen.addEventListener(ev,()=>pause(7000),{passive:true}));
-  sites.forEach(s=>{const sc=s.querySelector('.sc');if(sc)sc.addEventListener('scroll',()=>{s.classList.toggle('scrolled',sc.scrollTop>14);if(s.classList.contains('on'))pause(7000)},{passive:true})});
+  ['pointerdown','touchstart','wheel'].forEach(ev=>screen.addEventListener(ev,()=>handOver(8000),{passive:true}));
+  sites.forEach(s=>{const sc=s.querySelector('.sc');if(sc)sc.addEventListener('scroll',()=>{s.classList.toggle('scrolled',sc.scrollTop>14);if(!autoScrolling&&s.classList.contains('on')&&!playing){clearTimeout(idle);idle=setTimeout(start,8000)}},{passive:true})});
   if('IntersectionObserver' in window){new IntersectionObserver(e=>{inView=e[0].isIntersecting},{threshold:.3}).observe(document.querySelector('.phone'))}
   start();
 
