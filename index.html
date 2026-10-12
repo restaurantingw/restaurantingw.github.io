@@ -201,6 +201,30 @@ h2.display{font-size:clamp(40px,6.4vw,84px)}
 .s-cafe .bar b{background:#0F3B4C;color:#fff;border-radius:14px}
 .s-cafe .bar b+b{background:#fff;color:#0F3B4C}
 
+
+/* scrollable sample sites */
+.site::after{content:"";position:absolute;left:0;right:0;bottom:0;height:76px;z-index:3;pointer-events:none;background:linear-gradient(rgba(0,0,0,0),var(--bg) 42%)}
+.s-thai{--bg:#FFF8EE}.s-ramen{--bg:#0D0B09}.s-bake{--bg:#F8E6E1}.s-kebab{--bg:#FFD21F}.s-cafe{--bg:#DCEBF0}
+.site .sc{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;padding-bottom:78px;-webkit-overflow-scrolling:touch;overscroll-behavior-y:auto}
+.site .sc::-webkit-scrollbar{display:none}
+.site .nav{transition:background .25s ease,padding .25s ease,box-shadow .25s ease}
+.site.scrolled .nav{padding:38px 18px 12px;box-shadow:0 6px 16px -10px rgba(0,0,0,.35)}
+.s-thai.scrolled .nav{background:#C8102E}.s-ramen.scrolled .nav{background:#0D0B09}.s-bake.scrolled .nav{background:#F8E6E1}.s-kebab.scrolled .nav{background:#111}.s-cafe.scrolled .nav{background:#DCEBF0}
+.site .xs{padding:22px 20px 4px}
+.site .xs h4{font-size:19px;font-weight:400;margin-bottom:8px}
+.site .xs p{font-size:12px;line-height:1.5;opacity:.85;margin-bottom:6px}
+.site .xs .cat{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:1;margin:12px 0 2px}
+.site .ln{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;padding:7px 0;border-bottom:1px solid var(--ln,rgba(0,0,0,.12))}
+.site .ln i{font-style:normal;font-weight:700;white-space:nowrap}
+.site .ph.wide{height:150px;margin-top:10px}
+.site .foot{text-align:center;font-size:10px;letter-spacing:.08em;opacity:.55;padding:22px 0 6px}
+.s-thai .xs h4{font-family:"Chonburi",serif;color:#C8102E}.s-thai{--ln:rgba(27,42,107,.25)}.s-thai .xs .cat{color:#C8102E}.s-thai .ln i{color:#C8102E}
+.s-ramen .xs h4{font-family:"Zen Antique",serif;color:#F7EFDC}.s-ramen{--ln:rgba(201,161,91,.22)}.s-ramen .ln i{color:#E8C27A}
+.s-bake .xs h4{font-family:"Italiana",serif;font-size:24px}.s-bake{--ln:rgba(74,44,42,.15)}.s-bake .ln i{color:#7A9A5B}.s-bake .ph.wide{border-radius:14px}
+.s-kebab .xs h4{font-family:"Rubik Mono One",sans-serif;font-size:15px}.s-kebab{--ln:#111}.s-kebab .ln{font-weight:800;border-bottom-width:2px}
+.s-cafe .xs h4{font-family:"Young Serif",serif}.s-cafe{--ln:rgba(15,59,76,.15)}.s-cafe .ph.wide{border-radius:14px}
+.s-cafe .xs .ln:last-child,.s-thai .xs .ln:last-child{border-bottom:0}
+
 /* google section */
 .google{padding:110px 0;background:var(--white)}
 .google .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
@@ -506,42 +530,73 @@ footer a{color:#fff}
         <div class="screen" id="screen">
           <article class="site s-thai on" data-k="thai" aria-label="Sample: Baan Saeng, a Thai canteen">
             <div class="nav"><b>Baan Saeng</b><span class="burger"></span></div>
+            <div class="sc">
             <div class="band"><div class="th rise">บ้านแสง · Isaan kitchen</div><h3 class="rise d2">Isaan street food, right here in Marrickville.</h3><span class="open rise d3">Open now · till 9:30pm</span></div>
             <div class="pic"><img class="ph" data-id="32123676" alt="Grilled pork with sticky rice"><span class="stamp">Charcoal<br>grilled</span></div>
             <div class="row"><span class="lbl">Most ordered</span><span>Full menu</span></div>
             <div class="dish"><img class="ph" data-id="32123676" alt=""><div><b>Moo ping &amp; sticky rice</b><small>Grilled pork skewers</small></div><i>$16</i></div>
             <div class="dish"><img class="ph" data-id="28273396" alt=""><div><b>Larb moo</b><small>Herbs, lime, roasted rice</small></div><i>$17</i></div>
+            <div class="xs"><h4>The menu</h4>
+              <p class="cat">From the grill</p><div class="ln"><span>Gai yang, half chicken</span><i>$18</i></div><div class="ln"><span>Moo ping, five skewers</span><i>$16</i></div>
+              <p class="cat">Salads</p><div class="ln"><span>Som tum Thai</span><i>$14</i></div><div class="ln"><span>Larb moo</span><i>$17</i></div>
+              <p class="cat">Noodles</p><div class="ln"><span>Khao soi gai</span><i>$19</i></div><div class="ln"><span>Boat noodles</span><i>$17</i></div></div>
+            <div class="xs"><h4>Come find us</h4><p>Illawarra Rd, Marrickville. Five minutes from the station.</p><div class="ln"><span>Tue to Sun</span><i>11am to 9:30pm</i></div><div class="ln"><span>Monday</span><i>Closed</i></div></div>
+            <p class="foot">Baan Saeng · site by Restauranting</p>
+            </div>
             <div class="bar"><b>Order pickup</b><b>Call</b></div>
           </article>
           <article class="site s-ramen" data-k="ramen" aria-label="Sample: Kumo, a ramen bar">
             <div class="nav"><b>雲 KUMO</b><span class="burger"></span></div>
+            <div class="sc">
             <div class="shot"><img class="ph" data-id="4224210" alt="A bowl of ramen"></div>
             <div class="vert">雲ラーメン</div>
             <div class="body"><p class="lbl rise">Haymarket · open till 11pm</p><h3 class="rise d2">Kumo</h3><p class="tag rise d3">Eighteen-hour tonkotsu, slurped late.</p>
               <div class="menu"><div><span><small>とんこつ</small>Tonkotsu</span><i>$22</i></div><div><span><small>黒にんにく</small>Black garlic shoyu</span><i>$23</i></div><div><span><small>餃子</small>Gyoza, six</span><i>$11</i></div></div></div>
+            <div class="xs"><h4>More bowls</h4><div class="ln"><span>Spicy miso</span><i>$22</i></div><div class="ln"><span>Yuzu shio</span><i>$21</i></div><div class="ln"><span>Kakuni bao</span><i>$9</i></div><div class="ln"><span>Ajitama egg</span><i>+$3</i></div></div>
+            <div class="xs"><h4>After dark</h4><p>Kitchen open till 11pm, and till 1am on Fridays and Saturdays.</p><div class="ln"><span>Mon to Thu</span><i>5pm to 11pm</i></div><div class="ln"><span>Fri and Sat</span><i>5pm to 1am</i></div></div>
+            <div class="xs"><h4>Find us</h4><p>Dixon St, Haymarket. Look for the paper lantern.</p></div>
+            <p class="foot">Kumo · site by Restauranting</p>
+            </div>
             <div class="bar"><b>Book a table</b><b>Directions</b></div>
           </article>
           <article class="site s-bake" data-k="bake" aria-label="Sample: Nonna Lu, a pasticceria">
             <div class="nav"><span class="lbl">Leichhardt</span><span class="burger"></span></div>
+            <div class="sc">
             <div class="head"><h3 class="rise">Nonna Lu</h3><p class="rise d2">Pasticceria siciliana. Cornetti, cannoli and proper coffee.</p></div>
             <div class="arch"><img class="ph" data-id="13425794" alt="Fresh croissants"><span class="chip">Fresh from 7am</span></div>
             <div class="trio"><div><img class="ph" data-id="31688615" alt=""><span>Cornetto</span><i>$6.50</i></div><div><img class="ph" data-id="36602914" alt=""><span>Cannolo</span><i>$7</i></div><div><img class="ph" data-id="13425794" alt=""><span>Sfogliatella</span><i>$7.50</i></div></div>
+            <div class="xs"><h4>From the counter</h4><div class="ln"><span>Cannolo siciliano</span><i>$7</i></div><div class="ln"><span>Cornetto al pistacchio</span><i>$6.50</i></div><div class="ln"><span>Sfogliatella</span><i>$7.50</i></div><div class="ln"><span>Espresso</span><i>$4</i></div></div>
+            <div class="xs"><h4>Cakes to order</h4><p>Cassata, tiramisù and birthday cakes. Order 48 hours ahead.</p><img class="ph wide" data-id="36602914" alt="Pastries in a display case"></div>
+            <div class="xs"><h4>Visit</h4><p>Norton St, Leichhardt.</p><div class="ln"><span>Every day</span><i>7am to 3pm</i></div></div>
+            <p class="foot">Nonna Lu · site by Restauranting</p>
+            </div>
             <div class="bar"><b>Order a cake</b><b>Visit us</b></div>
           </article>
           <article class="site s-kebab" data-k="kebab" aria-label="Sample: Ember, late-night kebabs">
             <div class="nav"><b>EMBER</b><span class="burger"></span></div>
+            <div class="sc">
             <div class="shot"><img class="ph" data-id="16694861" alt="Meat sliced from a rotisserie"></div>
             <div class="ribbon"><span>OPEN TILL 3AM ✦ OPEN TILL 3AM ✦ OPEN TILL 3AM</span></div>
             <div class="body"><h3 class="rise">CHARCOAL KEBABS</h3><p class="sub rise d2">Bondi Junction · kebabs, snack packs, falafel</p>
               <div class="menu"><div><span>Mixed kebab</span><i>$16</i></div><div><span>Snack pack, large</span><i>$18</i></div><div><span>Falafel wrap</span><i>$13</i></div></div></div>
+            <div class="xs"><h4>MORE</h4><div class="ln"><span>Snack pack, regular</span><i>$14</i></div><div class="ln"><span>Chips &amp; garlic sauce</span><i>$7</i></div><div class="ln"><span>Lamb plate</span><i>$19</i></div></div>
+            <img class="ph wide" data-id="30500759" alt="Snack pack with chips and meat">
+            <div class="xs"><h4>LATE NIGHTS</h4><div class="ln"><span>Sun to Thu</span><i>11am to 1am</i></div><div class="ln"><span>Fri and Sat</span><i>11am to 3am</i></div><p>Oxford St, Bondi Junction.</p></div>
+            <p class="foot">Ember · site by Restauranting</p>
+            </div>
             <div class="bar"><b>ORDER NOW</b><b>Call</b></div>
           </article>
           <article class="site s-cafe" data-k="cafe" aria-label="Sample: Tide, a beach café">
             <div class="nav"><b>Tide</b><span class="burger"></span></div>
+            <div class="sc">
             <span class="status rise">Open · 6:30am to 2:30pm</span>
             <h3 class="rise d2">Brekkie and good coffee, two minutes from the sand.</h3>
             <div class="mosaic"><img class="ph" data-id="7936964" alt="Avocado toast with poached egg"><img class="ph" data-id="38345070" alt="Iced matcha latte"><img class="ph" data-id="6864216" alt="Pancakes"></div>
             <div class="card"><div><span>Avo &amp; poached eggs</span><i>$21</i></div><div><span>Ricotta hotcakes</span><i>$22</i></div><div><span>Iced matcha</span><i>$7</i></div></div>
+            <div class="xs"><h4>All-day menu</h4><div class="ln"><span>Chilli scramble</span><i>$22</i></div><div class="ln"><span>Big brekky</span><i>$26</i></div><div class="ln"><span>Açaí bowl</span><i>$18</i></div><div class="ln"><span>Flat white</span><i>$5</i></div></div>
+            <div class="xs"><h4>Find us</h4><p>Arden St, Coogee. Dogs welcome on the deck.</p><div class="ln"><span>Every day</span><i>6:30am to 2:30pm</i></div></div>
+            <p class="foot">Tide · site by Restauranting</p>
+            </div>
             <div class="bar"><b>Directions</b><b>See menu</b></div>
           </article>
         </div>
@@ -553,7 +608,7 @@ footer a{color:#fff}
         <button type="button" data-k="kebab" aria-pressed="false">Late-night kebabs</button>
         <button type="button" data-k="cafe" aria-pressed="false">Beach café</button>
       </div>
-      <p class="cap">A few sample sites we've designed (fictional restaurants). Tap to switch.</p>
+      <p class="cap">A few sample sites we've designed (fictional restaurants). Scroll inside the phone, or tap a style.</p>
     </div>
   </div>
 </section>
@@ -714,12 +769,16 @@ footer a{color:#fff}
   document.querySelectorAll('img[data-id]').forEach(img=>{const id=img.dataset.id;img.src=src(id,700);img.srcset=`${src(id,400)} 400w, ${src(id,700)} 700w`;img.sizes='330px';img.loading='lazy';img.decoding='async'});
 
   const sites=[...document.querySelectorAll('.site')], btns=[...document.querySelectorAll('.picker button')];
-  const keys=btns.map(b=>b.dataset.k); let i=0, timer=null, inView=true;
+  const keys=btns.map(b=>b.dataset.k); let i=0, timer=null, idle=null, inView=true;
   const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function show(k){i=keys.indexOf(k);sites.forEach(s=>s.classList.toggle('on',s.dataset.k===k));btns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k))}
-  function start(){if(reduce||timer)return;timer=setInterval(()=>{if(inView&&!document.hidden)show(keys[(i+1)%keys.length])},3400)}
+  function show(k){i=keys.indexOf(k);sites.forEach(s=>{const on=s.dataset.k===k;s.classList.toggle('on',on);if(on){const sc=s.querySelector('.sc');if(sc)sc.scrollTop=0;s.classList.remove('scrolled')}});btns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k))}
+  function start(){if(reduce||timer)return;timer=setInterval(()=>{if(inView&&!document.hidden)show(keys[(i+1)%keys.length])},4200)}
   function stop(){clearInterval(timer);timer=null}
-  btns.forEach(b=>b.addEventListener('click',()=>{stop();show(b.dataset.k)}));
+  function pause(ms){stop();clearTimeout(idle);idle=setTimeout(start,ms)}
+  btns.forEach(b=>b.addEventListener('click',()=>{show(b.dataset.k);pause(9000)}));
+  const screen=document.getElementById('screen');
+  ['pointerdown','touchstart','wheel'].forEach(ev=>screen.addEventListener(ev,()=>pause(7000),{passive:true}));
+  sites.forEach(s=>{const sc=s.querySelector('.sc');if(sc)sc.addEventListener('scroll',()=>{s.classList.toggle('scrolled',sc.scrollTop>14);if(s.classList.contains('on'))pause(7000)},{passive:true})});
   if('IntersectionObserver' in window){new IntersectionObserver(e=>{inView=e[0].isIntersecting},{threshold:.3}).observe(document.querySelector('.phone'))}
   start();
 
