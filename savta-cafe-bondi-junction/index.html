@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Savta · Bondi Junction</title>
+<meta name="description" content="Savta, homestyle Israeli and Mediterranean brunch made with love at 4/12 Waverley St, Bondi Junction. Israeli breakfast, kefta toastie, Sunday jachnun.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Frank+Ruhl+Libre:wght@500;700&display=swap" rel="stylesheet">
+<!-- logo file: ask owner (Instagram check pending). Wordmark in Frank Ruhl Libre with Hebrew סבתא. -->
+<!-- [CHECK] hours: Instagram says daily 7am-3pm; Waze shows Sunday 9am-2:30pm. Using Waze for Sunday. -->
+<style>
+:root{--tahini:#f5ecdc;--card:#fffdf7;--ink:#2b2420;--tomato:#c8402b;--zaatar:#5d6b3a;--blue:#2c5d8a;--rule:#cdbfa7}
+*{box-sizing:border-box;margin:0}
+body{font:400 18px/1.6 Assistant,system-ui,sans-serif;color:var(--ink);background:var(--tahini)}
+a{color:inherit}
+.pillnav{position:sticky;top:12px;z-index:5;margin:12px auto 0;width:max-content;max-width:calc(100% - 24px);display:flex;gap:4px;align-items:center;background:var(--ink);color:var(--card);border-radius:999px;padding:6px 6px 6px 16px;font-weight:600;font-size:15px}
+.pillnav b{font:700 18px "Frank Ruhl Libre",serif;margin-right:8px}
+.pillnav a{text-decoration:none;padding:6px 10px;border-radius:999px}
+.pillnav a:last-child{background:var(--tomato)}
+.note{max-width:860px;margin:14px auto 0;padding:0 16px;font-size:12.5px;color:#6d6053}
+.hero{max-width:860px;margin:18px auto 0;padding:0 16px}
+.card{background:var(--card);border:1px solid var(--rule);box-shadow:0 2px 0 var(--rule);position:relative}
+.card.lined{background-image:repeating-linear-gradient(transparent 0 33px,rgba(44,93,138,.13) 33px 34px);background-position:0 70px}
+.card .redline{position:absolute;left:46px;top:0;bottom:0;width:1px;background:rgba(200,64,43,.35)}
+.hero .card{padding:24px 20px 24px 62px}
+.he{font:700 22px "Frank Ruhl Libre";color:var(--tomato);direction:rtl;display:block}
+.clock{font:700 clamp(46px,12vw,96px)/.95 "Frank Ruhl Libre",serif;margin-top:6px}
+.clock span{color:var(--tomato)}
+.hero p{max-width:34ch;margin-top:14px;font-size:20px}
+.ann{font:600 16px Assistant;color:var(--blue);display:block;margin-top:10px;transform:rotate(-2deg)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btns a{text-decoration:none;font-weight:700;padding:12px 18px;border:2px solid var(--ink);border-radius:4px}
+.btns a.p{background:var(--ink);color:var(--card)}
+.ph1{margin-top:18px;position:relative}
+.ph1 img{width:100%;display:block;aspect-ratio:3/2;object-fit:cover;border:8px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.15);transform:rotate(1deg)}
+.ph1 small{display:block;font-size:13px;color:#6d6053;margin-top:10px}
+.index{max-width:860px;margin:36px auto 0;padding:0 16px}
+h2{font:700 clamp(32px,7vw,48px)/1.05 "Frank Ruhl Libre",serif}
+h2 small{display:block;font:600 14px Assistant;letter-spacing:.18em;text-transform:uppercase;color:var(--zaatar);margin-bottom:6px}
+.rec{display:grid;gap:14px;margin-top:18px}
+@media(min-width:720px){.rec{grid-template-columns:1fr 1fr}}
+.rc{padding:18px 18px 16px 62px;min-height:150px}
+.rc .no{position:absolute;left:12px;top:16px;font:700 14px "Frank Ruhl Libre";color:var(--tomato)}
+.rc h3{font:700 22px/1.2 "Frank Ruhl Libre"}
+.rc p{font-size:16px;color:#4b4038;margin-top:6px}
+.rc .ann{font-size:15px}
+.flipwrap{perspective:900px;margin-top:22px}
+.flip{position:relative;transform-style:preserve-3d;transition:transform .8s;min-height:220px}
+.flip.turn{transform:rotateY(180deg)}
+.flip .card{position:absolute;inset:0;backface-visibility:hidden;padding:22px 20px 20px 62px}
+.flip .back{transform:rotateY(180deg)}
+@media (prefers-reduced-motion:reduce){.flip{transition:none}}
+.flip button{all:unset;cursor:pointer;color:var(--blue);font-weight:700;margin-top:10px;display:inline-block;border-bottom:2px solid currentColor}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.photos img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover;border:6px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.12)}
+.photos img:first-child{transform:rotate(-1.5deg)}.photos img:last-child{transform:rotate(1.5deg)}
+.visit{max-width:860px;margin:40px auto 0;padding:0 16px 60px}
+.visit .card{padding:22px 20px 22px 62px;margin-top:16px}
+.hrs{width:100%;border-collapse:collapse}
+.hrs td{padding:6px 0;border-bottom:1px dashed var(--rule)}
+.hrs td+td{text-align:right}
+.hrs .today td{color:var(--tomato);font-weight:700}
+footer{font-size:13px;color:#6d6053;margin-top:24px}
+footer p+p{margin-top:6px}
+</style>
+</head>
+<body>
+<nav class="pillnav"><b>Savta</b><a href="#recipes">Menu</a><a href="#visit">Visit</a><a href="tel:+61293694222">Call</a></nav>
+<p class="note">Concept preview by Restauranting. Not the official website of Savta. Photos are licensed stock; menu and details come from your Instagram bio and public listings.</p>
+
+<header class="hero">
+  <div class="card lined"><i class="redline"></i>
+    <span class="he" lang="he">סבתא</span>
+    <h1 class="clock" id="clock">Savta's <span>kitchen</span></h1>
+    <p>Homestyle Mediterranean brunch, made with love. Savta means grandmother, and this is her kind of cooking.</p>
+    <span class="ann">↳ 4/12 Waverley St, Bondi Junction</span>
+    <div class="btns"><a class="p" href="https://www.ubereats.com/au/store/savta/b6vC9mRKSWOftg1GWUKb_Q" target="_blank" rel="noopener">Order on Uber Eats</a><a href="tel:+61293694222">Book a group: (02) 9369 4222</a></div>
+  </div>
+  <figure class="ph1"><img src="https://images.pexels.com/photos/30892286/pexels-photo-30892286.jpeg?auto=compress&cs=tinysrgb&w=1300" srcset="https://images.pexels.com/photos/30892286/pexels-photo-30892286.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/30892286/pexels-photo-30892286.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:860px) 828px,100vw" alt="Shakshuka in a skillet with crusty bread by a sunlit window" fetchpriority="high"><small>Photos shown are placeholders: we'd swap in your own shots.</small></figure>
+</header>
+
+<section class="index" id="recipes">
+  <h2><small>The recipe box</small>What we cook</h2>
+  <div class="rec">
+    <div class="card lined rc"><i class="redline"></i><span class="no">No. 1</span><h3>Israeli Breakfast</h3><p>The full spread, the way it's eaten at home.</p><span class="ann">↳ the one everyone orders</span></div>
+    <div class="card lined rc"><i class="redline"></i><span class="no">No. 2</span><h3>Kefta toastie</h3><p>Spiced kefta pressed in a toastie.</p></div>
+    <div class="card lined rc"><i class="redline"></i><span class="no">No. 3</span><h3>Chicken shawarma plate</h3><p>Shawarma on a plate, made for lunch.</p></div>
+    <div class="card lined rc"><i class="redline"></i><span class="no">No. 4</span><h3>Lemon &amp; coconut basbusa</h3><p>Semolina cake, for after.</p></div>
+  </div>
+  <div class="flipwrap"><div class="flip" id="flip">
+    <div class="card lined front"><i class="redline"></i><span class="no" style="position:absolute;left:12px;top:16px;font:700 14px 'Frank Ruhl Libre';color:#c8402b">Sun.</span><h3 style="font:700 24px 'Frank Ruhl Libre'">Sunday jachnun</h3><p id="sunTxt">Only on Sundays.</p><button id="flipBtn" type="button">Turn the card</button></div>
+    <div class="card lined back"><i class="redline"></i><h3 style="font:700 24px 'Frank Ruhl Libre'">How Savta serves it</h3><p>Slow-baked rolled pastry with crushed tomato, tahini, a hard-boiled egg and chilli.</p><button id="flipBack" type="button">Turn back</button></div>
+  </div></div>
+  <div class="photos">
+    <img loading="lazy" src="https://images.pexels.com/photos/6419383/pexels-photo-6419383.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hummus topped with paprika and herbs, served with pita">
+    <img loading="lazy" src="https://images.pexels.com/photos/23025183/pexels-photo-23025183.jpeg?auto=compress&cs=tinysrgb&w=600" alt="A platter of Middle Eastern dishes from above">
+  </div>
+  <!-- [CHECK] full menu with descriptions from Uber Eats / owner -->
+</section>
+
+<section class="visit" id="visit">
+  <h2><small>Come to Savta's</small>Hours &amp; table</h2>
+  <div class="card lined"><i class="redline"></i><table class="hrs" id="hrs"></table></div>
+  <div class="card lined"><i class="redline"></i>
+    <p><b>4/12 Waverley St, Bondi Junction NSW 2022</b></p>
+    <p>Group bookings, birthdays and catering: call us or drop in.</p>
+    <div class="btns"><a class="p" href="tel:+61293694222">Call (02) 9369 4222</a><a href="https://maps.google.com/?cid=13888609366823685295" target="_blank" rel="noopener">Directions</a><a href="https://www.ubereats.com/au/store/savta/b6vC9mRKSWOftg1GWUKb_Q" target="_blank" rel="noopener">Uber Eats</a></div>
+  </div>
+  <footer>
+    <p>Savta · <a href="https://www.instagram.com/savta_cafe/" target="_blank" rel="noopener">@savta_cafe</a> · <a href="mailto:savtacafe@gmail.com">savtacafe@gmail.com</a></p>
+    <p>Concept preview by Restauranting. Not the official website of Savta. Photos via Pexels (IDs 30892286, 6419383, 23025183).</p>
+  </footer>
+</section>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Savta","alternateName":"Savta Cafe","servesCuisine":["Israeli","Mediterranean","Brunch"],"priceRange":"$$","telephone":"+61293694222","email":"savtacafe@gmail.com","address":{"@type":"PostalAddress","streetAddress":"4/12 Waverley St","addressLocality":"Bondi Junction","addressRegion":"NSW","postalCode":"2022","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:00","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"09:00","closes":"14:30"}],"sameAs":["https://www.instagram.com/savta_cafe/"],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"The recipe box","hasMenuItem":[{"@type":"MenuItem","name":"Israeli Breakfast"},{"@type":"MenuItem","name":"Kefta toastie"},{"@type":"MenuItem","name":"Chicken shawarma plate"},{"@type":"MenuItem","name":"Lemon & coconut basbusa"},{"@type":"MenuItem","name":"Sunday jachnun"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={0:[[540,870]]};for(var i=1;i<7;i++)H[i]=[[420,900]];
+(function(){var s=openState(H),c=document.getElementById('clock');
+if(s.open)c.innerHTML='Open till <span>'+fmt(s.until)+'</span>';else if(s.next!=null)c.innerHTML='Back <span>'+(s.nextDay==='tomorrow'?'tomorrow':s.nextDay)+' '+fmt(s.next)+'</span>';
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h;
+if(s.d===0)document.getElementById('sunTxt').textContent="It's Sunday: it's on today.";
+var f=document.getElementById('flip');document.getElementById('flipBtn').onclick=function(){f.classList.add('turn')};document.getElementById('flipBack').onclick=function(){f.classList.remove('turn')}})();
+</script>
+</body>
+</html>

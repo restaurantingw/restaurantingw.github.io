@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Meidy's Cafe · 188 Bondi Road</title>
+<meta name="description" content="Meidy's Cafe on Bondi Road: organic coffee and tea, healthy breakfast and lunch with a little touch of Central America. Open every day from 6:30am.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Young+Serif&display=swap" rel="stylesheet">
+<!-- logo file: ask owner. Brand colour: deep brown #672710 from their Square Online theme. -->
+<!-- [CHECK] award: 'Best Cafe', Australian Small Business Championship 2023 (OpenTable, visitbondibeach) -->
+<style>
+:root{--brown:#672710;--cream:#fbf3e6;--marigold:#f2a516;--teal:#1e8a83;--ink:#2a1a12;--paper:#fffaf1}
+*{box-sizing:border-box;margin:0}
+body{font:400 17px/1.55 Rubik,system-ui,sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden}
+a{color:inherit}
+.note{background:var(--brown);color:var(--cream);font-size:12.5px;padding:8px 16px;text-align:center}
+.hero{position:relative;max-width:1100px;margin:0 auto;padding:30px 16px 40px;min-height:88svh}
+.stamp{display:inline-block;border:3px solid var(--brown);color:var(--brown);border-radius:50%;width:150px;height:150px;display:grid;place-items:center;text-align:center;transform:rotate(-8deg);font:400 30px/1 "Young Serif",serif;background:var(--paper)}
+.stamp small{display:block;font:500 11px/1.2 Rubik;letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
+.clock{font:400 clamp(48px,13vw,120px)/.92 "Young Serif",serif;color:var(--brown);margin-top:26px;max-width:9ch}
+.clock em{font-style:normal;background:var(--marigold);padding:0 .12em;color:var(--ink)}
+.lede{max-width:30ch;margin-top:16px;font-size:19px}
+.hand{font:500 15px/1.3 Rubik;color:var(--teal);transform:rotate(-3deg);display:inline-block;margin-top:14px}
+.collage{position:relative;height:420px;margin-top:30px}
+.cut{position:absolute;background:#fff;padding:8px 8px 30px;box-shadow:0 6px 18px rgba(42,26,18,.18)}
+.cut img{display:block;width:100%;height:100%;object-fit:cover}
+.cut span{position:absolute;bottom:7px;left:10px;font:400 15px "Young Serif",serif}
+.c1{width:62%;height:300px;left:0;top:10px;transform:rotate(-4deg)}
+.c2{width:50%;height:220px;right:0;top:150px;transform:rotate(5deg)}
+.tape{position:absolute;width:90px;height:24px;background:rgba(242,165,22,.7);top:-10px;left:40%;transform:rotate(-6deg)}
+.sticker{position:absolute;right:6%;top:-10px;width:120px;height:120px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;text-align:center;font:700 13px/1.15 Rubik;letter-spacing:.06em;text-transform:uppercase;transform:rotate(12deg);transition:transform .6s;cursor:default;z-index:2}
+.sticker:hover{transform:rotate(-8deg) scale(1.05)}
+@media (prefers-reduced-motion:reduce){.sticker{transition:none}}
+@media(min-width:900px){.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;padding-top:44px}.collage{margin-top:0;height:560px}.c1{height:380px}.c2{height:280px;top:230px}}
+section.board{max-width:1100px;margin:0 auto;padding:30px 16px}
+.board h2,.story h2,.visit h2{font:400 clamp(36px,8vw,60px)/1 "Young Serif",serif;color:var(--brown)}
+.chalk{background:#3b2a20;color:#f6ead8;padding:24px 22px;margin-top:18px;transform:rotate(-1deg);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.chalk h3{font:500 13px/1 Rubik;letter-spacing:.18em;text-transform:uppercase;color:var(--marigold)}
+.chalk ul{list-style:none;padding:0;margin-top:12px}
+.chalk li{font:400 23px/1.35 "Young Serif",serif;padding:6px 0;border-bottom:1px dashed rgba(246,234,216,.3)}
+.chalk li small{display:block;font:400 14px/1.4 Rubik;opacity:.8}
+.list{margin-top:22px;display:grid;gap:10px}
+@media(min-width:760px){.list{grid-template-columns:1fr 1fr}}
+.list div{background:var(--paper);padding:14px 16px;border-left:4px solid var(--teal)}
+.list b{font-weight:500}
+.list p{font-size:15px;color:#5a463a}
+.ph{font-size:13px;color:#6b5547;margin-top:14px}
+.story{max-width:760px;margin:0 auto;padding:40px 16px}
+.story p{margin-top:14px;font-size:18px}
+.story .pull{font:400 26px/1.25 "Young Serif",serif;color:var(--teal);margin-top:20px;transform:rotate(-1deg)}
+.visit{max-width:1100px;margin:0 auto;padding:30px 16px 130px;display:grid;gap:26px}
+@media(min-width:760px){.visit{grid-template-columns:1fr 1fr}}
+.hrs{width:100%;border-collapse:collapse;margin-top:12px}
+.hrs td{padding:7px 0;border-bottom:1px solid rgba(103,39,16,.2)}
+.hrs td+td{text-align:right}
+.hrs .today td{font-weight:700;color:var(--brown)}
+footer{grid-column:1/-1;font-size:13px;color:#5a463a}
+footer p+p{margin-top:6px}
+.drawer{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--brown);color:var(--cream);border-radius:18px 18px 0 0;transform:translateY(calc(100% - 64px));transition:transform .35s;box-shadow:0 -6px 18px rgba(0,0,0,.2)}
+.drawer.open{transform:none}
+@media (prefers-reduced-motion:reduce){.drawer{transition:none}}
+.drawer button{all:unset;display:flex;justify-content:space-between;align-items:center;width:100%;box-sizing:border-box;padding:0 20px;height:64px;font:500 16px Rubik;cursor:pointer}
+.drawer button:before{content:"";position:absolute;top:8px;left:50%;width:40px;height:4px;margin-left:-20px;border-radius:4px;background:rgba(251,243,230,.5)}
+.drawer .acts{display:grid;gap:10px;padding:0 20px 22px}
+.drawer .acts a{display:block;background:var(--cream);color:var(--brown);text-decoration:none;font-weight:700;text-align:center;padding:14px;border-radius:10px}
+@media(min-width:900px){.drawer{left:auto;right:24px;width:340px;bottom:0}}
+</style>
+</head>
+<body>
+<p class="note">Concept preview by Restauranting. Not the official website of Meidy's Cafe. Photos are licensed stock; details come from your public listings and Square page.</p>
+
+<header class="hero">
+  <div>
+    <div class="stamp"><div>Meidy's<small>Cafe · Bondi Rd</small></div></div>
+    <h1 class="clock" id="clock">Open <em>every day</em></h1>
+    <p class="lede">Organic coffee and tea, healthy food, and a little touch of Central America, on Bondi Road.</p>
+    <span class="hand">↳ family-run, since 2018</span>
+  </div>
+  <div class="collage">
+    <div class="sticker" title="Australian Small Business Championship 2023">Best<br>Cafe<br>2023</div>
+    <figure class="cut c1"><i class="tape"></i><img src="https://images.pexels.com/photos/12261174/pexels-photo-12261174.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/12261174/pexels-photo-12261174.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/12261174/pexels-photo-12261174.jpeg?auto=compress&cs=tinysrgb&w=900 900w" sizes="(min-width:900px) 330px,60vw" alt="A Central American breakfast with eggs and orange juice"><span>breakfast</span></figure>
+    <figure class="cut c2"><img loading="lazy" src="https://images.pexels.com/photos/2226091/pexels-photo-2226091.jpeg?auto=compress&cs=tinysrgb&w=600" alt="A latte with heart latte art on a wooden table"><span>organic coffee</span></figure>
+  </div>
+</header>
+
+<section class="board" id="menu">
+  <h2>On the board</h2>
+  <div class="chalk">
+    <h3>Today's favourites</h3>
+    <ul>
+      <li>Shakshuka<small>baked eggs, made to share or not</small></li>
+      <li>Breakfast bagels<small>for the walk down to the beach</small></li>
+      <li>Matcha chia pudding<small>the light one</small></li>
+      <li>Pistachio cookies<small>from the counter, while they last</small></li>
+    </ul>
+  </div>
+  <div class="list">
+    <div><b>Coffee &amp; tea</b><p>Organic beans, organic tea.</p></div>
+    <div><b>Breakfast &amp; lunch</b><p>Healthy plates, every day till 2:30.</p></div>
+  </div>
+  <figure class="cut" style="position:relative;margin-top:26px;max-width:420px;transform:rotate(2deg)"><img loading="lazy" src="https://images.pexels.com/photos/6275160/pexels-photo-6275160.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Shakshuka in a pan with fresh parsley" style="aspect-ratio:3/2"><span>shakshuka</span></figure>
+  <p class="ph">Photos shown are placeholders: we'd swap in your own shots.</p>
+  <!-- [CHECK] full menu from Square Online page -->
+</section>
+
+<section class="story">
+  <h2>Meidy's story</h2>
+  <p>Meidy grew up around coffee farms in Honduras. Meidy's opened on Bondi Road around 2018, and when the neighbourhood kept coming back for more, we moved a few doors up to a bigger space.</p>
+  <p class="pull">A warm hello, good coffee, and food that's good for you.</p>
+  <!-- [CHECK] story wording with owner (source: visitbondibeach.com, Montessori East 2021) -->
+</section>
+
+<section class="visit">
+  <div><h2>Come by</h2><table class="hrs" id="hrs"></table></div>
+  <div><h2>Find us</h2><p style="margin-top:12px">188 Bondi Road, Bondi NSW 2026</p><p><a href="tel:+61283137689">(02) 8313 7689</a> · <a href="https://www.instagram.com/meidys_cafe/" target="_blank" rel="noopener">@meidys_cafe</a></p></div>
+  <footer>
+    <p>Concept preview by Restauranting. Not the official website of Meidy's Cafe.</p>
+    <p>Photos via Pexels (IDs 12261174, 2226091, 6275160).</p>
+  </footer>
+</section>
+
+<div class="drawer" id="drawer">
+  <button id="dbtn" aria-expanded="false"><span id="dTxt">Open today</span><span>Call · Directions ↑</span></button>
+  <div class="acts">
+    <a href="tel:+61283137689">Call (02) 8313 7689</a>
+    <a href="https://maps.google.com/?cid=8982362605774225085" target="_blank" rel="noopener">Directions to 188 Bondi Rd</a>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Meidy's Cafe","servesCuisine":["Cafe","Central American"],"telephone":"+61283137689","address":{"@type":"PostalAddress","streetAddress":"188 Bondi Rd","addressLocality":"Bondi","addressRegion":"NSW","postalCode":"2026","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:30","closes":"14:30"}],"sameAs":["https://www.instagram.com/meidys_cafe/"],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"On the board","hasMenuItem":[{"@type":"MenuItem","name":"Shakshuka"},{"@type":"MenuItem","name":"Breakfast bagels"},{"@type":"MenuItem","name":"Matcha chia pudding"},{"@type":"MenuItem","name":"Pistachio cookies"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={};for(var i=0;i<7;i++)H[i]=[[390,870]];
+(function(){var s=openState(H),c=document.getElementById('clock'),d=document.getElementById('dTxt');
+if(s.open){c.innerHTML='Open till <em>'+fmt(s.until)+'</em>';d.textContent='Open now · till '+fmt(s.until)}
+else if(s.next!=null){c.innerHTML='Back <em>'+s.nextDay+' '+fmt(s.next)+'</em>';d.textContent='Closed · opens '+fmt(s.next)}
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h;
+var dr=document.getElementById('drawer'),b=document.getElementById('dbtn');b.addEventListener('click',function(){var o=dr.classList.toggle('open');b.setAttribute('aria-expanded',o)})})();
+</script>
+</body>
+</html>

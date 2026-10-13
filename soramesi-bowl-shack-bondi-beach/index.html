@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ja-Latn-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>soramesi bowl shack · Bondi Beach</title>
+<meta name="description" content="soramesi bowl shack: freshly made Japanese rice bowls and sandos on Curlewis St, Bondi Beach. Order for pickup, Monday to Saturday.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Shippori+Mincho:wght@600&display=swap" rel="stylesheet">
+<!-- logo file: ask owner. Brand: lowercase wordmark + sage #9dbd73 from their Square Online theme. -->
+<style>
+:root{--sage:#9dbd73;--sage-d:#5d7a3c;--rice:#fbfaf5;--soy:#2b2118;--line:#e4e2d8}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{font:400 17px/1.5 "M PLUS Rounded 1c",system-ui,sans-serif;color:var(--soy);background:#ecefe4}
+a{color:inherit}
+.app{max-width:480px;margin:0 auto;min-height:100%;background:var(--rice);position:relative;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:center;padding:16px 18px 10px}
+.word{font:800 26px/1 "M PLUS Rounded 1c";letter-spacing:-.02em}
+.word span{color:var(--sage-d)}
+.pill{display:inline-flex;align-items:center;gap:7px;font:700 13px "M PLUS Rounded 1c";background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 11px}
+.pill i{width:8px;height:8px;border-radius:50%;background:#bbb}
+.pill.on i{background:#3aa65a}
+.note{margin:0 18px;font-size:12px;color:#6c6457;background:#f2f0e6;border-radius:10px;padding:8px 10px}
+.views{flex:1;padding:12px 18px 110px}
+.view{display:none}
+.view.on{display:block;animation:in .25s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.view.on{animation:none}}
+h1{font:800 34px/1.1 "M PLUS Rounded 1c";letter-spacing:-.02em;margin:14px 0 6px}
+h1 em{font-style:normal;color:var(--sage-d)}
+.jp{font:600 15px "Shippori Mincho",serif;color:var(--sage-d);letter-spacing:.1em}
+.hero{border-radius:18px;overflow:hidden;margin-top:14px;position:relative}
+.hero img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.hero .bowl{position:absolute;left:14px;bottom:14px;background:var(--rice);border-radius:14px;padding:10px 14px;font-weight:700;font-size:15px}
+.seg{display:flex;gap:8px;margin:18px 0 6px}
+.seg button{all:unset;cursor:pointer;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:700;font-size:14px}
+.seg button[aria-pressed=true]{background:var(--soy);color:#fff;border-color:var(--soy)}
+.card{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;margin-top:10px;min-height:76px}
+.card img{width:64px;height:64px;border-radius:12px;object-fit:cover;flex:none}
+.card .ph{width:64px;height:64px;border-radius:12px;background:var(--sage);flex:none;display:grid;place-items:center;font:600 22px "Shippori Mincho";color:#fff}
+.card b{display:block;font-weight:700;font-size:16px;line-height:1.25}
+.card small{color:#6c6457;font-size:13.5px}
+.tag{display:inline-block;font:700 11px "M PLUS Rounded 1c";border:1px solid var(--sage-d);color:var(--sage-d);border-radius:6px;padding:1px 5px;margin-left:4px;vertical-align:2px}
+.key{font-size:13px;color:#6c6457;margin-top:12px}
+.big{display:block;text-align:center;text-decoration:none;font-weight:800;font-size:18px;padding:18px;border-radius:16px;margin-top:12px}
+.big.p{background:var(--sage);color:var(--soy)}
+.big.s{background:#fff;border:1px solid var(--line)}
+.hrs{width:100%;border-collapse:collapse;margin-top:10px;background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.hrs td{padding:12px 14px;border-bottom:1px solid var(--line);font-size:15.5px}
+.hrs td+td{text-align:right}
+.hrs tr:last-child td{border:0}
+.hrs .today td{background:#eef4e4;font-weight:700}
+p.body{margin-top:12px}
+.small{font-size:13px;color:#6c6457;margin-top:16px}
+.tabs{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:480px;display:grid;grid-template-columns:repeat(4,1fr);background:var(--soy);padding:8px 8px calc(8px + env(safe-area-inset-bottom));z-index:9;border-radius:20px 20px 0 0}
+.tabs button{all:unset;cursor:pointer;text-align:center;color:#d8d2c4;font:700 13px "M PLUS Rounded 1c";padding:10px 0;border-radius:12px}
+.tabs button[aria-selected=true]{background:var(--sage);color:var(--soy)}
+.tabs b{display:block;font:600 17px "Shippori Mincho";margin-bottom:2px}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top"><div class="word">soramesi <span>bowl shack</span></div><span class="pill" id="pill"><i></i><span id="pTxt">Bondi Beach</span></span></div>
+  <p class="note">Concept preview by Restauranting. Not the official website of soramesi bowl shack. Photos are licensed stock; menu and details come from your Square page and listings.</p>
+
+  <main class="views">
+    <section class="view on" id="v-menu" role="tabpanel">
+      <div class="jp">空 · 飯</div>
+      <h1>Freshly made <em>bowls &amp; sandos.</em></h1>
+      <div class="hero"><img src="https://images.pexels.com/photos/31317036/pexels-photo-31317036.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/31317036/pexels-photo-31317036.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/31317036/pexels-photo-31317036.jpeg?auto=compress&cs=tinysrgb&w=900 900w" sizes="(min-width:480px) 444px,92vw" alt="Japanese karaage rice bowl with sliced egg and scallions" fetchpriority="high"><span class="bowl" id="bowlTxt">Shop 2, 84 Curlewis St</span></div>
+      <div class="seg" role="group" aria-label="Menu section">
+        <button aria-pressed="true" data-s="bowls">Rice bowls</button><button aria-pressed="false" data-s="sandos">Sandos</button>
+      </div>
+      <div id="list"></div>
+      <p class="key"><span class="tag">GF</span> gluten free · <span class="tag">DF</span> dairy free.</p>
+      <p class="small">Photos shown are placeholders: we'd swap in your own shots.</p>
+    </section>
+
+    <section class="view" id="v-order" role="tabpanel">
+      <h1>Order for <em>pickup.</em></h1>
+      <p class="body">Order ahead and grab it from the shack on Curlewis St, or get it delivered.</p>
+      <a class="big p" href="https://soramesibowlshack.square.site/" target="_blank" rel="noopener">Order pickup (Square)</a>
+      <a class="big s" href="https://www.ubereats.com/au/store/soramesi-bowl-shack/hi__rFFYRoa4B1kUnr0J0w" target="_blank" rel="noopener">Delivery on Uber Eats</a>
+      <a class="big s" href="https://maps.google.com/?cid=8860188640362517362" target="_blank" rel="noopener">Directions</a>
+    </section>
+
+    <section class="view" id="v-hours" role="tabpanel">
+      <h1 id="hHead">Hours</h1>
+      <table class="hrs" id="hrs"></table>
+      <p class="small">Lunch and dinner, Monday to Saturday. Closed Sundays.</p>
+    </section>
+
+    <section class="view" id="v-us" role="tabpanel">
+      <h1>A tiny <em>shack</em> on Curlewis.</h1>
+      <p class="body">Japanese rice bowls and sandos, made fresh to order. Two small tables if you want to stay, a bag if you're heading to the beach.</p>
+      <p class="body">Our standouts: wagyu meatballs, aburi salmon poke and sweet miso salmon.</p>
+      <a class="big s" href="https://www.instagram.com/soramesibowlshack/" target="_blank" rel="noopener">@soramesibowlshack</a>
+      <p class="small">soramesi bowl shack · Shop 2/84 Curlewis St, Bondi Beach NSW 2026<br>Concept preview by Restauranting. Not the official website of soramesi bowl shack.<br>Photos via Pexels (IDs 31317036, 7531245, 31313476).</p>
+    </section>
+  </main>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-v="menu"><b>丼</b>Menu</button>
+    <button role="tab" aria-selected="false" data-v="order"><b>注</b>Order</button>
+    <button role="tab" aria-selected="false" data-v="hours"><b>時</b>Hours</button>
+    <button role="tab" aria-selected="false" data-v="us"><b>空</b>Us</button>
+  </nav>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"soramesi bowl shack","servesCuisine":["Japanese"],"address":{"@type":"PostalAddress","streetAddress":"Shop 2/84 Curlewis St","addressLocality":"Bondi Beach","addressRegion":"NSW","postalCode":"2026","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"11:00","closes":"14:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"17:00","closes":"20:30"}],"acceptsReservations":false,"sameAs":["https://www.instagram.com/soramesibowlshack/","https://soramesibowlshack.square.site/"],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Rice bowls","hasMenuItem":[{"@type":"MenuItem","name":"soramesi crispy chicken"},{"@type":"MenuItem","name":"Sweet miso salmon"},{"@type":"MenuItem","name":"Wagyu meatballs"},{"@type":"MenuItem","name":"Teriyaki karaage chicken"},{"@type":"MenuItem","name":"Aburi salmon poke"}]},{"@type":"MenuSection","name":"Sandos","hasMenuItem":[{"@type":"MenuItem","name":"Egg sando"},{"@type":"MenuItem","name":"Wagyu katsu sando"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={0:[],1:[[660,870],[1020,1230]],2:[[660,870],[1020,1230]],3:[[660,870],[1020,1230]],4:[[660,870],[1020,1230]],5:[[660,870],[1020,1230]],6:[[660,870],[1020,1230]]};
+var P='https://images.pexels.com/photos/',Q='?auto=compress&cs=tinysrgb&w=200';
+var M={bowls:[
+ {n:'soramesi crispy chicken',d:'our house bowl',t:['DF'],img:'31317036'},
+ {n:'Sweet miso salmon',d:'glazed salmon over rice',t:['GF','DF'],img:'7531245'},
+ {n:'Wagyu meatballs',d:'a favourite',t:[]},
+ {n:'Teriyaki karaage chicken',d:'crispy, glazed',t:['GF','DF']},
+ {n:'Aburi salmon poke',d:'flame-seared salmon',t:[]}],
+ sandos:[{n:'Egg sando',d:'soft and simple',t:[]},{n:'Wagyu katsu sando',d:'the big one',t:[],img:'31313476'}]};
+function draw(k){document.getElementById('list').innerHTML=M[k].map(function(x){var im=x.img?'<img loading="lazy" src="'+P+x.img+'/pexels-photo-'+x.img+'.jpeg'+Q+'" alt="'+x.n+'">':'<span class="ph" aria-hidden="true">丼</span>';return '<div class="card">'+im+'<div><b>'+x.n+x.t.map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'</b><small>'+x.d+'</small></div></div>'}).join('')}
+draw('bowls');
+[].forEach.call(document.querySelectorAll('.seg button'),function(b){b.onclick=function(){[].forEach.call(document.querySelectorAll('.seg button'),function(o){o.setAttribute('aria-pressed',o===b)});draw(b.dataset.s)}});
+[].forEach.call(document.querySelectorAll('.tabs button'),function(b){b.onclick=function(){[].forEach.call(document.querySelectorAll('.tabs button'),function(o){o.setAttribute('aria-selected',o===b)});[].forEach.call(document.querySelectorAll('.view'),function(v){v.classList.toggle('on',v.id==='v-'+b.dataset.v)});window.scrollTo(0,0)}});
+(function(){var s=openState(H),p=document.getElementById('pill'),t=document.getElementById('pTxt');
+if(s.open){p.classList.add('on');t.textContent='Open · till '+fmt(s.until)}else if(s.next!=null){t.textContent='Closed · '+s.nextDay+' '+fmt(s.next)}
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>

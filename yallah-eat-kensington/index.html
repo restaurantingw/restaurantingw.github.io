@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Yallah Eat · UNSW Gate 2, High St</title>
+<meta name="description" content="Yallah Eat: halal pita, kebabs, shawarma and rice bowls at UNSW Gate 2, High Street, Kensington. Build your own, grab the student meal, or order catering.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- logo file: ask owner (TapTouch store icon found but not verified). Wordmark in Alexandria. Store theme colour black. -->
+<!-- [CHECK] phone 0405 834 372 (dossier); [CHECK] hours ~9am-9pm daily (TapTouch / HappyCow differ). Map is a simplified illustration, not to scale. -->
+<style>
+:root{--black:#111;--sumac:#b8322a;--white:#fff;--sand:#f3eee5;--olive:#6c7a3a;--mute:#666}
+*{box-sizing:border-box;margin:0}
+body{font:400 17px/1.55 Cairo,system-ui,sans-serif;color:var(--black);background:var(--sand)}
+a{color:inherit}
+.rail{display:flex;justify-content:space-between;align-items:center;background:var(--black);color:#fff;padding:12px 16px}
+.rail .word{font:800 22px/1 Alexandria,sans-serif;letter-spacing:-.01em}
+.rail .ar{font:700 20px Cairo;color:var(--sumac);margin-left:8px}
+.rail nav a{color:#ccc;text-decoration:none;font-size:14px;margin-left:14px}
+@media(min-width:960px){
+ body{padding-left:110px}
+ .rail{position:fixed;left:0;top:0;bottom:0;width:110px;flex-direction:column;justify-content:space-between;padding:22px 0}
+ .rail .word{writing-mode:vertical-rl;transform:rotate(180deg);font-size:30px}
+ .rail .ar{margin:10px 0 0}
+ .rail nav{display:flex;flex-direction:column;gap:14px;text-align:center}
+ .rail nav a{margin:0}
+}
+.note{font-size:12.5px;color:var(--mute);padding:10px 16px;max-width:1100px;margin:0 auto}
+.find{max-width:1100px;margin:0 auto;padding:6px 16px 20px;display:grid;gap:20px}
+@media(min-width:960px){.find{grid-template-columns:1.3fr 1fr;align-items:center}}
+.map{background:#e9e3d6;border:2px solid var(--black);position:relative;overflow:hidden}
+.map svg{display:block;width:100%;height:auto}
+.pin{transform-box:fill-box;transform-origin:50% 100%;animation:drop .7s cubic-bezier(.3,1.5,.5,1) .3s both}
+@keyframes drop{from{transform:translateY(-120px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.pin{animation:none}}
+.how h1{font:800 clamp(40px,10vw,76px)/.95 Alexandria,sans-serif;letter-spacing:-.02em}
+.how h1 em{font-style:normal;color:var(--sumac)}
+.clock{font:800 clamp(26px,6vw,40px)/1.1 Alexandria;margin-top:14px}
+.clock span{color:var(--sumac)}
+.steps{list-style:none;padding:0;margin-top:16px;counter-reset:s}
+.steps li{counter-increment:s;padding:8px 0 8px 40px;position:relative;border-bottom:1px solid #d6cfc1}
+.steps li:before{content:counter(s);position:absolute;left:0;top:8px;width:28px;height:28px;border-radius:50%;background:var(--black);color:#fff;font:800 14px/28px Alexandria;text-align:center}
+.menu{max-width:1100px;margin:0 auto;padding:30px 16px}
+.menu h2,.visit h2{font:800 clamp(30px,7vw,52px)/1 Alexandria;letter-spacing:-.02em}
+.strip{display:flex;gap:12px;overflow-x:auto;margin:18px -16px 0;padding:0 16px 8px;scroll-snap-type:x mandatory}
+.strip figure{flex:0 0 78%;max-width:420px;scroll-snap-align:start;background:#fff;border:2px solid var(--black)}
+.strip img{width:100%;display:block;aspect-ratio:3/2;object-fit:cover}
+.strip figcaption{padding:10px 12px;font:800 18px Alexandria}
+.deal{background:var(--black);color:#fff;padding:20px;margin-top:22px;display:grid;gap:6px}
+.deal b{font:800 24px Alexandria;color:#fff}
+.deal span{color:#ddd}
+.list{margin-top:18px;border-top:2px solid var(--black)}
+.list div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #cfc7b8}
+.list b{font-weight:700}
+.list span{color:var(--mute);font-size:15px;text-align:right}
+.key{font-size:14px;color:var(--mute);margin-top:12px}
+.tag{display:inline-block;font:700 11px Cairo;background:var(--olive);color:#fff;border-radius:3px;padding:0 5px;margin-left:6px}
+.visit{max-width:1100px;margin:0 auto;padding:10px 16px 120px;display:grid;gap:24px}
+@media(min-width:760px){.visit{grid-template-columns:1fr 1fr}}
+.hrs{width:100%;border-collapse:collapse;margin-top:12px}
+.hrs td{padding:7px 0;border-bottom:1px solid #d6cfc1}
+.hrs td+td{text-align:right}
+.hrs .today td{font-weight:700;color:var(--sumac)}
+.links a{display:block;padding:12px 0;border-bottom:1px solid #d6cfc1;text-decoration:none;font-weight:700}
+footer{grid-column:1/-1;font-size:13px;color:var(--mute)}
+footer p+p{margin-top:6px}
+.order{position:fixed;right:16px;bottom:16px;z-index:9;background:var(--sumac);color:#fff;text-decoration:none;font:800 17px Alexandria;padding:16px 24px;border-radius:2px;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+</style>
+</head>
+<body>
+<header class="rail"><div><span class="word">Yallah Eat</span><span class="ar" lang="ar">يلا</span></div><nav><a href="#menu">Menu</a><a href="#visit">Hours</a></nav></header>
+<p class="note">Concept preview by Restauranting. Not the official website of Yallah Eat. Photos are licensed stock; menu and details come from your ordering page and public listings. Map simplified.</p>
+
+<section class="find">
+  <div class="map" aria-label="Simplified map: Yallah Eat at UNSW Gate 2 on High Street, in the University Terraces building">
+    <svg viewBox="0 0 640 420" role="img">
+      <title>Yallah Eat at UNSW Gate 2, High Street</title>
+      <rect width="640" height="420" fill="#e9e3d6"/>
+      <rect x="250" y="0" width="390" height="250" fill="#d9e0c8"/>
+      <text x="440" y="60" font-family="Alexandria" font-size="18" font-weight="800" fill="#5c6b3a" text-anchor="middle">UNSW lower campus</text>
+      <rect x="0" y="250" width="640" height="46" fill="#fff" stroke="#111" stroke-width="2"/>
+      <text x="40" y="279" font-family="Cairo" font-size="16" font-weight="700" fill="#111">HIGH ST</text>
+      <rect x="180" y="0" width="46" height="420" fill="#fff" stroke="#111" stroke-width="2"/>
+      <text x="203" y="400" font-family="Cairo" font-size="15" font-weight="700" fill="#111" transform="rotate(-90 203 400)">ANZAC PDE</text>
+      <line x1="0" y1="273" x2="640" y2="273" stroke="#b8322a" stroke-width="3" stroke-dasharray="10 8"/>
+      <text x="540" y="320" font-family="Cairo" font-size="13" fill="#b8322a">light rail</text>
+      <rect x="330" y="150" width="170" height="90" fill="#111"/>
+      <text x="415" y="190" font-family="Alexandria" font-size="14" font-weight="800" fill="#fff" text-anchor="middle">University</text>
+      <text x="415" y="208" font-family="Alexandria" font-size="14" font-weight="800" fill="#fff" text-anchor="middle">Terraces</text>
+      <rect x="510" y="180" width="60" height="60" fill="#fff" stroke="#111" stroke-width="2"/>
+      <text x="540" y="215" font-family="Cairo" font-size="13" font-weight="700" fill="#111" text-anchor="middle">IGA</text>
+      <rect x="296" y="236" width="40" height="18" fill="#b8322a"/>
+      <text x="316" y="249" font-family="Cairo" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">GATE 2</text>
+      <g class="pin"><path d="M440 96c-20 0-34 15-34 33 0 25 34 55 34 55s34-30 34-55c0-18-14-33-34-33z" fill="#b8322a" stroke="#111" stroke-width="2"/><circle cx="440" cy="129" r="11" fill="#fff"/></g>
+    </svg>
+  </div>
+  <div class="how">
+    <h1>Gate 2, <em>High St.</em></h1>
+    <div class="clock" id="clock">Open <span>7 days</span></div>
+    <ol class="steps">
+      <li>Come in through UNSW Gate 2 on High Street.</li>
+      <li>Look for the University Terraces building, next to IGA.</li>
+      <li>Grab a pita, a bowl or the student meal. Yallah.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <h2>Build your own</h2>
+  <div class="strip">
+    <figure><img src="https://images.pexels.com/photos/5779364/pexels-photo-5779364.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/5779364/pexels-photo-5779364.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/5779364/pexels-photo-5779364.jpeg?auto=compress&cs=tinysrgb&w=900 900w" sizes="(min-width:600px) 420px,78vw" alt="A grilled shawarma wrap cut in half"><figcaption>Pita &amp; kebab wraps</figcaption></figure>
+    <figure><img loading="lazy" src="https://images.pexels.com/photos/2373536/pexels-photo-2373536.jpeg?auto=compress&cs=tinysrgb&w=900" alt="A plate with falafel, kebabs and tabbouleh"><figcaption>Plates &amp; bowls</figcaption></figure>
+  </div>
+  <p class="key">Photos shown are placeholders: we'd swap in your own shots.</p>
+  <div class="deal"><b>The student meal</b><span>Hummus, lentil rice, salad, pita and your protein. Add fries and a drink if you're hungry.</span></div>
+  <div class="list">
+    <div><b>Pita or kebab wrap</b><span>build your own</span></div>
+    <div><b>HSP</b><span>the late-lecture fix</span></div>
+    <div><b>Rice &amp; salad bowls</b><span>your protein, your sauces</span></div>
+    <div><b>Falafel shawarma<span class="tag">V</span></b><span>vegan option</span></div>
+    <div><b>Catering &amp; group meal deals</b><span>ask us</span></div>
+  </div>
+  <p class="key"><span class="tag">V</span> vegan option. Everything we serve is halal.</p>
+</section>
+
+<section class="visit" id="visit">
+  <div><h2>Hours</h2><table class="hrs" id="hrs"></table></div>
+  <div class="links"><h2>Order &amp; find</h2>
+    <a href="https://yallaheat.lifeintouch.net/" target="_blank" rel="noopener">Order pickup online</a>
+    <a href="https://www.ubereats.com/au/store/yallah-eat-pita-kebab-%26-shawarma-bar/IZTJIksTSbSzHiwz4V9XcA" target="_blank" rel="noopener">Uber Eats delivery</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Yallah+Eat+17+High+St+Kensington+NSW" target="_blank" rel="noopener">Directions to Gate 2</a>
+    <a href="tel:+61405834372">Call 0405 834 372</a>
+    <a href="https://www.instagram.com/yallaheatau/" target="_blank" rel="noopener">@yallaheatau</a>
+  </div>
+  <footer>
+    <p>Yallah Eat · University Terraces, 17 High St (UNSW Gate 2), Kensington NSW 2033</p>
+    <p>Concept preview by Restauranting. Not the official website of Yallah Eat. Photos via Pexels (IDs 5779364, 2373536).</p>
+  </footer>
+</section>
+
+<a class="order" href="https://yallaheat.lifeintouch.net/" target="_blank" rel="noopener">Order</a>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Yallah Eat","alternateName":"Yallah Eat Pita, Kebab & Shawarma Bar","servesCuisine":["Lebanese","Middle Eastern","Halal"],"telephone":"+61405834372","address":{"@type":"PostalAddress","streetAddress":"17 High St, University Terraces, UNSW Gate 2","addressLocality":"Kensington","addressRegion":"NSW","postalCode":"2033","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"21:00"}],"sameAs":["https://www.instagram.com/yallaheatau/"],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Build your own","hasMenuItem":[{"@type":"MenuItem","name":"Pita or kebab wrap"},{"@type":"MenuItem","name":"HSP"},{"@type":"MenuItem","name":"Rice & salad bowls"},{"@type":"MenuItem","name":"Falafel shawarma","suitableForDiet":"https://schema.org/VeganDiet"},{"@type":"MenuItem","name":"Student meal"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={};for(var i=0;i<7;i++)H[i]=[[540,1260]];
+(function(){var s=openState(H),c=document.getElementById('clock');
+if(s.open)c.innerHTML='Open till <span>'+fmt(s.until)+'</span>';else if(s.next!=null)c.innerHTML='Opens <span>'+s.nextDay+' '+fmt(s.next)+'</span>';
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>
