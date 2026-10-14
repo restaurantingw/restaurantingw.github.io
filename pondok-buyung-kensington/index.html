@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pondok Buyung · Padang food, Kensington</title>
+<meta name="description" content="Pondok Buyung on Anzac Parade, Kensington: Padang-style nasi campur from the counter, beef rendang, goat curry, sambal ijo. Halal. Cash only.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;1,500&family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
+<!-- logo file: ask owner. [CHECK] address 124 vs 140 Anzac Pde; [CHECK] hours (10am-5pm per Wanderlog vs lunch/dinner per Yelp). -->
+<style>
+:root{--paper:#fbf6ec;--ink:#24180f;--rendang:#6b2d14;--turmeric:#e3a21a;--leaf:#2f6b3b;--mute:#76665a;--rule:#dccdb7}
+*{box-sizing:border-box;margin:0}
+body{font:400 18px/1.65 Alegreya,Georgia,serif;color:var(--ink);background:var(--paper)}
+a{color:inherit}
+.strip{position:sticky;top:0;z-index:6;display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--rendang);color:#fff;padding:9px 16px;font:400 14px "Alegreya Sans",sans-serif}
+.strip a{background:var(--turmeric);color:var(--ink);text-decoration:none;font-weight:700;padding:6px 12px;border-radius:3px}
+.mast{text-align:center;padding:24px 16px 16px;border-bottom:3px double var(--ink);max-width:980px;margin:0 auto}
+.mast .k{font:700 12px "Alegreya Sans";letter-spacing:.26em;text-transform:uppercase;color:var(--mute)}
+.mast .n{font:700 clamp(44px,11vw,82px)/1 Alegreya,serif;margin-top:6px}
+.mast .s{font-style:italic;color:var(--rendang)}
+.note{font:400 12.5px "Alegreya Sans";color:var(--mute);text-align:center;padding:8px 16px}
+article{max-width:980px;margin:0 auto;padding:24px 16px}
+h1{font:500 clamp(34px,7vw,58px)/1.08 Alegreya,serif;max-width:18ch}
+h1 i{color:var(--rendang)}
+.dek{font-style:italic;font-size:21px;color:#4b3b2f;margin-top:12px;max-width:40ch}
+.lead{margin-top:22px;position:relative}
+.lead img{width:100%;display:block;aspect-ratio:3/2;object-fit:cover}
+.lead figcaption{font:italic 400 14px Alegreya;color:var(--mute);margin-top:6px}
+.cash{position:absolute;right:14px;top:14px;border:3px solid #b2271b;color:#b2271b;font:700 18px/1 "Alegreya Sans";letter-spacing:.14em;padding:10px 12px;transform:rotate(-8deg) scale(1.6);opacity:0;background:rgba(251,246,236,.9);transition:transform .45s cubic-bezier(.3,1.6,.5,1),opacity .2s}
+.cash.on{transform:rotate(-8deg) scale(1);opacity:1}
+@media (prefers-reduced-motion:reduce){.cash{transition:none;transform:rotate(-8deg);opacity:1}}
+.cols{columns:1;column-gap:44px;margin-top:26px}
+@media(min-width:820px){.cols{columns:2}}
+.cols p{margin-bottom:14px;break-inside:avoid-column}
+.cols p:first-child:first-letter{float:left;font:700 70px/.8 Alegreya;color:var(--rendang);padding:6px 10px 0 0}
+blockquote{break-inside:avoid;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:14px 0;margin:6px 0 18px;font:italic 500 24px/1.35 Alegreya;color:var(--leaf)}
+.counter{max-width:980px;margin:10px auto 0;padding:0 16px}
+.counter h2,.info h2{font:700 15px/1 "Alegreya Sans";letter-spacing:.24em;text-transform:uppercase;border-top:3px double var(--ink);padding-top:14px}
+.strip2{display:flex;gap:12px;overflow-x:auto;margin:14px -16px 0;padding:0 16px 8px}
+.strip2 figure{flex:0 0 72%;max-width:340px}
+.strip2 img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.strip2 figcaption{font:italic 15px Alegreya;margin-top:4px}
+.dishes{display:grid;gap:0;margin-top:14px;font-family:"Alegreya Sans",sans-serif}
+@media(min-width:700px){.dishes{grid-template-columns:1fr 1fr;column-gap:30px}}
+.dishes p{padding:10px 0;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:10px}
+.dishes small{color:var(--mute);font-style:italic;font-family:Alegreya}
+.ph{font:italic 14px Alegreya;color:var(--mute);margin-top:12px}
+.info{max-width:980px;margin:30px auto 0;padding:0 16px 70px}
+.hrs{width:100%;border-collapse:collapse;margin-top:12px;font-family:"Alegreya Sans";font-size:16px}
+.hrs td{padding:7px 0;border-bottom:1px solid var(--rule)}
+.hrs td+td{text-align:right}
+.hrs .today td{color:var(--rendang);font-weight:700}
+.hrs .now td{font-style:italic;color:var(--leaf);border-bottom:2px solid var(--ink)}
+footer{font:400 13px "Alegreya Sans";color:var(--mute);margin-top:24px}
+footer p+p{margin-top:6px}
+</style>
+</head>
+<body>
+<div class="strip"><span>Halal · Cash only · Anzac Parade</span><a href="tel:+61296632296">Call</a></div>
+<header class="mast"><div class="k">Masakan Padang · Kensington</div><div class="n">Pondok Buyung</div><div class="s">Padang food from the counter</div></header>
+<p class="note">Concept preview by Restauranting. Not the official website of Pondok Buyung. Photos are licensed stock; details come from your public listings and press.</p>
+<article>
+  <h1>Point at the counter. <i>We'll fill your plate.</i></h1>
+  <p class="dek">Minang home cooking on Anzac Parade, the way it's eaten in Padang: rice, and whatever looks best in the window today.</p>
+  <figure class="lead" id="lead"><img src="https://images.pexels.com/photos/37066472/pexels-photo-37066472.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/37066472/pexels-photo-37066472.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/37066472/pexels-photo-37066472.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/37066472/pexels-photo-37066472.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:980px) 948px,100vw" alt="A plate of nasi Padang with rice, meat and vegetables on a banana leaf" fetchpriority="high"><span class="cash" id="cash">CASH ONLY</span><figcaption>Nasi Padang. Photos shown are placeholders: we'd swap in your own shots.</figcaption></figure>
+  <div class="cols">
+    <p>There's no printed menu at Pondok Buyung. You walk up to the bain-marie, look at the curries and fried things laid out behind the glass, and point. That's nasi campur, and it's how Padang food has always worked.</p>
+    <p>The rendang is the one everyone asks for: beef cooked down slowly in coconut and spice until it's dark and dry. Goat curry, bakwan, cassava leaf curry and a sharp green sambal ijo sit alongside it.</p>
+    <blockquote>Coconut, chilli, curries over rice.</blockquote>
+    <p>We've been on Anzac Parade, almost opposite Peters of Kensington, for years. About forty seats, everything halal, and please bring cash.</p>
+  </div>
+</article>
+
+<section class="counter" id="menu">
+  <h2>In the window today</h2>
+  <div class="strip2">
+    <figure><img src="https://images.pexels.com/photos/37249196/pexels-photo-37249196.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/37249196/pexels-photo-37249196.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/37249196/pexels-photo-37249196.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/37249196/pexels-photo-37249196.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="340px" alt="Beef rendang with chilli on a banana leaf" loading="lazy"><figcaption>rendang</figcaption></figure>
+    <figure><img src="https://images.pexels.com/photos/37073149/pexels-photo-37073149.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/37073149/pexels-photo-37073149.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/37073149/pexels-photo-37073149.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/37073149/pexels-photo-37073149.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="340px" alt="An Indonesian meal of rice, fish and sides on a banana leaf" loading="lazy"><figcaption>nasi campur</figcaption></figure>
+  </div>
+  <div class="dishes">
+    <p>Rendang daging <small>beef rendang</small></p>
+    <p>Gulai kambing <small>goat curry</small></p>
+    <p>Gulai daun singkong <small>cassava leaf curry</small></p>
+    <p>Bakwan <small>vegetable fritters</small></p>
+    <p>Sambal ijo <small>green chilli sambal</small></p>
+    <p>Nasi campur <small>rice with your choice</small></p>
+  </div>
+  <p class="ph">Dishes change with the day. Ask at the counter.</p>
+</section>
+
+<section class="info" id="visit">
+  <h2>Hours</h2>
+  <table class="hrs" id="hrs"></table>
+  <p style="margin-top:12px;font-family:'Alegreya Sans'">140 Anzac Parade, Kensington NSW 2033 · <a href="tel:+61296632296">(02) 9663 2296</a> · <a href="https://www.google.com/maps/search/?api=1&query=Pondok+Buyung+Anzac+Parade+Kensington" target="_blank" rel="noopener">Directions</a></p>
+  <footer><p>Concept preview by Restauranting. Not the official website of Pondok Buyung.</p><p>Photos via Pexels (IDs 37066472, 37249196, 37073149).</p></footer>
+</section>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Pondok Buyung","servesCuisine":["Indonesian","Padang","Halal"],"paymentAccepted":"Cash","telephone":"+61296632296","address":{"@type":"PostalAddress","streetAddress":"140 Anzac Parade","addressLocality":"Kensington","addressRegion":"NSW","postalCode":"2033","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"17:00"}],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"In the window","hasMenuItem":[{"@type":"MenuItem","name":"Rendang daging"},{"@type":"MenuItem","name":"Gulai kambing"},{"@type":"MenuItem","name":"Gulai daun singkong"},{"@type":"MenuItem","name":"Bakwan"},{"@type":"MenuItem","name":"Sambal ijo"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={};for(var i=0;i<7;i++)H[i]=[[600,1020]];
+(function(){var s=openState(H),h='<tr class="now"><td colspan="2">'+(s.open?'The window is full: open until '+fmt(s.until)+'.':'Closed now'+(s.next!=null?', back '+s.nextDay+' at '+fmt(s.next)+'.':'.'))+'</td></tr>';
+for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h;
+var c=document.getElementById('cash');if(RM||!('IntersectionObserver' in window)){c.classList.add('on');return}
+var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){setTimeout(function(){c.classList.add('on')},500);io.disconnect()}},{threshold:.5});io.observe(document.getElementById('lead'))})();
+</script>
+</body>
+</html>

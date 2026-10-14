@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi-Latn-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Happy Pho · Anzac Parade, Kensington</title>
+<meta name="description" content="Happy Pho, 2/160 Anzac Parade Kensington: brisket and tendon pho, chicken laksa, rice paper rolls and crispy chicken, fast. Open Monday to Saturday.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+<!-- logo file: ask owner. [CHECK] hours (Online Dining). -->
+<style>
+:root{--broth:#f3b33d;--chilli:#c8321f;--herb:#2f7d4a;--ink:#20160f;--bg:#fff8ec;--card:#fff;--line:#eadfcb}
+*{box-sizing:border-box;margin:0}
+body{font:400 17px/1.5 "Be Vietnam Pro",system-ui,sans-serif;color:var(--ink);background:#f1e6d1}
+a{color:inherit}
+.app{max-width:480px;margin:0 auto;min-height:100vh;background:var(--bg);position:relative;padding-bottom:100px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:var(--chilli);color:#fff}
+.word{font:800 22px/1 "Be Vietnam Pro";letter-spacing:-.01em}
+.word span{color:var(--broth)}
+.pill{display:inline-flex;gap:6px;align-items:center;font:600 12.5px "Be Vietnam Pro";background:rgba(255,255,255,.15);border-radius:999px;padding:5px 10px}
+.pill i{width:8px;height:8px;border-radius:50%;background:#ddd}.pill.on i{background:#7be08f}
+.note{font-size:12px;color:#7b6a58;padding:10px 16px}
+.view{display:none;padding:4px 16px}
+.view.on{display:block}
+.bowl{position:relative;border-radius:20px;overflow:hidden;margin-top:6px}
+.bowl img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+.steam{position:absolute;left:0;right:0;top:0;height:60%;pointer-events:none}
+.steam i{position:absolute;bottom:20%;width:40px;height:120px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,255,255,.55),transparent 70%);filter:blur(6px);animation:rise 4s ease-in infinite;opacity:0}
+.steam i:nth-child(1){left:30%}.steam i:nth-child(2){left:48%;animation-delay:1.3s}.steam i:nth-child(3){left:62%;animation-delay:2.6s}
+@keyframes rise{0%{transform:translateY(40px) scaleX(.8);opacity:0}30%{opacity:.8}100%{transform:translateY(-90px) scaleX(1.3);opacity:0}}
+@media (prefers-reduced-motion:reduce){.steam{display:none}}
+h1{font:800 32px/1.1 "Be Vietnam Pro";margin-top:14px;letter-spacing:-.02em}
+h1 span{color:var(--chilli)}
+.vi{font:600 15px "Roboto Slab",serif;color:var(--herb)}
+.card{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;margin-top:10px;min-height:74px}
+.card img{width:62px;height:62px;border-radius:12px;object-fit:cover;flex:none}
+.card .dot{width:62px;height:62px;border-radius:12px;background:var(--broth);flex:none;display:grid;place-items:center;font:600 15px "Roboto Slab";color:var(--ink)}
+.card b{display:block;font-weight:600}
+.card small{color:#7b6a58}
+.big{display:block;text-align:center;text-decoration:none;font-weight:800;font-size:18px;padding:17px;border-radius:16px;margin-top:12px}
+.big.p{background:var(--chilli);color:#fff}.big.s{background:var(--card);border:1px solid var(--line)}
+.hrs{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:12px}
+.hrs td{padding:12px 14px;border-bottom:1px solid var(--line)}
+.hrs td+td{text-align:right}
+.hrs .today td{background:#fff1d1;font-weight:600}
+.small{font-size:13px;color:#7b6a58;margin-top:14px}
+.tabs{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:480px;display:grid;grid-template-columns:repeat(4,1fr);background:var(--ink);padding:8px 8px calc(8px + env(safe-area-inset-bottom));z-index:9}
+.tabs button{all:unset;cursor:pointer;text-align:center;color:#cbbba6;font:600 13px "Be Vietnam Pro";padding:10px 0;border-radius:12px}
+.tabs button[aria-selected=true]{background:var(--broth);color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top"><div class="word">Happy <span>Pho</span></div><span class="pill" id="pill"><i></i><span id="pTxt">Kensington</span></span></div>
+  <p class="note">Concept preview by Restauranting. Not the official website of Happy Pho. Photos are licensed stock; details come from your public listings.</p>
+
+  <section class="view on" id="v-pho">
+    <div class="bowl"><div class="steam"><i></i><i></i><i></i></div><img src="https://images.pexels.com/photos/6646072/pexels-photo-6646072.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/6646072/pexels-photo-6646072.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/6646072/pexels-photo-6646072.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/6646072/pexels-photo-6646072.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:480px) 448px,92vw" alt="A bowl of Vietnamese pho with fresh herbs and chilli sauce" fetchpriority="high"></div>
+    <div class="vi" style="margin-top:14px">Phở bò · Anzac Parade</div>
+    <h1>Pho, fast, <span>done right.</span></h1>
+    <div id="list"></div>
+    <p class="small">Photos shown are placeholders: we'd swap in your own shots.</p>
+  </section>
+
+  <section class="view" id="v-go">
+    <h1>Eat in or <span>take it away.</span></h1>
+    <a class="big p" href="tel:+61468483229">Call to order · 0468 483 229</a>
+    <a class="big s" href="https://www.google.com/maps/search/?api=1&query=Happy+Pho+160+Anzac+Parade+Kensington" target="_blank" rel="noopener">Directions</a>
+    <p class="small">2/160 Anzac Parade, Kensington. In the Pavilions building, a short walk from UNSW.</p>
+  </section>
+
+  <section class="view" id="v-hours">
+    <h1>Hours</h1>
+    <table class="hrs" id="hrs"></table>
+    <p class="small">Closed Sundays.</p>
+  </section>
+
+  <section class="view" id="v-us">
+    <h1>A small pho shop <span>on Anzac Parade.</span></h1>
+    <p style="margin-top:10px">No frills, fast service, a big steaming bowl. Brisket and tendon pho is the one to start with.</p>
+    <p class="small">Happy Pho · 2/160 Anzac Parade, Kensington NSW 2033<br>Concept preview by Restauranting. Not the official website of Happy Pho.<br>Photos via Pexels (IDs 6646072, 9772441, 29341158).</p>
+  </section>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-v="pho">Menu</button>
+    <button role="tab" aria-selected="false" data-v="go">Order</button>
+    <button role="tab" aria-selected="false" data-v="hours">Hours</button>
+    <button role="tab" aria-selected="false" data-v="us">Us</button>
+  </nav>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Happy Pho","servesCuisine":["Vietnamese"],"telephone":"+61468483229","address":{"@type":"PostalAddress","streetAddress":"2/160 Anzac Parade","addressLocality":"Kensington","addressRegion":"NSW","postalCode":"2033","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"21:00"}],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Pho & noodles","hasMenuItem":[{"@type":"MenuItem","name":"Brisket and tendon pho"},{"@type":"MenuItem","name":"Beef noodle soup"},{"@type":"MenuItem","name":"Chicken laksa"}]},{"@type":"MenuSection","name":"On the side","hasMenuItem":[{"@type":"MenuItem","name":"Rice paper rolls"},{"@type":"MenuItem","name":"Crispy chicken"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={0:[]};for(var i=1;i<7;i++)H[i]=[[600,1260]];
+var P='https://images.pexels.com/photos/',Q='?auto=compress&cs=tinysrgb&w=200';
+var M=[{n:'Phở nạm gân',e:'Brisket & tendon pho',img:'3903586'},{n:'Beef noodle soup',e:'the big bowl'},{n:'Chicken laksa',e:'spicy, coconut',img:'9772441'},{n:'Gỏi cuốn',e:'Rice paper rolls',img:'29341158'},{n:'Crispy chicken',e:'on rice'}];
+document.getElementById('list').innerHTML=M.map(function(x){var im=x.img?'<img loading="lazy" src="'+P+x.img+'/pexels-photo-'+x.img+'.jpeg'+Q+'" alt="'+x.e+'">':'<span class="dot" aria-hidden="true">phở</span>';return '<div class="card">'+im+'<div><b>'+x.n+'</b><small>'+x.e+'</small></div></div>'}).join('');
+[].forEach.call(document.querySelectorAll('.tabs button'),function(b){b.onclick=function(){[].forEach.call(document.querySelectorAll('.tabs button'),function(o){o.setAttribute('aria-selected',o===b)});[].forEach.call(document.querySelectorAll('.view'),function(v){v.classList.toggle('on',v.id==='v-'+b.dataset.v)});scrollTo(0,0)}});
+(function(){var s=openState(H),p=document.getElementById('pill'),t=document.getElementById('pTxt');
+if(s.open){p.classList.add('on');t.textContent='Open · till '+fmt(s.until)}else if(s.next!=null){t.textContent='Closed · '+s.nextDay+' '+fmt(s.next)}
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>

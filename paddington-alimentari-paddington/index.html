@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Paddington Alimentari · Italian deli</title>
+<meta name="description" content="Paddington Alimentari, the Italian deli on the corner of William and Hopetoun Streets: Allpress coffee, panini, burrata, cured meats and ricotta cannoli.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,600;1,6..96,500&display=swap" rel="stylesheet">
+<!-- logo file: ask owner (Instagram check pending). Label wordmark set in Bodoni Moda. -->
+<style>
+:root{--paper:#fbf8f1;--green:#1f5a3c;--pink:#d98c8c;--ink:#1e1c19;--mute:#6c665d;--rule:#1e1c19}
+*{box-sizing:border-box;margin:0}
+body{font:400 17px/1.55 Archivo,system-ui,sans-serif;color:var(--ink);background:#ece6da}
+a{color:inherit}
+.note{font-size:12.5px;color:var(--mute);text-align:center;padding:10px 16px}
+.label{max-width:760px;margin:6px auto 0;background:var(--paper);border:2px solid var(--rule);outline:6px solid var(--paper);outline-offset:-12px;padding:34px 22px 28px;text-align:center;position:relative}
+.label:before{content:"";position:absolute;inset:10px;border:1px solid var(--rule);pointer-events:none}
+.stamp{display:inline-grid;place-items:center;width:150px;height:150px;border-radius:50%;border:3px double var(--green);color:var(--green);font:600 13px/1.1 Archivo;letter-spacing:.18em;text-transform:uppercase}
+.stamp b{display:block;font:600 34px/1 "Bodoni Moda",serif;letter-spacing:0;text-transform:none;margin:4px 0}
+.label h1{font:500 italic clamp(30px,7vw,48px)/1.1 "Bodoni Moda",serif;margin-top:18px}
+.batch{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:14px;font:600 12px Archivo;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.door{display:inline-block;margin-top:18px;font:800 15px Archivo;letter-spacing:.24em;padding:8px 16px;border:2px solid currentColor;transform:rotate(-2deg)}
+.door.open{color:var(--green)}.door.closed{color:#a33a2a}
+.ticket{position:absolute;right:18px;top:18px;background:var(--pink);color:var(--ink);font:800 12px/1.1 Archivo;letter-spacing:.08em;text-transform:uppercase;padding:8px 10px;transform:rotate(4deg);text-align:center}
+.ticket span{display:block;font:600 26px/1 "Bodoni Moda",serif;letter-spacing:0}
+.panel{max-width:760px;margin:22px auto 0;background:var(--paper);border:2px solid var(--rule);padding:24px 22px}
+.panel h2{font:800 13px/1 Archivo;letter-spacing:.22em;text-transform:uppercase;border-bottom:2px solid var(--rule);padding-bottom:8px}
+.ing{margin-top:12px}
+.ing p{margin-top:10px;font-size:16px}
+.mi{display:flex;gap:8px;align-items:baseline;padding:8px 0;border-bottom:1px solid #d9d1c2}
+.mi .n{font-weight:600}
+.mi .d{flex:1;border-bottom:1px dotted #a39a8a;transform:translateY(-5px)}
+.mi .w{font-style:italic;font-family:"Bodoni Moda",serif;color:var(--green)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.grid img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover;border:1px solid var(--rule)}
+.grid img:first-child{grid-column:1/-1;aspect-ratio:16/9}
+.small{font-size:13px;color:var(--mute);margin-top:10px}
+.hrs{width:100%;border-collapse:collapse;margin-top:10px}
+.hrs td{padding:7px 0;border-bottom:1px solid #d9d1c2}
+.hrs td+td{text-align:right}
+.hrs .today td{color:var(--green);font-weight:600}
+footer{max-width:760px;margin:16px auto 120px;padding:0 6px;font-size:13px;color:var(--mute)}
+footer p+p{margin-top:6px}
+.call{position:fixed;right:16px;bottom:16px;z-index:9;background:var(--green);color:#fff;text-decoration:none;font:800 15px Archivo;letter-spacing:.12em;text-transform:uppercase;padding:16px 20px;border:2px solid var(--ink)}
+</style>
+</head>
+<body>
+<p class="note">Concept preview by Restauranting. Not the official website of Paddington Alimentari. Photos are licensed stock; details come from your Instagram bio and public listings.</p>
+<header class="label">
+  <div class="ticket" aria-live="polite">Now serving<span id="tick">23</span></div>
+  <div class="stamp"><div>Paddington<b>Alimentari</b>Deli · Caffè</div></div>
+  <h1>Coffee, panini and the deli counter, on the corner.</h1>
+  <div class="batch"><span>Lot no. 2021</span><span>William &amp; Hopetoun Sts</span><span>Allpress coffee</span></div>
+  <div class="door" id="door">APERTO</div>
+</header>
+
+<section class="panel">
+  <h2>Ingredients of a good morning</h2>
+  <div class="ing">
+    <div class="mi"><span class="n">Allpress coffee</span><span class="d"></span><span class="w">to stay or go</span></div>
+    <div class="mi"><span class="n">Olive bread panini</span><span class="d"></span><span class="w">pressed to order</span></div>
+    <div class="mi"><span class="n">Bruschetta</span><span class="d"></span><span class="w">for the table</span></div>
+    <div class="mi"><span class="n">Burrata</span><span class="d"></span><span class="w">from the counter</span></div>
+    <div class="mi"><span class="n">Ricotta cannoli</span><span class="d"></span><span class="w">with the coffee</span></div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>From the deli counter</h2>
+  <div class="ing"><p>Cheeses, cured meats, olives and antipasti to take home. The baskets hanging from the ceiling and the salami behind the glass are half the reason people stop.</p></div>
+  <div class="grid">
+    <img src="https://images.pexels.com/photos/33605466/pexels-photo-33605466.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/33605466/pexels-photo-33605466.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/33605466/pexels-photo-33605466.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/33605466/pexels-photo-33605466.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:760px) 712px,100vw" alt="A traditional Italian deli counter with cured meats and cheeses" fetchpriority="high">
+    <img src="https://images.pexels.com/photos/32715053/pexels-photo-32715053.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/32715053/pexels-photo-32715053.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/32715053/pexels-photo-32715053.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/32715053/pexels-photo-32715053.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:760px) 350px,50vw" alt="A grilled ham and cheese panini on a wooden table" loading="lazy">
+    <img src="https://images.pexels.com/photos/27305274/pexels-photo-27305274.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/27305274/pexels-photo-27305274.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/27305274/pexels-photo-27305274.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/27305274/pexels-photo-27305274.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:760px) 350px,50vw" alt="Ricotta cannoli topped with pistachios" loading="lazy">
+  </div>
+  <p class="small">Photos shown are placeholders: we'd swap in your own shots.</p>
+</section>
+
+<section class="panel" id="visit">
+  <h2>Opening hours</h2>
+  <table class="hrs" id="hrs"></table>
+  <p class="small" style="font-size:15px;color:#1e1c19">2 Hopetoun St, Paddington NSW 2021 · <a href="tel:+61293582142">(02) 9358 2142</a> · <a href="https://www.google.com/maps/search/?api=1&query=Paddington+Alimentari+2+Hopetoun+St" target="_blank" rel="noopener">Directions</a> · <a href="https://www.instagram.com/paddingtonalimentari/" target="_blank" rel="noopener">@paddingtonalimentari</a></p>
+</section>
+<footer><p>Concept preview by Restauranting. Not the official website of Paddington Alimentari.</p><p>Photos via Pexels (IDs 33605466, 32715053, 27305274).</p></footer>
+
+<a class="call" href="tel:+61293582142">Call</a>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Paddington Alimentari","servesCuisine":["Italian","Deli","Cafe"],"telephone":"+61293582142","address":{"@type":"PostalAddress","streetAddress":"2 Hopetoun St","addressLocality":"Paddington","addressRegion":"NSW","postalCode":"2021","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"07:30","closes":"15:00"}],"sameAs":["https://www.instagram.com/paddingtonalimentari/"],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Cafe","hasMenuItem":[{"@type":"MenuItem","name":"Olive bread panini"},{"@type":"MenuItem","name":"Bruschetta"},{"@type":"MenuItem","name":"Burrata"},{"@type":"MenuItem","name":"Ricotta cannoli"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={0:[],6:[[450,900]]};for(var i=1;i<6;i++)H[i]=[[420,900]];
+(function(){var s=openState(H),d=document.getElementById('door');
+if(s.open){d.className='door open';d.textContent='APERTO · till '+fmt(s.until)}else{d.className='door closed';d.textContent='CHIUSO'+(s.next!=null?' · back '+s.nextDay+' '+fmt(s.next):'')}
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h;
+var t=document.getElementById('tick'),n=23;if(!RM)setInterval(function(){n=n>=99?1:n+1;t.textContent=n},4000)})();
+</script>
+</body>
+</html>

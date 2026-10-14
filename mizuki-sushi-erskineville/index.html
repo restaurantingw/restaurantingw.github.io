@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mizuki Sushi · Erskineville</title>
+<meta name="description" content="Mizuki Sushi, the neighbourhood sushi train on Mitchell Rd, Erskineville: wagyu aburi, teriyaki salmon bowls and party platters to order ahead.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
+<!-- logo file: ask owner (KPOS header logo found, low-res, not used). [CHECK] address: Mitchell Rd vs Foundry St on delivery apps. -->
+<style>
+:root{--paper:#fdfcf8;--ink:#121212;--salmon:#ef7c5a;--nori:#1f2a24;--mute:#6a6a66}
+*{box-sizing:border-box;margin:0}
+body{font:400 16.5px/1.6 "IBM Plex Mono",ui-monospace,monospace;color:var(--ink);background:#e9e6de}
+a{color:inherit}
+.rail{background:var(--nori);color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center}
+.rail .w{font:700 20px/1 "Zen Kaku Gothic New",sans-serif;letter-spacing:.04em}
+.rail .w span{color:var(--salmon)}
+.rail nav a{color:#bfc7c2;text-decoration:none;font-size:13px;margin-left:12px}
+@media(min-width:960px){body{padding-left:96px}.rail{position:fixed;left:0;top:0;bottom:0;width:96px;flex-direction:column;justify-content:space-between;padding:24px 0}.rail .w{writing-mode:vertical-rl;font-size:26px;letter-spacing:.12em}.rail nav{display:flex;flex-direction:column;gap:12px;text-align:center}.rail nav a{margin:0}}
+.note{font-size:12px;color:var(--mute);padding:10px 16px;max-width:620px;margin:0 auto}
+.ticket{max-width:620px;margin:6px auto 0;background:var(--paper);padding:22px 20px 26px;position:relative}
+.ticket:after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:10px;background:radial-gradient(circle at 5px 0,transparent 5px,var(--paper) 5.5px) 0 0/10px 10px repeat-x}
+.th{display:flex;justify-content:space-between;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);border-bottom:1px dashed var(--ink);padding-bottom:10px}
+.ticket h1{font:700 clamp(34px,8vw,54px)/1.05 "Zen Kaku Gothic New",sans-serif;margin-top:14px}
+.ticket h1 span{color:var(--salmon)}
+.jp{font:500 15px "Zen Kaku Gothic New";color:var(--mute);margin-top:4px}
+.belt{overflow:hidden;border-top:1px dashed var(--ink);border-bottom:1px dashed var(--ink);margin:16px -20px 0;padding:8px 0;white-space:nowrap}
+.belt div{display:inline-block;animation:belt 28s linear infinite;padding-left:100%}
+.belt span{margin-right:30px}
+.belt span:before{content:"● ";color:var(--salmon)}
+@keyframes belt{to{transform:translateX(-100%)}}
+@media (prefers-reduced-motion:reduce){.belt div{animation:none;padding-left:20px;white-space:normal}}
+.ln{display:flex;gap:8px;align-items:baseline;padding:6px 0}
+.ln .q{min-width:2.4ch;color:var(--mute)}
+.ln .n{flex:1;display:flex;gap:6px}
+.ln .n:after{content:"";flex:1;border-bottom:1px dotted #999;transform:translateY(-5px)}
+.ln .t{font-size:13px;color:var(--mute)}
+h2{font:600 13px/1 "IBM Plex Mono";letter-spacing:.18em;text-transform:uppercase;margin-top:20px;padding-top:14px;border-top:1px dashed var(--ink)}
+.ph{margin:16px -20px 0}
+.ph img{width:100%;display:block;aspect-ratio:3/2;object-fit:cover}
+.ph p{font-size:12px;color:var(--mute);padding:6px 20px 0}
+.hrs{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:6px}
+.hrs td{padding:4px 0;border-bottom:1px dotted #bbb}
+.hrs td+td{text-align:right}
+.hrs .today td{font-weight:600}
+.hrs .st td{color:var(--salmon);font-weight:600}
+.tot{display:flex;justify-content:space-between;font-weight:600;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:8px 0;margin-top:18px;text-transform:uppercase}
+footer{max-width:620px;margin:30px auto 0;padding:0 16px 120px;font-size:12px;color:var(--mute)}
+footer p+p{margin-top:6px}
+.order{position:fixed;right:16px;bottom:16px;z-index:9;background:var(--salmon);color:var(--ink);text-decoration:none;font:600 15px "IBM Plex Mono";letter-spacing:.08em;text-transform:uppercase;padding:15px 20px;border:2px solid var(--ink)}
+</style>
+</head>
+<body>
+<header class="rail"><div class="w">MIZUKI <span>SUSHI</span></div><nav><a href="#menu">Menu</a><a href="#hrs">Hours</a></nav></header>
+<p class="note">Concept preview by Restauranting. Not the official website of Mizuki Sushi. Photos are licensed stock; menu and details come from your ordering page and listings.</p>
+<main class="ticket">
+  <div class="th"><span>Order no. 149</span><span>Mitchell Rd · Erskineville</span></div>
+  <h1>Sushi train, <span>right here</span> on Mitchell Rd.</h1>
+  <div class="jp">回転寿司 · eat in, take away, or a platter for the party</div>
+  <div class="belt" aria-hidden="true"><div><span>alaska roll</span><span>wagyu aburi</span><span>teriyaki salmon bowl</span><span>party platters</span><span>salmon lover</span><span>udon</span><span>volcano roll</span></div></div>
+
+  <h2 id="menu">01 · Off the train</h2>
+  <div class="ln"><span class="q">1×</span><span class="n">Wagyu aburi</span><span class="t">seared</span></div>
+  <div class="ln"><span class="q">1×</span><span class="n">Alaska roll</span><span class="t">classic</span></div>
+  <h2>02 · Bowls</h2>
+  <div class="ln"><span class="q">1×</span><span class="n">Teriyaki salmon bowl</span><span class="t">lunch</span></div>
+  <h2>03 · Platters for the party</h2>
+  <div class="ln"><span class="q">1×</span><span class="n">Mizuki Nigiri platter</span><span class="t">order ahead</span></div>
+  <div class="ln"><span class="q">1×</span><span class="n">Salmon Lover platter</span><span class="t">order ahead</span></div>
+  <!-- [CHECK] full list from KPOS ordering page; prices deliberately not shown -->
+
+  <figure class="ph"><img src="https://images.pexels.com/photos/10562410/pexels-photo-10562410.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/10562410/pexels-photo-10562410.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/10562410/pexels-photo-10562410.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/10562410/pexels-photo-10562410.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:620px) 620px,100vw" alt="Assorted sushi on a black platter with wasabi and ginger" fetchpriority="high"><p>Photos shown are placeholders: we'd swap in your own shots.</p></figure>
+
+  <h2>04 · Hours</h2>
+  <table class="hrs" id="hrs"></table>
+  <div class="tot"><span>Licensed</span><span>Eat in · Takeaway</span></div>
+  <p style="margin-top:14px;font-size:14.5px">T2/149-153 Mitchell Rd, Erskineville NSW 2043<br><a href="tel:+61295505718">(02) 9550 5718</a> · <a href="https://www.google.com/maps/search/?api=1&query=Mizuki+Sushi+Mitchell+Rd+Erskineville" target="_blank" rel="noopener">Directions</a> · <a href="https://www.kpos.com.au/mizuki2/" target="_blank" rel="noopener">Order pickup</a></p>
+</main>
+<footer><p>Concept preview by Restauranting. Not the official website of Mizuki Sushi.</p><p>Photo via Pexels (ID 10562410).</p></footer>
+
+<a class="order" href="https://www.kpos.com.au/mizuki2/" target="_blank" rel="noopener">Order</a>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Mizuki Sushi","servesCuisine":["Japanese","Sushi"],"telephone":"+61295505718","address":{"@type":"PostalAddress","streetAddress":"T2/149-153 Mitchell Rd","addressLocality":"Erskineville","addressRegion":"NSW","postalCode":"2043","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:00","closes":"21:00"}],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Off the train","hasMenuItem":[{"@type":"MenuItem","name":"Wagyu aburi"},{"@type":"MenuItem","name":"Alaska roll"}]},{"@type":"MenuSection","name":"Bowls","hasMenuItem":[{"@type":"MenuItem","name":"Teriyaki salmon bowl"}]},{"@type":"MenuSection","name":"Platters","hasMenuItem":[{"@type":"MenuItem","name":"Mizuki Nigiri platter"},{"@type":"MenuItem","name":"Salmon Lover platter"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={};for(var i=0;i<7;i++)H[i]=[[660,1260]];
+(function(){var s=openState(H),h='<tr class="st"><td>Status</td><td>'+(s.open?'Train running · till '+fmt(s.until):'Closed'+(s.next!=null?' · '+s.nextDay+' '+fmt(s.next):''))+'</td></tr>';
+for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>

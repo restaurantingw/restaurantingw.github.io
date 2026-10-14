@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Four Six Eight Cafe · 468 Oxford St</title>
+<meta name="description" content="Four Six Eight Cafe, 468 Oxford St Paddington: baked porridge, steak sandwich, spicy noodle soup and pork belly, in a room full of terrariums and plants.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Syne:wght@600;800&display=swap" rel="stylesheet">
+<!-- logo file: ask owner (a black-and-white band logo appears on a third-party sitelift page; not verified as theirs). -->
+<style>
+:root{--paper:#f4f1e8;--ink:#1b1b18;--moss:#3f6b3a;--leaf:#a9c47f;--tape:rgba(240,214,120,.75);--mute:#67635a}
+*{box-sizing:border-box;margin:0}
+html{overflow-x:clip}
+body{font:400 17.5px/1.6 Lora,Georgia,serif;color:var(--ink);background:var(--paper);overflow-x:hidden}
+a{color:inherit}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:2px solid var(--ink)}
+.word{font:800 22px/1 Syne,sans-serif;letter-spacing:-.01em}
+.word span{color:var(--moss)}
+.pill{display:inline-flex;gap:7px;align-items:center;font:600 13px Syne;border:2px solid var(--ink);border-radius:999px;padding:4px 10px}
+.pill i{width:8px;height:8px;border-radius:50%;background:#aaa}.pill.on i{background:var(--moss)}
+.note{font-size:12.5px;color:var(--mute);padding:10px 16px;font-style:italic}
+.hero{position:relative;padding:20px 16px 10px;max-width:1100px;margin:0 auto}
+h1{font:800 clamp(44px,12vw,120px)/.9 Syne,sans-serif;letter-spacing:-.03em}
+h1 em{font-family:Lora,serif;font-weight:400;font-style:italic;color:var(--moss);letter-spacing:0}
+.scrawl{display:inline-block;font-style:italic;color:var(--moss);transform:rotate(-3deg);margin-top:10px;font-size:19px}
+.board{position:relative;max-width:1100px;margin:20px auto 0;height:560px}
+.pol{position:absolute;background:#fff;padding:10px 10px 36px;box-shadow:0 8px 22px rgba(0,0,0,.18);transition:transform .5s}
+.pol:hover{transform:rotate(0) scale(1.03)!important}
+.pol img{display:block;width:100%;height:100%;object-fit:cover}
+.pol span{position:absolute;left:12px;bottom:9px;font-style:italic;font-size:15px}
+.pol:before{content:"";position:absolute;top:-12px;left:50%;width:84px;height:24px;margin-left:-42px;background:var(--tape);transform:rotate(-4deg)}
+.p1{width:62%;height:300px;left:2%;top:0;transform:rotate(-3deg)}
+.p2{width:46%;height:220px;right:2%;top:120px;transform:rotate(4deg)}
+.p3{width:44%;height:200px;left:10%;top:330px;transform:rotate(2deg)}
+.sticker{position:absolute;right:8%;top:370px;width:130px;height:130px;border-radius:50%;background:var(--leaf);display:grid;place-items:center;text-align:center;font:800 14px/1.1 Syne;transform:rotate(-10deg);animation:sway 6s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(-4deg)}}
+@media (prefers-reduced-motion:reduce){.sticker{animation:none}.pol{transition:none}}
+@media(min-width:900px){.board{height:640px}.p1{height:380px;width:52%}.p2{height:280px;width:38%}.p3{height:250px;width:36%;top:380px}}
+.menu{max-width:860px;margin:30px auto 0;padding:0 16px}
+.menu h2,.visit h2{font:800 clamp(30px,7vw,48px)/1 Syne;letter-spacing:-.02em}
+.strip{display:flex;gap:12px;overflow-x:auto;margin:16px -16px 0;padding:6px 16px 10px}
+.strip figure{flex:0 0 64%;max-width:280px;background:#fff;padding:8px 8px 30px;position:relative;transform:rotate(-1deg)}
+.strip figure:nth-child(even){transform:rotate(1.5deg)}
+.strip img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.strip figcaption{position:absolute;left:10px;bottom:6px;font-style:italic}
+.list{margin-top:18px}
+.list p{padding:10px 0;border-bottom:2px dotted var(--ink);display:flex;justify-content:space-between;gap:10px}
+.list p small{color:var(--mute);font-style:italic}
+.ph{font-size:13px;color:var(--mute);margin-top:10px;font-style:italic}
+.visit{max-width:860px;margin:40px auto 0;padding:0 16px 120px}
+.hrs{width:100%;border-collapse:collapse;margin-top:12px}
+.hrs td{padding:7px 0;border-bottom:1px solid #cfc8b8}
+.hrs td+td{text-align:right}
+.hrs .today td{color:var(--moss);font-weight:700}
+footer{font-size:13px;color:var(--mute);margin-top:24px}
+footer p+p{margin-top:6px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:9;display:grid;grid-template-columns:repeat(3,1fr);background:var(--ink)}
+.bar a{color:var(--paper);text-decoration:none;text-align:center;padding:15px 4px;font:600 14px Syne;letter-spacing:.06em;text-transform:uppercase}
+.bar a+a{border-left:1px solid #444}
+@media(min-width:900px){.bar{left:auto;right:20px;bottom:20px;width:400px}}
+</style>
+</head>
+<body>
+<header><div class="word">four six <span>eight</span></div><span class="pill" id="pill"><i></i><span id="pTxt">468 Oxford St</span></span></header>
+<p class="note">Concept preview by Restauranting. Not the official website of Four Six Eight Cafe. Photos are licensed stock; details come from your public listings.</p>
+<section class="hero">
+  <h1>Lunch among the <em>terrariums.</em></h1>
+  <span class="scrawl">↳ a little cafe on the Oxford Street strip, full of plants</span>
+</section>
+<section class="board" aria-label="Photos">
+  <figure class="pol p1"><img src="https://images.pexels.com/photos/5830763/pexels-photo-5830763.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/5830763/pexels-photo-5830763.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/5830763/pexels-photo-5830763.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/5830763/pexels-photo-5830763.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:900px) 560px,62vw" alt="Glass terrariums with green moss on a wooden table" fetchpriority="high"><span>the terrariums</span></figure>
+  <figure class="pol p2"><img src="https://images.pexels.com/photos/14987799/pexels-photo-14987799.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/14987799/pexels-photo-14987799.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/14987799/pexels-photo-14987799.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/14987799/pexels-photo-14987799.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:900px) 420px,46vw" alt="A steak sandwich on a marble table" loading="lazy"><span>steak sandwich</span></figure>
+  <figure class="pol p3"><img src="https://images.pexels.com/photos/6454810/pexels-photo-6454810.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/6454810/pexels-photo-6454810.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/6454810/pexels-photo-6454810.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/6454810/pexels-photo-6454810.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:900px) 400px,44vw" alt="A spicy noodle soup with herbs, beef and chilli" loading="lazy"><span>spicy noodle soup</span></figure>
+  <div class="sticker">Plants,<br>fish &amp;<br>porridge</div>
+</section>
+
+<section class="menu" id="menu">
+  <h2>What people order</h2>
+  <div class="strip">
+    <figure><img src="https://images.pexels.com/photos/4071738/pexels-photo-4071738.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/4071738/pexels-photo-4071738.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/4071738/pexels-photo-4071738.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/4071738/pexels-photo-4071738.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="280px" alt="A bowl of oatmeal and a cup of coffee on a wooden table" loading="lazy"><figcaption>baked porridge</figcaption></figure>
+    <figure><img src="https://images.pexels.com/photos/8256960/pexels-photo-8256960.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/8256960/pexels-photo-8256960.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/8256960/pexels-photo-8256960.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/8256960/pexels-photo-8256960.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="280px" alt="Glazed pork belly with bok choy" loading="lazy"><figcaption>pork belly</figcaption></figure>
+  </div>
+  <div class="list">
+    <p>Baked porridge <small>the morning one</small></p>
+    <p>Steak sandwich <small>lunch</small></p>
+    <p>Spicy noodle soup <small>with a kick</small></p>
+    <p>Pork belly <small>a favourite</small></p>
+    <p>Vegetarian options <small>ask us</small></p>
+  </div>
+  <p class="ph">Photos shown are placeholders: we'd swap in your own shots (and the aquariums).</p>
+  <!-- [CHECK] full menu from owner -->
+</section>
+
+<section class="visit" id="visit">
+  <h2>Come in, say hi to the fish</h2>
+  <table class="hrs" id="hrs"></table>
+  <footer><p>Four Six Eight Cafe · 468 Oxford St, Paddington NSW 2021 · <a href="tel:+61280544441">(02) 8054 4441</a></p><p>Concept preview by Restauranting. Not the official website of Four Six Eight Cafe. Photos via Pexels (IDs 5830763, 14987799, 6454810, 4071738, 8256960).</p></footer>
+</section>
+
+<nav class="bar"><a href="tel:+61280544441">Call</a><a href="https://www.google.com/maps/search/?api=1&query=Four+Six+Eight+Cafe+468+Oxford+St+Paddington" target="_blank" rel="noopener">Directions</a><a href="#menu">Menu</a></nav>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Four Six Eight Cafe","servesCuisine":["Cafe","Asian"],"telephone":"+61280544441","address":{"@type":"PostalAddress","streetAddress":"468 Oxford St","addressLocality":"Paddington","addressRegion":"NSW","postalCode":"2021","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:30","closes":"14:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"08:00","closes":"14:00"}],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"What people order","hasMenuItem":[{"@type":"MenuItem","name":"Baked porridge"},{"@type":"MenuItem","name":"Steak sandwich"},{"@type":"MenuItem","name":"Spicy noodle soup"},{"@type":"MenuItem","name":"Pork belly"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={0:[[480,840]]};for(var i=1;i<7;i++)H[i]=[[450,870]];
+(function(){var s=openState(H),p=document.getElementById('pill'),t=document.getElementById('pTxt');
+if(s.open){p.classList.add('on');t.textContent='Open · till '+fmt(s.until)}else if(s.next!=null){t.textContent='Closed · '+s.nextDay+' '+fmt(s.next)}
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>

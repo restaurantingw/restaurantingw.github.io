@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Cafe Sofia · Erskineville</title>
+<meta name="description" content="Cafe Sofia, the family-run corner cafe by Erskineville station: breakfast from 6:30, lunch in the back courtyard, and family-size dishes to take home.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Literata:opsz,wght@7..72,500;7..72,700&display=swap" rel="stylesheet">
+<!-- logo file: ask owner. [CHECK] hours (Urban List). [CHECK] take-home family dishes, order a day ahead (hungryfoody). -->
+<style>
+:root{--bg:#fbf4e8;--ink:#2b211a;--accent:#c4603b;--olive:#6b7240;--card:#fffaf2;--mute:#76695c}
+body.t-lunch{--bg:#f6efe0;--accent:#b2512f}
+body.t-arvo{--bg:#f2e6d6;--accent:#9b4a2c}
+body.t-night{--bg:#2b2420;--ink:#f2e8da;--card:#3a312b;--mute:#c5b6a4}
+*{box-sizing:border-box;margin:0}
+body{font:400 17px/1.6 Figtree,system-ui,sans-serif;color:var(--ink);background:var(--bg);transition:background .8s,color .8s}
+@media (prefers-reduced-motion:reduce){body{transition:none}}
+a{color:inherit}
+.corner{position:fixed;top:12px;right:12px;z-index:8;background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:9px 14px;font:600 14px Figtree;text-decoration:none}
+.hero{padding:26px 18px 10px;max-width:900px;margin:0 auto}
+.note{font-size:12.5px;color:var(--mute);max-width:70%}
+.name{font:700 clamp(46px,12vw,96px)/.95 Literata,serif;margin-top:22px;letter-spacing:-.01em}
+.name span{color:var(--accent)}
+.now{font:500 clamp(22px,5vw,30px)/1.25 Literata,serif;margin-top:12px;max-width:26ch}
+.now b{color:var(--accent)}
+.line{max-width:900px;margin:24px auto 0;padding:0 18px;position:relative}
+.rail{position:absolute;left:30px;top:0;bottom:0;width:2px;background:var(--accent);opacity:.35}
+.part{position:relative;padding:0 0 32px 44px}
+.part:before{content:"";position:absolute;left:5px;top:8px;width:14px;height:14px;border-radius:50%;border:2px solid var(--accent);background:var(--bg)}
+.part.cur:before{background:var(--accent)}
+.part .time{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.part h2{font:700 clamp(28px,6vw,40px)/1.1 Literata,serif;margin-top:4px}
+.part.cur h2:after{content:" · now";font:600 14px Figtree;color:var(--accent);vertical-align:middle}
+.part p{margin-top:8px;max-width:56ch}
+.part ul{list-style:none;padding:0;margin-top:10px;display:grid;gap:8px}
+.part li{background:var(--card);padding:12px 14px;border-left:3px solid var(--accent)}
+.part li small{display:block;color:var(--mute);font-size:14px}
+.part img{width:100%;max-width:560px;display:block;aspect-ratio:3/2;object-fit:cover;margin-top:14px;border-radius:2px}
+.ph{font-size:13px;color:var(--mute);margin-top:8px}
+.visit{max-width:900px;margin:10px auto 0;padding:0 18px 140px}
+.visit h2{font:700 32px/1.1 Literata,serif}
+.hrs{width:100%;border-collapse:collapse;margin-top:12px}
+.hrs td{padding:8px 0;border-bottom:1px solid rgba(120,100,80,.25)}
+.hrs td+td{text-align:right}
+.hrs .today td{color:var(--accent);font-weight:600}
+.hrs .stat td{font-style:italic;color:var(--accent)}
+footer{font-size:13px;color:var(--mute);margin-top:22px}
+footer p+p{margin-top:6px}
+.drawer{position:fixed;left:0;right:0;bottom:0;z-index:9;background:var(--ink);color:var(--bg);border-radius:16px 16px 0 0;transform:translateY(calc(100% - 58px));transition:transform .35s}
+.drawer.open{transform:none}
+.drawer button{all:unset;cursor:pointer;display:flex;justify-content:space-between;width:100%;box-sizing:border-box;padding:0 18px;height:58px;align-items:center;font:600 15px Figtree}
+.drawer .acts{display:grid;gap:8px;padding:0 18px 20px}
+.drawer .acts a{background:var(--bg);color:var(--ink);text-decoration:none;text-align:center;font-weight:600;padding:13px;border-radius:8px}
+@media(min-width:900px){.drawer{left:auto;right:20px;width:340px}}
+</style>
+</head>
+<body>
+<a class="corner" href="#visit">Hours &amp; map</a>
+<header class="hero">
+  <p class="note">Concept preview by Restauranting. Not the official website of Cafe Sofia. Photos are licensed stock; details come from your public listings.</p>
+  <div class="name">Cafe <span>Sofia</span></div>
+  <p class="now" id="nowTxt">The corner cafe by <b>Erskineville station</b>, from first coffee to late lunch.</p>
+</header>
+
+<main class="line">
+  <i class="rail"></i>
+  <section class="part" id="p-morning">
+    <div class="time">From 6:30</div>
+    <h2>Morning</h2>
+    <p>Coffee for the train, or a proper breakfast if you've got time.</p>
+    <ul><li>Bacon-wrapped avocado<small>with a poached egg</small></li><li>Red velvet pancakes<small>the sweet one</small></li></ul>
+    <img src="https://images.pexels.com/photos/14623893/pexels-photo-14623893.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/14623893/pexels-photo-14623893.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/14623893/pexels-photo-14623893.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/14623893/pexels-photo-14623893.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:600px) 560px,90vw" alt="Avocado toast with a poached egg on a rustic plate" fetchpriority="high">
+    <p class="ph">Photos shown are placeholders: we'd swap in your own shots.</p>
+  </section>
+  <section class="part" id="p-lunch">
+    <div class="time">Midday</div>
+    <h2>Lunch in the courtyard</h2>
+    <p>Out the back there's a leafy courtyard most people walking past never know about.</p>
+    <img src="https://images.pexels.com/photos/31759539/pexels-photo-31759539.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/31759539/pexels-photo-31759539.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/31759539/pexels-photo-31759539.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/31759539/pexels-photo-31759539.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:600px) 560px,90vw" alt="An outdoor cafe courtyard with greenery and wooden tables" loading="lazy">
+  </section>
+  <section class="part" id="p-arvo">
+    <div class="time">Afternoon</div>
+    <h2>Dinner sorted, to take home</h2>
+    <p>Family-size Greek dishes to take home. Order a day ahead and pick up on your way back from the station.</p>
+    <ul><li>Spanakopita<small>family size</small></li><li>Souvlaki<small>family size</small></li></ul>
+    <img src="https://images.pexels.com/photos/35047345/pexels-photo-35047345.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/35047345/pexels-photo-35047345.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/35047345/pexels-photo-35047345.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/35047345/pexels-photo-35047345.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:600px) 560px,90vw" alt="A Mediterranean spread with eggs, olives and vegetables" loading="lazy">
+  </section>
+</main>
+
+<section class="visit" id="visit">
+  <h2>7 Swanson St, Erskineville</h2>
+  <table class="hrs" id="hrs"></table>
+  <footer>
+    <p>Cafe Sofia · 7 Swanson St, Erskineville NSW 2043 · <a href="tel:+61295191565">(02) 9519 1565</a></p>
+    <p>Concept preview by Restauranting. Not the official website of Cafe Sofia. Photos via Pexels (IDs 14623893, 31759539, 35047345).</p>
+  </footer>
+</section>
+
+<div class="drawer" id="drawer"><button id="dbtn" aria-expanded="false"><span id="dTxt">Cafe Sofia</span><span>Call · Directions ↑</span></button>
+  <div class="acts"><a href="tel:+61295191565">Call (02) 9519 1565</a><a href="https://www.google.com/maps/search/?api=1&query=Cafe+Sofia+7+Swanson+St+Erskineville" target="_blank" rel="noopener">Directions</a></div></div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Cafe Sofia","servesCuisine":["Cafe","Greek","Mediterranean"],"telephone":"+61295191565","address":{"@type":"PostalAddress","streetAddress":"7 Swanson St","addressLocality":"Erskineville","addressRegion":"NSW","postalCode":"2043","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:30","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"08:00","closes":"16:00"}],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Morning","hasMenuItem":[{"@type":"MenuItem","name":"Bacon-wrapped avocado with poached egg"},{"@type":"MenuItem","name":"Red velvet pancakes"}]},{"@type":"MenuSection","name":"To take home","hasMenuItem":[{"@type":"MenuItem","name":"Family-size spanakopita"},{"@type":"MenuItem","name":"Family-size souvlaki"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={0:[[480,960]],6:[[480,960]]};for(var i=1;i<6;i++)H[i]=[[390,1020]];
+(function(){var s=openState(H),n=sydNow(),part=n.m<660?'morning':n.m<840?'lunch':n.m<1080?'arvo':'night';
+document.body.classList.add('t-'+part);var cur=document.getElementById('p-'+(part==='night'?'morning':part));cur.classList.add('cur');
+var d=document.getElementById('dTxt');d.textContent=s.open?'Open now · till '+fmt(s.until):(s.next!=null?'Closed · opens '+s.nextDay+' '+fmt(s.next):'Closed');
+var h='<tr class="stat"><td colspan="2">'+(s.open?'Open right now, until '+fmt(s.until)+'.':'Closed right now'+(s.next!=null?', back '+s.nextDay+' at '+fmt(s.next)+'.':'.'))+'</td></tr>';
+for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h;
+var dr=document.getElementById('drawer'),b=document.getElementById('dbtn');b.onclick=function(){b.setAttribute('aria-expanded',dr.classList.toggle('open'))}})();
+</script>
+</body>
+</html>

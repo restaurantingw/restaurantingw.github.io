@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Alexandria Seafoods · 196 Mitchell Rd</title>
+<meta name="description" content="Alexandria Seafoods, 196 Mitchell Rd: grilled dory, BBQ octopus, prawn cutlets, thick-cut chips and fresh seafood over the counter.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- logo file: ask owner. Palette placeholder (fish-shop tile white, sea blue, lemon) until shopfront photos are checked. -->
+<!-- [CHECK] hours (AGFG vs TripAdvisor differ). [CHECK] 'since 1986' from Facebook handle; not shown on page. -->
+<style>
+:root{--tile:#f7f8f6;--blue:#0d4f8b;--deep:#082a4a;--lemon:#ffd23f;--ink:#101820;--mute:#5b6670}
+*{box-sizing:border-box;margin:0}
+body{font:400 17px/1.55 Karla,system-ui,sans-serif;color:var(--ink);background:var(--tile);background-image:linear-gradient(#e6e9e6 1px,transparent 1px),linear-gradient(90deg,#e6e9e6 1px,transparent 1px);background-size:44px 44px}
+a{color:inherit}
+.note{background:var(--deep);color:#dfe8f1;font-size:12.5px;padding:8px 16px;text-align:center}
+.mast{text-align:center;padding:22px 16px 10px}
+.mast .name{font:400 clamp(44px,12vw,92px)/.9 "Bebas Neue",sans-serif;letter-spacing:.02em;color:var(--blue)}
+.mast .sub{font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--mute);margin-top:4px}
+.clock{display:inline-block;margin-top:14px;font:400 clamp(30px,8vw,52px)/1 "Bebas Neue";background:var(--lemon);color:var(--deep);padding:6px 16px 2px;transform:rotate(-1.5deg)}
+.board{max-width:1100px;margin:22px auto 0;padding:0 12px}
+.frame{background:var(--deep);border:10px solid #1b1f24;border-radius:6px;padding:18px;box-shadow:0 14px 30px rgba(8,42,74,.25);position:relative}
+.frame .glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 0,rgba(255,255,255,.12),transparent 60%);opacity:0;transition:opacity 1.2s}
+.frame.on .glow{opacity:1}
+.cols{display:grid;gap:14px}
+@media(min-width:800px){.cols{grid-template-columns:repeat(3,1fr)}}
+.col{background:#fdfdfb;padding:16px 16px 12px;border-radius:2px}
+.col h2{font:400 30px/1 "Bebas Neue";color:var(--blue);border-bottom:3px solid var(--deep);padding-bottom:6px;letter-spacing:.03em}
+.col ul{list-style:none;padding:0;margin-top:6px}
+.col li{padding:9px 0;border-bottom:1px dashed #c9d1d8;font-weight:700;font-size:18px}
+.col li small{display:block;font-weight:400;font-size:14.5px;color:var(--mute)}
+.col li.flick{animation:flick 1.6s steps(1) 1}
+@keyframes flick{0%{opacity:.2}10%{opacity:1}14%{opacity:.4}18%,100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.col li.flick{animation:none}.frame .glow{transition:none}}
+.photos{max-width:1100px;margin:22px auto 0;padding:0 12px;display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.photos img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;border:6px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.photos img:first-child{grid-column:1/-1;aspect-ratio:16/9}
+.photos p{grid-column:1/-1;font-size:13px;color:var(--mute)}
+.counter{max-width:860px;margin:36px auto 0;padding:0 16px}
+.counter h2,.visit h2{font:400 clamp(34px,8vw,54px)/1 "Bebas Neue";color:var(--blue);letter-spacing:.02em}
+.counter p{margin-top:10px;font-size:18px}
+.visit{max-width:1100px;margin:30px auto 0;padding:0 16px 110px;display:grid;gap:24px}
+@media(min-width:760px){.visit{grid-template-columns:1fr 1fr}}
+.hrs{width:100%;border-collapse:collapse;margin-top:10px;background:#fff}
+.hrs td{padding:9px 12px;border-bottom:1px solid #e3e7ea}
+.hrs td+td{text-align:right}
+.hrs .today td{background:var(--lemon);font-weight:700}
+footer{grid-column:1/-1;font-size:13px;color:var(--mute)}
+footer p+p{margin-top:6px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:9;display:grid;grid-template-columns:repeat(3,1fr);background:var(--deep)}
+.bar a{color:#fff;text-decoration:none;text-align:center;padding:15px 4px;font:400 21px/1 "Bebas Neue";letter-spacing:.06em;border-right:1px solid rgba(255,255,255,.15)}
+.bar a:first-child{background:var(--lemon);color:var(--deep)}
+@media(min-width:900px){.bar{left:auto;right:20px;bottom:20px;width:420px;border-radius:4px;overflow:hidden}}
+</style>
+</head>
+<body>
+<p class="note">Concept preview by Restauranting. Not the official website of Alexandria Seafoods. Photos are licensed stock; menu and details come from your public listings.</p>
+<header class="mast">
+  <div class="name">Alexandria Seafoods</div>
+  <div class="sub">196 Mitchell Rd · Alexandria</div>
+  <div class="clock" id="clock">Fish &amp; chips · grill · fresh seafood</div>
+</header>
+
+<section class="board" aria-label="Menu board">
+  <div class="frame" id="frame"><i class="glow"></i>
+    <div class="cols">
+      <div class="col"><h2>From the grill</h2><ul>
+        <li>Grilled dory<small>straight off the grill</small></li>
+        <li>Grilled flathead</li>
+        <li>BBQ octopus</li>
+        <li>Sweet chilli soy salmon</li></ul></div>
+      <div class="col"><h2>Fried</h2><ul>
+        <li>Fish &amp; chips<small>the classic</small></li>
+        <li>Prawn cutlets</li>
+        <li>15mm thick-cut chips<small>the proper ones</small></li></ul></div>
+      <div class="col"><h2>On the side</h2><ul>
+        <li>Greek salad</li>
+        <li>Fresh seafood<small>over the counter, to cook at home</small></li>
+        <li>Big portions<small>bring a friend</small></li></ul></div>
+    </div>
+  </div>
+  <!-- [CHECK] full board from owner (prices deliberately not shown) -->
+</section>
+
+<section class="photos">
+  <img src="https://images.pexels.com/photos/5863643/pexels-photo-5863643.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/5863643/pexels-photo-5863643.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/5863643/pexels-photo-5863643.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/5863643/pexels-photo-5863643.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:1100px) 1076px,100vw" alt="Crispy fish and chips with salad and tartare sauce, from above" fetchpriority="high">
+  <img src="https://images.pexels.com/photos/15510263/pexels-photo-15510263.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/15510263/pexels-photo-15510263.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/15510263/pexels-photo-15510263.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/15510263/pexels-photo-15510263.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:1100px) 530px,50vw" alt="Whole fish grilling with lemon slices over charcoal" loading="lazy">
+  <img src="https://images.pexels.com/photos/724669/pexels-photo-724669.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/724669/pexels-photo-724669.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/724669/pexels-photo-724669.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/724669/pexels-photo-724669.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:1100px) 530px,50vw" alt="Greek salad with feta, olives and fresh vegetables" loading="lazy">
+  <p>Photos shown are placeholders: we'd swap in your own shots.</p>
+</section>
+
+<section class="counter">
+  <h2>The counter on Mitchell Road</h2>
+  <p>Grilled or fried, cooked when you order. Take it home, eat it at the park, or grab some fresh fish to cook yourself. Licensed takeaway, run by Tass and the team.</p>
+</section>
+
+<section class="visit">
+  <div><h2>Hours</h2><table class="hrs" id="hrs"></table></div>
+  <div><h2>Find us</h2><p style="margin-top:10px;font-size:18px">196 Mitchell Rd, Alexandria NSW 2015</p><p><a href="tel:+61295197309">(02) 9519 7309</a></p></div>
+  <footer><p>Concept preview by Restauranting. Not the official website of Alexandria Seafoods.</p><p>Photos via Pexels (IDs 5863643, 15510263, 724669).</p></footer>
+</section>
+
+<nav class="bar"><a href="tel:+61295197309">Call to order</a><a href="https://www.google.com/maps/search/?api=1&query=Alexandria+Seafoods+196+Mitchell+Rd+Alexandria" target="_blank" rel="noopener">Directions</a><a href="#hrs">Hours</a></nav>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Alexandria Seafoods","servesCuisine":["Seafood","Fish and chips","Greek"],"telephone":"+61295197309","address":{"@type":"PostalAddress","streetAddress":"196 Mitchell Rd","addressLocality":"Alexandria","addressRegion":"NSW","postalCode":"2015","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"11:00","closes":"21:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"11:00","closes":"20:00"}],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"From the grill","hasMenuItem":[{"@type":"MenuItem","name":"Grilled dory"},{"@type":"MenuItem","name":"Grilled flathead"},{"@type":"MenuItem","name":"BBQ octopus"},{"@type":"MenuItem","name":"Sweet chilli soy salmon"}]},{"@type":"MenuSection","name":"Fried","hasMenuItem":[{"@type":"MenuItem","name":"Fish & chips"},{"@type":"MenuItem","name":"Prawn cutlets"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={0:[[660,1200]],1:[],2:[[660,1260]],3:[[660,1260]],4:[[660,1260]],5:[[660,1260]],6:[[660,1260]]};
+(function(){var s=openState(H),c=document.getElementById('clock'),f=document.getElementById('frame');
+if(s.open){c.textContent='Open till '+fmt(s.until);f.classList.add('on');if(!RM)[].forEach.call(document.querySelectorAll('.col li'),function(li,i){setTimeout(function(){li.classList.add('flick')},i*90)})}
+else if(s.next!=null){c.textContent='Fryers back on '+s.nextDay+' '+fmt(s.next)}
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>

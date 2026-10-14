@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Betawi's Kitchen · Kensington</title>
+<meta name="description" content="Betawi's Kitchen, a small family-run Jakarta kitchen on Anzac Parade: soto Betawi, nasi uduk, sate ayam, nasi kuning and rotating specials.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;1,500&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+<!-- logo file: ask owner. [CHECK] hours (Wanderlog/HappyCow). Old Quandoo booking link is dead: bookings by phone. -->
+<style>
+:root{--card:#fffdf6;--paper:#f3ead8;--ink:#2a1d14;--red:#b83a26;--pandan:#4c7a3a;--blue:#2e5b8f;--mute:#76695b}
+*{box-sizing:border-box;margin:0}
+body{font:400 17px/1.6 "Nunito Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+a{color:inherit}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:var(--card);border-bottom:1px solid #e1d5bf}
+.word{font:600 22px/1 Bitter,serif;color:var(--red)}
+header a{font-size:14px;color:var(--mute);text-decoration:none}
+.note{font-size:12.5px;color:var(--mute);padding:10px 16px}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+.rc{background:var(--card);border:1px solid #e1d5bf;box-shadow:0 3px 0 #e1d5bf;position:relative;padding:22px 20px 22px 58px;margin-top:16px;background-image:repeating-linear-gradient(transparent 0 31px,rgba(46,91,143,.12) 31px 32px);background-position:0 60px}
+.rc:before{content:"";position:absolute;left:42px;top:0;bottom:0;width:1px;background:rgba(184,58,38,.35)}
+.clock{font:600 clamp(38px,9vw,70px)/1 Bitter,serif}
+.clock span{color:var(--red)}
+.rc p.lede{font-size:19px;margin-top:10px;max-width:40ch}
+.ann{display:inline-block;color:var(--blue);font-style:italic;font-family:Bitter,serif;transform:rotate(-2deg);margin-top:8px}
+.photo{margin-top:16px}
+.photo img{width:100%;display:block;aspect-ratio:3/2;object-fit:cover;border:8px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.14);transform:rotate(-.8deg)}
+.photo p{font-size:13px;color:var(--mute);margin-top:8px}
+.tabs{display:flex;gap:6px;margin-top:22px;flex-wrap:wrap}
+.tabs button{all:unset;cursor:pointer;padding:9px 14px;background:var(--card);border:1px solid #e1d5bf;border-bottom:0;border-radius:8px 8px 0 0;font:700 14px "Nunito Sans"}
+.tabs button[aria-selected=true]{background:var(--red);color:#fff;border-color:var(--red)}
+.panel{display:none}.panel.on{display:block}
+.panel .rc{margin-top:0;border-top:3px solid var(--red)}
+.rc h3{font:600 22px/1.2 Bitter,serif}
+.rc li{margin:6px 0}
+.rc ol,.rc ul{padding-left:20px}
+.rc small{color:var(--mute)}
+.special{background:#fff6c8;transform:rotate(1.5deg);max-width:420px;margin-left:auto}
+.special h3{color:var(--pandan)}
+.visit{max-width:860px;margin:30px auto 0;padding:0 16px 140px}
+.hrs{width:100%;border-collapse:collapse;margin-top:8px}
+.hrs td{padding:6px 0;border-bottom:1px dashed #d8c9ae}
+.hrs td+td{text-align:right}
+.hrs .today td{color:var(--red);font-weight:700}
+footer{font-size:13px;color:var(--mute);margin-top:20px}
+footer p+p{margin-top:6px}
+.drawer{position:fixed;left:0;right:0;bottom:0;z-index:9;background:var(--red);color:#fff;border-radius:16px 16px 0 0;transform:translateY(calc(100% - 58px));transition:transform .35s}
+.drawer.open{transform:none}
+@media (prefers-reduced-motion:reduce){.drawer{transition:none}}
+.drawer button{all:unset;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%;box-sizing:border-box;padding:0 18px;height:58px;font:700 15px "Nunito Sans"}
+.drawer .acts{display:grid;gap:8px;padding:0 18px 20px}
+.drawer .acts a{background:var(--card);color:var(--ink);text-decoration:none;text-align:center;font-weight:700;padding:13px;border-radius:8px}
+@media(min-width:900px){.drawer{left:auto;right:20px;width:340px}}
+</style>
+</head>
+<body>
+<header><div class="word">Betawi's Kitchen</div><a href="#visit">Hours</a></header>
+<p class="note">Concept preview by Restauranting. Not the official website of Betawi's Kitchen. Photos are licensed stock; details come from your public listings and press.</p>
+<div class="wrap">
+  <div class="rc">
+    <div class="clock" id="clock">Masakan <span>Betawi</span></div>
+    <p class="lede">Jakarta home cooking from a tiny family kitchen on Anzac Parade.</p>
+    <span class="ann">↳ the way it's cooked at home in Jakarta</span>
+  </div>
+  <figure class="photo"><img src="https://images.pexels.com/photos/37205601/pexels-photo-37205601.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/37205601/pexels-photo-37205601.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/37205601/pexels-photo-37205601.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/37205601/pexels-photo-37205601.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:860px) 828px,100vw" alt="A table of traditional Indonesian dishes" fetchpriority="high"><p>Photos shown are placeholders: we'd swap in your own shots.</p></figure>
+
+  <div class="tabs" role="tablist" id="menu">
+    <button role="tab" aria-selected="true" data-p="soto">Soto &amp; rice</button>
+    <button role="tab" aria-selected="false" data-p="sate">Satay &amp; snacks</button>
+    <button role="tab" aria-selected="false" data-p="take">Take home</button>
+  </div>
+  <div class="panel on" id="p-soto"><div class="rc">
+    <h3>Recipe no. 1 · Soto Betawi</h3>
+    <ul><li>Soto Betawi <small>beef soup in coconut broth</small></li><li>Nasi uduk <small>coconut rice with fried chicken</small></li><li>Nasi kuning <small>turmeric rice</small></li></ul>
+  </div></div>
+  <div class="panel" id="p-sate"><div class="rc">
+    <h3>Recipe no. 2 · From the grill</h3>
+    <ul><li>Sate ayam <small>chicken satay, peanut sauce</small></li><li>Otak-otak <small>fish cake</small></li></ul>
+    <img src="https://images.pexels.com/photos/36998500/pexels-photo-36998500.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/36998500/pexels-photo-36998500.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/36998500/pexels-photo-36998500.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/36998500/pexels-photo-36998500.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:860px) 760px,90vw" alt="Satay skewers with peanut sauce and rice cakes" loading="lazy">
+  </div></div>
+  <div class="panel" id="p-take"><div class="rc">
+    <h3>Recipe no. 3 · For the pantry</h3>
+    <ul><li>Kerupuk Betawi <small>crackers to take home</small></li></ul>
+    <p style="margin-top:8px">Order delivery on <a href="https://www.ubereats.com/au/store/betawis-kitchen-indonesian-restaurant/VeU84sQYUgqgBsPjWnsQ6w" target="_blank" rel="noopener">Uber Eats</a>, or call us for takeaway.</p>
+  </div></div>
+
+  <div class="rc special" style="margin-top:24px">
+    <h3>This week's special</h3>
+    <p id="spec">Sticky rice wrapped in banana leaf, when it's on. Ask us what's cooking.</p>
+  </div>
+</div>
+
+<section class="visit" id="visit">
+  <div class="rc"><h3>Hours</h3><table class="hrs" id="hrs"></table>
+  <p style="margin-top:10px">6/240 Anzac Parade, Kensington NSW 2033 · <a href="tel:+61293440900">(02) 9344 0900</a></p></div>
+  <footer><p>Concept preview by Restauranting. Not the official website of Betawi's Kitchen.</p><p>Photos via Pexels (IDs 37205601, 36998500).</p></footer>
+</section>
+
+<div class="drawer" id="drawer"><button id="dbtn" aria-expanded="false"><span id="dTxt">Betawi's Kitchen</span><span>Call · Order ↑</span></button>
+<div class="acts"><a href="tel:+61293440900">Call (02) 9344 0900</a><a href="https://www.ubereats.com/au/store/betawis-kitchen-indonesian-restaurant/VeU84sQYUgqgBsPjWnsQ6w" target="_blank" rel="noopener">Order on Uber Eats</a><a href="https://www.google.com/maps/search/?api=1&query=Betawi%27s+Kitchen+240+Anzac+Parade+Kensington" target="_blank" rel="noopener">Directions</a></div></div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Betawi's Kitchen","servesCuisine":["Indonesian","Betawi"],"telephone":"+61293440900","acceptsReservations":true,"address":{"@type":"PostalAddress","streetAddress":"6/240 Anzac Parade","addressLocality":"Kensington","addressRegion":"NSW","postalCode":"2033","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"11:30","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"17:00","closes":"20:30"}],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Soto & rice","hasMenuItem":[{"@type":"MenuItem","name":"Soto Betawi"},{"@type":"MenuItem","name":"Nasi uduk"},{"@type":"MenuItem","name":"Nasi kuning"}]},{"@type":"MenuSection","name":"Satay & snacks","hasMenuItem":[{"@type":"MenuItem","name":"Sate ayam"},{"@type":"MenuItem","name":"Otak-otak"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={0:[]};for(var i=1;i<7;i++)H[i]=[[690,900],[1020,1230]];
+(function(){var s=openState(H),c=document.getElementById('clock'),d=document.getElementById('dTxt');
+if(s.open){c.innerHTML='Open till <span>'+fmt(s.until)+'</span>';d.textContent='Open now · till '+fmt(s.until)}else if(s.next!=null){c.innerHTML='Back <span>'+s.nextDay+' '+fmt(s.next)+'</span>';d.textContent='Closed · opens '+fmt(s.next)}
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h;
+[].forEach.call(document.querySelectorAll('.tabs button'),function(b){b.onclick=function(){[].forEach.call(document.querySelectorAll('.tabs button'),function(o){o.setAttribute('aria-selected',o===b)});[].forEach.call(document.querySelectorAll('.panel'),function(p){p.classList.toggle('on',p.id==='p-'+b.dataset.p)})}});
+var dr=document.getElementById('drawer'),b=document.getElementById('dbtn');b.onclick=function(){b.setAttribute('aria-expanded',dr.classList.toggle('open'))}})();
+</script>
+</body>
+</html>

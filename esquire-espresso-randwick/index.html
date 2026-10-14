@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Esquire Espresso · Belmore Rd, Randwick</title>
+<meta name="description" content="Esquire Espresso, 68 Belmore Rd Randwick: Campos coffee from 6am, swan latte art, all-day breakfast and bacon and egg rolls. Order ahead on Hey You.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<!-- logo file: ask owner. Brand cue brown/gold. [CHECK] hours (6am opening; public holiday 5am-3pm per Facebook). -->
+<style>
+:root{--paper:#fbfaf7;--ink:#1d1814;--gold:#a8823c;--brown:#4b3a2a;--mute:#7b7268}
+*{box-sizing:border-box;margin:0}
+body{font:400 16.5px/1.7 Jost,system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+a{color:inherit}
+.pillnav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:8;display:flex;gap:14px;align-items:center;background:rgba(251,250,247,.95);border:1px solid #e6e0d6;border-radius:999px;padding:8px 16px;font-size:14px;white-space:nowrap}
+.pillnav b{font:500 italic 18px "EB Garamond",serif}
+.pillnav a{text-decoration:none;color:var(--mute)}
+.wrap{max-width:1180px;margin:0 auto;padding:90px 18px 60px}
+.note{font-size:12px;color:var(--mute);max-width:420px}
+.hero{display:grid;gap:30px;margin-top:30px}
+@media(min-width:900px){.hero{grid-template-columns:5fr 7fr;align-items:end}}
+h1{font:500 clamp(40px,8vw,84px)/1 "EB Garamond",serif;letter-spacing:-.01em}
+h1 i{color:var(--gold)}
+.pill{display:inline-flex;gap:8px;align-items:center;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-top:18px;color:var(--mute)}
+.pill i{width:7px;height:7px;border-radius:50%;background:#bbb}
+.pill.on i{background:var(--gold)}
+.acts{margin-top:22px;display:flex;gap:18px;font-size:15px}
+.acts a{text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.swan{position:relative;overflow:hidden}
+.swan img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;clip-path:inset(100% 0 0 0);transition:clip-path 1.6s cubic-bezier(.2,.7,.2,1)}
+.swan.in img{clip-path:inset(0 0 0 0)}
+@media (prefers-reduced-motion:reduce){.swan img{clip-path:none;transition:none}}
+.cap{font-size:12.5px;color:var(--mute);margin-top:8px}
+.asym{display:grid;gap:18px;margin-top:90px}
+@media(min-width:900px){.asym{grid-template-columns:repeat(12,1fr)}.a1{grid-column:2/7}.a2{grid-column:8/12;margin-top:120px}}
+.asym img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover}
+.menu{max-width:720px;margin:110px auto 0}
+.menu h2,.visit h2{font:500 italic 30px "EB Garamond",serif;color:var(--brown)}
+.two{columns:1;margin-top:18px}
+@media(min-width:700px){.two{columns:2;column-gap:56px}}
+.two p{break-inside:avoid;padding:8px 0;border-bottom:1px solid #ece6dc}
+.two small{display:block;color:var(--mute);font-size:13.5px}
+.visit{max-width:720px;margin:90px auto 0}
+.hrs{width:100%;border-collapse:collapse;margin-top:12px;font-size:15.5px}
+.hrs td{padding:6px 0;border-bottom:1px solid #ece6dc}
+.hrs td+td{text-align:right}
+.hrs .today td{color:var(--gold)}
+footer{max-width:720px;margin:50px auto 0;font-size:12.5px;color:var(--mute)}
+footer p+p{margin-top:6px}
+</style>
+</head>
+<body>
+<nav class="pillnav"><b>Esquire</b><a href="#menu">Menu</a><a href="#visit">Visit</a><a href="tel:+61466994159">Call</a></nav>
+<div class="wrap">
+  <p class="note">Concept preview by Restauranting. Not the official website of Esquire Espresso. Photos are licensed stock; details come from your Instagram, Facebook and listings.</p>
+  <section class="hero">
+    <div>
+      <h1>Campos coffee, <i>poured slowly</i>, from six.</h1>
+      <span class="pill" id="pill"><i></i><span id="pTxt">68 Belmore Rd, Randwick</span></span>
+      <div class="acts"><a href="https://heyyou.com.au/restaurant/1861/esquire-espresso" target="_blank" rel="noopener">Order ahead</a><a href="https://maps.google.com/?cid=18348884499787484194" target="_blank" rel="noopener">Directions</a><a href="tel:+61466994159">0466 994 159</a></div>
+    </div>
+    <figure class="swan" id="swan"><img src="https://images.pexels.com/photos/27960058/pexels-photo-27960058.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/27960058/pexels-photo-27960058.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/27960058/pexels-photo-27960058.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/27960058/pexels-photo-27960058.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:900px) 680px,100vw" alt="A cappuccino with careful latte art on a marble table" fetchpriority="high"><figcaption class="cap">Photos shown are placeholders: we'd swap in your own shots, swans included.</figcaption></figure>
+  </section>
+
+  <section class="asym">
+    <div class="a1"><img src="https://images.pexels.com/photos/30131921/pexels-photo-30131921.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/30131921/pexels-photo-30131921.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/30131921/pexels-photo-30131921.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/30131921/pexels-photo-30131921.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:900px) 460px,100vw" alt="Coffee mugs warming on top of a commercial espresso machine" loading="lazy"></div>
+    <div class="a2"><img src="https://images.pexels.com/photos/16556114/pexels-photo-16556114.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/16556114/pexels-photo-16556114.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/16556114/pexels-photo-16556114.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/16556114/pexels-photo-16556114.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:900px) 360px,100vw" alt="Eggs Benedict with potatoes and salad" loading="lazy"></div>
+  </section>
+
+  <section class="menu" id="menu">
+    <h2>The list</h2>
+    <div class="two">
+      <p>Espresso &amp; milk coffee<small>Campos beans</small></p>
+      <p>Swan latte<small>ask nicely</small></p>
+      <p>Cold drinks</p>
+      <p>Bacon &amp; egg roll<small>the commuter's breakfast</small></p>
+      <p>Breakfast, all day</p>
+      <p>Gourmet burgers</p>
+    </div>
+    <!-- [CHECK] full menu from Hey You store / owner; prices deliberately not shown -->
+  </section>
+
+  <section class="visit" id="visit">
+    <h2>Hours</h2>
+    <table class="hrs" id="hrs"></table>
+    <div class="acts"><a href="https://heyyou.com.au/restaurant/1861/esquire-espresso" target="_blank" rel="noopener">Order ahead on Hey You</a><a href="https://www.instagram.com/esquire_espresso/" target="_blank" rel="noopener">Instagram</a></div>
+  </section>
+  <footer><p>Esquire Espresso · 68 Belmore Rd, Randwick NSW 2031. No card surcharges.</p><p>Concept preview by Restauranting. Not the official website of Esquire Espresso. Photos via Pexels (IDs 27960058, 30131921, 16556114).</p></footer>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Esquire Espresso","servesCuisine":["Coffee","Breakfast"],"telephone":"+61466994159","address":{"@type":"PostalAddress","streetAddress":"68 Belmore Rd","addressLocality":"Randwick","addressRegion":"NSW","postalCode":"2031","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:00","closes":"15:00"}],"sameAs":["https://www.instagram.com/esquire_espresso/"],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"The list","hasMenuItem":[{"@type":"MenuItem","name":"Swan latte"},{"@type":"MenuItem","name":"Bacon & egg roll"},{"@type":"MenuItem","name":"All-day breakfast"},{"@type":"MenuItem","name":"Gourmet burgers"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={};for(var i=0;i<7;i++)H[i]=[[360,900]];
+(function(){var s=openState(H),p=document.getElementById('pill'),t=document.getElementById('pTxt');
+if(s.open){p.classList.add('on');t.textContent='Open · till '+fmt(s.until)}else if(s.next!=null){t.textContent='Closed · from '+fmt(s.next)+' '+s.nextDay}
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h;
+setTimeout(function(){document.getElementById('swan').classList.add('in')},200)})();
+</script>
+</body>
+</html>
