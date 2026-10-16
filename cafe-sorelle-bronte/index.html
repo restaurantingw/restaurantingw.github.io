@@ -8,7 +8,7 @@
 <meta name="description" content="Cafe Sorelle on Bronte Road: homemade Italian food and Colombian coffee. Eggs in Purgatory, Croissant Benedict, the Big Breakfast and Parma panini.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
-<!-- logo file: ask owner (Instagram check pending). [CHECK] hours; [CHECK] phone (other listings show 02 9387 3799). -->
+<!-- logo file: ask owner. Hours from Instagram bio (16 Oct): Mon-Fri 6am-3:30pm, Sat 7:30am-2:30pm. [CHECK] phone (other listings show 02 9387 3799). -->
 <style>
 :root{--cream:#f8f1e4;--tomato:#c43b26;--basil:#3e6b3a;--espresso:#2a1a12}
 *{box-sizing:border-box;margin:0}
@@ -58,7 +58,7 @@ a{color:inherit}
 <section class="poster">
   <img src="https://images.pexels.com/photos/36851643/pexels-photo-36851643.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/36851643/pexels-photo-36851643.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/36851643/pexels-photo-36851643.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/36851643/pexels-photo-36851643.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="100vw" alt="A flat white with heart latte art in a grey cup" loading="lazy">
   <h2>Colombian <em>coffee.</em></h2>
-  <p>From 6:30, every day.</p>
+  <p>Great coffee every morning, from 6am on weekdays.</p>
   <span class="n">02 / 04</span>
 </section>
 <section class="poster">
@@ -85,7 +85,7 @@ a{color:inherit}
 </section>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Cafe Sorelle","servesCuisine":["Italian","Cafe"],"telephone":"+61423453857","address":{"@type":"PostalAddress","streetAddress":"274 Bronte Rd","addressLocality":"Waverley","addressRegion":"NSW","postalCode":"2024","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:30","closes":"17:30"}],"sameAs":["https://www.instagram.com/cafesorelle/"],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Il menu","hasMenuItem":[{"@type":"MenuItem","name":"Eggs in Purgatory"},{"@type":"MenuItem","name":"Croissant Benedict"},{"@type":"MenuItem","name":"Big Breakfast"},{"@type":"MenuItem","name":"Parma panini"}]}]}}
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Cafe Sorelle","servesCuisine":["Italian","Cafe"],"telephone":"+61423453857","address":{"@type":"PostalAddress","streetAddress":"274 Bronte Rd","addressLocality":"Waverley","addressRegion":"NSW","postalCode":"2024","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"15:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"07:30","closes":"14:30"}],"sameAs":["https://www.instagram.com/cafesorelle/"],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Il menu","hasMenuItem":[{"@type":"MenuItem","name":"Eggs in Purgatory"},{"@type":"MenuItem","name":"Croissant Benedict"},{"@type":"MenuItem","name":"Big Breakfast"},{"@type":"MenuItem","name":"Parma panini"}]}]}}
 </script>
 <script>
 /* shared plumbing: Sydney time + open-now */
@@ -97,7 +97,7 @@ function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+f
 var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-var H={};for(var i=0;i<7;i++)H[i]=[[390,1050]];
+var H={0:[],6:[[450,870]]};for(var i=1;i<6;i++)H[i]=[[360,930]];
 (function(){var s=openState(H),p=document.getElementById('pill'),t=document.getElementById('pTxt');
 if(s.open){p.classList.add('on');t.textContent='Aperto · till '+fmt(s.until)}else if(s.next!=null){t.textContent='Chiuso · '+s.nextDay+' '+fmt(s.next)}
 var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
