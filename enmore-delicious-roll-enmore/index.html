@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Enmore Delicious Roll · 207 Enmore Rd</title>
+<meta name="description" content="Enmore Delicious Roll, 207 Enmore Rd: family-run banh mi since the late 2000s. Crackling pork roll, tofu roll, pho, rice paper rolls and Vietnamese iced coffee.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+<!-- logo file: none found (Facebook only). [CHECK] hours about 9-5 daily, Sun 10-4. [CHECK] phone differs across directories. [CHECK] owner Loan still runs it. -->
+<style>
+:root{--green:#1d6b3a;--chili:#e2412b;--bun:#f4c463;--ink:#1a1a1a;--bg:#fff7e6;--card:#fff;--line:#efe2c6}
+*{box-sizing:border-box;margin:0}
+body{font:400 16.5px/1.5 Rubik,system-ui,sans-serif;color:var(--ink);background:#e9dfc9}
+a{color:inherit}
+.app{max-width:460px;margin:0 auto;min-height:100vh;background:var(--bg);padding-bottom:100px}
+.top{background:var(--green);color:#fff;padding:16px 16px 18px;border-radius:0 0 22px 22px}
+.top .row{display:flex;justify-content:space-between;align-items:center}
+.word{font:800 21px/1.05 Rubik}
+.word span{color:var(--bun)}
+.pill{font:600 12.5px Rubik;background:rgba(255,255,255,.16);border-radius:999px;padding:5px 10px;display:inline-flex;gap:6px;align-items:center}
+.pill i{width:8px;height:8px;border-radius:50%;background:#bbb}.pill.on i{background:var(--bun)}
+.top h1{font:800 28px/1.1 Rubik;margin-top:14px}
+.note{font-size:12px;color:#7b6f5c;padding:10px 16px 0}
+.view{display:none;padding:10px 16px}.view.on{display:block}
+.flip{perspective:900px;margin-top:12px;cursor:pointer}
+.flip .in{position:relative;transition:transform .6s;transform-style:preserve-3d;min-height:290px}
+.flip.f .in{transform:rotateY(180deg)}
+@media (prefers-reduced-motion:reduce){.flip .in{transition:none}}
+.face{position:absolute;inset:0;border-radius:18px;overflow:hidden;backface-visibility:hidden;background:var(--card);border:1px solid var(--line)}
+.face img{width:100%;height:200px;object-fit:cover;display:block}
+.face .t{padding:12px 14px}
+.face b{font:800 19px Rubik}
+.face small{display:block;color:#7b6f5c}
+.back{transform:rotateY(180deg);padding:20px;background:var(--bun)}
+.back h3{font:800 20px Rubik}
+.back ul{margin-top:8px;padding-left:18px}
+.tap{font-size:12.5px;color:#7b6f5c;text-align:center;margin-top:6px}
+.card{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;margin-top:10px}
+.card img{width:64px;height:64px;border-radius:12px;object-fit:cover;flex:none}
+.card .dot{width:64px;height:64px;border-radius:12px;background:var(--chili);flex:none}
+.card b{display:block;font-weight:600}.card small{color:#7b6f5c}
+.big{display:block;text-align:center;text-decoration:none;font-weight:800;font-size:18px;padding:17px;border-radius:16px;margin-top:12px}
+.big.p{background:var(--chili);color:#fff}.big.s{background:var(--card);border:1px solid var(--line)}
+.hrs{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:12px}
+.hrs td{padding:12px 14px;border-bottom:1px solid var(--line)}
+.hrs td+td{text-align:right}
+.hrs .today td{background:#fdeec8;font-weight:600}
+.small{font-size:13px;color:#7b6f5c;margin-top:14px}
+h2{font:800 24px/1.15 Rubik;margin-top:8px}
+.tabs{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:460px;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom));z-index:9}
+.tabs button{all:unset;cursor:pointer;text-align:center;color:#6b6250;font:600 13px Rubik;padding:10px 0;border-radius:12px}
+.tabs button[aria-selected=true]{background:var(--green);color:#fff}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top"><div class="row"><div class="word">Enmore<br><span>Delicious Roll</span></div><span class="pill" id="pill"><i></i><span id="pTxt">207 Enmore Rd</span></span></div><h1>The crackling pork roll Enmore queues for.</h1></div>
+  <p class="note">Concept preview by Restauranting. Not the official website of Enmore Delicious Roll. Photos are licensed stock; details come from public listings.</p>
+
+  <section class="view on" id="v-rolls">
+    <div class="flip" id="flip" role="button" tabindex="0" aria-label="Flip the roll card">
+      <div class="in">
+        <div class="face"><img src="https://images.pexels.com/photos/32689610/pexels-photo-32689610.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/32689610/pexels-photo-32689610.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/32689610/pexels-photo-32689610.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/32689610/pexels-photo-32689610.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:460px) 428px,92vw" alt="Vietnamese banh mi rolls with fresh vegetables" fetchpriority="high"><div class="t"><b>Crackling pork roll</b><small>the one everyone orders</small></div></div>
+        <div class="face back"><!-- [CHECK] fillings with owner --><h3>What goes in</h3><ul><li>Crackling roast pork</li><li>Pickled veg</li><li>Fresh herbs and chilli</li></ul><p class="small" style="color:#5a4a20">Tofu version for the vegos.</p></div>
+      </div>
+    </div>
+    <p class="tap">Tap the card to see what goes in</p>
+    <div class="card"><img src="https://images.pexels.com/photos/11783313/pexels-photo-11783313.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/11783313/pexels-photo-11783313.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/11783313/pexels-photo-11783313.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/11783313/pexels-photo-11783313.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="64px" alt="Vietnamese rice paper rolls with salad" loading="lazy"><div><b>Rice paper rolls</b><small>fresh, to go</small></div></div>
+    <div class="card"><span class="dot" aria-hidden="true"></span><div><b>Pho</b><small>beef or chicken</small></div></div>
+    <div class="card"><img src="https://images.pexels.com/photos/33684272/pexels-photo-33684272.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/33684272/pexels-photo-33684272.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/33684272/pexels-photo-33684272.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/33684272/pexels-photo-33684272.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="64px" alt="A Vietnamese iced coffee in a glass with a straw" loading="lazy"><div><b>Vietnamese iced coffee</b><small>strong and sweet</small></div></div>
+    <p class="small">Photos shown are placeholders: we'd swap in your own shots.</p>
+    <!-- [CHECK] full menu from owner / Uber Eats; prices deliberately not shown -->
+  </section>
+
+  <section class="view" id="v-order">
+    <h2>Call ahead, skip the queue</h2>
+    <a class="big p" href="tel:+61452169868">Call · 0452 169 868</a>
+    <a class="big s" href="https://maps.google.com/?cid=9238874540020770485" target="_blank" rel="noopener">Directions</a>
+    <p class="small">207 Enmore Rd, a few doors from the Enmore Theatre end of the strip.</p>
+  </section>
+
+  <section class="view" id="v-hours">
+    <h2>Hours</h2>
+    <table class="hrs" id="hrs"></table>
+  </section>
+
+  <section class="view" id="v-us">
+    <h2>Family-run, since the late 2000s</h2>
+    <p style="margin-top:10px">Big rolls, fast lunch, and a hello for the regulars. If you're a local, they probably know your order already.</p>
+    <p class="small">Enmore Delicious Roll · 207 Enmore Rd, Enmore NSW 2042<br>Concept preview by Restauranting. Not the official website of Enmore Delicious Roll.<br>Photos via Pexels (IDs 32689610, 11783313, 33684272).</p>
+  </section>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-v="rolls">Rolls</button>
+    <button role="tab" aria-selected="false" data-v="order">Order</button>
+    <button role="tab" aria-selected="false" data-v="hours">Hours</button>
+    <button role="tab" aria-selected="false" data-v="us">Us</button>
+  </nav>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Enmore Delicious Roll","servesCuisine":["Vietnamese","Banh mi"],"telephone":"+61452169868","address":{"@type":"PostalAddress","streetAddress":"207 Enmore Rd","addressLocality":"Enmore","addressRegion":"NSW","postalCode":"2042","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"16:00"}],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Rolls","hasMenuItem":[{"@type":"MenuItem","name":"Crackling pork roll"},{"@type":"MenuItem","name":"Tofu roll"}]},{"@type":"MenuSection","name":"More","hasMenuItem":[{"@type":"MenuItem","name":"Pho"},{"@type":"MenuItem","name":"Rice paper rolls"},{"@type":"MenuItem","name":"Vietnamese iced coffee"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={0:[[600,960]]};for(var i=1;i<7;i++)H[i]=[[540,1020]];
+var f=document.getElementById('flip');function fl(){f.classList.toggle('f')}f.onclick=fl;f.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();fl()}};
+[].forEach.call(document.querySelectorAll('.tabs button'),function(b){b.onclick=function(){[].forEach.call(document.querySelectorAll('.tabs button'),function(o){o.setAttribute('aria-selected',o===b)});[].forEach.call(document.querySelectorAll('.view'),function(v){v.classList.toggle('on',v.id==='v-'+b.dataset.v)});scrollTo(0,0)}});
+(function(){var s=openState(H),p=document.getElementById('pill'),t=document.getElementById('pTxt');
+if(s.open){p.classList.add('on');t.textContent='Open · till '+fmt(s.until)}else if(s.next!=null){t.textContent='Closed · '+s.nextDay+' '+fmt(s.next)}
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>

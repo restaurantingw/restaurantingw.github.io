@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sapporo Miso Ramen Factory Sora · 381 King St, Newtown</title>
+<meta name="description" content="Sapporo Miso Ramen Factory Sora, now at 381 King St Newtown (moved from Potts Point in January 2026): Hokkaido-style miso ramen with house-made noodles, gyoza and karaage.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<!-- logo file: ask owner. [CHECK] hours Tue-Sun 12-3 & 5-9 (Facebook ramen group). No working phone confirmed (old Potts Point number may be dead), so no call button. Owner IG handle unverified, not linked. -->
+<style>
+:root{--night:#0e0f14;--red:#e0362c;--amber:#ffb347;--paper:#f3ead9;--mute:#9a958c}
+*{box-sizing:border-box;margin:0}
+body{font:400 16.5px/1.65 "Noto Sans JP",system-ui,sans-serif;color:var(--paper);background:var(--night);overflow-x:hidden}
+a{color:inherit}
+.ticker{background:var(--red);color:#fff;font:700 13.5px "Noto Sans JP";letter-spacing:.06em;white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker div{display:inline-block;padding-left:100%;animation:tk 22s linear infinite}
+@keyframes tk{to{transform:translateX(-100%)}}
+@media (prefers-reduced-motion:reduce){.ticker div{animation:none;padding-left:16px}}
+.note{font-size:12.5px;color:var(--mute);padding:12px 16px;max-width:640px}
+.hero{display:flex;gap:22px;align-items:center;padding:20px 16px 0;max-width:1000px;margin:0 auto}
+.lantern{flex:none;width:92px;height:140px;border-radius:46px/60px;background:#3a1512;position:relative;display:grid;place-items:center;font:400 34px/1 "Dela Gothic One";color:#5a2a24;writing-mode:vertical-rl;transition:background .5s,box-shadow .5s,color .5s}
+.lantern:before,.lantern:after{content:"";position:absolute;left:18px;right:18px;height:10px;background:#1a1a1a;border-radius:2px}
+.lantern:before{top:-4px}.lantern:after{bottom:-4px}
+.lantern.on{background:var(--red);color:#fff4e0;box-shadow:0 0 30px rgba(224,54,44,.6),0 0 70px rgba(255,179,71,.25)}
+h1{font:400 clamp(34px,8.5vw,76px)/1.02 "Dela Gothic One",sans-serif}
+h1 span{color:var(--amber)}
+.sub{color:var(--mute);margin-top:8px}
+.big{max-width:1000px;margin:26px auto 0;padding:0 16px;font:400 clamp(30px,8vw,64px)/1.05 "Dela Gothic One";color:var(--amber)}
+.mood{max-width:1000px;margin:24px auto 0;padding:0 16px}
+.mood img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;filter:brightness(.82) contrast(1.05)}
+.mood p{font-size:13px;color:var(--mute);margin-top:6px}
+.board{max-width:640px;margin:44px auto 0;padding:22px 20px;background:#17181f;border:2px solid var(--amber);box-shadow:0 0 22px rgba(255,179,71,.18)}
+.board h2{font:400 24px "Dela Gothic One";color:var(--amber)}
+.mi{display:flex;gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid #2b2c36}
+.mi b{font-weight:700}.mi i{flex:1}.mi small{color:var(--mute)}
+.board img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-top:14px}
+.story{max-width:640px;margin:44px auto 0;padding:0 16px}
+.story h2,.visit h2{font:400 28px "Dela Gothic One"}
+.story p{margin-top:10px}
+.visit{max-width:640px;margin:40px auto 0;padding:0 16px 130px}
+.hrs{width:100%;border-collapse:collapse;margin-top:10px}
+.hrs td{padding:8px 0;border-bottom:1px solid #2b2c36}
+.hrs td+td{text-align:right}
+.hrs .today td{color:var(--amber);font-weight:700}
+footer{font-size:13px;color:var(--mute);margin-top:22px}
+footer p+p{margin-top:6px}
+.go{position:fixed;right:16px;bottom:16px;z-index:9;background:var(--amber);color:var(--night);text-decoration:none;font:400 17px "Dela Gothic One";padding:15px 20px;border-radius:4px}
+</style>
+</head>
+<body>
+<div class="ticker" aria-label="We've moved to 381 King St, Newtown"><div>We've moved · Now at 381 King St, Newtown · No longer in Potts Point · House-made noodles · Hokkaido miso ·</div></div>
+<p class="note">Concept preview by Restauranting. Not the official website of Sapporo Miso Ramen Factory Sora. Photos are licensed stock; details come from your posts and public listings.</p>
+
+<header class="hero">
+  <div class="lantern" id="lan" aria-hidden="true">空</div>
+  <div><h1>Sapporo miso ramen, <span>now on King St.</span></h1><p class="sub">Ramen Factory Sora · 381 King St, Newtown</p></div>
+</header>
+<p class="big" id="big">Lunch and dinner, Tuesday to Sunday.</p>
+
+<figure class="mood"><img src="https://images.pexels.com/photos/16388427/pexels-photo-16388427.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/16388427/pexels-photo-16388427.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/16388427/pexels-photo-16388427.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/16388427/pexels-photo-16388427.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:1000px) 968px,100vw" alt="A steaming bowl of ramen with pork, egg and vegetables" fetchpriority="high"><p>Photos shown are placeholders: we'd swap in your own shots.</p></figure>
+
+<section class="board" id="menu">
+  <h2>The counter</h2>
+  <div class="mi"><b>Sapporo miso ramen</b><i></i><small>the house bowl</small></div>
+  <div class="mi"><b>House-made noodles</b><i></i><small>made here</small></div>
+  <div class="mi"><b>Gyoza</b><i></i><small>pan-fried</small></div>
+  <div class="mi"><b>Karaage</b><i></i><small>crisp</small></div>
+  <img src="https://images.pexels.com/photos/5668688/pexels-photo-5668688.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/5668688/pexels-photo-5668688.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/5668688/pexels-photo-5668688.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/5668688/pexels-photo-5668688.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:640px) 600px,90vw" alt="Pan-fried gyoza dumplings with sesame and sauce" loading="lazy">
+  <!-- [CHECK] full menu from owner; prices deliberately not shown -->
+</section>
+
+<section class="story">
+  <h2>Same broth, new street</h2>
+  <p>For years we were tucked away in Potts Point. In January 2026 we moved to King St. The broth still simmers for about twelve hours and the noodles are still made in-house, Hokkaido style.</p>
+</section>
+
+<section class="visit" id="visit">
+  <h2>Find us</h2>
+  <table class="hrs" id="hrs"></table>
+  <p style="margin-top:12px">381 King St, Newtown NSW 2042 · <a href="https://maps.google.com/?cid=10974706334196389144" target="_blank" rel="noopener">Directions</a></p>
+  <footer><p>Concept preview by Restauranting. Not the official website of Sapporo Miso Ramen Factory Sora.</p><p>Photos via Pexels (IDs 16388427, 5668688).</p></footer>
+</section>
+
+<a class="go" href="https://maps.google.com/?cid=10974706334196389144" target="_blank" rel="noopener">Directions</a>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Sapporo Miso Ramen Factory Sora","servesCuisine":["Japanese","Ramen"],"address":{"@type":"PostalAddress","streetAddress":"381 King St","addressLocality":"Newtown","addressRegion":"NSW","postalCode":"2042","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"17:00","closes":"21:00"}],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Ramen","hasMenuItem":[{"@type":"MenuItem","name":"Sapporo miso ramen"},{"@type":"MenuItem","name":"Gyoza"},{"@type":"MenuItem","name":"Karaage"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={1:[]};[0,2,3,4,5,6].forEach(function(d){H[d]=[[720,900],[1020,1260]]});
+(function(){var s=openState(H),b=document.getElementById('big');
+if(s.open){document.getElementById('lan').classList.add('on');b.textContent='Lantern’s on. Open till '+fmt(s.until)+'.'}else if(s.next!=null)b.textContent='Back '+s.nextDay+' at '+fmt(s.next)+'.';
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>
