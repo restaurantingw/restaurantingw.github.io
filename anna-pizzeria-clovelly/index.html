@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Anna Pizzeria · Clovelly Rd</title>
+<meta name="description" content="Anna Pizzeria, 350 Clovelly Rd: Roman-style wood-fired pizza, named after the founders' mothers. Book a table by phone, Tuesday to Sunday from 5pm.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monoton&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Karla:wght@400;600&display=swap" rel="stylesheet">
+<!-- logo file: ask owner. [CHECK] hours: Tue-Sun from 5pm, Fri-Sat till 10 (IG Feb 2026); other closing times assumed 9pm. [CHECK] BYO Tue-Thu. -->
+<style>
+:root{--night:#120d0b;--glow:#ff6a3d;--warm:#ffc58a;--cream:#f4e9dc;--mute:#a8988a}
+*{box-sizing:border-box;margin:0}
+body{font:400 17px/1.6 Karla,system-ui,sans-serif;color:var(--cream);background:var(--night);overflow-x:hidden}
+a{color:inherit}
+.note{font-size:12.5px;color:var(--mute);text-align:center;padding:12px 16px}
+.mast{text-align:center;padding:26px 16px 0}
+.sign{font:400 clamp(46px,14vw,120px)/1 Monoton,cursive;color:#5a2a1c;letter-spacing:.04em;transition:color .4s,text-shadow .4s}
+.sign.on{color:var(--glow);text-shadow:0 0 6px rgba(255,106,61,.9),0 0 22px rgba(255,106,61,.6),0 0 48px rgba(255,106,61,.35);animation:flick 1.6s steps(1) 1}
+@keyframes flick{0%{opacity:.2}10%{opacity:1}14%{opacity:.3}20%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.sign.on{animation:none}}
+.mast p{font:500 italic 20px "Cormorant Garamond",serif;color:var(--warm);margin-top:6px}
+.clock{text-align:center;font:500 clamp(34px,9vw,70px)/1.05 "Cormorant Garamond",serif;margin:30px 16px 0}
+.clock em{font-style:italic;color:var(--glow)}
+.mood{margin:30px auto 0;max-width:920px;padding:0 16px}
+.mood img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;filter:brightness(.85)}
+.mood p{font-size:13px;color:var(--mute);margin-top:6px}
+.mums{max-width:620px;margin:40px auto 0;padding:0 16px;text-align:center}
+.mums h2{font:500 italic 34px/1.1 "Cormorant Garamond",serif;color:var(--warm)}
+.mums p{margin-top:10px}
+.board{max-width:620px;margin:44px auto 0;padding:24px 20px;border:2px solid var(--glow);box-shadow:0 0 18px rgba(255,106,61,.25),inset 0 0 18px rgba(255,106,61,.12)}
+.board h2{font:400 22px/1 Monoton;color:var(--glow);text-align:center;letter-spacing:.06em}
+.mi{display:flex;gap:8px;align-items:baseline;padding:10px 0}
+.mi b{font:500 22px "Cormorant Garamond",serif;font-weight:500}
+.mi i{flex:1;border-bottom:1px dotted #5c4a3e;transform:translateY(-6px)}
+.mi small{color:var(--mute)}
+.board img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-top:14px}
+.visit{max-width:620px;margin:44px auto 0;padding:0 16px 130px}
+.visit h2{font:500 italic 32px "Cormorant Garamond",serif;color:var(--warm)}
+.hrs{width:100%;border-collapse:collapse;margin-top:10px}
+.hrs td{padding:8px 0;border-bottom:1px solid #3a2c24}
+.hrs td+td{text-align:right}
+.hrs .today td{color:var(--glow);font-weight:600}
+footer{font-size:13px;color:var(--mute);margin-top:22px}
+footer p+p{margin-top:6px}
+.book{position:fixed;right:16px;bottom:16px;z-index:9;background:var(--glow);color:var(--night);text-decoration:none;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:15px;padding:15px 20px;border-radius:999px}
+</style>
+</head>
+<body>
+<p class="note">Concept preview by Restauranting. Not the official website of Anna Pizzeria. Photos are licensed stock; details come from your Instagram and public listings.</p>
+<header class="mast"><div class="sign" id="sign">Anna</div><p>pizzeria · Clovelly Rd</p></header>
+<div class="clock" id="clock">The oven's lit <em>from 5pm.</em></div>
+
+<figure class="mood"><img src="https://images.pexels.com/photos/29626981/pexels-photo-29626981.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/29626981/pexels-photo-29626981.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/29626981/pexels-photo-29626981.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/29626981/pexels-photo-29626981.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:920px) 888px,100vw" alt="A pizza baking in a wood-fired oven with flames" fetchpriority="high"><p>Photos shown are placeholders: we'd swap in your own shots.</p></figure>
+
+<section class="mums">
+  <h2>Named after our mums.</h2>
+  <p>Luca and Jury spent years in Sydney's Italian kitchens, from La Panchina to Tipica. Anna is the place they built together: Roman-style pizza out of a wood fire, a spritz, and dessert worth staying for.</p>
+</section>
+
+<section class="board" id="menu">
+  <h2>Tonight</h2>
+  <div class="mi"><b>Anna</b><i></i><small>the house pizza</small></div>
+  <div class="mi"><b>Pizza Romana</b><i></i><small>thin, crisp</small></div>
+  <div class="mi"><b>Gluten-free vegan</b><i></i><small>ask us</small></div>
+  <div class="mi"><b>Secret chilli oil</b><i></i><small>on everything</small></div>
+  <div class="mi"><b>Cheesecake</b><i></i><small>for the table</small></div>
+  <div class="mi"><b>Spritz</b><i></i><small>licensed</small></div>
+  <img src="https://images.pexels.com/photos/18437684/pexels-photo-18437684.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/18437684/pexels-photo-18437684.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/18437684/pexels-photo-18437684.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/18437684/pexels-photo-18437684.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:620px) 580px,90vw" alt="A wood-fired margherita pizza with basil leaves" loading="lazy">
+  <!-- [CHECK] full menu from owner; prices deliberately not shown -->
+</section>
+
+<section class="visit" id="visit">
+  <h2>Book a table</h2>
+  <p>Bookings by phone: <a href="tel:+61451616555">0451 616 555</a>. Walk-ins welcome when there's room.</p>
+  <table class="hrs" id="hrs"></table>
+  <footer><p>Anna Pizzeria · 350 Clovelly Rd, Clovelly NSW 2031 · <a href="https://www.instagram.com/annapizzeriaclovelly/" target="_blank" rel="noopener">@annapizzeriaclovelly</a> · <a href="https://maps.google.com/?cid=1563338880161781683" target="_blank" rel="noopener">Directions</a></p><p>Concept preview by Restauranting. Not the official website of Anna Pizzeria. Photos via Pexels (IDs 29626981, 18437684).</p></footer>
+</section>
+
+<a class="book" href="tel:+61451616555">Book</a>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Anna Pizzeria","servesCuisine":["Italian","Pizza"],"telephone":"+61451616555","acceptsReservations":true,"address":{"@type":"PostalAddress","streetAddress":"350 Clovelly Rd","addressLocality":"Clovelly","addressRegion":"NSW","postalCode":"2031","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Sunday"],"opens":"17:00","closes":"21:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"17:00","closes":"22:00"}],"sameAs":["https://www.instagram.com/annapizzeriaclovelly/"],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Pizza","hasMenuItem":[{"@type":"MenuItem","name":"Anna"},{"@type":"MenuItem","name":"Pizza Romana"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={0:[[1020,1260]],1:[],2:[[1020,1260]],3:[[1020,1260]],4:[[1020,1260]],5:[[1020,1320]],6:[[1020,1320]]};
+(function(){var s=openState(H),g=document.getElementById('sign'),c=document.getElementById('clock');
+if(s.open){g.classList.add('on');c.innerHTML='Oven’s on <em>till '+fmt(s.until)+'.</em>'}else if(s.next!=null){c.innerHTML='Lights back on <em>'+s.nextDay+', '+fmt(s.next)+'.</em>'}
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hot Rolls Vietnamese · Coogee Bay Rd</title>
+<meta name="description" content="Hot Rolls Vietnamese, 209A Coogee Bay Rd: crackling pork banh mi, lemongrass beef, pho, rice paper rolls and vermicelli salads, a short walk from the beach.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
+<!-- logo file: ask owner. [CHECK] brand: yellow sign per review snippet. [CHECK] hours 10:30-8 daily (Waze). [CHECK] new owner since 2026 sale. -->
+<style>
+:root{--yellow:#ffd21f;--red:#d7261e;--ink:#161310;--board:#1d1a17;--cream:#fffbea;--mute:#6f675c}
+*{box-sizing:border-box;margin:0}
+body{font:400 17px/1.5 Archivo,system-ui,sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden}
+a{color:inherit}
+header{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px;background:var(--yellow);border-bottom:4px solid var(--ink)}
+.word{font:400 24px/1 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.01em}
+.word span{color:var(--red)}
+.door{font:400 14px/1 "Archivo Black";letter-spacing:.12em;border:3px solid var(--ink);padding:7px 10px;background:#fff;transform:rotate(-2deg);transition:transform .5s}
+.door.closed{background:var(--ink);color:var(--yellow);transform:rotate(2deg)}
+@media (prefers-reduced-motion:reduce){.door{transition:none}}
+.note{font-size:12.5px;color:var(--mute);padding:10px 16px}
+.wall{background:var(--board);padding:18px 14px 22px;margin:0 10px;border:6px solid #3a332c;transition:filter .8s}
+.wall.dim{filter:brightness(.55) saturate(.6)}
+.wall h1{font:400 clamp(30px,8vw,56px)/1 "Archivo Black";color:var(--yellow);text-transform:uppercase}
+.wall .sub{color:#e9e1cf;margin-top:6px;font-size:15px}
+.cols{display:grid;gap:12px;margin-top:16px}
+@media(min-width:760px){.cols{grid-template-columns:repeat(3,1fr)}}
+.panel{background:var(--yellow);padding:14px 14px 10px;box-shadow:inset 0 0 0 3px var(--ink)}
+.panel h2{font:400 22px/1 "Archivo Black";text-transform:uppercase;color:var(--red);border-bottom:3px solid var(--ink);padding-bottom:8px}
+.panel p{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.2);font-weight:600}
+.panel p small{font-weight:400;color:#5a4e2a;text-align:right}
+.panel img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:10px;border:3px solid var(--ink)}
+.ph{color:#cfc6b2;font-size:13px;margin-top:12px}
+.story{max-width:760px;margin:0 auto;padding:36px 16px 0}
+.story h2,.hours h2{font:400 34px/1 "Archivo Black";text-transform:uppercase}
+.story p{margin-top:10px}
+.hours{max-width:760px;margin:0 auto;padding:34px 16px 130px}
+.hrs{width:100%;border-collapse:collapse;margin-top:12px}
+.hrs td{padding:9px 0;border-bottom:2px solid var(--ink);font-weight:600}
+.hrs td+td{text-align:right}
+.hrs .today td{background:var(--yellow)}
+footer{font-size:13px;color:var(--mute);margin-top:22px}
+footer p+p{margin-top:6px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:9;display:grid;grid-template-columns:repeat(3,1fr);background:var(--ink);border-top:4px solid var(--yellow)}
+.bar a{color:var(--yellow);text-decoration:none;text-align:center;padding:15px 4px;font:400 15px "Archivo Black";text-transform:uppercase;letter-spacing:.04em}
+.bar a+a{border-left:1px solid #3a332c}
+</style>
+</head>
+<body>
+<header><div class="word">Hot <span>Rolls</span></div><span class="door" id="door">OPEN</span></header>
+<p class="note">Concept preview by Restauranting. Not the official website of Hot Rolls Vietnamese. Photos are licensed stock; details come from public listings.</p>
+
+<section class="wall" id="wall">
+  <h1>Crackling pork rolls, two minutes from the sand.</h1>
+  <p class="sub" id="sub">Vietnamese rolls, pho and salads on Coogee Bay Rd.</p>
+  <div class="cols" id="menu">
+    <div class="panel"><h2>Rolls</h2>
+      <p>Roast pork crackling <small>the famous one</small></p>
+      <p>Lemongrass beef <small>chargrilled</small></p>
+      <p>Chicken <small>with pâté and pickles</small></p>
+      <img src="https://images.pexels.com/photos/32961651/pexels-photo-32961651.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/32961651/pexels-photo-32961651.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/32961651/pexels-photo-32961651.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/32961651/pexels-photo-32961651.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:760px) 300px,90vw" alt="A Vietnamese banh mi roll with herbs on newspaper" fetchpriority="high">
+    </div>
+    <div class="panel"><h2>Bowls</h2>
+      <p>Pho <small>beef or chicken</small></p>
+      <p>Vermicelli salad <small>with spring rolls</small></p>
+      <img src="https://images.pexels.com/photos/1001773/pexels-photo-1001773.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/1001773/pexels-photo-1001773.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/1001773/pexels-photo-1001773.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/1001773/pexels-photo-1001773.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:760px) 300px,90vw" alt="A bowl of Vietnamese pho with herbs and vegetables" loading="lazy">
+    </div>
+    <div class="panel"><h2>On the side</h2>
+      <p>Rice paper rolls <small>fresh</small></p>
+      <p>Mango pancakes <small>for after</small></p>
+      <img src="https://images.pexels.com/photos/6646031/pexels-photo-6646031.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/6646031/pexels-photo-6646031.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/6646031/pexels-photo-6646031.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/6646031/pexels-photo-6646031.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:760px) 300px,90vw" alt="Vietnamese rice paper rolls with dipping sauce" loading="lazy">
+    </div>
+  </div>
+  <p class="ph">Photos shown are placeholders: we'd swap in your own shots.</p>
+  <!-- [CHECK] full menu from Uber Eats / owner; prices deliberately not shown -->
+</section>
+
+<section class="story">
+  <h2>Grab one for the beach</h2>
+  <p>Fresh rolls made to order, a few seats inside, and pho for the cooler nights. Walk up from the beach, or order ahead and pick up on your way down.</p>
+</section>
+
+<section class="hours" id="hours">
+  <h2>Open every day</h2>
+  <table class="hrs" id="hrs"></table>
+  <footer><p>Hot Rolls Vietnamese · 209A Coogee Bay Rd, Coogee NSW 2034 · <a href="tel:+61416505799">0416 505 799</a></p><p>Concept preview by Restauranting. Not the official website of Hot Rolls Vietnamese. Photos via Pexels (IDs 32961651, 1001773, 6646031).</p></footer>
+</section>
+
+<nav class="bar"><a href="tel:+61416505799">Call</a><a href="https://www.google.com/maps/search/?api=1&query=Hot+Rolls+Vietnamese+209A+Coogee+Bay+Rd+Coogee" target="_blank" rel="noopener">Directions</a><a href="#menu">Menu</a></nav>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Hot Rolls Vietnamese","servesCuisine":["Vietnamese"],"telephone":"+61416505799","address":{"@type":"PostalAddress","streetAddress":"209A Coogee Bay Rd","addressLocality":"Coogee","addressRegion":"NSW","postalCode":"2034","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:30","closes":"20:00"}],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Rolls","hasMenuItem":[{"@type":"MenuItem","name":"Roast pork crackling roll"},{"@type":"MenuItem","name":"Lemongrass beef roll"}]},{"@type":"MenuSection","name":"Bowls","hasMenuItem":[{"@type":"MenuItem","name":"Pho"},{"@type":"MenuItem","name":"Vermicelli salad"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={};for(var i=0;i<7;i++)H[i]=[[630,1200]];
+(function(){var s=openState(H),d=document.getElementById('door'),w=document.getElementById('wall'),sub=document.getElementById('sub');
+if(s.open){d.textContent='OPEN';sub.textContent='Open now, till '+fmt(s.until)+'. Rolls made to order.'}else{d.textContent='CLOSED';d.classList.add('closed');w.classList.add('dim');if(s.next!=null)sub.textContent='Closed now. Back '+s.nextDay+' at '+fmt(s.next)+'.'}
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>

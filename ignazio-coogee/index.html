@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ignazio · Pizza on Coogee Bay Rd</title>
+<meta name="description" content="Ignazio, 132 Coogee Bay Rd: Neapolitan pizza from family recipes, the house chilli oil and tiramisu. Dine in, take away, BYO.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<!-- logo file: ask owner (Instagram check pending). [CHECK] hours: Wed-Sun per IG, times assumed 5-9:30pm. [CHECK] owner names. Old Jack's Pizza listing still shows on Yelp. -->
+<style>
+:root{--kraft:#d9b98c;--board:#c9a46f;--red:#b8231b;--ink:#231a12;--paper:#f8f1e3;--mute:#6d5c48}
+*{box-sizing:border-box;margin:0}
+body{font:400 16.5px/1.6 "Courier Prime",ui-monospace,monospace;color:var(--ink);background:var(--kraft);overflow-x:hidden}
+a{color:inherit}
+.note{font-size:12.5px;color:var(--mute);padding:12px 16px;text-align:center}
+.box{max-width:720px;margin:6px auto 0;padding:0 14px;perspective:1200px}
+.lid{background:var(--board);border:3px solid var(--ink);padding:26px 18px 22px;text-align:center;transform-origin:top center;transform:rotateX(0);transition:transform 1.1s cubic-bezier(.2,.8,.2,1);position:relative;z-index:2;box-shadow:0 10px 0 -4px rgba(0,0,0,.18)}
+.lid.open{transform:rotateX(-14deg)}
+@media (prefers-reduced-motion:reduce){.lid{transition:none}}
+.lid .stamp{display:inline-block;border:3px solid var(--red);color:var(--red);padding:12px 20px;transform:rotate(-3deg)}
+.lid h1{font:400 clamp(52px,15vw,104px)/.9 "Rozha One",serif;letter-spacing:.01em}
+.lid .tag{font-weight:700;letter-spacing:.24em;text-transform:uppercase;font-size:13px;margin-top:6px}
+.lid p.l{margin-top:14px;font-size:14px}
+.inside{background:var(--paper);border:3px solid var(--ink);border-top:0;padding:16px}
+.inside img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:50%;border:10px solid #fff;box-shadow:0 0 0 3px var(--ink)}
+.inside .ph{font-size:13px;color:var(--mute);text-align:center;margin-top:10px}
+.pill{display:inline-flex;gap:7px;align-items:center;font-weight:700;font-size:14px;border:2px solid var(--ink);border-radius:999px;padding:5px 12px;margin-top:14px;background:var(--paper)}
+.pill i{width:9px;height:9px;border-radius:50%;background:#999}.pill.on i{background:var(--red)}
+.acts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:14px}
+.acts a{text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:12px 16px;border:2px solid var(--ink);background:var(--paper)}
+.acts a.p{background:var(--red);color:#fff;border-color:var(--red)}
+.label{max-width:560px;margin:46px auto 0;background:var(--paper);border:3px solid var(--ink);padding:18px;position:relative}
+.label:before{content:"";position:absolute;inset:5px;border:1px solid var(--ink);pointer-events:none}
+.label h2{font:400 32px/1 "Rozha One",serif;color:var(--red);text-align:center}
+.label .b{display:flex;justify-content:space-between;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:5px 0;margin-top:12px}
+.label p.i{margin-top:10px}
+.label ul{list-style:none;padding:0;margin-top:10px}
+.label li{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px dashed var(--ink)}
+.label li small{color:var(--mute)}
+.label img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-top:14px;border:2px solid var(--ink)}
+.visit{max-width:560px;margin:46px auto 0;padding:0 14px 70px}
+.visit h2{font:400 32px "Rozha One",serif}
+.hrs{width:100%;border-collapse:collapse;margin-top:10px}
+.hrs td{padding:7px 0;border-bottom:2px solid var(--ink)}
+.hrs td+td{text-align:right}
+.hrs .today td{color:var(--red);font-weight:700}
+footer{font-size:12.5px;color:var(--mute);margin-top:22px}
+footer p+p{margin-top:6px}
+</style>
+</head>
+<body>
+<p class="note">Concept preview by Restauranting. Not the official website of Ignazio. Photos are licensed stock; details come from your Instagram and public listings.</p>
+<div class="box">
+  <header class="lid" id="lid">
+    <div class="stamp"><h1>Ignazio</h1><div class="tag">Pizza · Coogee</div></div>
+    <p class="l">Family recipes. Wood, dough, tomato, time.</p>
+    <span class="pill" id="pill"><i></i><span id="pTxt">132 Coogee Bay Rd</span></span>
+    <div class="acts"><a class="p" href="tel:+61296650033">Call to order</a><a href="#menu">Menu</a></div>
+  </header>
+  <div class="inside">
+    <img src="https://images.pexels.com/photos/31596394/pexels-photo-31596394.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/31596394/pexels-photo-31596394.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/31596394/pexels-photo-31596394.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/31596394/pexels-photo-31596394.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:720px) 660px,90vw" alt="A fresh margherita pizza with tomato and basil" fetchpriority="high">
+    <p class="ph">Photos shown are placeholders: we'd swap in your own shots.</p>
+  </div>
+</div>
+
+<section class="label" id="menu">
+  <h2>Contents</h2>
+  <div class="b"><span>Neapolitan</span><span>Dine in · Takeaway · BYO</span></div>
+  <ul>
+    <li>Margherita <small>tomato, fior di latte, basil</small></li>
+    <li>The house chilli oil <small>family recipe, on the side</small></li>
+    <li>Tiramisu <small>to finish</small></li>
+  </ul>
+  <img src="https://images.pexels.com/photos/6223172/pexels-photo-6223172.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/6223172/pexels-photo-6223172.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/6223172/pexels-photo-6223172.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/6223172/pexels-photo-6223172.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:560px) 520px,90vw" alt="A pizza baking in a wood-fired brick oven" loading="lazy">
+  <p class="i">Ask for a drizzle of the chilli oil. It's the one everyone talks about.</p>
+  <!-- [CHECK] full pizza list from owner; prices deliberately not shown -->
+</section>
+
+<section class="visit" id="visit">
+  <h2>Come by</h2>
+  <p>Same corner of Coogee Bay Rd, new pizzeria. BYO welcome.</p>
+  <table class="hrs" id="hrs"></table>
+  <div class="acts" style="justify-content:flex-start"><a class="p" href="tel:+61296650033">(02) 9665 0033</a><a href="https://maps.google.com/?cid=11464677415297959363" target="_blank" rel="noopener">Directions</a><a href="https://www.instagram.com/ignazio.syd/" target="_blank" rel="noopener">Instagram</a></div>
+  <footer><p>Ignazio · 132 Coogee Bay Rd, Coogee NSW 2034</p><p>Concept preview by Restauranting. Not the official website of Ignazio. Photos via Pexels (IDs 31596394, 6223172).</p></footer>
+</section>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Ignazio","servesCuisine":["Italian","Pizza"],"telephone":"+61296650033","address":{"@type":"PostalAddress","streetAddress":"132 Coogee Bay Rd","addressLocality":"Coogee","addressRegion":"NSW","postalCode":"2034","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"17:00","closes":"21:30"}],"sameAs":["https://www.instagram.com/ignazio.syd/"],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Pizza","hasMenuItem":[{"@type":"MenuItem","name":"Margherita"},{"@type":"MenuItem","name":"Tiramisu"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={1:[],2:[]};[0,3,4,5,6].forEach(function(d){H[d]=[[1020,1290]]});
+(function(){var s=openState(H),p=document.getElementById('pill'),t=document.getElementById('pTxt');
+if(s.open){p.classList.add('on');t.textContent='Oven on · till '+fmt(s.until)}else if(s.next!=null){t.textContent='Closed · '+s.nextDay+' '+fmt(s.next)}
+requestAnimationFrame(function(){document.getElementById('lid').classList.add('open')});
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>
