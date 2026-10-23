@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Albermarle Cafe · Livingstone Rd, Marrickville</title>
+<meta name="description" content="Albermarle Cafe, 249 Livingstone Rd on the corner of Albermarle St, Marrickville: Little Marionette coffee and small plates. Where Marrickville meets for coffee.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;600&display=swap" rel="stylesheet">
+<!-- logo file: ask owner (Instagram check pending). Hours Mon-Sat 6-3, Sun 7-2 from IG bio. No phone on Google, so no call button. -->
+<style>
+:root{--sage:#8fa58a;--deep:#2e3b2c;--cream:#f5f1e8;--ink:#1d1f1a;--mute:#6a6c62;--clay:#c06a46}
+*{box-sizing:border-box;margin:0}
+body{font:400 17px/1.6 "Inter Tight",system-ui,sans-serif;color:var(--ink);background:var(--cream)}
+a{color:inherit}
+.side{position:relative;background:var(--sage);color:var(--cream);min-height:56svh;display:flex;flex-direction:column;justify-content:space-between;padding:18px}
+.side .corner{font:600 12px "Inter Tight";letter-spacing:.24em;text-transform:uppercase}
+.side .name{font:400 clamp(58px,16vw,128px)/.88 "Instrument Serif",serif}
+.side .name i{color:var(--deep)}
+.sidenote{font-size:12px;margin-top:8px;max-width:36ch;opacity:.95}
+.side .door{align-self:flex-start;font:600 13px "Inter Tight";letter-spacing:.12em;text-transform:uppercase;background:var(--cream);color:var(--deep);padding:8px 12px;border-radius:2px;transform-origin:top center;transition:transform .6s}
+.side .door.swing{animation:swing 1.2s ease-out}
+@keyframes swing{0%{transform:rotate(12deg)}40%{transform:rotate(-8deg)}70%{transform:rotate(4deg)}100%{transform:none}}
+@media (prefers-reduced-motion:reduce){.side .door.swing{animation:none}}
+.strip{display:flex;gap:8px;overflow-x:auto;padding:10px 18px;background:var(--deep)}
+.strip img{flex:0 0 46%;height:140px;object-fit:cover;display:block}
+.main{padding:0 20px 120px}
+.note{font-size:12.5px;color:var(--mute);padding-top:16px}
+.main h1{font:400 clamp(38px,8vw,64px)/1.02 "Instrument Serif",serif;margin-top:16px}
+.main h1 i{color:var(--clay)}
+.main section{margin-top:40px;max-width:520px}
+.main h2{font:400 34px/1.05 "Instrument Serif",serif}
+.main h2 i{color:var(--clay)}
+.list p{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #ddd6c6}
+.list small{color:var(--mute)}
+.ph{font-size:13px;color:var(--mute);margin-top:10px}
+.hrs{width:100%;border-collapse:collapse;margin-top:10px}
+.hrs td{padding:8px 0;border-bottom:1px solid #ddd6c6}
+.hrs td+td{text-align:right}
+.hrs .today td{font-weight:600;color:var(--deep)}
+.acts{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.acts a{text-decoration:none;font-weight:600;padding:12px 18px;border:1.5px solid var(--deep)}
+.acts a.p{background:var(--deep);color:var(--cream)}
+footer{font-size:13px;color:var(--mute);margin-top:24px}
+footer p+p{margin-top:6px}
+.big img{width:100%;aspect-ratio:4/5;object-fit:cover;display:none}
+@media(min-width:900px){
+ body{display:grid;grid-template-columns:44% 56%}
+ .left{position:sticky;top:0;height:100vh;display:flex;flex-direction:column}
+ .side{flex:1;min-height:0}
+ .strip{display:none}
+ .big{flex:1.2;overflow:hidden}.big img{display:block;height:100%;aspect-ratio:auto}
+ .main{padding:20px 6vw 100px}
+}
+</style>
+</head>
+<body>
+<div class="left">
+  <div class="side">
+    <div><span class="corner">249 Livingstone Rd · cnr Albermarle St</span><p class="sidenote">Concept preview by Restauranting. Not the official website of Albermarle Cafe.</p></div>
+    <div class="name">Alber<i>marle</i></div>
+    <span class="door" id="door">Corner cafe</span>
+  </div>
+  <div class="big"><img src="https://images.pexels.com/photos/5373243/pexels-photo-5373243.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/5373243/pexels-photo-5373243.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/5373243/pexels-photo-5373243.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/5373243/pexels-photo-5373243.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:900px) 44vw,1px" alt="Friends sharing avocado toast and coffee at a cafe" loading="lazy"></div>
+  <div class="strip">
+    <img src="https://images.pexels.com/photos/5373243/pexels-photo-5373243.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/5373243/pexels-photo-5373243.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/5373243/pexels-photo-5373243.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/5373243/pexels-photo-5373243.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="46vw" alt="Friends sharing avocado toast and coffee at a cafe" fetchpriority="high">
+    <img src="https://images.pexels.com/photos/19992955/pexels-photo-19992955.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/19992955/pexels-photo-19992955.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/19992955/pexels-photo-19992955.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/19992955/pexels-photo-19992955.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="46vw" alt="An assortment of bruschetta on a plate" loading="lazy">
+    <img src="https://images.pexels.com/photos/894696/pexels-photo-894696.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/894696/pexels-photo-894696.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/894696/pexels-photo-894696.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/894696/pexels-photo-894696.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="46vw" alt="A latte with latte art on a wooden table" loading="lazy">
+  </div>
+</div>
+<main class="main">
+  <p class="note">Concept preview by Restauranting. Not the official website of Albermarle Cafe. Photos are licensed stock; details come from your Instagram bio and public listings.</p>
+  <h1>Where Marrickville <i>meets for coffee.</i></h1>
+  <p style="margin-top:12px">A corner cafe pouring Little Marionette, with small plates to share. Popular with locals and families.</p>
+
+  <section id="menu">
+    <h2>On the <i>corner</i></h2>
+    <div class="list">
+      <p>Little Marionette coffee <small>from 6am</small></p>
+      <p>Small plates <small>to share</small></p>
+    </div>
+    <p class="ph">Photos shown are placeholders: we'd swap in your own shots.</p>
+    <!-- [CHECK] full menu from owner; prices deliberately not shown -->
+  </section>
+
+  <section id="visit">
+    <h2>Opening <i>hours</i></h2>
+    <table class="hrs" id="hrs"></table>
+    <div class="acts"><a class="p" href="https://maps.google.com/?cid=2271112445047463169" target="_blank" rel="noopener">Directions</a><a href="https://www.instagram.com/albermarlemarrickville/" target="_blank" rel="noopener">Instagram</a></div>
+    <footer><p>Albermarle Cafe · 249 Livingstone Rd (cnr Albermarle St), Marrickville NSW 2204</p><p>Concept preview by Restauranting. Not the official website of Albermarle Cafe. Photos via Pexels (IDs 5373243, 19992955, 894696).</p></footer>
+  </section>
+</main>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Albermarle Cafe","servesCuisine":["Cafe"],"address":{"@type":"PostalAddress","streetAddress":"249 Livingstone Rd","addressLocality":"Marrickville","addressRegion":"NSW","postalCode":"2204","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"06:00","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"07:00","closes":"14:00"}],"sameAs":["https://www.instagram.com/albermarlemarrickville/"],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Menu","hasMenuItem":[{"@type":"MenuItem","name":"Little Marionette coffee"},{"@type":"MenuItem","name":"Small plates"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={0:[[420,840]]};for(var i=1;i<7;i++)H[i]=[[360,900]];
+(function(){var s=openState(H),d=document.getElementById('door');
+d.textContent=s.open?'Open · till '+fmt(s.until):'Closed'+(s.next!=null?' · '+s.nextDay+' '+fmt(s.next):'');d.classList.add('swing');
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>

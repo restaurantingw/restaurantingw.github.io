@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Cafe Martini · 529A King St, Newtown</title>
+<meta name="description" content="Cafe Martini, 529A King St Newtown: on King St since 1996. Strong coffee, a big tea collection, smoothies, frappes and all-day breakfast.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<!-- logo file: ask owner. [CHECK] hours Tue-Fri 7-2, Sat-Sun 7-3, closed Mon (Localista). [CHECK] Instagram handle. -->
+<style>
+:root{--wine:#7a1f2b;--olive:#6b7a3a;--cream:#fbf4e8;--ink:#221914;--mute:#6e6257;--sun:#f2b544}
+*{box-sizing:border-box;margin:0}
+body{font:400 17px/1.6 Lato,system-ui,sans-serif;color:var(--ink);background:var(--cream)}
+a{color:inherit}
+header{text-align:center;padding:26px 16px 0}
+.est{font:700 12px Lato;letter-spacing:.3em;text-transform:uppercase;color:var(--olive)}
+header h1{font:400 clamp(54px,15vw,118px)/.9 "Abril Fatface",serif;color:var(--wine);margin-top:6px}
+header p{margin-top:8px;color:var(--mute)}
+.note{font-size:12.5px;color:var(--mute);text-align:center;max-width:560px;margin:10px auto 0;padding:0 16px}
+.clock{max-width:760px;margin:30px auto 0;padding:0 16px;display:flex;gap:6px}
+.clock span{flex:1;height:10px;background:#e6dccb;border-radius:5px;position:relative}
+.clock span.on{background:var(--sun)}
+.clock span.past{background:#cbb994}
+.labels{max-width:760px;margin:6px auto 0;padding:0 16px;display:flex;justify-content:space-between;font-size:12.5px;color:var(--mute)}
+.part{max-width:760px;margin:34px auto 0;padding:0 16px;display:grid;gap:16px;opacity:.55;transition:opacity .5s}
+.part.now{opacity:1}
+@media (prefers-reduced-motion:reduce){.part{transition:none}}
+@media(min-width:760px){.part{grid-template-columns:1fr 1fr;align-items:center}.part:nth-of-type(even) figure{order:2}}
+.part img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:200px 200px 0 0}
+.part .t{font:700 13px Lato;letter-spacing:.2em;text-transform:uppercase;color:var(--olive)}
+.part.now .t:after{content:" · now";color:var(--wine)}
+.part h2{font:400 38px/1.05 "Abril Fatface",serif;color:var(--wine);margin-top:4px}
+.part ul{list-style:none;padding:0;margin-top:10px}
+.part li{padding:6px 0;border-bottom:1px solid #e3d7c2}
+.ph{max-width:760px;margin:20px auto 0;padding:0 16px;font-size:13px;color:var(--mute)}
+.since{max-width:620px;margin:50px auto 0;padding:0 16px;text-align:center;font:400 26px/1.35 "Abril Fatface",serif;color:var(--ink)}
+.visit{max-width:620px;margin:40px auto 0;padding:0 16px 130px}
+.visit h2{font:400 34px "Abril Fatface";color:var(--wine)}
+.hrs{width:100%;border-collapse:collapse;margin-top:10px}
+.hrs td{padding:8px 0;border-bottom:1px solid #e3d7c2}
+.hrs td+td{text-align:right}
+.hrs .today td{font-weight:700;color:var(--wine)}
+footer{font-size:13px;color:var(--mute);margin-top:22px}
+footer p+p{margin-top:6px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:9;display:grid;grid-template-columns:repeat(3,1fr);background:var(--wine)}
+.bar a{color:var(--cream);text-decoration:none;text-align:center;padding:15px 4px;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.bar a+a{border-left:1px solid rgba(255,255,255,.2)}
+</style>
+</head>
+<body>
+<header><div class="est">King St · since 1996</div><h1>Martini</h1><p id="st">Cafe · 529A King St, Newtown</p></header>
+<p class="note">Concept preview by Restauranting. Not the official website of Cafe Martini. Photos are licensed stock; details come from your Facebook and public listings.</p>
+
+<div class="clock" id="clock" aria-hidden="true"><span data-f="420" data-t="660"></span><span data-f="660" data-t="780"></span><span data-f="780" data-t="900"></span></div>
+<div class="labels"><span>7am</span><span>11am</span><span>1pm</span><span>close</span></div>
+
+<section class="part" data-f="420" data-t="660" id="menu">
+  <figure><img src="https://images.pexels.com/photos/6879450/pexels-photo-6879450.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/6879450/pexels-photo-6879450.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/6879450/pexels-photo-6879450.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/6879450/pexels-photo-6879450.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:760px) 360px,92vw" alt="Latte art in a cup at a cafe" fetchpriority="high"></figure>
+  <div><div class="t">7am · the first cup</div><h2>Strong coffee</h2><ul><li>Espresso the way King St likes it</li><li>Or pick from the big tea collection</li></ul></div>
+</section>
+<section class="part" data-f="660" data-t="780">
+  <figure><img src="https://images.pexels.com/photos/13020203/pexels-photo-13020203.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/13020203/pexels-photo-13020203.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/13020203/pexels-photo-13020203.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/13020203/pexels-photo-13020203.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:760px) 360px,92vw" alt="A breakfast plate with scrambled eggs, toast and coffee" loading="lazy"></figure>
+  <div><div class="t">11am · still breakfast</div><h2>All-day breakfast</h2><ul><li>Eggs, toast and the works</li><li>No rush, no cut-off</li></ul></div>
+</section>
+<section class="part" data-f="780" data-t="900">
+  <figure><img src="https://images.pexels.com/photos/7656388/pexels-photo-7656388.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/7656388/pexels-photo-7656388.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/7656388/pexels-photo-7656388.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/7656388/pexels-photo-7656388.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:760px) 360px,92vw" alt="Three fruit smoothies with fresh fruit on a wooden table" loading="lazy"></figure>
+  <div><div class="t">1pm · something cold</div><h2>Smoothies &amp; frappes</h2><ul><li>The house smoothies</li><li>Frappes for a warm King St afternoon</li></ul></div>
+</section>
+<p class="ph">Photos shown are placeholders: we'd swap in your own shots.</p>
+<!-- [CHECK] full menu and tea list from owner; prices deliberately not shown -->
+
+<p class="since">Thirty years on south King St, and still one of the street's favourite cups.</p>
+
+<section class="visit" id="visit">
+  <h2>Hours</h2>
+  <table class="hrs" id="hrs"></table>
+  <p style="margin-top:12px">529A King St, Newtown NSW 2042 · <a href="tel:+61285937401">(02) 8593 7401</a></p>
+  <footer><p>Concept preview by Restauranting. Not the official website of Cafe Martini.</p><p>Photos via Pexels (IDs 6879450, 13020203, 7656388).</p></footer>
+</section>
+
+<nav class="bar"><a href="tel:+61285937401">Call</a><a href="https://maps.google.com/?cid=17854957226572481369" target="_blank" rel="noopener">Directions</a><a href="https://www.facebook.com/martinicafebar" target="_blank" rel="noopener">Facebook</a></nav>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Cafe Martini","foundingDate":"1996","servesCuisine":["Cafe","Breakfast"],"telephone":"+61285937401","address":{"@type":"PostalAddress","streetAddress":"529A King St","addressLocality":"Newtown","addressRegion":"NSW","postalCode":"2042","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"14:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"07:00","closes":"15:00"}],"sameAs":["https://www.facebook.com/martinicafebar"],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Menu","hasMenuItem":[{"@type":"MenuItem","name":"Coffee"},{"@type":"MenuItem","name":"All-day breakfast"},{"@type":"MenuItem","name":"Smoothies"},{"@type":"MenuItem","name":"Frappes"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={1:[],0:[[420,900]],6:[[420,900]]};for(var i=2;i<6;i++)H[i]=[[420,840]];
+(function(){var s=openState(H),n=sydNow(),st=document.getElementById('st');
+st.textContent=s.open?'Open now · till '+fmt(s.until):'Closed'+(s.next!=null?' · back '+s.nextDay+' '+fmt(s.next):'');
+[].forEach.call(document.querySelectorAll('#clock span'),function(x){if(!s.open)return;var f=+x.dataset.f,t=+x.dataset.t;if(n.m>=f&&n.m<t)x.classList.add('on');else if(n.m>=t)x.classList.add('past')});
+[].forEach.call(document.querySelectorAll('.part'),function(p){if(!s.open||(n.m>=+p.dataset.f&&n.m<+p.dataset.t))p.classList.add('now')});
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>

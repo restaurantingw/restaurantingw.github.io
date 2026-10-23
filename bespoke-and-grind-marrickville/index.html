@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Bespoke and Grind · Livingstone Rd, Marrickville</title>
+<meta name="description" content="Bespoke and Grind, 1A/78-80 Livingstone Rd Marrickville: house-roasted coffee (the Mazza blend), breakfast, chocolate hazelnut brownies and almond orange friands near Marrickville Park.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<!-- logo file: ask owner (Instagram check pending). [CHECK] hours: from 6:30am weekdays (Yelp); rest assumed. [CHECK] bean sales (hook idea, not confirmed). -->
+<style>
+:root{--kraft:#c8a57a;--bag:#2b2622;--cream:#f4ecdf;--orange:#d9662b;--mute:#6f6458}
+*{box-sizing:border-box;margin:0}
+body{font:400 15.5px/1.6 "IBM Plex Mono",ui-monospace,monospace;color:var(--bag);background:var(--cream)}
+a{color:inherit}
+.note{font-size:12px;color:var(--mute);padding:12px 16px;max-width:620px}
+.bag{max-width:520px;margin:6px auto 0;background:var(--kraft);padding:0 0 26px;position:relative;clip-path:polygon(0 0,100% 0,100% 100%,0 100%);box-shadow:0 14px 30px rgba(43,38,34,.25)}
+.fold{height:26px;background:repeating-linear-gradient(90deg,#b8946a 0 6px,#c8a57a 6px 12px);border-bottom:2px solid var(--bag)}
+.lab{margin:26px 22px 0;background:var(--cream);border:3px solid var(--bag);padding:18px 16px;text-align:center;position:relative}
+.lab:before{content:"";position:absolute;inset:5px;border:1px solid var(--bag);pointer-events:none}
+.lab .sm{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase}
+.lab h1{font:900 clamp(46px,13vw,76px)/.88 "Big Shoulders Display",sans-serif;text-transform:uppercase;margin:8px 0}
+.lab h1 span{color:var(--orange)}
+.blend{display:inline-block;background:var(--bag);color:var(--cream);font-weight:600;padding:5px 12px;margin-top:6px;letter-spacing:.12em;text-transform:uppercase}
+.spec{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--bag);margin-top:14px;text-align:left}
+.spec div{padding:8px 6px;border-bottom:1px solid var(--bag)}
+.spec div:nth-child(odd){border-right:1px solid var(--bag)}
+.spec b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.stamp{position:absolute;right:-8px;top:-18px;width:92px;height:92px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;text-align:center;font:700 16px/1.05 "Big Shoulders Display";letter-spacing:.06em;text-transform:uppercase;transform:rotate(14deg)}
+.stamp.closed{background:var(--bag)}
+.window{margin:18px 22px 0;border:3px solid var(--bag)}
+.window img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.ph{font-size:12px;color:var(--mute);text-align:center;margin-top:10px}
+.ing{max-width:620px;margin:44px auto 0;padding:0 16px}
+.ing h2,.visit h2{font:900 34px/1 "Big Shoulders Display";text-transform:uppercase}
+.ing p.l{margin-top:10px}
+.ing ul{list-style:none;padding:0;margin-top:12px}
+.ing li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed var(--bag)}
+.ing li small{color:var(--mute)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.duo img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border:3px solid var(--bag)}
+.visit{max-width:620px;margin:44px auto 0;padding:0 16px 120px}
+.hrs{width:100%;border-collapse:collapse;margin-top:10px}
+.hrs td{padding:7px 0;border-bottom:1px solid #d6c7b2}
+.hrs td+td{text-align:right}
+.hrs .today td{color:var(--orange);font-weight:600}
+footer{font-size:12px;color:var(--mute);margin-top:22px}
+footer p+p{margin-top:6px}
+.call{position:fixed;left:16px;right:16px;bottom:14px;z-index:9;display:block;text-align:center;background:var(--bag);color:var(--cream);text-decoration:none;font:700 20px "Big Shoulders Display";letter-spacing:.12em;text-transform:uppercase;padding:14px}
+@media(min-width:700px){.call{left:auto;width:300px}}
+</style>
+</head>
+<body>
+<p class="note">Concept preview by Restauranting. Not the official website of Bespoke and Grind. Photos are licensed stock; details come from your listings and press.</p>
+<div class="bag">
+  <div class="fold" aria-hidden="true"></div>
+  <div class="lab">
+    <div class="stamp" id="stamp">Roasting<br>today</div>
+    <div class="sm">Roasted in house · Marrickville</div>
+    <h1>Bespoke<br><span>&amp;</span> Grind</h1>
+    <span class="blend">Mazza blend</span>
+    <div class="spec">
+      <div><b>Origin</b>Livingstone Rd</div>
+      <div><b>Roast</b>Our own</div>
+      <div><b>Status</b><span id="st">—</span></div>
+      <div><b>Near</b>Marrickville Park</div>
+    </div>
+  </div>
+  <figure class="window"><img src="https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:520px) 470px,85vw" alt="Freshly roasted coffee beans in a roaster" fetchpriority="high"></figure>
+  <p class="ph">Photos shown are placeholders: we'd swap in your own shots.</p>
+</div>
+
+<section class="ing" id="menu">
+  <h2>Contents</h2>
+  <p class="l">We roast our own beans and bake our own sweets. Pull up a seat or take a coffee to the park.</p>
+  <ul>
+    <li>Mazza blend <small>espresso, milk coffee</small></li>
+    <li>Breakfast <small>made to order</small></li>
+    <li>Chocolate hazelnut brownie <small>baked here</small></li>
+    <li>Almond orange friand <small>baked here</small></li>
+  </ul>
+  <div class="duo">
+    <img src="https://images.pexels.com/photos/15106329/pexels-photo-15106329.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/15106329/pexels-photo-15106329.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/15106329/pexels-photo-15106329.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/15106329/pexels-photo-15106329.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:620px) 290px,45vw" alt="Chocolate brownies on a black plate" loading="lazy">
+    <img src="https://images.pexels.com/photos/9949102/pexels-photo-9949102.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/9949102/pexels-photo-9949102.jpeg?auto=compress&cs=tinysrgb&w=600 600w,https://images.pexels.com/photos/9949102/pexels-photo-9949102.jpeg?auto=compress&cs=tinysrgb&w=900 900w,https://images.pexels.com/photos/9949102/pexels-photo-9949102.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(min-width:620px) 290px,45vw" alt="A cappuccino with latte art on a wooden table" loading="lazy">
+  </div>
+  <!-- [CHECK] full menu, bean sales with owners; prices deliberately not shown -->
+</section>
+
+<section class="visit" id="visit">
+  <h2>Come by the roaster</h2>
+  <table class="hrs" id="hrs"></table>
+  <p style="margin-top:12px">1A/78-80 Livingstone Rd, Marrickville NSW 2204 · <a href="tel:+61426742339">0426 742 339</a> · <a href="https://maps.google.com/?cid=916183675868060993" target="_blank" rel="noopener">Directions</a> · <a href="https://www.instagram.com/bespokeandgrind/" target="_blank" rel="noopener">@bespokeandgrind</a></p>
+  <footer><p>Concept preview by Restauranting. Not the official website of Bespoke and Grind.</p><p>Photos via Pexels (IDs 894695, 15106329, 9949102).</p></footer>
+</section>
+
+<a class="call" href="tel:+61426742339">Call</a>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Bespoke and Grind","servesCuisine":["Cafe","Coffee"],"telephone":"+61426742339","address":{"@type":"PostalAddress","streetAddress":"1A/78-80 Livingstone Rd","addressLocality":"Marrickville","addressRegion":"NSW","postalCode":"2204","addressCountry":"AU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:30","closes":"14:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"07:30","closes":"14:00"}],"sameAs":["https://www.instagram.com/bespokeandgrind/"],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Contents","hasMenuItem":[{"@type":"MenuItem","name":"Mazza blend coffee"},{"@type":"MenuItem","name":"Chocolate hazelnut brownie"},{"@type":"MenuItem","name":"Almond orange friand"}]}]}}
+</script>
+<script>
+/* shared plumbing: Sydney time + open-now */
+function sydNow(){var p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);return{d:d,m:(+p.hour%24)*60+(+p.minute)}}
+function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h<12?'am':'pm',hh=h%12||12;return hh+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+function openState(H){var n=sydNow(),t=H[n.d]||[];for(var i=0;i<t.length;i++){if(n.m>=t[i][0]&&n.m<t[i][1])return{open:true,until:t[i][1],today:t,d:n.d}}
+for(var k=0;k<8;k++){var dd=(n.d+k)%7,r=H[dd]||[];for(var j=0;j<r.length;j++){if(k>0||r[j][0]>n.m)return{open:false,next:r[j][0],nextDay:k===0?'today':k===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dd],today:t,d:n.d}}}return{open:false,today:t,d:n.d}}
+function todayText(t){return t.length?t.map(function(r){return fmt(r[0])+'–'+fmt(r[1])}).join(', '):'Closed today'}
+var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var H={0:[[450,840]],6:[[450,840]]};for(var i=1;i<6;i++)H[i]=[[390,870]];
+(function(){var s=openState(H),st=document.getElementById('st'),sp=document.getElementById('stamp');
+if(s.open){st.textContent='Open · till '+fmt(s.until);sp.innerHTML='Open<br>now'}else{st.textContent='Closed'+(s.next!=null?' · '+s.nextDay+' '+fmt(s.next):'');sp.innerHTML='Back<br>'+(s.next!=null?fmt(s.next):'soon');sp.classList.add('closed')}
+var h='';for(var i=1;i<8;i++){var k=i%7;h+='<tr'+(k===s.d?' class="today"':'')+'><td>'+DAYS[k]+'</td><td>'+todayText(H[k])+'</td></tr>'}document.getElementById('hrs').innerHTML=h})();
+</script>
+</body>
+</html>
